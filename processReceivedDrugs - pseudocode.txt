@@ -1,0 +1,173 @@
+0x00:
+    push(0x150E)
+
+    minODToxicity = 3.9
+    maxGeneralSatisfaction = 3.0
+    lowToxOdPercent = 0.1
+    highToxOdPercent = 0.25
+    highToxLevel = 12.0
+    minAddictValue = 1.0
+    maxAddictValue = 13.0
+    clientSaleSatisfactionRange = 0.3
+
+    if typeof(this) != sampleClientBP_C
+        jmp 0x335
+
+    samplePerson = (sampleClientBP_C)this
+    mainComputers = GameplayStatics::GetAllActorsOfClass(this, mainComputer_C)
+    drugsAvailable_i = 0
+
+0x183:
+    mainComputer = mainComputers[0]
+    drugsAvailableCount = KismetArrayLibrary::Array_Length(mainComputer.drugsAvailable)
+
+    if !(drugsAvailable_i < drugsAvailableCount)
+        jmp 0xFF7
+
+    push(0x1392)
+
+    mainComputer = mainComputers[0]
+    currentDrug = mainComputer.drugsAvailable[drugsAvailable_i]
+    //drugStringIds = []
+    KismetArrayLibrary::Array_Add(drugStringIds, currentDrug.StringID)
+
+0x334:
+    pop() // => jum 0x1392
+
+0x335:
+    salesManagers = GameplayStatics::GetAllActorsOfClass(this, salesManager_C)
+    salesManager = salesManagers[0]
+    memSalesMenager = salesManager
+
+    ClientId = this.orderListClientID[this.OrderId]
+
+    memSalesMenager.clientsLastOrderDrugName[ClientId] = this.drugExpected.DrugName
+    memSalesMenager.clientsLastOrderRecievedDrugName[ClientId] = this.drugReceived.DrugName
+    drugExpected_i = KismetArrayLibrary::Array_Find(this.drugReceived.MixStringIDs, this.drugExpected.StringID)
+
+    productContentExpectationRatio = this.drugReceived.MixStringProportions[drugExpected_i]
+    this.saleReputationUpdate(productContentExpectationRatio)
+    productStrengthRatio = this.drugReceived.strength / this.drugExpected.strength
+
+    temp = productContentExpectationRatio * 0.2
+    temp2 = KismetMathLibrary::FClamp(productStrengthRatio, 0, 1.5)
+
+    endProductQualityRatio = temp * temp2 + productContentExpectationRatio
+
+    clientExpectedQuality = memSalesMenager.ClientsExpectedQuality[ClientId]
+    clientExpectedQuality += 0.2
+    clientExpectedQuality = KismetMathLibrary::FClamp(clientExpectedQuality, 0.4, 0.9)
+
+    clientSatisfaction = (endProductQualityRatio / clientExpectedQuality) - 0.95
+    clientSatisfaction *= clientSaleSatisfactionRange
+    clientSatisfaction = KismetMathLibrary::FClamp(clientSatisfaction, -0.5, 0.25)
+
+    memSalesMenager.clientSatisfactionLastOrder[ClientId] = clientSatisfaction
+    clientSatisfactionGeneral = memSalesMenager.clientsSatisfactionGeneral[ClientId]
+
+    clientExpectedQuality = memSalesMenager.ClientsExpectedQuality[ClientId]
+    clientExpectedQuality += 0.2
+    clientExpectedQuality = KismetMathLibrary::FClamp(clientExpectedQuality, 0.4, 0.9)
+
+    clientSatisfaction = (endProductQualityRatio / clientExpectedQuality) - 0.95
+    clientSatisfaction *= clientSaleSatisfactionRange
+    clientSatisfaction = KismetMathLibrary::FClamp(clientSatisfaction, -0.5, 0.25)
+    
+    clientSatisfaction += clientSatisfactionGeneral
+    clientSatisfaction = KismetMathLibrary::FClamp(clientSatisfaction, -1, maxGeneralSatisfaction)
+
+    memSalesMenager.clientsSatisfactionGeneral[ClientId] = clientSatisfaction
+
+    memSalesMenager.clientAwaitingResponse[ClientId] = true // ?? I think?
+
+    if !(this.drugReceived.toxicity > minODToxicity)
+        jmp 0xC5C
+
+    if !(this.drugReceived.toxicity > highToxLevel)
+        jmp 0x13DC
+
+    clientHadODed = KismetMathLibrary::RandomBoolWithWeight(highToxOdPercent)
+    memSalesMenager.clientsOD[ClientId] = clientHadODed
+
+0xC5C:
+    questManagers = GameplayStatics::GetAllActorsOfClass(questManager_C)
+    questManager = questManagers[0]
+
+    longNewDrugsTaskID = questManager.longNewDrugsTaskID > 0
+    
+    if !(longNewDrugsTaskID && this.drugReceived.addictiveness > minAddictValue)
+        jmp 0xFF2
+
+    addictChance = minAddictValue / 2
+    addictChance = this.drugReceived.addictiveness - addictChance
+    addictChance = addictChance / maxAddictValue
+    addictChance = addictChance / 3
+    addictChance = KismetMathLibrary::FClamp(addictChance, 0.01, 0.1)
+
+    clientAddicted = KismetMathLibrary::RandomBoolWithWeight(addictChance)
+
+    if !clientAddicted
+        jmp 0xFF2
+    
+    mainComputers = GameplayStatics::GetAllActorsOfClass(mainComputer_C)
+    mainComputer = mainComputers[0]
+
+    currentDrug_i = KismetArrayLibrary::Array_Find(mainComputer.drugsAvailable, this.drugExpected)
+    memSalesMenager.clientsDrugAddictedTo[ClientId] = currentDrug_i
+    memSalesMenager.clientsDrugAddictedData[ClientId] = this.drugReceived
+
+0xFF2:
+    jmp 0x150E
+
+0xFF7:
+    mixStringIDs_i = 0
+
+0x1025:
+    mixStringIDsCount = KismetArrayLibrary::Array_Length(this.drugReceived.MixStringIDs)
+
+    if !(mixStringIDs_i < mixStringIDsCount)
+        jmp 0x1249
+    
+    push(0x11FF)
+
+    currentMixStringID = this.drugReceived[mixStringIDs_i]
+    currentMixStringID_i = KismetArrayLibrary::Array_Find(drugStringIds, mix)
+
+    if !(currentMixStringID_i > -1)
+        pop() // => jmp 0x11FF
+
+    currentMixStringProportion = this.drugReceived.MixStringProportions[mixStringIDs_i]
+    totalPercDrug += currentMixStringProportion
+
+    pop() // => jmp 0x11FF
+
+0x11FF:
+    mixStringIDs_i++
+    jmp 0x1025
+
+0x1249:
+    saleAreaManagers = GameplayStatics::GetAllActorsOfClass(this, saleAreaManager_C)
+    gainedExposure = KismetMathLibrary::FClamp(this.drugReceivedQuantity * 40 * totalPercDrug, 50, 250)
+    saleAreaManager = saleAreaManagers[0]
+    saleAreaManager.addAreaExposure(samplePerson.sampleAreaAffected, gainedExposure)
+
+    pop() // => jmp 0x150E
+
+0x1392:
+    drugsAvailable_i++
+    jmp 0x183
+
+0x13DC:
+    clientODChance = this.drugReceived.toxicity - minODToxicity
+    clientODChance = clientODChance / minODToxicity
+    clientODChance = clientODChance / 20
+    clientODChance = KismetMathLibrary::FClamp(clientODChance, 0.001, 0.08)
+
+    clientHasODed = KismetMathLibrary::RandomBoolWithWeight(clientODChance)
+
+    memSalesMenager.clientsOD[CLientID] = clientHadODed
+
+    jmp 0xC5C
+
+0x150E:
+    return

@@ -1,0 +1,121 @@
+
+Label_0x0:
+    
+      $31: set array
+        $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0xB:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C86B93880:GameplayStatics Engine.Default__GameplayStatics)
+        Skip Bytes:
+          0x1D
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+            $17: EX_Self
+          
+            $20: EX_ObjectConst (0000017CAC474300:BlueprintGeneratedClass statisticsManager.statisticsManager_C)
+          
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x3E:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Subtract_FloatFloat)
+            $0: Local variable named productQuality
+          
+            $1E: literal float 0.500000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x68:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x9F:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
+            $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
+          
+            $1E: literal float 0.350000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xC9:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Array_Get_Item
+        Skip Bytes:
+          0x17
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named modifyReputation
+            $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xF6:
+    
+      $4: Return expression
+        $B: EX_Nothing
+      
+    
+  
+Label_0xF8:
+    
+      $53: EX_EndOfScript
+    
+  

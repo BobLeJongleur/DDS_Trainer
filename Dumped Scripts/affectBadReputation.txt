@@ -1,0 +1,82 @@
+
+Label_0x0:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named multiplierMin
+        Expression:
+          $1E: literal float 1.000000
+        
+      
+    
+  
+Label_0x17:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named multiplierMax
+        Expression:
+          $1E: literal float 4.000000
+        
+      
+    
+  
+Label_0x2E:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
+            $1: Instance variable named badReputationMultiplier
+          
+            $0: Local variable named ReputationLoss
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x5C:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_FClamp_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::FClamp)
+            $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+          
+            $0: Local variable named multiplierMin
+          
+            $0: Local variable named multiplierMax
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x93:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $1: Instance variable named badReputationMultiplier
+        Expression:
+          $0: Local variable named CallFunc_FClamp_ReturnValue
+        
+      
+    
+  
+Label_0xAE:
+    
+      $4: Return expression
+        $B: EX_Nothing
+      
+    
+  
+Label_0xB0:
+    
+      $53: EX_EndOfScript
+    
+  

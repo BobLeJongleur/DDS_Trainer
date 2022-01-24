@@ -1,0 +1,46 @@
+highTox = 12.0
+minOD = 3.9
+
+minAddict = 1.0
+maxAddict = 13.0
+
+repFactor = 100.0
+clientSaleSatisfactionRange = 0.3
+
+def hasODed(tox):
+    if tox < minOD:
+        return false
+
+    if tox > highTox:
+        return random() < 0.25
+    else:
+        return random() < mid(0.001, (tox / minOD - 1) / 20, 0.08)
+
+
+def isAddicted(addict):
+    if addict < minAddict:
+        return false
+
+    return random() < mid(0.01, (((addict - (minAddict / 2.0)) / maxAddict) / 3.0), 0.1)
+
+// productQuality is % of expected drug in the drug received
+def saleRepGain(productQuality):
+    gain = (productQuality - 0.5) * 0.35 + repFactor
+    return mid(-repFactor, gain, repFactor)
+
+// expectedDrugProportion is the % of the base drug they asked for that is present in your mix
+// expectedDrugStrength is the strength of the base drug they asked for
+def clientSatisfactionGain(strength, expectedDrugProportion, expectedDrugStrength, clientExpectedQuality):
+    productStrengthRatio = strength / expectedDrugStrength
+
+    temp = productContentExpectationRatio * 0.2
+    temp2 = mid(0, productStrengthRatio, 1.5)
+
+    productQualityRatio = temp * temp2 + expectedDrugProportion
+
+    clientExpectedQuality += 0.2
+    clientExpectedQuality = mid(0.4, clientExpectedQuality, 0.9)
+
+    clientSatisfaction = (productQualityRatio / clientExpectedQuality) - 0.95
+    clientSatisfaction *= clientSaleSatisfactionRange
+    return mid(-0.5, clientSatisfaction, 0.25)

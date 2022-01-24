@@ -1,0 +1,961 @@
+
+Label_0x0:
+    
+      $31: set array
+        $0: Local variable named K2Node_MakeArray_Array2
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0x1D7:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named dealerOdMessage
+        Expression:
+          $0: Local variable named K2Node_MakeArray_Array2
+        
+      
+    
+  
+Label_0x1F2:
+    
+      $31: set array
+        $0: Local variable named K2Node_MakeArray_Array1
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0x31D:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named dealerEverAgainMsg
+        Expression:
+          $0: Local variable named K2Node_MakeArray_Array1
+        
+      
+    
+  
+Label_0x338:
+    
+      $31: set array
+        $0: Local variable named K2Node_MakeArray_Array
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0x45A:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named dealerOutMsg
+        Expression:
+          $0: Local variable named K2Node_MakeArray_Array
+        
+      
+    
+  
+Label_0x475:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsExpectedQuality
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x4B0:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $1E: literal float 2.600000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x4DA:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_FClamp_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::FClamp)
+            $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+          
+            $1E: literal float 0.500000
+          
+            $1E: literal float 2.500000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x509:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsAverageOrderInterval
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item4
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x544:
+    
+      $68: Call Math (stack node KismetMathLibrary::BreakVector2D)
+        $1: Instance variable named OrderIntervalRandRange
+      
+        $0: Local variable named CallFunc_BreakVector2D_X
+      
+        $0: Local variable named CallFunc_BreakVector2D_Y
+      
+        $16: EX_EndFunctionParms
+      
+    
+  
+Label_0x569:
+    
+      $1B: Virtual Function named calcIntervalMultiplier
+        $0: Local variable named CallFunc_Array_Get_Item4
+      
+        $0: Local variable named CallFunc_calcIntervalMultiplier_OutInterval
+      
+        $16: EX_EndFunctionParms
+      
+    
+  
+Label_0x589:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_RandomFloatInRange_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::RandomFloatInRange)
+            $0: Local variable named CallFunc_BreakVector2D_X
+          
+            $0: Local variable named CallFunc_BreakVector2D_Y
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x5B7:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
+            $0: Local variable named CallFunc_calcIntervalMultiplier_OutInterval
+          
+            $0: Local variable named CallFunc_RandomFloatInRange_ReturnValue
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x5E5:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue1
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
+            $0: Local variable named CallFunc_FClamp_ReturnValue
+          
+            $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x613:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x26
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $1: Instance variable named clientsOrderCountdown
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue1
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x64F:
+    
+      $7: Jump to offset 0xA5E if not expr:
+        $0: Local variable named dealer
+      
+    
+  
+Label_0x65D:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Array_LastIndex_ReturnValue2
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+            Skip Bytes:
+              0x13
+            R-Value Property
+              CallFunc_Array_LastIndex_ReturnValue2
+            ContextExpression:
+              $1C: Final Function (stack node KismetArrayLibrary::Array_LastIndex)
+                $0: Local variable named dealerOdMessage
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0x698:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue2
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::RandomIntegerInRange)
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_LastIndex_ReturnValue2
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x6C2:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named dealerOdMessage
+          
+            $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue2
+          
+            $0: Local variable named CallFunc_Array_Get_Item3
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x6FD:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsAvailable
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x738:
+    
+      $19: Context
+        ObjectExpression:
+          $1: Instance variable named mainComputerRef
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named addUserMessage
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $0: Local variable named CallFunc_Array_Get_Item3
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x76F:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x26
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $1: Instance variable named clientsOD
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named Temp_bool_Variable2
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x7AB:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named Temp_float_Variable
+        Expression:
+          $1E: literal float 0.010000
+        
+      
+    
+  
+Label_0x7C2:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x26
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $1: Instance variable named clientsSatisfactionLastOrder
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named Temp_float_Variable
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x7FE:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsSatisfactionGeneral
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item5
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x839:
+    
+      $14: LetBool (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_LessEqual_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::LessEqual_FloatFloat)
+            $0: Local variable named CallFunc_Array_Get_Item5
+          
+            $1E: literal float 0.000000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x85B:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x26
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $1: Instance variable named ClientsLost
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_LessEqual_FloatFloat_ReturnValue
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x897:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsSatisfactionGeneral
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item5
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x8D2:
+    
+      $14: LetBool (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_LessEqual_FloatFloat_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::LessEqual_FloatFloat)
+            $0: Local variable named CallFunc_Array_Get_Item5
+          
+            $1E: literal float 0.000000
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x8F4:
+    
+      $7: Jump to offset 0xB87 if not expr:
+        $0: Local variable named CallFunc_LessEqual_FloatFloat_ReturnValue
+      
+    
+  
+Label_0x902:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Array_LastIndex_ReturnValue
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+            Skip Bytes:
+              0x13
+            R-Value Property
+              CallFunc_Array_LastIndex_ReturnValue
+            ContextExpression:
+              $1C: Final Function (stack node KismetArrayLibrary::Array_LastIndex)
+                $0: Local variable named dealerOutMsg
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0x93D:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::RandomIntegerInRange)
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_LastIndex_ReturnValue
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x967:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named dealerOutMsg
+          
+            $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue
+          
+            $0: Local variable named CallFunc_Array_Get_Item
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x9A2:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsAvailable
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x9DD:
+    
+      $19: Context
+        ObjectExpression:
+          $1: Instance variable named mainComputerRef
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named addUserMessage
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $0: Local variable named CallFunc_Array_Get_Item
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xA14:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Subtract_IntInt_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Subtract_IntInt)
+            $1: Instance variable named curClientCount
+          
+            $1D: literal int32_t 1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xA3E:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $1: Instance variable named curClientCount
+        Expression:
+          $0: Local variable named CallFunc_Subtract_IntInt_ReturnValue
+        
+      
+    
+  
+Label_0xA59:
+    
+      $6: Jump to offset 0xC99
+    
+  
+Label_0xA5E:
+    
+      $14: LetBool (Variable = Expression)
+        Variable:
+          $0: Local variable named Temp_bool_Variable1
+        Expression:
+          $27: EX_True
+        
+      
+    
+  
+Label_0xA69:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsAvailable
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xAA4:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x3C
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $19: Context
+              ObjectExpression:
+                $1: Instance variable named contactsManager
+              Skip Bytes:
+                0x9
+              R-Value Property
+                charIsDead
+              ContextExpression:
+                $1: Instance variable named charIsDead
+              
+            
+          
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $0: Local variable named Temp_bool_Variable1
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xAF6:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Subtract_IntInt_ReturnValue1
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Subtract_IntInt)
+            $1: Instance variable named curClientCount
+          
+            $1D: literal int32_t 1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xB20:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $1: Instance variable named curClientCount
+        Expression:
+          $0: Local variable named CallFunc_Subtract_IntInt_ReturnValue1
+        
+      
+    
+  
+Label_0xB3B:
+    
+      $14: LetBool (Variable = Expression)
+        Variable:
+          $0: Local variable named Temp_bool_Variable
+        Expression:
+          $27: EX_True
+        
+      
+    
+  
+Label_0xB46:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x26
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Set)
+            $1: Instance variable named ClientsLost
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named Temp_bool_Variable
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xB82:
+    
+      $6: Jump to offset 0xC99
+    
+  
+Label_0xB87:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Array_LastIndex_ReturnValue1
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+            Skip Bytes:
+              0x13
+            R-Value Property
+              CallFunc_Array_LastIndex_ReturnValue1
+            ContextExpression:
+              $1C: Final Function (stack node KismetArrayLibrary::Array_LastIndex)
+                $0: Local variable named dealerEverAgainMsg
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0xBC2:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue1
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::RandomIntegerInRange)
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_LastIndex_ReturnValue1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xBEC:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named dealerEverAgainMsg
+          
+            $0: Local variable named CallFunc_RandomIntegerInRange_ReturnValue1
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xC27:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x25
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientsAvailable
+          
+            $0: Local variable named ClientId
+          
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xC62:
+    
+      $19: Context
+        ObjectExpression:
+          $1: Instance variable named mainComputerRef
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named addUserMessage
+            $0: Local variable named CallFunc_Array_Get_Item6
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $28: EX_False
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xC99:
+    
+      $4: Return expression
+        $B: EX_Nothing
+      
+    
+  
+Label_0xC9B:
+    
+      $53: EX_EndOfScript
+    
+  

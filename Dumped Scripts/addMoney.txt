@@ -1,0 +1,225 @@
+
+Label_0x0:
+  
+    $1B: Virtual Function named tryAddToInventory
+      $1: Instance variable named moneyBaseData
+    
+      $0: Local variable named Amount
+    
+      $0: Local variable named CallFunc_tryAddToInventory_Success
+    
+      $0: Local variable named CallFunc_tryAddToInventory_FailReason
+    
+      $16: EX_EndFunctionParms
+    
+  
+
+Label_0x32:
+  
+    $7: Jump to offset 0x12E if not expr:
+      $0: Local variable named CallFunc_tryAddToInventory_Success
+    
+  
+
+Label_0x40:
+  
+    $5F: Let Obj (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (0000017C86B94B70:WidgetBlueprintLibrary UMG.Default__WidgetBlueprintLibrary)
+          Skip Bytes:
+            0x15
+          R-Value Property
+            CallFunc_Create_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node WidgetBlueprintLibrary::Create)
+              $17: EX_Self
+            
+              $20: EX_ObjectConst (0000017C9A7FF580:WidgetBlueprintGeneratedClass newCashIncome.newCashIncome_C)
+            
+              $2A: EX_NoObject
+            
+              $16: EX_EndFunctionParms
+            
+          
+        
+      
+    
+  
+
+Label_0x75:
+  
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
+          $1: Instance variable named allEarnedMoney
+        
+          $0: Local variable named Amount
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0xA3:
+  
+    $F: Let (Variable = Expression)
+      Variable:
+        $1: Instance variable named allEarnedMoney
+      Expression:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+      
+    
+  
+
+Label_0xBE:
+  
+    $7: Jump to offset 0x13E if not expr:
+      $1: Instance variable named bankIntroduced
+    
+  
+
+Label_0xCC:
+  
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Skip Bytes:
+        0x17
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named Setup
+          $0: Local variable named Amount
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0xF9:
+  
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Skip Bytes:
+        0xF
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node UserWidget::AddToViewport)
+          $1D: literal int32_t 7
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x11E:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named Success
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x129:
+  
+    $6: Jump to offset 0x1A2
+  
+
+Label_0x12E:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named Success
+      Expression:
+        $28: EX_False
+      
+    
+  
+
+Label_0x139:
+  
+    $6: Jump to offset 0x1A2
+  
+
+Label_0x13E:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::GreaterEqual_IntInt)
+          $1: Instance variable named allEarnedMoney
+        
+          $1D: literal int32_t 600
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x160:
+  
+    $7: Jump to offset 0xCC if not expr:
+      $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue
+    
+  
+
+Label_0x16E:
+  
+    $19: Context
+      ObjectExpression:
+        $1: Instance variable named questManagerRef
+      Skip Bytes:
+        0xE
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named introduceBank
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x192:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $1: Instance variable named bankIntroduced
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x19D:
+  
+    $6: Jump to offset 0xCC
+  
+
+Label_0x1A2:
+  
+    $4: Return expression
+      $B: EX_Nothing
+    
+  
+
+Label_0x1A4:
+  
+    $53: EX_EndOfScript
+  

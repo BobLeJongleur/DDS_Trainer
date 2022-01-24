@@ -1,0 +1,550 @@
+
+Label_0x0:
+    
+      $F: Let (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Array_Length_ReturnValue
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+            Skip Bytes:
+              0x13
+            R-Value Property
+              CallFunc_Array_Length_ReturnValue
+            ContextExpression:
+              $1C: Final Function (stack node KismetArrayLibrary::Array_Length)
+                $1: Instance variable named clientStateQueueName
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0x3B:
+    
+      $14: LetBool (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
+        Expression:
+          $68: Call Math (stack node KismetMathLibrary::Greater_IntInt)
+            $0: Local variable named CallFunc_Array_Length_ReturnValue
+          
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x5D:
+    
+      $7: Jump to offset 0x493 if not expr:
+        $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
+      
+    
+  
+Label_0x6B:
+    
+      $31: set array
+        $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0x76:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C86B93880:GameplayStatics Engine.Default__GameplayStatics)
+        Skip Bytes:
+          0x1D
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+            $17: EX_Self
+          
+            $20: EX_ObjectConst (0000017C988A4C00:BlueprintGeneratedClass questManager.questManager_C)
+          
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xA9:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item4
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0xE0:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Array_Get_Item4
+        Skip Bytes:
+          0x17
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named playerAvailable
+            $0: Local variable named CallFunc_playerAvailable_isAvailable
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x10D:
+    
+      $7: Jump to offset 0x493 if not expr:
+        $0: Local variable named CallFunc_playerAvailable_isAvailable
+      
+    
+  
+Label_0x11B:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientStateQueueOD
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item3
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x152:
+    
+      $7: Jump to offset 0x390 if not expr:
+        $0: Local variable named CallFunc_Array_Get_Item3
+      
+    
+  
+Label_0x160:
+    
+      $5F: Let Obj (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Create_ReturnValue
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C86B94B70:WidgetBlueprintLibrary UMG.Default__WidgetBlueprintLibrary)
+            Skip Bytes:
+              0x15
+            R-Value Property
+              CallFunc_Create_ReturnValue
+            ContextExpression:
+              $1C: Final Function (stack node WidgetBlueprintLibrary::Create)
+                $17: EX_Self
+              
+                $20: EX_ObjectConst (0000017C9D942380:WidgetBlueprintGeneratedClass clientODPopup.clientODPopup_C)
+              
+                $2A: EX_NoObject
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0x195:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientStateQueueDrug
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x1CC:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientStateQueueName
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x203:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Create_ReturnValue
+        Skip Bytes:
+          0x20
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named Setup
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x239:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Create_ReturnValue
+        Skip Bytes:
+          0xF
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node UserWidget::AddToViewport)
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x25E:
+    
+      $31: set array
+        $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+      
+        $32: EX_EndArray
+      
+    
+  
+Label_0x269:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C86B93880:GameplayStatics Engine.Default__GameplayStatics)
+        Skip Bytes:
+          0x1D
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+            $17: EX_Self
+          
+            $20: EX_ObjectConst (0000017C988A4C00:BlueprintGeneratedClass questManager.questManager_C)
+          
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x29C:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x2D3:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Array_Get_Item
+        Skip Bytes:
+          0x18
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named newNarrationEvent
+            $1F: literal ansi string "??????????????????????????????????????????????????????????????????????????"
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x301:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x18
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Remove)
+            $1: Instance variable named clientStateQueueOD
+          
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x32F:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x18
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Remove)
+            $1: Instance variable named clientStateQueueDrug
+          
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x35D:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x18
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Remove)
+            $1: Instance variable named clientStateQueueName
+          
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x38B:
+    
+      $6: Jump to offset 0x493
+    
+  
+Label_0x390:
+    
+      $5F: Let Obj (Variable = Expression)
+        Variable:
+          $0: Local variable named CallFunc_Create_ReturnValue1
+        Expression:
+          $19: Context
+            ObjectExpression:
+              $20: EX_ObjectConst (0000017C86B94B70:WidgetBlueprintLibrary UMG.Default__WidgetBlueprintLibrary)
+            Skip Bytes:
+              0x15
+            R-Value Property
+              CallFunc_Create_ReturnValue1
+            ContextExpression:
+              $1C: Final Function (stack node WidgetBlueprintLibrary::Create)
+                $17: EX_Self
+              
+                $20: EX_ObjectConst (0000017C9825A500:WidgetBlueprintGeneratedClass clientAddictedPopup.clientAddictedPopup_C)
+              
+                $2A: EX_NoObject
+              
+                $16: EX_EndFunctionParms
+              
+            
+          
+        
+      
+    
+  
+Label_0x3C5:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientStateQueueDrug
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x3FC:
+    
+      $19: Context
+        ObjectExpression:
+          $20: EX_ObjectConst (0000017C85DBE560:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+        Skip Bytes:
+          0x21
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+            $1: Instance variable named clientStateQueueName
+          
+            $1D: literal int32_t 0
+          
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x433:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Create_ReturnValue1
+        Skip Bytes:
+          0x20
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1B: Virtual Function named Setup
+            $0: Local variable named CallFunc_Array_Get_Item2
+          
+            $0: Local variable named CallFunc_Array_Get_Item1
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x469:
+    
+      $19: Context
+        ObjectExpression:
+          $0: Local variable named CallFunc_Create_ReturnValue1
+        Skip Bytes:
+          0xF
+        R-Value Property
+          (null)
+        ContextExpression:
+          $1C: Final Function (stack node UserWidget::AddToViewport)
+            $1D: literal int32_t 0
+          
+            $16: EX_EndFunctionParms
+          
+        
+      
+    
+  
+Label_0x48E:
+    
+      $6: Jump to offset 0x301
+    
+  
+Label_0x493:
+    
+      $4: Return expression
+        $B: EX_Nothing
+      
+    
+  
+Label_0x495:
+    
+      $53: EX_EndOfScript
+    
+  
