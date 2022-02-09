@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,6 +73,23 @@ struct FEventReply UsaleAreaManageMarker_C::OnMouseButtonDown(const struct FGeom
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function saleAreaManageMarker.saleAreaManageMarker_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UsaleAreaManageMarker_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManageMarker.saleAreaManageMarker_C.Construct");
+
+	UsaleAreaManageMarker_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -160,23 +177,6 @@ void UsaleAreaManageMarker_C::updateProgressBar()
 	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManageMarker.saleAreaManageMarker_C.updateProgressBar");
 
 	UsaleAreaManageMarker_C_updateProgressBar_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function saleAreaManageMarker.saleAreaManageMarker_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UsaleAreaManageMarker_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManageMarker.saleAreaManageMarker_C.Construct");
-
-	UsaleAreaManageMarker_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

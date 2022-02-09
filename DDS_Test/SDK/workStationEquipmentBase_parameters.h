@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.RamaExpand
+struct AworkStationEquipmentBase_C_RamaExpand_Params
+{
+};
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID
+struct AworkStationEquipmentBase_C_GetHeldSubstanceID_Params
+{
+	bool                                               FinalProduct;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       OutSubstanceID;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.HandleRama
+struct AworkStationEquipmentBase_C_HandleRama_Params
+{
+};
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.packagePopup
 struct AworkStationEquipmentBase_C_packagePopup_Params
@@ -38,14 +55,18 @@ struct AworkStationEquipmentBase_C_tryAddSubstance_Params
 struct AworkStationEquipmentBase_C_verifySubstanceSource_Params
 {
 	bool                                               Proceed;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               NameDiffers;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FdrugData                                   SourceData;                                               // (Parm, OutParm)
+	struct FMixProportionsStruct                       SourceMixProportions;                                     // (Parm, OutParm)
 };
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.compareContent
 struct AworkStationEquipmentBase_C_compareContent_Params
 {
 	struct FdrugData                                   NewData;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FMixProportionsStruct                       MixProportions;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               TheSame;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               NameMissmatch;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.clearEquipment
@@ -119,7 +140,7 @@ struct AworkStationEquipmentBase_C_calcLineTracePoints_Params
 // Function workStationEquipmentBase.workStationEquipmentBase_C.checkCanFit
 struct AworkStationEquipmentBase_C_checkCanFit_Params
 {
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.UserConstructionScript
@@ -158,6 +179,23 @@ struct AworkStationEquipmentBase_C_selectMe_Params
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.dumpContent
 struct AworkStationEquipmentBase_C_dumpContent_Params
+{
+};
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AworkStationEquipmentBase_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.SubclassRamaLoad
+struct AworkStationEquipmentBase_C_SubclassRamaLoad_Params
+{
+};
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.GizmoSet
+struct AworkStationEquipmentBase_C_GizmoSet_Params
 {
 };
 

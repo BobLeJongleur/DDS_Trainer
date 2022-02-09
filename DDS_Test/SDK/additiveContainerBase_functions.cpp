@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -186,6 +186,46 @@ void AadditiveContainerBase_C::tryAddSubstance()
 	static auto fn = UObject::FindObject<UFunction>("Function additiveContainerBase.additiveContainerBase_C.tryAddSubstance");
 
 	AadditiveContainerBase_C_tryAddSubstance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function additiveContainerBase.additiveContainerBase_C.UserClickedConfirm
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 ActionID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AadditiveContainerBase_C::UserClickedConfirm(const struct FString& ActionID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function additiveContainerBase.additiveContainerBase_C.UserClickedConfirm");
+
+	AadditiveContainerBase_C_UserClickedConfirm_Params params;
+	params.ActionID = ActionID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function additiveContainerBase.additiveContainerBase_C.UserClickedCancel
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 ActionID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AadditiveContainerBase_C::UserClickedCancel(const struct FString& ActionID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function additiveContainerBase.additiveContainerBase_C.UserClickedCancel");
+
+	AadditiveContainerBase_C_UserClickedCancel_Params params;
+	params.ActionID = ActionID;
 
 	auto flags = fn->FunctionFlags;
 

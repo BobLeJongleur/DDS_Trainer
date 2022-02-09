@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,24 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function backpackSlotWidget.backpackSlotWidget_C.Get_curBackpackIcon_ToolTipWidget_1
+struct UbackpackSlotWidget_C_Get_curBackpackIcon_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function backpackSlotWidget.backpackSlotWidget_C.Get_curBackpackIcon_ToolTipText_1
+struct UbackpackSlotWidget_C_Get_curBackpackIcon_ToolTipText_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function backpackSlotWidget.backpackSlotWidget_C.extractItemContents
 struct UbackpackSlotWidget_C_extractItemContents_Params
 {
 	struct FString                                     Source;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                FromIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       ParentGuid;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AitemInventoryHolder_C*                      ItemHolderRef;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -27,7 +40,8 @@ struct UbackpackSlotWidget_C_setBackpack_Params
 {
 	class UDragDropOperation*                          Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               fromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       BackpackID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function backpackSlotWidget.backpackSlotWidget_C.OnDragDetected

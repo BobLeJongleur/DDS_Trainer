@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,9 +16,9 @@ namespace SDK
 // Function worldMapUI_Marker.worldMapUI_Marker_C.checkAreaUnlocked
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Unlocked                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           unlocked                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UworldMapUI_Marker_C::checkAreaUnlocked(bool* Unlocked)
+void UworldMapUI_Marker_C::checkAreaUnlocked(bool* unlocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function worldMapUI_Marker.worldMapUI_Marker_C.checkAreaUnlocked");
 
@@ -30,8 +30,8 @@ void UworldMapUI_Marker_C::checkAreaUnlocked(bool* Unlocked)
 
 	fn->FunctionFlags = flags;
 
-	if (Unlocked != nullptr)
-		*Unlocked = params.Unlocked;
+	if (unlocked != nullptr)
+		*unlocked = params.unlocked;
 }
 
 
@@ -99,6 +99,48 @@ bool UworldMapUI_Marker_C::Get_mainCanvas_bIsEnabled_1()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseEnter
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent           MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UworldMapUI_Marker_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseEnter");
+
+	UworldMapUI_Marker_C_OnMouseEnter_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FPointerEvent           MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UworldMapUI_Marker_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseLeave");
+
+	UworldMapUI_Marker_C_OnMouseLeave_Params params;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

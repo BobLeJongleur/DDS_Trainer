@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,6 +67,18 @@ struct AadditiveContainerBase_C_customiseLabel_Params
 // Function additiveContainerBase.additiveContainerBase_C.tryAddSubstance
 struct AadditiveContainerBase_C_tryAddSubstance_Params
 {
+};
+
+// Function additiveContainerBase.additiveContainerBase_C.UserClickedConfirm
+struct AadditiveContainerBase_C_UserClickedConfirm_Params
+{
+	struct FString                                     ActionID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function additiveContainerBase.additiveContainerBase_C.UserClickedCancel
+struct AadditiveContainerBase_C_UserClickedCancel_Params
+{
+	struct FString                                     ActionID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function additiveContainerBase.additiveContainerBase_C.ExecuteUbergraph_additiveContainerBase

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function workStationMixerBase.workStationMixerBase_C.ExpandMixerRama
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AworkStationMixerBase_C::ExpandMixerRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationMixerBase.workStationMixerBase_C.ExpandMixerRama");
+
+	AworkStationMixerBase_C_ExpandMixerRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function workStationMixerBase.workStationMixerBase_C.calcByStrengthening
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -70,8 +87,9 @@ void AworkStationMixerBase_C::calcPrecision(float paramIn, float* paramOut)
 // Parameters:
 // struct FdrugData               mixProduct                     (Parm, OutParm)
 // float                          mixProductAmount               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FMixProportionsStruct   OutMixProportions              (Parm, OutParm)
 
-void AworkStationMixerBase_C::processMix(struct FdrugData* mixProduct, float* mixProductAmount)
+void AworkStationMixerBase_C::processMix(struct FdrugData* mixProduct, float* mixProductAmount, struct FMixProportionsStruct* OutMixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationMixerBase.workStationMixerBase_C.processMix");
 
@@ -87,6 +105,8 @@ void AworkStationMixerBase_C::processMix(struct FdrugData* mixProduct, float* mi
 		*mixProduct = params.mixProduct;
 	if (mixProductAmount != nullptr)
 		*mixProductAmount = params.mixProductAmount;
+	if (OutMixProportions != nullptr)
+		*OutMixProportions = params.OutMixProportions;
 }
 
 
@@ -237,6 +257,23 @@ void AworkStationMixerBase_C::tryAddSubstance()
 	static auto fn = UObject::FindObject<UFunction>("Function workStationMixerBase.workStationMixerBase_C.tryAddSubstance");
 
 	AworkStationMixerBase_C_tryAddSubstance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function workStationMixerBase.workStationMixerBase_C.SubclassRamaLoad
+// (BlueprintCallable, BlueprintEvent)
+
+void AworkStationMixerBase_C::SubclassRamaLoad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationMixerBase.workStationMixerBase_C.SubclassRamaLoad");
+
+	AworkStationMixerBase_C_SubclassRamaLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
 

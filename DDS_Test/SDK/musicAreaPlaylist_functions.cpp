@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function musicAreaPlaylist.musicAreaPlaylist_C.GetNewTrack
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class USoundBase*              Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AmusicAreaPlaylist_C::GetNewTrack(class USoundBase** Output)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function musicAreaPlaylist.musicAreaPlaylist_C.GetNewTrack");
+
+	AmusicAreaPlaylist_C_GetNewTrack_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Output != nullptr)
+		*Output = params.Output;
+}
+
 
 // Function musicAreaPlaylist.musicAreaPlaylist_C.getMusicVolume
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.GetSubstanceName
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   OutName                        (Parm, OutParm)
+
+void UworkStationSubstanceAddWidget_C::GetSubstanceName(struct FText* OutName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.GetSubstanceName");
+
+	UworkStationSubstanceAddWidget_C_GetSubstanceName_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutName != nullptr)
+		*OutName = params.OutName;
+}
+
 
 // Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.setPackageIcon
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,6 +38,26 @@ void AenviroLightBase_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function enviroLightBase.enviroLightBase_C.UserConstructionScript");
 
 	AenviroLightBase_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function enviroLightBase.enviroLightBase_C.LongRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AenviroLightBase_C::LongRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function enviroLightBase.enviroLightBase_C.LongRadiusChanged");
+
+	AenviroLightBase_C_LongRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -174,6 +194,46 @@ void AenviroLightBase_C::retryGather()
 	static auto fn = UObject::FindObject<UFunction>("Function enviroLightBase.enviroLightBase_C.retryGather");
 
 	AenviroLightBase_C_retryGather_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function enviroLightBase.enviroLightBase_C.ShortRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AenviroLightBase_C::ShortRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function enviroLightBase.enviroLightBase_C.ShortRadiusChanged");
+
+	AenviroLightBase_C_ShortRadiusChanged_Params params;
+	params.InRadius = InRadius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function enviroLightBase.enviroLightBase_C.ToggleShadows
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           on                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AenviroLightBase_C::ToggleShadows(bool on)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function enviroLightBase.enviroLightBase_C.ToggleShadows");
+
+	AenviroLightBase_C_ToggleShadows_Params params;
+	params.on = on;
 
 	auto flags = fn->FunctionFlags;
 

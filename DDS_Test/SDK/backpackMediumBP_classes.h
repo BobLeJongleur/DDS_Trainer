@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass backpackMediumBP.backpackMediumBP_C
-// 0x0000 (0x057C - 0x057C)
+// 0x0000 (0x05F5 - 0x05F5)
 class AbackpackMediumBP_C : public AbackpackBase_C
 {
 public:

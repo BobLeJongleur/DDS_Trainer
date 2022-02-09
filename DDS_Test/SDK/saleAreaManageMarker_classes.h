@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass saleAreaManageMarker.saleAreaManageMarker_C
-// 0x0099 (0x02A1 - 0x0208)
+// 0x0100 (0x0308 - 0x0208)
 class UsaleAreaManageMarker_C : public UUserWidget
 {
 public:
@@ -39,6 +39,8 @@ public:
 	unsigned char                                      UnknownData01[0x6];                                       // 0x0292(0x0006) MISSED OFFSET
 	class AsaleAreaManager_C*                          saleAreaManager;                                          // 0x0298(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	bool                                               requirementsMet;                                          // 0x02A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
+	struct FSaleAreaData                               AreaMeta;                                                 // 0x02A8(0x0060) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -50,12 +52,12 @@ public:
 	void setParentReference();
 	class UWidget* Get_alertIcon_ToolTipWidget_1();
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void Construct();
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void BndEvt__btnUnlockArea_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void reInitiate();
 	void updateProgressBar();
-	void Construct();
 	void ExecuteUbergraph_saleAreaManageMarker(int EntryPoint);
 };
 

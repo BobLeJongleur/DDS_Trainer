@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,7 +63,7 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__playerComeTrigger_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void playInpatientQuote();
-	void playerSatDown();
+	void PlayerSatDown();
 	void animateMouth();
 	void stopAnimateMouth();
 	void eyeBlink();

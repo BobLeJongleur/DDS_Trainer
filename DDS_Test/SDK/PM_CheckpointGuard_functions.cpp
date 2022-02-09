@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,17 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PM_CheckpointGuard.PM_CheckpointGuard_C.checkBackpackForIllegals
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AbackpackBase_C*         Backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AbackpackBase_C*         backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APM_CheckpointGuard_C::checkBackpackForIllegals(class AbackpackBase_C* Backpack, bool* found)
+void APM_CheckpointGuard_C::checkBackpackForIllegals(class AbackpackBase_C* backpack, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.checkBackpackForIllegals");
 
 	APM_CheckpointGuard_C_checkBackpackForIllegals_Params params;
-	params.Backpack = Backpack;
+	params.backpack = backpack;
 
 	auto flags = fn->FunctionFlags;
 
@@ -32,8 +32,8 @@ void APM_CheckpointGuard_C::checkBackpackForIllegals(class AbackpackBase_C* Back
 
 	fn->FunctionFlags = flags;
 
-	if (found != nullptr)
-		*found = params.found;
+	if (Found != nullptr)
+		*Found = params.Found;
 }
 
 
@@ -231,6 +231,23 @@ void APM_CheckpointGuard_C::overrideSearch()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.overrideSearch");
 
 	APM_CheckpointGuard_C_overrideSearch_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_CheckpointGuard.PM_CheckpointGuard_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void APM_CheckpointGuard_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.ReceiveDestroyed");
+
+	APM_CheckpointGuard_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 

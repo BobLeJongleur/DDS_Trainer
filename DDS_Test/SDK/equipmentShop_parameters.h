@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function equipmentShop.equipmentShop_C.GetShopData
+struct AequipmentShop_C_GetShopData_Params
+{
+	struct FShopDataStruct                             ShopData;                                                 // (Parm, OutParm)
+};
 
 // Function equipmentShop.equipmentShop_C.removeItems
 struct AequipmentShop_C_removeItems_Params

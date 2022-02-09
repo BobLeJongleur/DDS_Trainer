@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,6 +33,11 @@ struct UsaleAreaManageMarker_C_OnMouseButtonDown_Params
 	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function saleAreaManageMarker.saleAreaManageMarker_C.Construct
+struct UsaleAreaManageMarker_C_Construct_Params
+{
+};
+
 // Function saleAreaManageMarker.saleAreaManageMarker_C.OnMouseEnter
 struct UsaleAreaManageMarker_C_OnMouseEnter_Params
 {
@@ -58,11 +63,6 @@ struct UsaleAreaManageMarker_C_reInitiate_Params
 
 // Function saleAreaManageMarker.saleAreaManageMarker_C.updateProgressBar
 struct UsaleAreaManageMarker_C_updateProgressBar_Params
-{
-};
-
-// Function saleAreaManageMarker.saleAreaManageMarker_C.Construct
-struct UsaleAreaManageMarker_C_Construct_Params
 {
 };
 

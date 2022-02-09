@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass smallElectricMixerBP.smallElectricMixerBP_C
-// 0x0000 (0x0794 - 0x0794)
+// 0x0000 (0x083C - 0x083C)
 class AsmallElectricMixerBP_C : public AworkStationMixerBase_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -239,6 +239,16 @@ enum class EHorizontalAlignment : uint8_t
 };
 
 
+// Enum SlateCore.ENavigationGenesis
+enum class ENavigationGenesis : uint8_t
+{
+	ENavigationGenesis__Keyboard   = 0,
+	ENavigationGenesis__Controller = 1,
+	ENavigationGenesis__User       = 2,
+	ENavigationGenesis__ENavigationGenesis_MAX = 3
+};
+
+
 // Enum SlateCore.ENavigationSource
 enum class ENavigationSource : uint8_t
 {
@@ -341,16 +351,6 @@ enum class EConsumeMouseWheel : uint8_t
 };
 
 
-// Enum SlateCore.ENavigationGenesis
-enum class ENavigationGenesis : uint8_t
-{
-	ENavigationGenesis__Keyboard   = 0,
-	ENavigationGenesis__Controller = 1,
-	ENavigationGenesis__User       = 2,
-	ENavigationGenesis__ENavigationGenesis_MAX = 3
-};
-
-
 
 //---------------------------------------------------------------------------
 // Script Structs
@@ -417,6 +417,13 @@ struct FPointerEvent : public FInputEvent
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0018(0x0058) MISSED OFFSET
 };
 
+// ScriptStruct SlateCore.CharacterEvent
+// 0x0008 (0x0020 - 0x0018)
+struct FCharacterEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct SlateCore.KeyEvent
 // 0x0020 (0x0038 - 0x0018)
 struct FKeyEvent : public FInputEvent
@@ -436,13 +443,6 @@ struct FNavigationEvent : public FInputEvent
 struct FAnalogInputEvent : public FKeyEvent
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct SlateCore.CharacterEvent
-// 0x0008 (0x0020 - 0x0018)
-struct FCharacterEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct SlateCore.FontOutlineSettings
@@ -712,6 +712,16 @@ struct FScrollBorderStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
 };
 
+// ScriptStruct SlateCore.ScrollBoxStyle
+// 0x0220 (0x0228 - 0x0008)
+struct FScrollBoxStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 TopShadowBrush;                                           // 0x0008(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 LeftShadowBrush;                                          // 0x0118(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 RightShadowBrush;                                         // 0x01A0(0x0088) (Edit, BlueprintVisible)
+};
+
 // ScriptStruct SlateCore.DockTabStyle
 // 0x06F8 (0x0700 - 0x0008)
 struct FDockTabStyle : public FSlateWidgetStyle
@@ -763,16 +773,6 @@ struct FHeaderRowStyle : public FSlateWidgetStyle
 	struct FSplitterStyle                              ColumnSplitterStyle;                                      // 0x09A8(0x0118) (Edit)
 	struct FSlateBrush                                 BackgroundBrush;                                          // 0x0AC0(0x0088) (Edit)
 	struct FSlateColor                                 ForegroundColor;                                          // 0x0B48(0x0028) (Edit)
-};
-
-// ScriptStruct SlateCore.ScrollBoxStyle
-// 0x0220 (0x0228 - 0x0008)
-struct FScrollBoxStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 TopShadowBrush;                                           // 0x0008(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 LeftShadowBrush;                                          // 0x0118(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 RightShadowBrush;                                         // 0x01A0(0x0088) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct SlateCore.InlineTextImageStyle

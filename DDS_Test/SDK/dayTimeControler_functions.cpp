@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -223,6 +223,43 @@ void AdayTimeControler_C::UserConstructionScript()
 }
 
 
+// Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AdayTimeControler_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay");
+
+	AdayTimeControler_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dayTimeControler.dayTimeControler_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AdayTimeControler_C::ReceiveTick(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.ReceiveTick");
+
+	AdayTimeControler_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function dayTimeControler.dayTimeControler_C.updateSun
 // (BlueprintCallable, BlueprintEvent)
 
@@ -304,43 +341,6 @@ void AdayTimeControler_C::AddTime(float Hours, float Minutes)
 	AdayTimeControler_C_AddTime_Params params;
 	params.Hours = Hours;
 	params.Minutes = Minutes;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function dayTimeControler.dayTimeControler_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AdayTimeControler_C::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.ReceiveTick");
-
-	AdayTimeControler_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AdayTimeControler_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay");
-
-	AdayTimeControler_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -452,6 +452,62 @@ void AdayTimeControler_C::retrySetDefaultTime()
 }
 
 
+// Function dayTimeControler.dayTimeControler_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AdayTimeControler_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AdayTimeControler_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dayTimeControler.dayTimeControler_C.SetupLanterns
+// (BlueprintCallable, BlueprintEvent)
+
+void AdayTimeControler_C::SetupLanterns()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.SetupLanterns");
+
+	AdayTimeControler_C_SetupLanterns_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dayTimeControler.dayTimeControler_C.DisplayDayID
+// (BlueprintCallable, BlueprintEvent)
+
+void AdayTimeControler_C::DisplayDayID()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.DisplayDayID");
+
+	AdayTimeControler_C_DisplayDayID_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function dayTimeControler.dayTimeControler_C.ExecuteUbergraph_dayTimeControler
 // (Final, HasDefaults)
 // Parameters:
@@ -463,6 +519,46 @@ void AdayTimeControler_C::ExecuteUbergraph_dayTimeControler(int EntryPoint)
 
 	AdayTimeControler_C_ExecuteUbergraph_dayTimeControler_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dayTimeControler.dayTimeControler_C.SwitchLanterns__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           TurnedOn                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AdayTimeControler_C::SwitchLanterns__DelegateSignature(bool TurnedOn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.SwitchLanterns__DelegateSignature");
+
+	AdayTimeControler_C_SwitchLanterns__DelegateSignature_Params params;
+	params.TurnedOn = TurnedOn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dayTimeControler.dayTimeControler_C.ClearTrashBins__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           TotalPurge                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AdayTimeControler_C::ClearTrashBins__DelegateSignature(bool TotalPurge)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dayTimeControler.dayTimeControler_C.ClearTrashBins__DelegateSignature");
+
+	AdayTimeControler_C_ClearTrashBins__DelegateSignature_Params params;
+	params.TotalPurge = TotalPurge;
 
 	auto flags = fn->FunctionFlags;
 

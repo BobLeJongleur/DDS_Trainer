@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,39 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_btnAddToOrder_bIsEnabled_1
+struct UshadyCommInterface_C_Get_btnAddToOrder_bIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.GetText_1
+struct UshadyCommInterface_C_GetText_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.PopulatePTCCombo
+struct UshadyCommInterface_C_PopulatePTCCombo_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.CloseArrestList
+struct UshadyCommInterface_C_CloseArrestList_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.OpenArrestList
+struct UshadyCommInterface_C_OpenArrestList_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_TextBlock_28_Text_1
+struct UshadyCommInterface_C_Get_TextBlock_28_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
 
 // Function shadyCommInterface.shadyCommInterface_C.determineSector
 struct UshadyCommInterface_C_determineSector_Params
@@ -26,7 +59,7 @@ struct UshadyCommInterface_C_toggleAreaDetails_Params
 {
 	bool                                               Show;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     AreaString;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	bool                                               Unlocked;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               unlocked;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.spawnSeedGuy
@@ -55,7 +88,7 @@ struct UshadyCommInterface_C_Get_txtStatusDeliveryTime_ToolTipWidget_1_Params
 // Function shadyCommInterface.shadyCommInterface_C.countAverageSatisfaction
 struct UshadyCommInterface_C_countAverageSatisfaction_Params
 {
-	TArray<bool>                                       ClientsLost;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<bool>                                       clientsLost;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<float>                                      ClientSatisfaction;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        ClientNumSales;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
@@ -150,7 +183,7 @@ struct UshadyCommInterface_C_findSalePointByAreaID_Params
 struct UshadyCommInterface_C_spawnClientOnMap_Params
 {
 	class AsalesManager_C*                             SaleManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                OrderId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                orderID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.checkOptionAvailability
@@ -394,6 +427,43 @@ struct UshadyCommInterface_C_QueueDealerResponse_Params
 
 // Function shadyCommInterface.shadyCommInterface_C.randomWobble
 struct UshadyCommInterface_C_randomWobble_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.OpenBuyPTC
+struct UshadyCommInterface_C_OpenBuyPTC_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature_Params
+{
+	struct FString                                     SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.Destruct
+struct UshadyCommInterface_C_Destruct_Params
 {
 };
 

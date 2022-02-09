@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,6 +61,16 @@ struct UsaveLoadWidget_C_BndEvt__btnClose_K2Node_ComponentBoundEvent_2_OnButtonC
 
 // Function saveLoadWidget.saveLoadWidget_C.Destruct
 struct UsaveLoadWidget_C_Destruct_Params
+{
+};
+
+// Function saveLoadWidget.saveLoadWidget_C.BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+struct UsaveLoadWidget_C_BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function saveLoadWidget.saveLoadWidget_C.RefreshList
+struct UsaveLoadWidget_C_RefreshList_Params
 {
 };
 

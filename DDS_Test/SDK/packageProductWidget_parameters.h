@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,7 +61,7 @@ struct UpackageProductWidget_C_checkButtonActivity_Params
 // Function packageProductWidget.packageProductWidget_C.checkCanFitInventory
 struct UpackageProductWidget_C_checkCanFitInventory_Params
 {
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function packageProductWidget.packageProductWidget_C.Construct

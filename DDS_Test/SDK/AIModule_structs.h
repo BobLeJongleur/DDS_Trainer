@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,15 +35,6 @@ enum class EEnvQueryStatus : uint8_t
 	EEnvQueryStatus__OwnerLost     = 4,
 	EEnvQueryStatus__MissingParam  = 5,
 	EEnvQueryStatus__EEnvQueryStatus_MAX = 6
-};
-
-
-// Enum AIModule.EAISenseNotifyType
-enum class EAISenseNotifyType : uint8_t
-{
-	EAISenseNotifyType__OnEveryPerception = 0,
-	EAISenseNotifyType__OnPerceptionChange = 1,
-	EAISenseNotifyType__EAISenseNotifyType_MAX = 2
 };
 
 
@@ -96,16 +87,12 @@ enum class EAIRequestPriority : uint8_t
 };
 
 
-// Enum AIModule.EPawnActionEventType
-enum class EPawnActionEventType : uint8_t
+// Enum AIModule.EAISenseNotifyType
+enum class EAISenseNotifyType : uint8_t
 {
-	EPawnActionEventType__Invalid  = 0,
-	EPawnActionEventType__FailedToStart = 1,
-	EPawnActionEventType__InstantAbort = 2,
-	EPawnActionEventType__FinishedAborting = 3,
-	EPawnActionEventType__FinishedExecution = 4,
-	EPawnActionEventType__Push     = 5,
-	EPawnActionEventType__EPawnActionEventType_MAX = 6
+	EAISenseNotifyType__OnEveryPerception = 0,
+	EAISenseNotifyType__OnPerceptionChange = 1,
+	EAISenseNotifyType__EAISenseNotifyType_MAX = 2
 };
 
 
@@ -153,14 +140,16 @@ enum class EAIOptionFlag : uint8_t
 };
 
 
-// Enum AIModule.EBTFlowAbortMode
-enum class EBTFlowAbortMode : uint8_t
+// Enum AIModule.EPawnActionEventType
+enum class EPawnActionEventType : uint8_t
 {
-	EBTFlowAbortMode__None         = 0,
-	EBTFlowAbortMode__LowerPriority = 1,
-	EBTFlowAbortMode__Self         = 2,
-	EBTFlowAbortMode__Both         = 3,
-	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 4
+	EPawnActionEventType__Invalid  = 0,
+	EPawnActionEventType__FailedToStart = 1,
+	EPawnActionEventType__InstantAbort = 2,
+	EPawnActionEventType__FinishedAborting = 3,
+	EPawnActionEventType__FinishedExecution = 4,
+	EPawnActionEventType__Push     = 5,
+	EPawnActionEventType__EPawnActionEventType_MAX = 6
 };
 
 
@@ -186,16 +175,14 @@ enum class ETextKeyOperation : uint8_t
 };
 
 
-// Enum AIModule.EArithmeticKeyOperation
-enum class EArithmeticKeyOperation : uint8_t
+// Enum AIModule.EBTFlowAbortMode
+enum class EBTFlowAbortMode : uint8_t
 {
-	EArithmeticKeyOperation__Equal = 0,
-	EArithmeticKeyOperation__NotEqual = 1,
-	EArithmeticKeyOperation__Less  = 2,
-	EArithmeticKeyOperation__LessOrEqual = 3,
-	EArithmeticKeyOperation__Greater = 4,
-	EArithmeticKeyOperation__GreaterOrEqual = 5,
-	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
+	EBTFlowAbortMode__None         = 0,
+	EBTFlowAbortMode__LowerPriority = 1,
+	EBTFlowAbortMode__Self         = 2,
+	EBTFlowAbortMode__Both         = 3,
+	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 4
 };
 
 
@@ -238,6 +225,19 @@ enum class EBTChildIndex : uint8_t
 };
 
 
+// Enum AIModule.EArithmeticKeyOperation
+enum class EArithmeticKeyOperation : uint8_t
+{
+	EArithmeticKeyOperation__Equal = 0,
+	EArithmeticKeyOperation__NotEqual = 1,
+	EArithmeticKeyOperation__Less  = 2,
+	EArithmeticKeyOperation__LessOrEqual = 3,
+	EArithmeticKeyOperation__Greater = 4,
+	EArithmeticKeyOperation__GreaterOrEqual = 5,
+	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
+};
+
+
 // Enum AIModule.EBlackBoardEntryComparison
 enum class EBlackBoardEntryComparison : uint8_t
 {
@@ -266,12 +266,12 @@ enum class EPointOnCircleSpacingMethod : uint8_t
 };
 
 
-// Enum AIModule.EEQSNormalizationType
-enum class EEQSNormalizationType : uint8_t
+// Enum AIModule.EBTBlackboardRestart
+enum class EBTBlackboardRestart : uint8_t
 {
-	EEQSNormalizationType__Absolute = 0,
-	EEQSNormalizationType__RelativeToScores = 1,
-	EEQSNormalizationType__EEQSNormalizationType_MAX = 2
+	EBTBlackboardRestart__ValueChange = 0,
+	EBTBlackboardRestart__ResultChange = 1,
+	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
 };
 
 
@@ -286,12 +286,12 @@ enum class EEnvTestDistance : uint8_t
 };
 
 
-// Enum AIModule.EBTBlackboardRestart
-enum class EBTBlackboardRestart : uint8_t
+// Enum AIModule.EEnvTestDot
+enum class EEnvTestDot : uint8_t
 {
-	EBTBlackboardRestart__ValueChange = 0,
-	EBTBlackboardRestart__ResultChange = 1,
-	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
+	EEnvTestDot__Dot3D             = 0,
+	EEnvTestDot__Dot2D             = 1,
+	EEnvTestDot__EEnvTestDot_MAX   = 2
 };
 
 
@@ -315,12 +315,12 @@ enum class EEnvQueryTestClamping : uint8_t
 };
 
 
-// Enum AIModule.EEnvDirection
-enum class EEnvDirection : uint8_t
+// Enum AIModule.EEQSNormalizationType
+enum class EEQSNormalizationType : uint8_t
 {
-	EEnvDirection__TwoPoints       = 0,
-	EEnvDirection__Rotation        = 1,
-	EEnvDirection__EEnvDirection_MAX = 2
+	EEQSNormalizationType__Absolute = 0,
+	EEQSNormalizationType__RelativeToScores = 1,
+	EEQSNormalizationType__EEQSNormalizationType_MAX = 2
 };
 
 
@@ -387,12 +387,13 @@ enum class EEnvQueryRunMode : uint8_t
 };
 
 
-// Enum AIModule.EEnvTestDot
-enum class EEnvTestDot : uint8_t
+// Enum AIModule.EEnvTestScoreOperator
+enum class EEnvTestScoreOperator : uint8_t
 {
-	EEnvTestDot__Dot3D             = 0,
-	EEnvTestDot__Dot2D             = 1,
-	EEnvTestDot__EEnvTestDot_MAX   = 2
+	EEnvTestScoreOperator__AverageScore = 0,
+	EEnvTestScoreOperator__MinScore = 1,
+	EEnvTestScoreOperator__MaxScore = 2,
+	EEnvTestScoreOperator__EEnvTestScoreOperator_MAX = 3
 };
 
 
@@ -451,13 +452,12 @@ enum class EEnvTestFilterType : uint8_t
 };
 
 
-// Enum AIModule.EEnvTestPurpose
-enum class EEnvTestPurpose : uint8_t
+// Enum AIModule.EEnvDirection
+enum class EEnvDirection : uint8_t
 {
-	EEnvTestPurpose__Filter        = 0,
-	EEnvTestPurpose__Score         = 1,
-	EEnvTestPurpose__FilterAndScore = 2,
-	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
+	EEnvDirection__TwoPoints       = 0,
+	EEnvDirection__Rotation        = 1,
+	EEnvDirection__EEnvDirection_MAX = 2
 };
 
 
@@ -532,22 +532,22 @@ enum class EPawnSubActionTriggeringPolicy : uint8_t
 };
 
 
+// Enum AIModule.EEnvTestPurpose
+enum class EEnvTestPurpose : uint8_t
+{
+	EEnvTestPurpose__Filter        = 0,
+	EEnvTestPurpose__Score         = 1,
+	EEnvTestPurpose__FilterAndScore = 2,
+	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
+};
+
+
 // Enum AIModule.EPawnActionMoveMode
 enum class EPawnActionMoveMode : uint8_t
 {
 	EPawnActionMoveMode__UsePathfinding = 0,
 	EPawnActionMoveMode__StraightLine = 1,
 	EPawnActionMoveMode__EPawnActionMoveMode_MAX = 2
-};
-
-
-// Enum AIModule.EEnvTestScoreOperator
-enum class EEnvTestScoreOperator : uint8_t
-{
-	EEnvTestScoreOperator__AverageScore = 0,
-	EEnvTestScoreOperator__MinScore = 1,
-	EEnvTestScoreOperator__MaxScore = 2,
-	EEnvTestScoreOperator__EEnvTestScoreOperator_MAX = 3
 };
 
 
@@ -847,14 +847,6 @@ struct FEnvDirection
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct AIModule.EnvQueryInstanceCache
-// 0x0178
-struct FEnvQueryInstanceCache
-{
-	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x170];                                     // 0x0008(0x0170) MISSED OFFSET
-};
-
 // ScriptStruct AIModule.EnvOverlapData
 // 0x0020
 struct FEnvOverlapData
@@ -869,6 +861,14 @@ struct FEnvOverlapData
 	unsigned char                                      bOnlyBlockingHits : 1;                                    // 0x001C(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bOverlapComplex : 1;                                      // 0x001C(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct AIModule.EnvQueryInstanceCache
+// 0x0178
+struct FEnvQueryInstanceCache
+{
+	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x170];                                     // 0x0008(0x0170) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.PawnActionStack

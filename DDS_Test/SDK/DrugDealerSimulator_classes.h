@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -2424,7 +2424,7 @@ public:
 class UWTACFactorsComponent : public UActorComponent
 {
 public:
-	TArray<float>                                      factorFloats;                                             // 0x00F0(0x0010) (ZeroConstructor)
+	TArray<float>                                      factorFloats;                                             // 0x00F0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	int                                                saveT1;                                                   // 0x0100(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                serializedFloatsObjects;                                  // 0x0104(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0108(0x0020) MISSED OFFSET

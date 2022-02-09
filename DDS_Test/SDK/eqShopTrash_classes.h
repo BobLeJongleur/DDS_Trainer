@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass eqShopTrash.eqShopTrash_C
-// 0x0000 (0x03D9 - 0x03D9)
+// 0x0000 (0x03E9 - 0x03E9)
 class AeqShopTrash_C : public AequipmentShop_C
 {
 public:

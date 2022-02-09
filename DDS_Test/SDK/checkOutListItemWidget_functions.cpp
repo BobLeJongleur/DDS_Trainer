@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,18 +16,18 @@ namespace SDK
 // Function checkOutListItemWidget.checkOutListItemWidget_C.Setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FappartmentEquipment    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UEquipmentShopInterfaceWidget_C* parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UcheckOutListItemWidget_C::Setup(const struct FappartmentEquipment& Data, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* parentRef)
+void UcheckOutListItemWidget_C::Setup(const struct FName& NewParam, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* parentRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function checkOutListItemWidget.checkOutListItemWidget_C.Setup");
 
 	UcheckOutListItemWidget_C_Setup_Params params;
-	params.Data = Data;
+	params.NewParam = NewParam;
 	params.Price = Price;
 	params.Quantity = Quantity;
 	params.Index = Index;

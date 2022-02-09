@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,9 +47,10 @@ struct AdeadDropBase_C_closeEventScript_Params
 {
 };
 
-// Function deadDropBase.deadDropBase_C.testPlayerDistance
-struct AdeadDropBase_C_testPlayerDistance_Params
+// Function deadDropBase.deadDropBase_C.LongRadiusChanged
+struct AdeadDropBase_C_LongRadiusChanged_Params
 {
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function deadDropBase.deadDropBase_C.testItemSteal
@@ -65,6 +66,12 @@ struct AdeadDropBase_C_clearContainer_Params
 // Function deadDropBase.deadDropBase_C.openEventScript
 struct AdeadDropBase_C_openEventScript_Params
 {
+};
+
+// Function deadDropBase.deadDropBase_C.ShortRadiusChanged
+struct AdeadDropBase_C_ShortRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function deadDropBase.deadDropBase_C.ExecuteUbergraph_deadDropBase

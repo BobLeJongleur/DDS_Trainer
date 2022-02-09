@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.GetSubstanceName
+struct UworkStationSubstanceAddWidget_C_GetSubstanceName_Params
+{
+	struct FText                                       OutName;                                                  // (Parm, OutParm)
+};
 
 // Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.setPackageIcon
 struct UworkStationSubstanceAddWidget_C_setPackageIcon_Params

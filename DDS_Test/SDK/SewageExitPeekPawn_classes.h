@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ public:
 	class UStaticMeshComponent*                        tunnelExitTopWell;                                        // 0x03A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UArrowComponent*                             Arrow;                                                    // 0x03B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x03B8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AplayerCharacterBP_C*                        playerRef;                                                // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AsewageExit_C*                               ExitLadderRef;                                            // 0x03C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ready;                                                    // 0x03D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x03D1(0x0003) MISSED OFFSET
@@ -49,7 +49,7 @@ public:
 	void InpActEvt_SpaceBar_K2Node_InputKeyEvent_1(const struct FKey& Key);
 	void ReceiveTick(float DeltaSeconds);
 	void InpAxisEvt_LookSideways_K2Node_InputAxisEvent_1(float AxisValue);
-	void Setup(class AsewageExit_C* ExitLadderRef, class AplayerCharacterBP_C* playerRef);
+	void Setup(class AsewageExit_C* ExitLadderRef, class AplayerCharacterBP_C* PlayerRef);
 	void ReceivePossessed(class AController* NewController);
 	void ReceiveUnpossessed(class AController* OldController);
 	void ExecuteUbergraph_SewageExitPeekPawn(int EntryPoint);

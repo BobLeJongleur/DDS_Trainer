@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CountClassNum
+struct AworldConsoleCommands_C_CountClassNum_Params
+{
+};
 
 // Function worldConsoleCommands.worldConsoleCommands_C.UserConstructionScript
 struct AworldConsoleCommands_C_UserConstructionScript_Params
@@ -174,6 +179,70 @@ struct AworldConsoleCommands_C_KillAllPolicemen_Params
 
 // Function worldConsoleCommands.worldConsoleCommands_C.TeleportSectorC
 struct AworldConsoleCommands_C_TeleportSectorC_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestDrugDemand
+struct AworldConsoleCommands_C_TestDrugDemand_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderMoney
+struct AworldConsoleCommands_C_AddLaunderMoney_Params
+{
+	float                                              Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderedMoney
+struct AworldConsoleCommands_C_AddLaunderedMoney_Params
+{
+	float                                              Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.SetExpoLevel
+struct AworldConsoleCommands_C_SetExpoLevel_Params
+{
+	float                                              expoFactorLevel;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.addInventoryItem
+struct AworldConsoleCommands_C_addInventoryItem_Params
+{
+	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestGetItem
+struct AworldConsoleCommands_C_TestGetItem_Params
+{
+	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestDealerExp
+struct AworldConsoleCommands_C_TestDealerExp_Params
+{
+	float                                              Exp;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoEvent
+struct AworldConsoleCommands_C_RegisterExpoEvent_Params
+{
+	struct FName                                       EventID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoSale
+struct AworldConsoleCommands_C_RegisterExpoSale_Params
+{
+	int                                                AmountGrams;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CountKurwaEverything
+struct AworldConsoleCommands_C_CountKurwaEverything_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.WyjebChuj
+struct AworldConsoleCommands_C_WyjebChuj_Params
 {
 };
 

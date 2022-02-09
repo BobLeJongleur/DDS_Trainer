@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass playerCharacterPC.playerCharacterPC_C
-// 0x0008 (0x0680 - 0x0678)
+// 0x0018 (0x0690 - 0x0678)
 class AplayerCharacterPC_C : public APlayerController
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0678(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UUserWidget*>                         FrontWidgets;                                             // 0x0680(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,9 @@ public:
 	}
 
 
+	void HasFrontWidgets(bool* HasWidgets);
+	void CloseFrontWidget();
+	void RegisterFrontWidget(class UUserWidget* NewItem);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_playerCharacterPC(int EntryPoint);

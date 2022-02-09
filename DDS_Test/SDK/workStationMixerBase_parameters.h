@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function workStationMixerBase.workStationMixerBase_C.ExpandMixerRama
+struct AworkStationMixerBase_C_ExpandMixerRama_Params
+{
+};
 
 // Function workStationMixerBase.workStationMixerBase_C.calcByStrengthening
 struct AworkStationMixerBase_C_calcByStrengthening_Params
@@ -35,6 +40,7 @@ struct AworkStationMixerBase_C_processMix_Params
 {
 	struct FdrugData                                   mixProduct;                                               // (Parm, OutParm)
 	float                                              mixProductAmount;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FMixProportionsStruct                       OutMixProportions;                                        // (Parm, OutParm)
 };
 
 // Function workStationMixerBase.workStationMixerBase_C.showAddPopup
@@ -80,6 +86,11 @@ struct AworkStationMixerBase_C_displayApllyMix_Params
 
 // Function workStationMixerBase.workStationMixerBase_C.tryAddSubstance
 struct AworkStationMixerBase_C_tryAddSubstance_Params
+{
+};
+
+// Function workStationMixerBase.workStationMixerBase_C.SubclassRamaLoad
+struct AworkStationMixerBase_C_SubclassRamaLoad_Params
 {
 };
 

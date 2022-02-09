@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,38 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function workStationUI.workStationUI_C.getSubstanceName
+// Function workStationUI.workStationUI_C.Get_tabWorkStation_ColorAndOpacity_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateColor UworkStationUI_C::Get_tabWorkStation_ColorAndOpacity_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationUI.workStationUI_C.Get_tabWorkStation_ColorAndOpacity_1");
+
+	UworkStationUI_C_Get_tabWorkStation_ColorAndOpacity_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function workStationUI.workStationUI_C.GetSubstanceName
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AworkStationEquipmentBase_C* Eq                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (Parm, OutParm)
 
-void UworkStationUI_C::getSubstanceName(class AworkStationEquipmentBase_C* Eq, struct FText* Name)
+void UworkStationUI_C::GetSubstanceName(class AworkStationEquipmentBase_C* Eq, struct FText* Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function workStationUI.workStationUI_C.getSubstanceName");
+	static auto fn = UObject::FindObject<UFunction>("Function workStationUI.workStationUI_C.GetSubstanceName");
 
-	UworkStationUI_C_getSubstanceName_Params params;
+	UworkStationUI_C_GetSubstanceName_Params params;
 	params.Eq = Eq;
 
 	auto flags = fn->FunctionFlags;

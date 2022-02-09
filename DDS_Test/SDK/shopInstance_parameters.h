@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,12 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function shopInstance.shopInstance_C.GetShopMeta
+struct AshopInstance_C_GetShopMeta_Params
+{
+	struct FShopDataStruct                             ShopData;                                                 // (Parm, OutParm)
+};
+
 // Function shopInstance.shopInstance_C.updateShopClassDefaults
 struct AshopInstance_C_updateShopClassDefaults_Params
 {
@@ -24,8 +30,8 @@ struct AshopInstance_C_UserConstructionScript_Params
 {
 };
 
-// Function shopInstance.shopInstance_C.ReceiveBeginPlay
-struct AshopInstance_C_ReceiveBeginPlay_Params
+// Function shopInstance.shopInstance_C.checkShopResupply
+struct AshopInstance_C_checkShopResupply_Params
 {
 };
 
@@ -34,8 +40,8 @@ struct AshopInstance_C_resupplyShop_Params
 {
 };
 
-// Function shopInstance.shopInstance_C.checkShopResupply
-struct AshopInstance_C_checkShopResupply_Params
+// Function shopInstance.shopInstance_C.ReceiveBeginPlay
+struct AshopInstance_C_ReceiveBeginPlay_Params
 {
 };
 

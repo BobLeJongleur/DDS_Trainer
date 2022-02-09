@@ -21,8 +21,8 @@ uintptr_t InitSdk(const std::string& moduleName, const size_t gObjectsOffset, co
 
 	//uintptr_t* firstChunk = reinterpret_cast<uintptr_t*>(mBaseAddress + gObjectsOffset);
 	//UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(*firstChunk);
-	UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(mBaseAddress + gObjectsOffset);
-	FName::GNames = reinterpret_cast<SDK::TNameEntryArray*>(mBaseAddress + gNamesOffset);
+	UObject::GObjects = reinterpret_cast<FUObjectArray*>(mBaseAddress + gObjectsOffset);
+	FName::GNames = reinterpret_cast<TNameEntryArray*>(mBaseAddress + gNamesOffset);
 	return mBaseAddress;
 }
 //---------------------------------------------------------------------------

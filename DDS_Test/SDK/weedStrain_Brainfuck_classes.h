@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass weedStrain_Brainfuck.weedStrain_Brainfuck_C
-// 0x0000 (0x0564 - 0x0564)
+// 0x0000 (0x05A0 - 0x05A0)
 class AweedStrain_Brainfuck_C : public AweedPlantBP_C
 {
 public:

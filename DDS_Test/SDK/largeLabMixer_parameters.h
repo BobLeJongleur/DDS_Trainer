@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,6 +28,11 @@ struct AlargeLabMixer_C_ReceiveBeginPlay_Params
 struct AlargeLabMixer_C_ReceiveTick_Params
 {
 	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function largeLabMixer.largeLabMixer_C.GizmoSet
+struct AlargeLabMixer_C_GizmoSet_Params
+{
 };
 
 // Function largeLabMixer.largeLabMixer_C.ExecuteUbergraph_largeLabMixer

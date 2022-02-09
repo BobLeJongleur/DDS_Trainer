@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -506,14 +506,6 @@ struct UAITask_MoveTo_AIMoveTo_Params
 	class UAITask_MoveTo*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function AIModule.AITask_RunEQS.RunEQS
-struct UAITask_RunEQS_RunEQS_Params
-{
-	class AAIController*                               Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class UEnvQuery*                                   QueryTemplate;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAITask_RunEQS*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function AIModule.BrainComponent.StopLogic
 struct UBrainComponent_StopLogic_Params
 {
@@ -537,26 +529,12 @@ struct UBrainComponent_IsPaused_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
-struct UBehaviorTreeComponent_SetDynamicSubtree_Params
+// Function AIModule.AITask_RunEQS.RunEQS
+struct UAITask_RunEQS_RunEQS_Params
 {
-	struct FGameplayTag                                InjectTag;                                                // (Parm)
-	class UBehaviorTree*                               BehaviorAsset;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
-struct UBehaviorTreeComponent_GetTagCooldownEndTime_Params
-{
-	struct FGameplayTag                                CooldownTag;                                              // (Parm)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
-struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
-{
-	struct FGameplayTag                                CooldownTag;                                              // (Parm)
-	float                                              CooldownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bAddToExistingDuration;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AAIController*                               Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UEnvQuery*                                   QueryTemplate;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAITask_RunEQS*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.SetValueAsVector
@@ -822,6 +800,28 @@ struct UBTDecorator_BlueprintBase_IsDecoratorObserverActive_Params
 struct UBTDecorator_BlueprintBase_IsDecoratorExecutionActive_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
+struct UBehaviorTreeComponent_SetDynamicSubtree_Params
+{
+	struct FGameplayTag                                InjectTag;                                                // (Parm)
+	class UBehaviorTree*                               BehaviorAsset;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
+struct UBehaviorTreeComponent_GetTagCooldownEndTime_Params
+{
+	struct FGameplayTag                                CooldownTag;                                              // (Parm)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
+struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
+{
+	struct FGameplayTag                                CooldownTag;                                              // (Parm)
+	float                                              CooldownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bAddToExistingDuration;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.StopUsingExternalEvent

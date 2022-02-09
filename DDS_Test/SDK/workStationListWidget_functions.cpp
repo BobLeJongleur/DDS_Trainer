@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,21 +17,31 @@ namespace SDK
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FinventoryItemStruct    InventoryData                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   EqID                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   DrugID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FGuid                   InventoryGuid                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FappartmentEquipment    eqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& InventoryData, int Quantity, bool equipment, const struct FappartmentEquipment& eqData, bool selected)
+void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationListWidget.workStationListWidget_C.Setup");
 
 	UworkStationListWidget_C_Setup_Params params;
 	params.InventoryData = InventoryData;
+	params.EqID = EqID;
+	params.DrugID = DrugID;
+	params.InventoryGuid = InventoryGuid;
 	params.Quantity = Quantity;
+	params.Amount = Amount;
 	params.equipment = equipment;
 	params.eqData = eqData;
 	params.selected = selected;
+	params.MixProportions = MixProportions;
 
 	auto flags = fn->FunctionFlags;
 

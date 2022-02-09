@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,14 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function workStationUI.workStationUI_C.getSubstanceName
-struct UworkStationUI_C_getSubstanceName_Params
+// Function workStationUI.workStationUI_C.Get_tabWorkStation_ColorAndOpacity_1
+struct UworkStationUI_C_Get_tabWorkStation_ColorAndOpacity_1_Params
+{
+	struct FSlateColor                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function workStationUI.workStationUI_C.GetSubstanceName
+struct UworkStationUI_C_GetSubstanceName_Params
 {
 	class AworkStationEquipmentBase_C*                 Eq;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Name;                                                     // (Parm, OutParm)

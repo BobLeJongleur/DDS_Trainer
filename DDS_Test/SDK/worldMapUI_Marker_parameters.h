@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function worldMapUI_Marker.worldMapUI_Marker_C.checkAreaUnlocked
 struct UworldMapUI_Marker_C_checkAreaUnlocked_Params
 {
-	bool                                               Unlocked;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               unlocked;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseButtonDoubleClick
@@ -38,6 +38,19 @@ struct UworldMapUI_Marker_C_Get_mainCanvas_ToolTipWidget_1_Params
 struct UworldMapUI_Marker_C_Get_mainCanvas_bIsEnabled_1_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseEnter
+struct UworldMapUI_Marker_C_OnMouseEnter_Params
+{
+	struct FGeometry                                   MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent                               MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseLeave
+struct UworldMapUI_Marker_C_OnMouseLeave_Params
+{
+	struct FPointerEvent                               MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
 // Function worldMapUI_Marker.worldMapUI_Marker_C.Setup

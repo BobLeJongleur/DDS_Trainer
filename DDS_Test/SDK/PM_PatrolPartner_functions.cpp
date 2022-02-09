@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -92,6 +92,28 @@ void APM_PatrolPartner_C::SyncWithPartner()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolPartner.PM_PatrolPartner_C.SyncWithPartner");
 
 	APM_PatrolPartner_C_SyncWithPartner_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolPartner.PM_PatrolPartner_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void APM_PatrolPartner_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolPartner.PM_PatrolPartner_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	APM_PatrolPartner_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

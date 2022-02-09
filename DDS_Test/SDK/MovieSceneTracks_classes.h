@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -181,6 +181,21 @@ public:
 };
 
 
+// Class MovieSceneTracks.MovieScene3DTransformTrack
+// 0x0000 (0x0080 - 0x0080)
+class UMovieScene3DTransformTrack : public UMovieScenePropertyTrack
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DTransformTrack");
+		return ptr;
+	}
+
+};
+
+
 // Class MovieSceneTracks.MovieSceneActorReferenceSection
 // 0x0120 (0x0200 - 0x00E0)
 class UMovieSceneActorReferenceSection : public UMovieSceneSection
@@ -243,21 +258,6 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieScene3DTransformTrack
-// 0x0000 (0x0080 - 0x0080)
-class UMovieScene3DTransformTrack : public UMovieScenePropertyTrack
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DTransformTrack");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieSceneTracks.MovieSceneAudioTrack
 // 0x0010 (0x0068 - 0x0058)
 class UMovieSceneAudioTrack : public UMovieSceneNameableTrack
@@ -268,6 +268,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneAudioTrack");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieSceneTracks.MovieSceneBoolSection
+// 0x0098 (0x0178 - 0x00E0)
+class UMovieSceneBoolSection : public UMovieSceneSection
+{
+public:
+	bool                                               DefaultValue;                                             // 0x00E0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
+	struct FMovieSceneBoolChannel                      BoolCurve;                                                // 0x00E8(0x0090)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneBoolSection");
 		return ptr;
 	}
 
@@ -321,18 +339,23 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieSceneBoolSection
-// 0x0098 (0x0178 - 0x00E0)
-class UMovieSceneBoolSection : public UMovieSceneSection
+// Class MovieSceneTracks.MovieSceneCameraAnimSection
+// 0x0040 (0x0120 - 0x00E0)
+class UMovieSceneCameraAnimSection : public UMovieSceneSection
 {
 public:
-	bool                                               DefaultValue;                                             // 0x00E0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	struct FMovieSceneBoolChannel                      BoolCurve;                                                // 0x00E8(0x0090)
+	struct FMovieSceneCameraAnimSectionData            AnimData;                                                 // 0x00E0(0x0020) (Edit)
+	class UCameraAnim*                                 CameraAnim;                                               // 0x0100(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              PlayRate;                                                 // 0x0108(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              PlayScale;                                                // 0x010C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              BlendInTime;                                              // 0x0110(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              BlendOutTime;                                             // 0x0114(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	bool                                               bLooping;                                                 // 0x0118(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneBoolSection");
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraAnimSection");
 		return ptr;
 	}
 
@@ -494,23 +517,16 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieSceneCameraAnimSection
-// 0x0040 (0x0120 - 0x00E0)
-class UMovieSceneCameraAnimSection : public UMovieSceneSection
+// Class MovieSceneTracks.MovieSceneEnumSection
+// 0x0098 (0x0178 - 0x00E0)
+class UMovieSceneEnumSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneCameraAnimSectionData            AnimData;                                                 // 0x00E0(0x0020) (Edit)
-	class UCameraAnim*                                 CameraAnim;                                               // 0x0100(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0108(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              PlayScale;                                                // 0x010C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              BlendInTime;                                              // 0x0110(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              BlendOutTime;                                             // 0x0114(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x0118(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0119(0x0007) MISSED OFFSET
+	struct FMovieSceneByteChannel                      EnumCurve;                                                // 0x00E0(0x0098)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraAnimSection");
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEnumSection");
 		return ptr;
 	}
 
@@ -563,16 +579,16 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieSceneEnumSection
-// 0x0098 (0x0178 - 0x00E0)
-class UMovieSceneEnumSection : public UMovieSceneSection
+// Class MovieSceneTracks.MovieSceneEventRepeaterSection
+// 0x0008 (0x00E8 - 0x00E0)
+class UMovieSceneEventRepeaterSection : public UMovieSceneEventSectionBase
 {
 public:
-	struct FMovieSceneByteChannel                      EnumCurve;                                                // 0x00E0(0x0098)
+	struct FMovieSceneEvent                            Event;                                                    // 0x00E0(0x0008) (Edit)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEnumSection");
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEventRepeaterSection");
 		return ptr;
 	}
 
@@ -650,22 +666,6 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieSceneEventRepeaterSection
-// 0x0008 (0x00E8 - 0x00E0)
-class UMovieSceneEventRepeaterSection : public UMovieSceneEventSectionBase
-{
-public:
-	struct FMovieSceneEvent                            Event;                                                    // 0x00E0(0x0008) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEventRepeaterSection");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieSceneTracks.MovieSceneFadeSection
 // 0x0018 (0x0198 - 0x0180)
 class UMovieSceneFadeSection : public UMovieSceneFloatSection
@@ -730,6 +730,21 @@ public:
 };
 
 
+// Class MovieSceneTracks.MovieSceneIntegerTrack
+// 0x0000 (0x0080 - 0x0080)
+class UMovieSceneIntegerTrack : public UMovieScenePropertyTrack
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneIntegerTrack");
+		return ptr;
+	}
+
+};
+
+
 // Class MovieSceneTracks.MovieSceneLevelVisibilitySection
 // 0x0018 (0x00F8 - 0x00E0)
 class UMovieSceneLevelVisibilitySection : public UMovieSceneSection
@@ -742,22 +757,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneLevelVisibilitySection");
-		return ptr;
-	}
-
-};
-
-
-// Class MovieSceneTracks.MovieSceneLevelVisibilityTrack
-// 0x0010 (0x0068 - 0x0058)
-class UMovieSceneLevelVisibilityTrack : public UMovieSceneNameableTrack
-{
-public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0058(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneLevelVisibilityTrack");
 		return ptr;
 	}
 
@@ -951,6 +950,22 @@ public:
 };
 
 
+// Class MovieSceneTracks.MovieSceneLevelVisibilityTrack
+// 0x0010 (0x0068 - 0x0058)
+class UMovieSceneLevelVisibilityTrack : public UMovieSceneNameableTrack
+{
+public:
+	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneLevelVisibilityTrack");
+		return ptr;
+	}
+
+};
+
+
 // Class MovieSceneTracks.MovieSceneSpawnSection
 // 0x0000 (0x0178 - 0x0178)
 class UMovieSceneSpawnSection : public UMovieSceneBoolSection
@@ -993,21 +1008,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneStringSection");
-		return ptr;
-	}
-
-};
-
-
-// Class MovieSceneTracks.MovieSceneStringTrack
-// 0x0000 (0x0080 - 0x0080)
-class UMovieSceneStringTrack : public UMovieScenePropertyTrack
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneStringTrack");
 		return ptr;
 	}
 
@@ -1079,15 +1079,15 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieSceneIntegerTrack
+// Class MovieSceneTracks.MovieSceneStringTrack
 // 0x0000 (0x0080 - 0x0080)
-class UMovieSceneIntegerTrack : public UMovieScenePropertyTrack
+class UMovieSceneStringTrack : public UMovieScenePropertyTrack
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneIntegerTrack");
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneStringTrack");
 		return ptr;
 	}
 

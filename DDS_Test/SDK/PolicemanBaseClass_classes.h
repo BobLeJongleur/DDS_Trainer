@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PolicemanBaseClass.PolicemanBaseClass_C
-// 0x0128 (0x0868 - 0x0740)
+// 0x0129 (0x0869 - 0x0740)
 class APolicemanBaseClass_C : public ACharacter
 {
 public:
@@ -32,7 +32,7 @@ public:
 	struct FRotator                                    tempHeadRot;                                              // 0x07A4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                partnerRefID;                                             // 0x07B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                MyID;                                                     // 0x07B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AplayerCharacterBP_C*                        playerRef;                                                // 0x07B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x07B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	float                                              perceptionMeter;                                          // 0x07C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              perceptionRise;                                           // 0x07C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              perceptionDetectLevel;                                    // 0x07C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -86,6 +86,7 @@ public:
 	bool                                               canHearPlayer;                                            // 0x0861(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x2];                                       // 0x0862(0x0002) MISSED OFFSET
 	float                                              spotChanceMultiplier;                                     // 0x0864(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CheatBlinded;                                             // 0x0868(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -94,13 +95,14 @@ public:
 	}
 
 
+	void CheckCanReachPlayer(bool* CanReach);
 	void adaptDifficulty();
 	void checkCanSpotPlayer(bool* canSpot);
 	void checkBallenaProtection(bool* protectedBy);
 	void checkPlayerRunning(float Delta);
-	void finishChasing(bool StayAlerted);
+	void finishChasing(bool stayAlerted);
 	void checkChasingPolicemen();
-	void calcControlMultiplier(class AplayerCharacterBP_C* playerRef);
+	void calcControlMultiplier(class AplayerCharacterBP_C* PlayerRef);
 	void alertedCountdown(float Delta);
 	float calcPerceptionRaise(float DeltaTime);
 	void playVoiceSound(class USoundCue* Sound);
@@ -121,7 +123,7 @@ public:
 	void EngageSuspect();
 	void LostPlayer();
 	void SetChaseMode();
-	void EndChase(bool StayAlerted, bool cancelAllChasers);
+	void EndChase(bool stayAlerted, bool cancelAllChasers);
 	void ReangageChase();
 	void walkSpeedCheck();
 	void removeMe();
@@ -129,6 +131,8 @@ public:
 	void despawnPatrol();
 	void tryDespawn();
 	void resetHear();
+	void InitBehaviour();
+	void CameraAlert();
 	void ExecuteUbergraph_PolicemanBaseClass(int EntryPoint);
 };
 

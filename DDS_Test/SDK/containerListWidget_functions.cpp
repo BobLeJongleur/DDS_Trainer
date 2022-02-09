@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,91 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function containerListWidget.containerListWidget_C.RemoveTradedItem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UcontainerListWidget_C::RemoveTradedItem(int Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function containerListWidget.containerListWidget_C.RemoveTradedItem");
+
+	UcontainerListWidget_C_RemoveTradedItem_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function containerListWidget.containerListWidget_C.ClearTradedItems
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UcontainerListWidget_C::ClearTradedItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function containerListWidget.containerListWidget_C.ClearTradedItems");
+
+	UcontainerListWidget_C_ClearTradedItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function containerListWidget.containerListWidget_C.AddTradedItem
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            itemQuantity                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ItemAmount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UcontainerListWidget_C::AddTradedItem(const struct FName& ItemID, int itemQuantity, int ItemAmount, const struct FMixProportionsStruct& MixProportions)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function containerListWidget.containerListWidget_C.AddTradedItem");
+
+	UcontainerListWidget_C_AddTradedItem_Params params;
+	params.ItemID = ItemID;
+	params.itemQuantity = itemQuantity;
+	params.ItemAmount = ItemAmount;
+	params.MixProportions = MixProportions;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function containerListWidget.containerListWidget_C.SetListSizing
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            Width                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UcontainerListWidget_C::SetListSizing(int Width, int Height)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function containerListWidget.containerListWidget_C.SetListSizing");
+
+	UcontainerListWidget_C_SetListSizing_Params params;
+	params.Width = Width;
+	params.Height = Height;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function containerListWidget.containerListWidget_C.showQunatityDialogue
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -36,7 +121,7 @@ void UcontainerListWidget_C::showQunatityDialogue(int InMaxQuantity, class Uinve
 
 
 // Function containerListWidget.containerListWidget_C.processDropOperation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -123,7 +208,7 @@ void UcontainerListWidget_C::manageItemContents(const struct FinventoryItemStruc
 
 
 // Function containerListWidget.containerListWidget_C.OnDrop
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -177,6 +262,26 @@ void UcontainerListWidget_C::addContainerItem(class UinventoryItemWidget_C* item
 
 	UcontainerListWidget_C_addContainerItem_Params params;
 	params.itemWidget = itemWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function containerListWidget.containerListWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UcontainerListWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function containerListWidget.containerListWidget_C.PreConstruct");
+
+	UcontainerListWidget_C_PreConstruct_Params params;
+	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
 

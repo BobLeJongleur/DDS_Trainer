@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ struct UsaveSlotWidget_C_Construct_Params
 // Function saveSlotWidget.saveSlotWidget_C.Setup
 struct UsaveSlotWidget_C_Setup_Params
 {
-	bool                                               occupied;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Occupied;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     SlotCustomName;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	struct FString                                     saveDateTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                Slot_Num;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

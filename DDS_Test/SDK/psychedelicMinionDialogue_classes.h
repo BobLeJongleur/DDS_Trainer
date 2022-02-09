@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass psychedelicMinionDialogue.psychedelicMinionDialogue_C
-// 0x022F (0x05B8 - 0x0389)
+// 0x022E (0x05C0 - 0x0392)
 class ApsychedelicMinionDialogue_C : public AdialogueInstance_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0390(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<struct FdialogueData>                       retrieveEnvelopeLines;                                    // 0x0398(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               allowBypass;                                              // 0x03A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x03A9(0x0007) MISSED OFFSET
-	struct FdialogueData                               bypassDialOption;                                         // 0x03B0(0x0100) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FdialogueData                               noBypassDialOption;                                       // 0x04B0(0x0100) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class ApsychedelicGangManager_C*                   gangManRef;                                               // 0x05B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0392(0x0006) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0398(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<struct FdialogueData>                       retrieveEnvelopeLines;                                    // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               allowBypass;                                              // 0x03B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x03B1(0x0007) MISSED OFFSET
+	struct FdialogueData                               bypassDialOption;                                         // 0x03B8(0x0100) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FdialogueData                               noBypassDialOption;                                       // 0x04B8(0x0100) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class ApsychedelicGangManager_C*                   gangManRef;                                               // 0x05B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

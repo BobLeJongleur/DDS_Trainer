@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,12 +42,11 @@ public:
 	void UserConstructionScript();
 	void lightFlicker__FinishedFunc();
 	void lightFlicker__UpdateFunc();
+	void LongRadiusChanged(bool InRadius);
 	void ReceiveBeginPlay();
 	void toggleLight();
-	void BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void enableShadows();
-	void retryInitialise();
+	void ShortRadiusChanged(bool InRadius);
 	void ExecuteUbergraph_appartmentLight(int EntryPoint);
 };
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,36 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function mainComputer.mainComputer_C.GetPlayerDebt
+struct AmainComputer_C_GetPlayerDebt_Params
+{
+	float                                              OutDebt;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function mainComputer.mainComputer_C.GetPlayerOrderLimit
+struct AmainComputer_C_GetPlayerOrderLimit_Params
+{
+	float                                              Limit;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function mainComputer.mainComputer_C.SendLaunderPayment
+struct AmainComputer_C_SendLaunderPayment_Params
+{
+	float                                              Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Force;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function mainComputer.mainComputer_C.AddMoneyToLaunder
+struct AmainComputer_C_AddMoneyToLaunder_Params
+{
+	float                                              Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function mainComputer.mainComputer_C.ExpandRama
+struct AmainComputer_C_ExpandRama_Params
+{
+};
 
 // Function mainComputer.mainComputer_C.reconstructDrugOffer
 struct AmainComputer_C_reconstructDrugOffer_Params
@@ -82,6 +112,7 @@ struct AmainComputer_C_constructMessageSentence_Params
 struct AmainComputer_C_sendNewOrder_Params
 {
 	TArray<struct FdrugData>                           drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FName>                               DrugIDs;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        DrugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
@@ -126,13 +157,20 @@ struct AmainComputer_C_checkIllegalIncome_Params
 {
 };
 
-// Function mainComputer.mainComputer_C.openIllegalGate
-struct AmainComputer_C_openIllegalGate_Params
+// Function mainComputer.mainComputer_C.addPsychedelicsOffer
+struct AmainComputer_C_addPsychedelicsOffer_Params
 {
 };
 
-// Function mainComputer.mainComputer_C.addPsychedelicsOffer
-struct AmainComputer_C_addPsychedelicsOffer_Params
+// Function mainComputer.mainComputer_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AmainComputer_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function mainComputer.mainComputer_C.RetryIllegalReminder
+struct AmainComputer_C_RetryIllegalReminder_Params
 {
 };
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,14 +47,14 @@ void AsewageTeleportPoint_C::ReceiveBeginPlay()
 }
 
 
-// Function sewageTeleportPoint.sewageTeleportPoint_C.checkAvailable
+// Function sewageTeleportPoint.sewageTeleportPoint_C.CheckAvailable
 // (BlueprintCallable, BlueprintEvent)
 
-void AsewageTeleportPoint_C::checkAvailable()
+void AsewageTeleportPoint_C::CheckAvailable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function sewageTeleportPoint.sewageTeleportPoint_C.checkAvailable");
+	static auto fn = UObject::FindObject<UFunction>("Function sewageTeleportPoint.sewageTeleportPoint_C.CheckAvailable");
 
-	AsewageTeleportPoint_C_checkAvailable_Params params;
+	AsewageTeleportPoint_C_CheckAvailable_Params params;
 
 	auto flags = fn->FunctionFlags;
 

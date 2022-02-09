@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -132,6 +132,28 @@ void AwallCheckpoint_C::tryDestroyBackpack()
 	static auto fn = UObject::FindObject<UFunction>("Function wallCheckpoint.wallCheckpoint_C.tryDestroyBackpack");
 
 	AwallCheckpoint_C_tryDestroyBackpack_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function wallCheckpoint.wallCheckpoint_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AwallCheckpoint_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function wallCheckpoint.wallCheckpoint_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AwallCheckpoint_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

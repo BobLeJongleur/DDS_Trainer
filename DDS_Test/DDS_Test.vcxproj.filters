@@ -18,49 +18,31 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp">
+    <ClCompile Include="utils\mem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\baseNPC_functions.cpp">
+    <ClCompile Include="utils\proc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Engine_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\drugData_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\clientLooksData_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\InputCore_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Slate_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\SlateCore_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\drugForm_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\AudioPlatformConfiguration_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\PacketHandler_functions.cpp">
+    <ClCompile Include="ScriptDisassembler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\actionOptionWidget_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ActiveBush_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\ActorSequence_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\AdaptiveMusic_BP_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\additiveBakingSoda50_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\additiveBakingSoda250_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\additiveContainerBase_functions.cpp">
@@ -72,13 +54,7 @@
     <ClCompile Include="SDK\AIModule_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\airplaneBP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\alarmClockBP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\ambientSoundsControler_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\AndroidPermission_functions.cpp">
@@ -120,16 +96,28 @@
     <ClCompile Include="SDK\AppleVision_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\AppManageList_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\AppManageListItem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\AppManageShippmentListItem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\ArchVisCharacter_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\areaMusicManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\asianStreetThug01_functions.cpp">
+    <ClCompile Include="SDK\AreaPlaylistStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\asianStreetThug02_functions.cpp">
+    <ClCompile Include="SDK\ArrestListItem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ArrestScreenWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\AssetRegistry_functions.cpp">
@@ -153,6 +141,9 @@
     <ClCompile Include="SDK\AudioMixer_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\AudioPlatformConfiguration_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\AvfMediaFactory_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -165,6 +156,21 @@
     <ClCompile Include="SDK\backpackMediumBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\backpackRepr_Duffle_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\backpackRepr_Large_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\backpackRepr_Medium_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\backpackRepr_Small_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\backpackRepresentationModel_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\backpackSlotWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -172,12 +178,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\ballenaBodyguard01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\ballenaBodyguard02_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\ballenaBodyguard03_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\ballenaCigarBP_functions.cpp">
@@ -195,9 +195,6 @@
     <ClCompile Include="SDK\ballenaManSpawnPoint_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\ballenaMoneyDialogueInstance_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\ballenaMoneyMan_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -213,22 +210,13 @@
     <ClCompile Include="SDK\baseMap_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Bird_AI_Controller_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Bird_EnemySelection_Structure_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Bird_Ground_TargetPoint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Bird_Perch_TargetPoint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Bird_Sky_TargetPoint_functions.cpp">
+    <ClCompile Include="SDK\baseNPC_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\blockEntranceLight_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BlueprintHelpers_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\bobbyPinBoxPickupBP_functions.cpp">
@@ -270,22 +258,61 @@
     <ClCompile Include="SDK\BP_BU_ManagerActor_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Carousel_B_functions.cpp">
+    <ClCompile Include="SDK\BP_decoDeskLamp1_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_CharacterBaseWithHealth_functions.cpp">
+    <ClCompile Include="SDK\BP_decoDeskLamp2_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Classic_Commode_3_functions.cpp">
+    <ClCompile Include="SDK\BP_decoDeskLamp3_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Classic_Commode_functions.cpp">
+    <ClCompile Include="SDK\BP_decoDeskLamp4_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Classic_Cupboard_functions.cpp">
+    <ClCompile Include="SDK\BP_decoElegantChair_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Gas_Tank_Red_functions.cpp">
+    <ClCompile Include="SDK\BP_decoElegantOtoman_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoModernChair_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoModernOfficeChair_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoModernPaddedBed_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoModernSofaLarge_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoScandiArmchair_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoScandiFloorLamp_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoScandiSofa_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoScandiTVStand_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoTV_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoTVstand_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoVase1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoVase2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BP_decoVase3_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\BP_HumanoidActor_functions.cpp">
@@ -300,19 +327,7 @@
     <ClCompile Include="SDK\BP_NextSingletonWorldHelper_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_NPC_Bird_Base_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_NPC_Crow_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_NPC_Pigeon_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\BP_Sky_Sphere_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_Swings_A_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\BP_TDE_Alkaloid_functions.cpp">
@@ -345,94 +360,13 @@
     <ClCompile Include="SDK\BP_TDE_Tryptamina_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_Truck01_Dump_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_Truck01_Dump2_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_Truck01_Dump2Frame_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_Truck01_DumpFrame_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BP_Truck01_Timber_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\BP_TS_TunnelEntrance_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\BP_Wires_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\BP_WorldTimeAndConditions_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\breachCamShake_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_DisableAvoidance_NearGroundTarget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_DisableAvoidance_NearPerch_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_FlyToARandomGroundTarget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_FlyToARandomPerchTarget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_FlyToARandomSkyTarget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_GetDistanceToEnemy_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_IsThePerch_Occupied_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_LandWhenCloseTo_GroundTarget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_ObstacleAvoidance_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTService_Bird_Shuffle_SkyTarget_WhenNearCurrent_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_GetRandomPoint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_JumpAway_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_MoveToEnemyLocation_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_Random_MaxWalkSpeed_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_RandomBehaviorSelector_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_Set_FlyAway_ToFalse_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_Set_FlyAway_ToTrue_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_SetMovement_T0_Flying_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_SetMovement_T0_Perched_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_TurnAndRunFrom_Enemy_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\BTTask_Bird_ZeroOutPitchAndRoll_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\BuildPatchServices_functions.cpp">
@@ -442,6 +376,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\CableComponent_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\CashDrawerBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\caughtOnSearchWidget_functions.cpp">
@@ -489,16 +426,19 @@
     <ClCompile Include="SDK\clientAddictedPopup_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\clientLooksData_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\clientLooksDatabaseBP_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ClientMeta_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\clientODPopup_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\closetBig01BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\closetSmall01BP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\clothesWardrobeBP_functions.cpp">
@@ -531,6 +471,12 @@
     <ClCompile Include="SDK\confirmDumpContent_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\confirmPopupFrame_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ConfirmPopupInterface_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\contactPersonStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -541,6 +487,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\containerListWidget_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ContainerMoneyDeposit_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ContainerSafeLarge_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ContainerSafeSmall_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\contOldschoolCommode_functions.cpp">
@@ -555,7 +510,7 @@
     <ClCompile Include="SDK\creditsCamera_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Crow_AnimBlueprint_functions.cpp">
+    <ClCompile Include="SDK\CursedSpotFixer_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\CustomMeshComponent_functions.cpp">
@@ -571,21 +526,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\daytimeRefStorage_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\dd_CustomSpot_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\dd_trashBinConcrete_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\dd_trashCan_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\dd_ventShaft01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\dd_ventShaft02_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\dd_wallVentSmall_functions.cpp">
@@ -604,6 +544,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\deaFlashBang_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\dealerArrestPopup_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\dealerCashTransactionDialogue_functions.cpp">
@@ -753,7 +696,34 @@
     <ClCompile Include="SDK\decoPicture_11_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\decoPosterDDS1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoPosterDDS2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoPosterDDS3_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoPosterLFB1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoPosterLFB2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\decorativeFurniture_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoTableHousePlant1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoTableHousePlant2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoTableHousePlant3_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\decoTableHousePlant4_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\decoTrashArtPiece_functions.cpp">
@@ -801,10 +771,10 @@
     <ClCompile Include="SDK\dialogueResponseWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\dialogueWidget_functions.cpp">
+    <ClCompile Include="SDK\DialogueStructure_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\dialShopDecorations_functions.cpp">
+    <ClCompile Include="SDK\dialogueWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\difficultyLevels_functions.cpp">
@@ -837,31 +807,7 @@
     <ClCompile Include="SDK\doorsExtMetal01_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\doorsExtMetal02_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtMetal03_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\doorsExtWood01_PlayerAppartment_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood02_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood03_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood04_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood05_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\doorsExtWood06_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\doorsExtWoodPsychedelicHideout_functions.cpp">
@@ -870,10 +816,19 @@
     <ClCompile Include="SDK\drugConfusionCamShake_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\drugData_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\drugDealerFPS_GM_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\DrugDealerSimulator_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\DrugDemandStruct_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\drugForm_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\drugItemSlot_functions.cpp">
@@ -927,6 +882,9 @@
     <ClCompile Include="SDK\eddieFirstDialogue_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\EddieLimitLevels_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\eddieMainAnimBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -942,10 +900,7 @@
     <ClCompile Include="SDK\EditableMesh_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\electricBoxContainer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\elementCounter_functions.cpp">
+    <ClCompile Include="SDK\Engine_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\EngineMessages_functions.cpp">
@@ -999,6 +954,9 @@
     <ClCompile Include="SDK\expEarnedPopup_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\ExpoEventData_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\extinguishPoilicePath_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1011,6 +969,9 @@
     <ClCompile Include="SDK\FacialAnimation_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\fallDmgCamShake_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\filterNpcCitizen_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1021,6 +982,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\findGoHomePoint_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Firecracker_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FlagStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\flashBangShake_functions.cpp">
@@ -1044,7 +1011,10 @@
     <ClCompile Include="SDK\fpsArmsAnimBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\furnitureDoorFixer_functions.cpp">
+    <ClCompile Include="SDK\FrontWidgetInterface_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\furnitureDropQuantityWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\furnitureShopEnterTrigger_functions.cpp">
@@ -1062,31 +1032,61 @@
     <ClCompile Include="SDK\gangDeadDropBase_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\gangDropFixer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\gangManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\gangReputationWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\garage3m01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\garage4m01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\garage5m01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\garageDoorBase_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\gasStationDoorBP_functions.cpp">
+    <ClCompile Include="SDK\garbageBottle_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\gateRefreshManager_functions.cpp">
+    <ClCompile Include="SDK\garbageBox_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageBox1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageBox2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageBrokenBottle_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageBrokenBottle2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageBucket_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageCan_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageCloth_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageCloth2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageCloth3_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageCup_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageTin_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageTin1_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\garbageTin2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\gasStationDoorBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\GeometryCache_functions.cpp">
@@ -1101,15 +1101,6 @@
     <ClCompile Include="SDK\goHomePoint_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\gunshotsPlayer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\halogenLightBP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\handsSlotWidget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\hangingCabinetLargeBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1119,34 +1110,16 @@
     <ClCompile Include="SDK\HeadMountedDisplay_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\HealthInterface_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\hiddenWallContainerBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\hideArea_functions.cpp">
+    <ClCompile Include="SDK\HideoutData_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\hideoutMarker_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\HighwayBulletinAngledLg_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\HighwayBulletinAngledSm_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\HighwayPosterDouble_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\HighwayPosterSingleJr_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\hodeoutTunnelEntrance_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\holyMaryLookTrigger_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\homeDestination_functions.cpp">
@@ -1176,6 +1149,12 @@
     <ClCompile Include="SDK\infiniteSpawnPoint_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\InputCore_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\InteractionInterface_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\interactiveBaseObject_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1197,13 +1176,25 @@
     <ClCompile Include="SDK\inventoryCharacterBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\InventoryComponent_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\inventoryErrorWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\inventoryItemStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\InventoryItemTooltip_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\InventoryItemTooltipContentItem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\inventoryItemWidget_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\InventoryListStructure_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\inventoryScreen_functions.cpp">
@@ -1236,13 +1227,16 @@
     <ClCompile Include="SDK\keijiFinalAnimBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\keijiManSpawnPoint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\keijiMoneyDialogueInstance_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\keijiRestaurantManager_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\keyAppartment_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\keyElectricBox_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\keyFactoryPass_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\laBallena_functions.cpp">
@@ -1281,6 +1275,9 @@
     <ClCompile Include="SDK\largeLabMixer_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\launderDoor_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\launderingWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1291,9 +1288,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\levelUpWidget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\lightDistanceDisabler_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\lightningEffectActor_functions.cpp">
@@ -1326,10 +1320,10 @@
     <ClCompile Include="SDK\lookAtTrigger_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\lootSpawner_functions.cpp">
+    <ClCompile Include="SDK\LootPoolData_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\lsdEffectSmallTree_functions.cpp">
+    <ClCompile Include="SDK\LootPoolEntry_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\mainComputer_functions.cpp">
@@ -1348,9 +1342,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\mapMarkerWidget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\marketSalesmanBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\MaterialShaderQualitySettings_functions.cpp">
@@ -1380,12 +1371,6 @@
     <ClCompile Include="SDK\metalBoxContainer_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\metalWicket01_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\metalWicket02_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\millCoffeeElectric_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1404,6 +1389,9 @@
     <ClCompile Include="SDK\mixListWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\MixProportionsStruct_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\MobilePatchingUtils_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1417,6 +1405,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\moneyLaunderGuy_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\MoneyLaunderLevelData_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\moneyPickup_functions.cpp">
@@ -1479,10 +1470,16 @@
     <ClCompile Include="SDK\newDayWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\newTaskWidget_functions.cpp">
+    <ClCompile Include="SDK\NewDrugData_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\nightClubLookTrigger_functions.cpp">
+    <ClCompile Include="SDK\NewItemStructure_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\NewLightBase_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\newTaskWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\nightMusicPlayer_functions.cpp">
@@ -1494,13 +1491,7 @@
     <ClCompile Include="SDK\npcAmy_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\npcDonaldMcKensey_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\npcJay_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\npcPharmacist_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\obstacleTypeCategory_functions.cpp">
@@ -1542,6 +1533,9 @@
     <ClCompile Include="SDK\packageProductWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\PacketHandler_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\panEddie_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1555,9 +1549,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\passOutScreen_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\patchManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\patrolPoliceAnimBP_functions.cpp">
@@ -1587,22 +1578,10 @@
     <ClCompile Include="SDK\pickupItemBase_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Pigeon_AnimBlueprint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\pillMakerBase_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\pillMakerSmallBP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\planeManager_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\planeSourcePoint_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\planeTargetPoint_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\plantStatsWidget_functions.cpp">
@@ -1621,6 +1600,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\playerHUD_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\PlayerInfluenceInterface_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\PlayerInfluenceRadius_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\PM_BeginSearch_functions.cpp">
@@ -1743,9 +1728,6 @@
     <ClCompile Include="SDK\policeSearchWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\policeSignBoardBP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\policeTeleportLocation_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1755,13 +1737,13 @@
     <ClCompile Include="SDK\policeWalkieTalkie_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\polskaPatolaPlayer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\populationManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\popupFrame_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\PowerSwitch_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\ProceduralMeshComponent_functions.cpp">
@@ -1830,13 +1812,13 @@
     <ClCompile Include="SDK\randomSampleDialogueInstance_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\randomTwoTowersSoundPlayer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\ratDeadDrop_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\ratDropSign_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\ratEnvelopePickup_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\Renderer_functions.cpp">
@@ -1845,13 +1827,13 @@
     <ClCompile Include="SDK\rentAppartmentArea_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\repairsSoundsPlayer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\reputationChartWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\respectRaiseWidget_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SaleAreaData_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\saleAreaManageMarker_functions.cpp">
@@ -1890,6 +1872,9 @@
     <ClCompile Include="SDK\sampleClientSetGoHome_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\SampleClientSpawner_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\sampleClientWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1911,13 +1896,13 @@
     <ClCompile Include="SDK\saveSystemManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Seagull_AnimationBlueprint_functions.cpp">
+    <ClCompile Include="SDK\SectorHidoutUnlocker_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\sebiksController_functions.cpp">
+    <ClCompile Include="SDK\SecurityCamera_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\sebiksSpawnPoint_functions.cpp">
+    <ClCompile Include="SDK\SecurityCameraAlertRadius_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\seedSellerBP_functions.cpp">
@@ -1965,9 +1950,6 @@
     <ClCompile Include="SDK\sewageTeleportWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\sewerMetalGate_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\shadyCommContactGroupTitle_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1983,7 +1965,7 @@
     <ClCompile Include="SDK\shadyMessageWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\shopAmyGasStaion_functions.cpp">
+    <ClCompile Include="SDK\ShopDataStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\shopExpositionModel_functions.cpp">
@@ -1995,13 +1977,7 @@
     <ClCompile Include="SDK\shopInstance_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\shopJay_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\shopOwnerDecorations_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\shopPharmacy_functions.cpp">
+    <ClCompile Include="SDK\ShopProductStruct_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\sitDownPlace_functions.cpp">
@@ -2011,6 +1987,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\skillLevelWidget_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Slate_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SlateCore_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\sleepingBedBase_functions.cpp">
@@ -2025,22 +2007,16 @@
     <ClCompile Include="SDK\smallJarContainer_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\smug_Cemetery_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\smug_DeadDrop_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\smug_Delicatessen_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\smug_oldHarbor_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\smug_sewageTreatment_functions.cpp">
+    <ClCompile Include="SDK\SmuggleBox_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\smuggleLocation_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\smugglerLaundryDialogueInstance_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\SoundVisualizations_functions.cpp">
@@ -2050,18 +2026,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\spinBoxOverride_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\splinePath_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\splineRoad400_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\splineRoad400Sidewalks_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\splineRoad500_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\sprayActionWidget_functions.cpp">
@@ -2085,46 +2049,10 @@
     <ClCompile Include="SDK\statisticsManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\stobernGateUnlocker_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stonePreacherFixer_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_desert_port_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_docks_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_docks_garages_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_docks_warehouse_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_oldMarket_farDetail_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_oldTown_farDetails_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_oldTownEast_BasketCourt_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_slums_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\stream_twoTowers_farDetail_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\streamMapBoxLoader_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\streamMapLoader_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\streetLantern_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\streetLight_functions.cpp">
@@ -2190,6 +2118,9 @@
     <ClCompile Include="SDK\streetTeleport_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\SubstancePickupItem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\suitcaseBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -2229,12 +2160,6 @@
     <ClCompile Include="SDK\testDrugWorkStation_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\testLight_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\theCity_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\theGreatSwitch_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -2253,13 +2178,7 @@
     <ClCompile Include="SDK\trainSegment_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\trainTrackSpline_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\TrashCupboard_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\trashFurnitureArtits_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\TunnelMusic_functions.cpp">
@@ -2269,12 +2188,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\tutorialTipWidget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\twoTowersLookTrigger_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\twoTowersRubberDollBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\UdpMessaging_functions.cpp">
@@ -2292,7 +2205,34 @@
     <ClCompile Include="SDK\useSlotWidget_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\valBracelet_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\valGoldBar_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\valGoldBarLarge_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\valNecklace_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\valPhone_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\valWatch_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="SDK\VariantManagerContent_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\VillaListCategories_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\VillaSurfaceCategory_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\VillaSurfaceFinish_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\virusFlashDrivePickup_functions.cpp">
@@ -2310,16 +2250,10 @@
     <ClCompile Include="SDK\wallSwitchLightBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\waterArea_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\waterBottleBP_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\waterSinkProgressWidget_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\weedDeskBlocker_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\weedDialogueFirstDone_functions.cpp">
@@ -2385,18 +2319,6 @@
     <ClCompile Include="SDK\WmfMediaFactory_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\WoodenBulletinBracedLarge_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\WoodenBulletinBracedSmall_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\WoodenBulletinDoubleMedium_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\WoodenBulletinSingleLarge_BP_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\workspaceTutorialManager_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -2422,9 +2344,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\worldCustomMarker_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\worldEffectLSDBase_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\worldMapMarker_functions.cpp">
@@ -2475,120 +2394,36 @@
     <ClCompile Include="SDK\ws_trashtable_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utils\mem.cpp">
+    <ClCompile Include="SDK\ws_trashtableNEW_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utils\proc.cpp">
+    <ClCompile Include="SDK\CoreUObject_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ScriptDisassembler.cpp">
+    <ClCompile Include="SDK\Basic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SDK\Basic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\baseNPC_structs.h">
+    <ClInclude Include="utils\mem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\baseNPC_parameters.h">
+    <ClInclude Include="utils\proc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\baseNPC_classes.h">
+    <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Engine_classes.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Engine_parameters.h">
+    <ClInclude Include="Script.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Engine_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\CoreUObject_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\CoreUObject_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\CoreUObject_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugData_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugData_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugData_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\clientLooksData_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\clientLooksData_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\clientLooksData_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\InputCore_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\InputCore_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\InputCore_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Slate_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Slate_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Slate_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\SlateCore_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\SlateCore_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\SlateCore_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugForm_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugForm_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\drugForm_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\AudioPlatformConfiguration_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\AudioPlatformConfiguration_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\AudioPlatformConfiguration_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\PacketHandler_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\PacketHandler_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\PacketHandler_structs.h">
+    <ClInclude Include="ScriptDisassembler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\actionOptionWidget_classes.h">
@@ -2598,6 +2433,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\actionOptionWidget_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ActiveBush_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ActiveBush_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ActiveBush_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\ActorSequence_classes.h">
@@ -2616,6 +2460,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\AdaptiveMusic_BP_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda50_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda50_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda50_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda250_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda250_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\additiveBakingSoda250_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\additiveContainerBase_classes.h">
@@ -2645,15 +2507,6 @@
     <ClInclude Include="SDK\AIModule_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\airplaneBP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\airplaneBP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\airplaneBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\alarmClockBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2661,15 +2514,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\alarmClockBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ambientSoundsControler_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ambientSoundsControler_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ambientSoundsControler_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\AndroidPermission_classes.h">
@@ -2789,6 +2633,33 @@
     <ClInclude Include="SDK\AppleVision_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\AppManageList_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageList_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageList_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageListItem_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageListItem_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageListItem_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageShippmentListItem_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageShippmentListItem_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AppManageShippmentListItem_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\ArchVisCharacter_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2807,22 +2678,31 @@
     <ClInclude Include="SDK\areaMusicManager_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug01_classes.h">
+    <ClInclude Include="SDK\AreaPlaylistStruct_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug01_parameters.h">
+    <ClInclude Include="SDK\AreaPlaylistStruct_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug01_structs.h">
+    <ClInclude Include="SDK\AreaPlaylistStruct_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug02_classes.h">
+    <ClInclude Include="SDK\ArrestListItem_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug02_parameters.h">
+    <ClInclude Include="SDK\ArrestListItem_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\asianStreetThug02_structs.h">
+    <ClInclude Include="SDK\ArrestListItem_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ArrestScreenWidget_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ArrestScreenWidget_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ArrestScreenWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\AssetRegistry_classes.h">
@@ -2888,6 +2768,15 @@
     <ClInclude Include="SDK\AudioMixer_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\AudioPlatformConfiguration_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AudioPlatformConfiguration_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\AudioPlatformConfiguration_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\AvfMediaFactory_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2924,6 +2813,51 @@
     <ClInclude Include="SDK\backpackMediumBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Duffle_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Duffle_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Duffle_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Large_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Large_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Large_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Medium_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Medium_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Medium_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Small_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Small_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepr_Small_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepresentationModel_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepresentationModel_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\backpackRepresentationModel_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\backpackSlotWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2949,24 +2883,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\ballenaBodyguard01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard02_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard02_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard02_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard03_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard03_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaBodyguard03_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\ballenaCigarBP_classes.h">
@@ -3014,15 +2930,6 @@
     <ClInclude Include="SDK\ballenaManSpawnPoint_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\ballenaMoneyDialogueInstance_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaMoneyDialogueInstance_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\ballenaMoneyDialogueInstance_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\ballenaMoneyMan_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3068,49 +2975,13 @@
     <ClInclude Include="SDK\baseMap_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Bird_AI_Controller_classes.h">
+    <ClInclude Include="SDK\baseNPC_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Bird_AI_Controller_parameters.h">
+    <ClInclude Include="SDK\baseNPC_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Bird_AI_Controller_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_EnemySelection_Structure_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_EnemySelection_Structure_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_EnemySelection_Structure_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Ground_TargetPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Ground_TargetPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Ground_TargetPoint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Perch_TargetPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Perch_TargetPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Perch_TargetPoint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Sky_TargetPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Sky_TargetPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Bird_Sky_TargetPoint_structs.h">
+    <ClInclude Include="SDK\baseNPC_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\blockEntranceLight_classes.h">
@@ -3120,6 +2991,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\blockEntranceLight_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BlueprintHelpers_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BlueprintHelpers_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BlueprintHelpers_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\bobbyPinBoxPickupBP_classes.h">
@@ -3239,58 +3119,175 @@
     <ClInclude Include="SDK\BP_BU_ManagerActor_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Carousel_B_classes.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp1_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Carousel_B_parameters.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp1_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Carousel_B_structs.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp1_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_CharacterBaseWithHealth_classes.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp2_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_CharacterBaseWithHealth_parameters.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp2_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_CharacterBaseWithHealth_structs.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp2_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_3_classes.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp3_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_3_parameters.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp3_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_3_structs.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp3_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_classes.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp4_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_parameters.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp4_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Commode_structs.h">
+    <ClInclude Include="SDK\BP_decoDeskLamp4_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Cupboard_classes.h">
+    <ClInclude Include="SDK\BP_decoElegantChair_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Cupboard_parameters.h">
+    <ClInclude Include="SDK\BP_decoElegantChair_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Classic_Cupboard_structs.h">
+    <ClInclude Include="SDK\BP_decoElegantChair_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Gas_Tank_Red_classes.h">
+    <ClInclude Include="SDK\BP_decoElegantOtoman_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Gas_Tank_Red_parameters.h">
+    <ClInclude Include="SDK\BP_decoElegantOtoman_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Gas_Tank_Red_structs.h">
+    <ClInclude Include="SDK\BP_decoElegantOtoman_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernChair_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernChair_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernChair_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernOfficeChair_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernOfficeChair_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernOfficeChair_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernPaddedBed_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernPaddedBed_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernPaddedBed_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernSofaLarge_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernSofaLarge_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoModernSofaLarge_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiArmchair_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiArmchair_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiArmchair_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiFloorLamp_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiFloorLamp_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiFloorLamp_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiSofa_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiSofa_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiSofa_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiTVStand_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiTVStand_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoScandiTVStand_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTV_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTV_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTV_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTVstand_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTVstand_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoTVstand_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase3_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase3_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\BP_decoVase3_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\BP_HumanoidActor_classes.h">
@@ -3329,33 +3326,6 @@
     <ClInclude Include="SDK\BP_NextSingletonWorldHelper_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Bird_Base_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Bird_Base_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Bird_Base_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Crow_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Crow_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Crow_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Pigeon_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Pigeon_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_NPC_Pigeon_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\BP_Sky_Sphere_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3363,15 +3333,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\BP_Sky_Sphere_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Swings_A_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Swings_A_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Swings_A_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\BP_TDE_Alkaloid_classes.h">
@@ -3464,51 +3425,6 @@
     <ClInclude Include="SDK\BP_TDE_Tryptamina_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2Frame_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2Frame_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Dump2Frame_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_DumpFrame_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_DumpFrame_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_DumpFrame_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Timber_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Timber_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_Truck01_Timber_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\BP_TS_TunnelEntrance_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3527,15 +3443,6 @@
     <ClInclude Include="SDK\BP_Wires_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\BP_WorldTimeAndConditions_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_WorldTimeAndConditions_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BP_WorldTimeAndConditions_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\breachCamShake_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3543,195 +3450,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\breachCamShake_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearGroundTarget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearGroundTarget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearGroundTarget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearPerch_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearPerch_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_DisableAvoidance_NearPerch_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomGroundTarget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomGroundTarget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomGroundTarget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomPerchTarget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomPerchTarget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomPerchTarget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomSkyTarget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomSkyTarget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_FlyToARandomSkyTarget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_GetDistanceToEnemy_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_GetDistanceToEnemy_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_GetDistanceToEnemy_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_IsThePerch_Occupied_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_IsThePerch_Occupied_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_IsThePerch_Occupied_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_LandWhenCloseTo_GroundTarget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_LandWhenCloseTo_GroundTarget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_LandWhenCloseTo_GroundTarget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_ObstacleAvoidance_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_ObstacleAvoidance_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_ObstacleAvoidance_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_Shuffle_SkyTarget_WhenNearCurrent_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_Shuffle_SkyTarget_WhenNearCurrent_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTService_Bird_Shuffle_SkyTarget_WhenNearCurrent_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_GetRandomPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_GetRandomPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_GetRandomPoint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_JumpAway_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_JumpAway_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_JumpAway_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_MoveToEnemyLocation_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_MoveToEnemyLocation_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_MoveToEnemyLocation_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Random_MaxWalkSpeed_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Random_MaxWalkSpeed_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Random_MaxWalkSpeed_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_RandomBehaviorSelector_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_RandomBehaviorSelector_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_RandomBehaviorSelector_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToFalse_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToFalse_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToFalse_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToTrue_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToTrue_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_Set_FlyAway_ToTrue_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Flying_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Flying_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Flying_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Perched_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Perched_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_SetMovement_T0_Perched_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_TurnAndRunFrom_Enemy_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_TurnAndRunFrom_Enemy_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_TurnAndRunFrom_Enemy_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_ZeroOutPitchAndRoll_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_ZeroOutPitchAndRoll_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\BTTask_Bird_ZeroOutPitchAndRoll_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\BuildPatchServices_classes.h">
@@ -3759,6 +3477,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\CableComponent_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\CashDrawerBP_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\CashDrawerBP_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\CashDrawerBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\caughtOnSearchWidget_classes.h">
@@ -3896,6 +3623,15 @@
     <ClInclude Include="SDK\clientAddictedPopup_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\clientLooksData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\clientLooksData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\clientLooksData_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\clientLooksDatabaseBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3903,6 +3639,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\clientLooksDatabaseBP_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ClientMeta_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ClientMeta_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ClientMeta_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\clientODPopup_classes.h">
@@ -3921,15 +3666,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\closetBig01BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\closetSmall01BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\closetSmall01BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\closetSmall01BP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\clothesWardrobeBP_classes.h">
@@ -4022,6 +3758,24 @@
     <ClInclude Include="SDK\confirmDumpContent_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\confirmPopupFrame_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\confirmPopupFrame_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\confirmPopupFrame_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ConfirmPopupInterface_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ConfirmPopupInterface_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ConfirmPopupInterface_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\contactPersonStruct_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -4056,6 +3810,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\containerListWidget_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerMoneyDeposit_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerMoneyDeposit_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerMoneyDeposit_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeLarge_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeLarge_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeLarge_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeSmall_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeSmall_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ContainerSafeSmall_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\contOldschoolCommode_classes.h">
@@ -4094,13 +3875,13 @@
     <ClInclude Include="SDK\creditsCamera_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Crow_AnimBlueprint_classes.h">
+    <ClInclude Include="SDK\CursedSpotFixer_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Crow_AnimBlueprint_parameters.h">
+    <ClInclude Include="SDK\CursedSpotFixer_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Crow_AnimBlueprint_structs.h">
+    <ClInclude Include="SDK\CursedSpotFixer_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\CustomMeshComponent_classes.h">
@@ -4146,51 +3927,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\daytimeRefStorage_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_CustomSpot_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_CustomSpot_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_CustomSpot_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashBinConcrete_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashBinConcrete_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashBinConcrete_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashCan_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashCan_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_trashCan_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft02_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft02_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dd_ventShaft02_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\dd_wallVentSmall_classes.h">
@@ -4245,6 +3981,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\deaFlashBang_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\dealerArrestPopup_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\dealerArrestPopup_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\dealerArrestPopup_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\dealerCashTransactionDialogue_classes.h">
@@ -4688,6 +4433,51 @@
     <ClInclude Include="SDK\decoPicture_11_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS3_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS3_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterDDS3_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoPosterLFB2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\decorativeFurniture_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -4695,6 +4485,42 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\decorativeFurniture_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant3_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant3_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant3_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant4_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant4_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\decoTableHousePlant4_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\decoTrashArtPiece_classes.h">
@@ -4832,6 +4658,15 @@
     <ClInclude Include="SDK\dialogueResponseWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\DialogueStructure_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\DialogueStructure_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\DialogueStructure_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\dialogueWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -4839,15 +4674,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\dialogueWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dialShopDecorations_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dialShopDecorations_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\dialShopDecorations_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\difficultyLevels_classes.h">
@@ -4940,30 +4766,6 @@
     <ClInclude Include="SDK\doorsExtMetal01_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal02_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal02_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal02_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal03_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal03_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtMetal03_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\doorsExtWood01_PlayerAppartment_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -4971,54 +4773,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\doorsExtWood01_PlayerAppartment_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood02_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood02_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood02_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood03_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood03_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood03_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood04_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood04_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood04_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood05_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood05_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood05_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood06_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood06_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\doorsExtWood06_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\doorsExtWoodPsychedelicHideout_classes.h">
@@ -5039,6 +4793,15 @@
     <ClInclude Include="SDK\drugConfusionCamShake_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\drugData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\drugData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\drugData_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\drugDealerFPS_GM_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5055,6 +4818,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\DrugDealerSimulator_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\DrugDemandStruct_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\DrugDemandStruct_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\DrugDemandStruct_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\drugForm_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\drugForm_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\drugForm_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\drugItemSlot_classes.h">
@@ -5210,6 +4991,15 @@
     <ClInclude Include="SDK\eddieFirstDialogue_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\EddieLimitLevels_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\EddieLimitLevels_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\EddieLimitLevels_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\eddieMainAnimBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5255,22 +5045,13 @@
     <ClInclude Include="SDK\EditableMesh_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\electricBoxContainer_classes.h">
+    <ClInclude Include="SDK\Engine_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\electricBoxContainer_parameters.h">
+    <ClInclude Include="SDK\Engine_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\electricBoxContainer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\elementCounter_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\elementCounter_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\elementCounter_structs.h">
+    <ClInclude Include="SDK\Engine_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\EngineMessages_classes.h">
@@ -5426,6 +5207,15 @@
     <ClInclude Include="SDK\expEarnedPopup_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\ExpoEventData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ExpoEventData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ExpoEventData_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\extinguishPoilicePath_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5462,6 +5252,15 @@
     <ClInclude Include="SDK\FacialAnimation_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\fallDmgCamShake_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\fallDmgCamShake_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\fallDmgCamShake_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\filterNpcCitizen_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5496,6 +5295,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\findGoHomePoint_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Firecracker_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Firecracker_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Firecracker_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\FlagStruct_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\FlagStruct_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\FlagStruct_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\flashBangShake_classes.h">
@@ -5561,13 +5378,22 @@
     <ClInclude Include="SDK\fpsArmsAnimBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\furnitureDoorFixer_classes.h">
+    <ClInclude Include="SDK\FrontWidgetInterface_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\furnitureDoorFixer_parameters.h">
+    <ClInclude Include="SDK\FrontWidgetInterface_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\furnitureDoorFixer_structs.h">
+    <ClInclude Include="SDK\FrontWidgetInterface_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\furnitureDropQuantityWidget_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\furnitureDropQuantityWidget_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\furnitureDropQuantityWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\furnitureShopEnterTrigger_classes.h">
@@ -5615,15 +5441,6 @@
     <ClInclude Include="SDK\gangDeadDropBase_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\gangDropFixer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gangDropFixer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gangDropFixer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\gangManager_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5642,33 +5459,6 @@
     <ClInclude Include="SDK\gangReputationWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\garage3m01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage3m01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage3m01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage4m01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage4m01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage4m01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage5m01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage5m01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\garage5m01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\garageDoorBase_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5678,6 +5468,141 @@
     <ClInclude Include="SDK\garageDoorBase_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\garbageBottle_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBottle_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBottle_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBox2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBrokenBottle2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBucket_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBucket_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageBucket_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCan_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCan_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCan_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth3_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth3_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCloth3_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCup_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCup_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageCup_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin1_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin1_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin1_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin2_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin2_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\garbageTin2_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\gasStationDoorBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5685,15 +5610,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\gasStationDoorBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gateRefreshManager_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gateRefreshManager_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gateRefreshManager_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\GeometryCache_classes.h">
@@ -5732,33 +5648,6 @@
     <ClInclude Include="SDK\goHomePoint_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\gunshotsPlayer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gunshotsPlayer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\gunshotsPlayer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\halogenLightBP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\halogenLightBP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\halogenLightBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\handsSlotWidget_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\handsSlotWidget_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\handsSlotWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\hangingCabinetLargeBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5786,15 +5675,6 @@
     <ClInclude Include="SDK\HeadMountedDisplay_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\HealthInterface_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HealthInterface_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HealthInterface_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\hiddenWallContainerBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5804,13 +5684,13 @@
     <ClInclude Include="SDK\hiddenWallContainerBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\hideArea_classes.h">
+    <ClInclude Include="SDK\HideoutData_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\hideArea_parameters.h">
+    <ClInclude Include="SDK\HideoutData_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\hideArea_structs.h">
+    <ClInclude Include="SDK\HideoutData_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\hideoutMarker_classes.h">
@@ -5822,42 +5702,6 @@
     <ClInclude Include="SDK\hideoutMarker_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledLg_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledLg_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledLg_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledSm_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledSm_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayBulletinAngledSm_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterDouble_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterDouble_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterDouble_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterSingleJr_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterSingleJr_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\HighwayPosterSingleJr_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\hodeoutTunnelEntrance_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -5865,15 +5709,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\hodeoutTunnelEntrance_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\holyMaryLookTrigger_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\holyMaryLookTrigger_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\holyMaryLookTrigger_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\homeDestination_classes.h">
@@ -5957,6 +5792,24 @@
     <ClInclude Include="SDK\infiniteSpawnPoint_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\InputCore_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InputCore_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InputCore_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InteractionInterface_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InteractionInterface_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InteractionInterface_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\interactiveBaseObject_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6020,6 +5873,15 @@
     <ClInclude Include="SDK\inventoryCharacterBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\InventoryComponent_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryComponent_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryComponent_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\inventoryErrorWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6038,6 +5900,24 @@
     <ClInclude Include="SDK\inventoryItemStruct_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltip_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltip_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltip_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltipContentItem_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltipContentItem_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryItemTooltipContentItem_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\inventoryItemWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6045,6 +5925,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\inventoryItemWidget_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryListStructure_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryListStructure_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\InventoryListStructure_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\inventoryScreen_classes.h">
@@ -6137,24 +6026,6 @@
     <ClInclude Include="SDK\keijiFinalAnimBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\keijiManSpawnPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\keijiManSpawnPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\keijiManSpawnPoint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\keijiMoneyDialogueInstance_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\keijiMoneyDialogueInstance_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\keijiMoneyDialogueInstance_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\keijiRestaurantManager_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6162,6 +6033,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\keijiRestaurantManager_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyAppartment_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyAppartment_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyAppartment_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyElectricBox_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyElectricBox_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyElectricBox_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyFactoryPass_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyFactoryPass_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\keyFactoryPass_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\laBallena_classes.h">
@@ -6272,6 +6170,15 @@
     <ClInclude Include="SDK\largeLabMixer_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\launderDoor_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\launderDoor_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\launderDoor_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\launderingWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6306,15 +6213,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\levelUpWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\lightDistanceDisabler_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\lightDistanceDisabler_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\lightDistanceDisabler_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\lightningEffectActor_classes.h">
@@ -6407,22 +6305,22 @@
     <ClInclude Include="SDK\lookAtTrigger_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lootSpawner_classes.h">
+    <ClInclude Include="SDK\LootPoolData_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lootSpawner_parameters.h">
+    <ClInclude Include="SDK\LootPoolData_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lootSpawner_structs.h">
+    <ClInclude Include="SDK\LootPoolData_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lsdEffectSmallTree_classes.h">
+    <ClInclude Include="SDK\LootPoolEntry_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lsdEffectSmallTree_parameters.h">
+    <ClInclude Include="SDK\LootPoolEntry_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\lsdEffectSmallTree_structs.h">
+    <ClInclude Include="SDK\LootPoolEntry_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\mainComputer_classes.h">
@@ -6477,15 +6375,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\mapMarkerWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\marketSalesmanBP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\marketSalesmanBP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\marketSalesmanBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\MaterialShaderQualitySettings_classes.h">
@@ -6569,24 +6458,6 @@
     <ClInclude Include="SDK\metalBoxContainer_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\metalWicket01_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\metalWicket01_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\metalWicket01_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\metalWicket02_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\metalWicket02_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\metalWicket02_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\millCoffeeElectric_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6641,6 +6512,15 @@
     <ClInclude Include="SDK\mixListWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\MixProportionsStruct_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MixProportionsStruct_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MixProportionsStruct_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\MobilePatchingUtils_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6684,6 +6564,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\moneyLaunderGuy_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MoneyLaunderLevelData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MoneyLaunderLevelData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\MoneyLaunderLevelData_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\moneyPickup_classes.h">
@@ -6866,6 +6755,33 @@
     <ClInclude Include="SDK\newDayWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\NewDrugData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewDrugData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewDrugData_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewItemStructure_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewItemStructure_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewItemStructure_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewLightBase_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewLightBase_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\NewLightBase_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\newTaskWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6873,15 +6789,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\newTaskWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\nightClubLookTrigger_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\nightClubLookTrigger_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\nightClubLookTrigger_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\nightMusicPlayer_classes.h">
@@ -6911,15 +6818,6 @@
     <ClInclude Include="SDK\npcAmy_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\npcDonaldMcKensey_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\npcDonaldMcKensey_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\npcDonaldMcKensey_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\npcJay_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -6927,15 +6825,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\npcJay_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\npcPharmacist_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\npcPharmacist_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\npcPharmacist_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\obstacleTypeCategory_classes.h">
@@ -7055,6 +6944,15 @@
     <ClInclude Include="SDK\packageProductWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\PacketHandler_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PacketHandler_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PacketHandler_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\panEddie_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7098,15 +6996,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\passOutScreen_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\patchManager_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\patchManager_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\patchManager_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\patrolPoliceAnimBP_classes.h">
@@ -7190,15 +7079,6 @@
     <ClInclude Include="SDK\pickupItemBase_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Pigeon_AnimBlueprint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Pigeon_AnimBlueprint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Pigeon_AnimBlueprint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\pillMakerBase_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7215,33 +7095,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\pillMakerSmallBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeManager_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeManager_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeManager_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeSourcePoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeSourcePoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeSourcePoint_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeTargetPoint_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeTargetPoint_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\planeTargetPoint_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\plantStatsWidget_classes.h">
@@ -7296,6 +7149,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\playerHUD_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceInterface_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceInterface_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceInterface_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceRadius_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceRadius_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PlayerInfluenceRadius_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\PM_BeginSearch_classes.h">
@@ -7658,15 +7529,6 @@
     <ClInclude Include="SDK\policeSearchWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\policeSignBoardBP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\policeSignBoardBP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\policeSignBoardBP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\policeTeleportLocation_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7694,15 +7556,6 @@
     <ClInclude Include="SDK\policeWalkieTalkie_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\polskaPatolaPlayer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\polskaPatolaPlayer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\polskaPatolaPlayer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\populationManager_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7719,6 +7572,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\popupFrame_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PowerSwitch_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PowerSwitch_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PowerSwitch_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\ProceduralMeshComponent_classes.h">
@@ -7919,15 +7781,6 @@
     <ClInclude Include="SDK\randomSampleDialogueInstance_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\randomTwoTowersSoundPlayer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\randomTwoTowersSoundPlayer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\randomTwoTowersSoundPlayer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\ratDeadDrop_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7944,6 +7797,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\ratDropSign_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ratEnvelopePickup_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ratEnvelopePickup_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\ratEnvelopePickup_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\Renderer_classes.h">
@@ -7964,15 +7826,6 @@
     <ClInclude Include="SDK\rentAppartmentArea_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\repairsSoundsPlayer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\repairsSoundsPlayer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\repairsSoundsPlayer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\reputationChartWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -7989,6 +7842,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\respectRaiseWidget_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SaleAreaData_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SaleAreaData_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SaleAreaData_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\saleAreaManageMarker_classes.h">
@@ -8099,6 +7961,15 @@
     <ClInclude Include="SDK\sampleClientSetGoHome_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\SampleClientSpawner_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SampleClientSpawner_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SampleClientSpawner_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\sampleClientWidget_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -8162,31 +8033,31 @@
     <ClInclude Include="SDK\saveSystemManager_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Seagull_AnimationBlueprint_classes.h">
+    <ClInclude Include="SDK\SectorHidoutUnlocker_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Seagull_AnimationBlueprint_parameters.h">
+    <ClInclude Include="SDK\SectorHidoutUnlocker_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Seagull_AnimationBlueprint_structs.h">
+    <ClInclude Include="SDK\SectorHidoutUnlocker_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksController_classes.h">
+    <ClInclude Include="SDK\SecurityCamera_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksController_parameters.h">
+    <ClInclude Include="SDK\SecurityCamera_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksController_structs.h">
+    <ClInclude Include="SDK\SecurityCamera_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksSpawnPoint_classes.h">
+    <ClInclude Include="SDK\SecurityCameraAlertRadius_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksSpawnPoint_parameters.h">
+    <ClInclude Include="SDK\SecurityCameraAlertRadius_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sebiksSpawnPoint_structs.h">
+    <ClInclude Include="SDK\SecurityCameraAlertRadius_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\seedSellerBP_classes.h">
@@ -8324,15 +8195,6 @@
     <ClInclude Include="SDK\sewageTeleportWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\sewerMetalGate_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\sewerMetalGate_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\sewerMetalGate_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\shadyCommContactGroupTitle_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -8378,13 +8240,13 @@
     <ClInclude Include="SDK\shadyMessageWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopAmyGasStaion_classes.h">
+    <ClInclude Include="SDK\ShopDataStruct_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopAmyGasStaion_parameters.h">
+    <ClInclude Include="SDK\ShopDataStruct_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopAmyGasStaion_structs.h">
+    <ClInclude Include="SDK\ShopDataStruct_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\shopExpositionModel_classes.h">
@@ -8414,31 +8276,13 @@
     <ClInclude Include="SDK\shopInstance_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopJay_classes.h">
+    <ClInclude Include="SDK\ShopProductStruct_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopJay_parameters.h">
+    <ClInclude Include="SDK\ShopProductStruct_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\shopJay_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopOwnerDecorations_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopOwnerDecorations_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopOwnerDecorations_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopPharmacy_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopPharmacy_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\shopPharmacy_structs.h">
+    <ClInclude Include="SDK\ShopProductStruct_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\sitDownPlace_classes.h">
@@ -8466,6 +8310,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\skillLevelWidget_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Slate_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Slate_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Slate_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SlateCore_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SlateCore_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SlateCore_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\sleepingBedBase_classes.h">
@@ -8504,15 +8366,6 @@
     <ClInclude Include="SDK\smallJarContainer_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\smug_Cemetery_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_Cemetery_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_Cemetery_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\smug_DeadDrop_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -8522,31 +8375,13 @@
     <ClInclude Include="SDK\smug_DeadDrop_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\smug_Delicatessen_classes.h">
+    <ClInclude Include="SDK\SmuggleBox_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\smug_Delicatessen_parameters.h">
+    <ClInclude Include="SDK\SmuggleBox_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\smug_Delicatessen_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_oldHarbor_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_oldHarbor_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_oldHarbor_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_sewageTreatment_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_sewageTreatment_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\smug_sewageTreatment_structs.h">
+    <ClInclude Include="SDK\SmuggleBox_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\smuggleLocation_classes.h">
@@ -8556,6 +8391,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\smuggleLocation_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\smugglerLaundryDialogueInstance_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\smugglerLaundryDialogueInstance_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\smugglerLaundryDialogueInstance_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\SoundVisualizations_classes.h">
@@ -8583,42 +8427,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\spinBoxOverride_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splinePath_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splinePath_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splinePath_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400Sidewalks_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400Sidewalks_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad400Sidewalks_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad500_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad500_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\splineRoad500_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\sprayActionWidget_classes.h">
@@ -8684,105 +8492,6 @@
     <ClInclude Include="SDK\statisticsManager_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\stobernGateUnlocker_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stobernGateUnlocker_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stobernGateUnlocker_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stonePreacherFixer_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stonePreacherFixer_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stonePreacherFixer_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_desert_port_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_desert_port_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_desert_port_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_garages_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_garages_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_garages_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_warehouse_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_warehouse_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_docks_warehouse_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldMarket_farDetail_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldMarket_farDetail_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldMarket_farDetail_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTown_farDetails_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTown_farDetails_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTown_farDetails_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTownEast_BasketCourt_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTownEast_BasketCourt_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_oldTownEast_BasketCourt_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_slums_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_slums_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_slums_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_twoTowers_farDetail_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_twoTowers_farDetail_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\stream_twoTowers_farDetail_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\streamMapBoxLoader_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -8799,15 +8508,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\streamMapLoader_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\streetLantern_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\streetLantern_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\streetLantern_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\streetLight_classes.h">
@@ -8999,6 +8699,15 @@
     <ClInclude Include="SDK\streetTeleport_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\SubstancePickupItem_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SubstancePickupItem_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SubstancePickupItem_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\suitcaseBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9116,24 +8825,6 @@
     <ClInclude Include="SDK\testDrugWorkStation_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\testLight_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\testLight_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\testLight_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\theCity_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\theCity_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\theCity_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\theGreatSwitch_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9188,15 +8879,6 @@
     <ClInclude Include="SDK\trainSegment_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\trainTrackSpline_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\trainTrackSpline_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\trainTrackSpline_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\TrashCupboard_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9204,15 +8886,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\TrashCupboard_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\trashFurnitureArtits_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\trashFurnitureArtits_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\trashFurnitureArtits_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\TunnelMusic_classes.h">
@@ -9240,24 +8913,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\tutorialTipWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersLookTrigger_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersLookTrigger_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersLookTrigger_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersRubberDollBP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersRubberDollBP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\twoTowersRubberDollBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\UdpMessaging_classes.h">
@@ -9305,6 +8960,60 @@
     <ClInclude Include="SDK\useSlotWidget_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\valBracelet_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valBracelet_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valBracelet_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBar_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBar_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBar_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBarLarge_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBarLarge_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valGoldBarLarge_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valNecklace_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valNecklace_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valNecklace_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valPhone_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valPhone_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valPhone_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valWatch_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valWatch_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\valWatch_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SDK\VariantManagerContent_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9312,6 +9021,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\VariantManagerContent_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaListCategories_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaListCategories_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaListCategories_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceCategory_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceCategory_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceCategory_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceFinish_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceFinish_parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VillaSurfaceFinish_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\virusFlashDrivePickup_classes.h">
@@ -9359,15 +9095,6 @@
     <ClInclude Include="SDK\wallSwitchLightBP_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\waterArea_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\waterArea_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\waterArea_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\waterBottleBP_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9384,15 +9111,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\waterSinkProgressWidget_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\weedDeskBlocker_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\weedDeskBlocker_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\weedDeskBlocker_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\weedDialogueFirstDone_classes.h">
@@ -9584,42 +9302,6 @@
     <ClInclude Include="SDK\WmfMediaFactory_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedLarge_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedLarge_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedLarge_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedSmall_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedSmall_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinBracedSmall_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinDoubleMedium_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinDoubleMedium_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinDoubleMedium_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinSingleLarge_BP_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinSingleLarge_BP_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WoodenBulletinSingleLarge_BP_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\workspaceTutorialManager_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -9699,15 +9381,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\worldCustomMarker_structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\worldEffectLSDBase_classes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\worldEffectLSDBase_parameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\worldEffectLSDBase_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SDK\worldMapMarker_classes.h">
@@ -9854,22 +9527,25 @@
     <ClInclude Include="SDK\ws_trashtable_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="utils\mem.h">
+    <ClInclude Include="SDK\ws_trashtableNEW_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="utils\proc.h">
+    <ClInclude Include="SDK\ws_trashtableNEW_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="SDK\ws_trashtableNEW_structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
+    <ClInclude Include="SDK\CoreUObject_classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Script.h">
+    <ClInclude Include="SDK\CoreUObject_parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ScriptDisassembler.h">
+    <ClInclude Include="SDK\CoreUObject_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Basic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

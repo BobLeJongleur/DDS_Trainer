@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass evidenceDocuments.evidenceDocuments_C
-// 0x0000 (0x0535 - 0x0535)
+// 0x0000 (0x05A8 - 0x05A8)
 class AevidenceDocuments_C : public ApickupItemBase_C
 {
 public:

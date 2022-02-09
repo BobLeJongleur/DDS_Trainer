@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ void UEquipmentShopInterfaceWidget_C::checkPlayerHasApartments(bool* hasApartmen
 
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.renderAppartments
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UEquipmentShopInterfaceWidget_C::renderAppartments()
 {
@@ -109,7 +109,7 @@ void UEquipmentShopInterfaceWidget_C::renderMainList()
 
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.renderCheckoutItems
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UEquipmentShopInterfaceWidget_C::renderCheckoutItems()
 {
@@ -145,27 +145,17 @@ void UEquipmentShopInterfaceWidget_C::recalcCheckout()
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FappartmentEquipment    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UequipmentShopItemWidget_C* ItemRef                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UEquipmentShopInterfaceWidget_C::addListItem(const struct FText& Name, float Price, int Quantity, int Index, class UTexture2D* Icon, const struct FappartmentEquipment& Data, const struct FText& Description, class UequipmentShopItemWidget_C** ItemRef)
+void UEquipmentShopInterfaceWidget_C::addListItem(const struct FName& ItemID, float Price, class UequipmentShopItemWidget_C** ItemRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem");
 
 	UEquipmentShopInterfaceWidget_C_addListItem_Params params;
-	params.Name = Name;
+	params.ItemID = ItemID;
 	params.Price = Price;
-	params.Quantity = Quantity;
-	params.Index = Index;
-	params.Icon = Icon;
-	params.Data = Data;
-	params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
 
@@ -201,9 +191,9 @@ void UEquipmentShopInterfaceWidget_C::Construct()
 // TArray<struct FappartmentEquipment> baseEq                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  basePrices                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AequipmentShop_C*        ParentShopRef                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<bool>                   Unlocked                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<bool>                   unlocked                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> Unlocked)
+void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> unlocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Setup");
 
@@ -211,7 +201,7 @@ void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> 
 	params.baseEq = baseEq;
 	params.basePrices = basePrices;
 	params.ParentShopRef = ParentShopRef;
-	params.Unlocked = Unlocked;
+	params.unlocked = unlocked;
 
 	auto flags = fn->FunctionFlags;
 

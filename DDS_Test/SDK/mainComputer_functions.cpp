@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,109 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function mainComputer.mainComputer_C.GetPlayerDebt
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          OutDebt                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AmainComputer_C::GetPlayerDebt(float* OutDebt)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.GetPlayerDebt");
+
+	AmainComputer_C_GetPlayerDebt_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutDebt != nullptr)
+		*OutDebt = params.OutDebt;
+}
+
+
+// Function mainComputer.mainComputer_C.GetPlayerOrderLimit
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          Limit                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AmainComputer_C::GetPlayerOrderLimit(float* Limit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.GetPlayerOrderLimit");
+
+	AmainComputer_C_GetPlayerOrderLimit_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Limit != nullptr)
+		*Limit = params.Limit;
+}
+
+
+// Function mainComputer.mainComputer_C.SendLaunderPayment
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AmainComputer_C::SendLaunderPayment(float Amount, bool Force)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.SendLaunderPayment");
+
+	AmainComputer_C_SendLaunderPayment_Params params;
+	params.Amount = Amount;
+	params.Force = Force;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function mainComputer.mainComputer_C.AddMoneyToLaunder
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AmainComputer_C::AddMoneyToLaunder(float Amount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.AddMoneyToLaunder");
+
+	AmainComputer_C_AddMoneyToLaunder_Params params;
+	params.Amount = Amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function mainComputer.mainComputer_C.ExpandRama
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AmainComputer_C::ExpandRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.ExpandRama");
+
+	AmainComputer_C_ExpandRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function mainComputer.mainComputer_C.reconstructDrugOffer
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -218,9 +321,10 @@ void AmainComputer_C::constructMessageSentence(bool LastIndex, bool BeforeLastIn
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FdrugData>       drugData                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FName>           DrugIDs                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    DrugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<int>* DrugQuantities)
+void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<struct FName>* DrugIDs, TArray<int>* DrugQuantities)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.sendNewOrder");
 
@@ -234,6 +338,8 @@ void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<in
 
 	if (drugData != nullptr)
 		*drugData = params.drugData;
+	if (DrugIDs != nullptr)
+		*DrugIDs = params.DrugIDs;
 	if (DrugQuantities != nullptr)
 		*DrugQuantities = params.DrugQuantities;
 }
@@ -378,14 +484,14 @@ void AmainComputer_C::checkIllegalIncome()
 }
 
 
-// Function mainComputer.mainComputer_C.openIllegalGate
+// Function mainComputer.mainComputer_C.addPsychedelicsOffer
 // (BlueprintCallable, BlueprintEvent)
 
-void AmainComputer_C::openIllegalGate()
+void AmainComputer_C::addPsychedelicsOffer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.openIllegalGate");
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.addPsychedelicsOffer");
 
-	AmainComputer_C_openIllegalGate_Params params;
+	AmainComputer_C_addPsychedelicsOffer_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -395,14 +501,36 @@ void AmainComputer_C::openIllegalGate()
 }
 
 
-// Function mainComputer.mainComputer_C.addPsychedelicsOffer
+// Function mainComputer.mainComputer_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AmainComputer_C::BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AmainComputer_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function mainComputer.mainComputer_C.RetryIllegalReminder
 // (BlueprintCallable, BlueprintEvent)
 
-void AmainComputer_C::addPsychedelicsOffer()
+void AmainComputer_C::RetryIllegalReminder()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.addPsychedelicsOffer");
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.RetryIllegalReminder");
 
-	AmainComputer_C_addPsychedelicsOffer_Params params;
+	AmainComputer_C_RetryIllegalReminder_Params params;
 
 	auto flags = fn->FunctionFlags;
 

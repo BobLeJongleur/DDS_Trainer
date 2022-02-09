@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,7 +65,7 @@ struct UappartmentViewerWidget_C_closeConfirmPanel_Params
 // Function appartmentViewerWidget.appartmentViewerWidget_C.rentConfirmed
 struct UappartmentViewerWidget_C_rentConfirmed_Params
 {
-	int                                                DaysLeft;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                DAYSLEFT;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Price;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -77,7 +77,7 @@ struct UappartmentViewerWidget_C_rentWentBad_Params
 // Function appartmentViewerWidget.appartmentViewerWidget_C.rentTerminated
 struct UappartmentViewerWidget_C_rentTerminated_Params
 {
-	int                                                DaysLeft;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                DAYSLEFT;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function appartmentViewerWidget.appartmentViewerWidget_C.ExecuteUbergraph_appartmentViewerWidget

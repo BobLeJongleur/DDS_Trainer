@@ -21,12 +21,16 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 	wprintf_s(L"Hooked\n");
 
+	//1.1.0
+	// Same as 1.0.8 it seems.
+	uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
+
 	//1.0.8
 	// Found 0x2EE77A0 from a pointer search in CheatEngine, it points to the GObjects in memory. The GObject position in memory comes from UFT 3.1.0.
 	// We need a FUObjectArray though, there is some metadata before the pointer, 4 int32 (4x4 = 16 = 0x10).
 	// Found 0x2EE3460 from a pointer search on the memory position of the GName table given by UFT 3.1.0.
 	// yeet
-	uintptr_t *baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0-0x10, 0x2EE3460));
+	//uintptr_t *baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0-0x10, 0x2EE3460));
 
 	// 1.0.6
 	//uintptr_t baseAddr = SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2E75B10, 0x2E717E0);
@@ -215,8 +219,8 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			for (int i = 0; i < salesManager->clientsDrugAddictedTo.Num(); i++)
 				wprintf_s(L"%6d; ", salesManager->clientsDrugAddictedTo[i]);
 			wprintf_s(L"\n Lost: ");
-			for (int i = 0; i < salesManager->ClientsLost.Num(); i++)
-				wprintf_s(L"%6d; ", salesManager->ClientsLost[i]);
+			for (int i = 0; i < salesManager->clientsLost.Num(); i++)
+				wprintf_s(L"%6d; ", salesManager->clientsLost[i]);
 			wprintf_s(L"\n   OD: ");
 			for (int i = 0; i < salesManager->clientsOD.Num(); i++)
 				wprintf_s(L"%6d; ", salesManager->clientsOD[i]);
@@ -312,7 +316,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			for (int i = 0; i < potentialNPCs.size(); i++)
 			{
 				auto tmp = potentialNPCs[i];
-				if (tmp->OrderId > 0)
+				if (tmp->orderID > 0)
 					npcsWithActiveOrder.push_back(tmp);
 			}
 
@@ -321,7 +325,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 			for (auto npc : npcsWithActiveOrder)
 			{
-				wprintf_s(L"\nNPC at 0x%p: OrderId %d\n", npc, npc->OrderId);
+				wprintf_s(L"\nNPC at 0x%p: OrderId %d\n", npc, npc->orderID);
 
 				for (int i = 0; i < npc->drugsDemanded.Num(); i++)
 				{
@@ -503,7 +507,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 		if (GetAsyncKeyState(VK_F9) & 1)
 		{
 			bool success = false;
-			player->addMoney(1, &success);
+			player->addMoney(1, false, &success);
 		}
 
 		if (updateStatus)

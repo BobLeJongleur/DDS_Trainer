@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,26 @@ void AgoHomePoint_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function goHomePoint.goHomePoint_C.UserConstructionScript");
 
 	AgoHomePoint_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function goHomePoint.goHomePoint_C.ShortRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AgoHomePoint_C::ShortRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function goHomePoint.goHomePoint_C.ShortRadiusChanged");
+
+	AgoHomePoint_C_ShortRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -68,6 +88,26 @@ void AgoHomePoint_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOver
 	params.OtherBodyIndex = OtherBodyIndex;
 	params.bFromSweep = bFromSweep;
 	params.SweepResult = SweepResult;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function goHomePoint.goHomePoint_C.LongRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AgoHomePoint_C::LongRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function goHomePoint.goHomePoint_C.LongRadiusChanged");
+
+	AgoHomePoint_C_LongRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 

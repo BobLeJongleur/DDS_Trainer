@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -158,14 +158,14 @@ void AlaBallena_C::ReceiveBeginPlay()
 }
 
 
-// Function laBallena.laBallena_C.playerSatDown
+// Function laBallena.laBallena_C.PlayerSatDown
 // (BlueprintCallable, BlueprintEvent)
 
-void AlaBallena_C::playerSatDown()
+void AlaBallena_C::PlayerSatDown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function laBallena.laBallena_C.playerSatDown");
+	static auto fn = UObject::FindObject<UFunction>("Function laBallena.laBallena_C.PlayerSatDown");
 
-	AlaBallena_C_playerSatDown_Params params;
+	AlaBallena_C_PlayerSatDown_Params params;
 
 	auto flags = fn->FunctionFlags;
 

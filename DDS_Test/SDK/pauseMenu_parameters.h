@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,7 @@ struct UpauseMenu_C_showConfirm_Params
 {
 	struct FText                                       Header;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Desc;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                confirmActionIndex;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ConfirmActionIndex;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function pauseMenu.pauseMenu_C.terminateMe

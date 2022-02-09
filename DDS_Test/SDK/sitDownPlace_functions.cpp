@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,14 +70,14 @@ void AsitDownPlace_C::ReceiveBeginPlay()
 // Function sitDownPlace.sitDownPlace_C.SitDown
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AsitDownPlace_C::SitDown(class AplayerCharacterBP_C* playerRef)
+void AsitDownPlace_C::SitDown(class AplayerCharacterBP_C* PlayerRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function sitDownPlace.sitDownPlace_C.SitDown");
 
 	AsitDownPlace_C_SitDown_Params params;
-	params.playerRef = playerRef;
+	params.PlayerRef = PlayerRef;
 
 	auto flags = fn->FunctionFlags;
 

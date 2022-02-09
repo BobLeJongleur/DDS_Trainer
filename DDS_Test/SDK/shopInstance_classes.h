@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass shopInstance.shopInstance_C
-// 0x00B8 (0x03E0 - 0x0328)
+// 0x00C1 (0x03E9 - 0x0328)
 class AshopInstance_C : public AActor
 {
 public:
@@ -35,6 +35,8 @@ public:
 	bool                                               shopIsTrading;                                            // 0x03D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x03D9(0x0003) MISSED OFFSET
 	float                                              newQuantityMultiplier;                                    // 0x03DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ShopID;                                                   // 0x03E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DisableMap;                                               // 0x03E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -43,11 +45,12 @@ public:
 	}
 
 
+	void GetShopMeta(struct FShopDataStruct* ShopData);
 	void updateShopClassDefaults();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void resupplyShop();
 	void checkShopResupply();
+	void resupplyShop();
+	void ReceiveBeginPlay();
 	void scriptResupplyEvent();
 	void ExecuteUbergraph_shopInstance(int EntryPoint);
 };

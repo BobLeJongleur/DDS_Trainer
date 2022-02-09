@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,6 +51,13 @@ struct FEngineServiceAuthDeny
 	struct FString                                     UserToDeny;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct EngineMessages.EngineServicePing
+// 0x0001
+struct FEngineServicePing
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct EngineMessages.EngineServicePong
 // 0x0050
 struct FEngineServicePong
@@ -64,13 +71,6 @@ struct FEngineServicePong
 	struct FGuid                                       SessionId;                                                // 0x0038(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              WorldTimeSeconds;                                         // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct EngineMessages.EngineServicePing
-// 0x0001
-struct FEngineServicePing
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ void UweedSeedSelectWidget_C::plantCurrentSeed()
 
 
 // Function weedSeedSelectWidget.weedSeedSelectWidget_C.renderSeedList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UweedSeedSelectWidget_C::renderSeedList()
 {
@@ -89,15 +89,15 @@ void UweedSeedSelectWidget_C::Tick(const struct FGeometry& MyGeometry, float InD
 // Function weedSeedSelectWidget.weedSeedSelectWidget_C.Setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           showIndoor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UweedSeedSelectWidget_C::Setup(class AplayerCharacterBP_C* playerRef, bool showIndoor)
+void UweedSeedSelectWidget_C::Setup(class AplayerCharacterBP_C* PlayerRef, bool showIndoor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function weedSeedSelectWidget.weedSeedSelectWidget_C.Setup");
 
 	UweedSeedSelectWidget_C_Setup_Params params;
-	params.playerRef = playerRef;
+	params.PlayerRef = PlayerRef;
 	params.showIndoor = showIndoor;
 
 	auto flags = fn->FunctionFlags;

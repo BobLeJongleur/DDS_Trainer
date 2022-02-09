@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,7 +78,7 @@ void AappartmentManager_C::countAvailableApartments()
 
 
 // Function appartmentManager.appartmentManager_C.processRentTransaction
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -368,6 +368,28 @@ void AappartmentManager_C::firstRentAction()
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.firstRentAction");
 
 	AappartmentManager_C_firstRentAction_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function appartmentManager.appartmentManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AappartmentManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AappartmentManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

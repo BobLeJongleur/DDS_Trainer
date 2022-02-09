@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,6 +54,13 @@ struct AwallCheckpoint_C_BndEvt__throwCollider_K2Node_ComponentBoundEvent_1_Comp
 // Function wallCheckpoint.wallCheckpoint_C.tryDestroyBackpack
 struct AwallCheckpoint_C_tryDestroyBackpack_Params
 {
+};
+
+// Function wallCheckpoint.wallCheckpoint_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AwallCheckpoint_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function wallCheckpoint.wallCheckpoint_C.ExecuteUbergraph_wallCheckpoint

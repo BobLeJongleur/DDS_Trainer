@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,64 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.RamaExpand
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AworkStationEquipmentBase_C::RamaExpand()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.RamaExpand");
+
+	AworkStationEquipmentBase_C_RamaExpand_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           FinalProduct                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   OutSubstanceID                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AworkStationEquipmentBase_C::GetHeldSubstanceID(bool FinalProduct, struct FName* OutSubstanceID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID");
+
+	AworkStationEquipmentBase_C_GetHeldSubstanceID_Params params;
+	params.FinalProduct = FinalProduct;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutSubstanceID != nullptr)
+		*OutSubstanceID = params.OutSubstanceID;
+}
+
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.HandleRama
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AworkStationEquipmentBase_C::HandleRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.HandleRama");
+
+	AworkStationEquipmentBase_C_HandleRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.packagePopup
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -31,7 +89,7 @@ void AworkStationEquipmentBase_C::packagePopup()
 
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.packageProduct
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AworkStationEquipmentBase_C::packageProduct()
 {
@@ -85,9 +143,11 @@ void AworkStationEquipmentBase_C::tryAddSubstance()
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Proceed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           NameDiffers                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FdrugData               SourceData                     (Parm, OutParm)
+// struct FMixProportionsStruct   SourceMixProportions           (Parm, OutParm)
 
-void AworkStationEquipmentBase_C::verifySubstanceSource(bool* Proceed, struct FdrugData* SourceData)
+void AworkStationEquipmentBase_C::verifySubstanceSource(bool* Proceed, bool* NameDiffers, struct FdrugData* SourceData, struct FMixProportionsStruct* SourceMixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.verifySubstanceSource");
 
@@ -101,8 +161,12 @@ void AworkStationEquipmentBase_C::verifySubstanceSource(bool* Proceed, struct Fd
 
 	if (Proceed != nullptr)
 		*Proceed = params.Proceed;
+	if (NameDiffers != nullptr)
+		*NameDiffers = params.NameDiffers;
 	if (SourceData != nullptr)
 		*SourceData = params.SourceData;
+	if (SourceMixProportions != nullptr)
+		*SourceMixProportions = params.SourceMixProportions;
 }
 
 
@@ -110,14 +174,17 @@ void AworkStationEquipmentBase_C::verifySubstanceSource(bool* Proceed, struct Fd
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FdrugData               NewData                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           TheSame                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           NameMissmatch                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationEquipmentBase_C::compareContent(const struct FdrugData& NewData, bool* TheSame)
+void AworkStationEquipmentBase_C::compareContent(const struct FdrugData& NewData, const struct FMixProportionsStruct& MixProportions, bool* TheSame, bool* NameMissmatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.compareContent");
 
 	AworkStationEquipmentBase_C_compareContent_Params params;
 	params.NewData = NewData;
+	params.MixProportions = MixProportions;
 
 	auto flags = fn->FunctionFlags;
 
@@ -127,6 +194,8 @@ void AworkStationEquipmentBase_C::compareContent(const struct FdrugData& NewData
 
 	if (TheSame != nullptr)
 		*TheSame = params.TheSame;
+	if (NameMissmatch != nullptr)
+		*NameMissmatch = params.NameMissmatch;
 }
 
 
@@ -363,9 +432,9 @@ void AworkStationEquipmentBase_C::calcLineTracePoints()
 // Function workStationEquipmentBase.workStationEquipmentBase_C.checkCanFit
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationEquipmentBase_C::checkCanFit(bool* CanFit)
+void AworkStationEquipmentBase_C::checkCanFit(bool* canFit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.checkCanFit");
 
@@ -377,8 +446,8 @@ void AworkStationEquipmentBase_C::checkCanFit(bool* CanFit)
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
 }
 
 
@@ -502,6 +571,62 @@ void AworkStationEquipmentBase_C::dumpContent()
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.dumpContent");
 
 	AworkStationEquipmentBase_C_dumpContent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AworkStationEquipmentBase_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AworkStationEquipmentBase_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.SubclassRamaLoad
+// (BlueprintCallable, BlueprintEvent)
+
+void AworkStationEquipmentBase_C::SubclassRamaLoad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.SubclassRamaLoad");
+
+	AworkStationEquipmentBase_C_SubclassRamaLoad_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function workStationEquipmentBase.workStationEquipmentBase_C.GizmoSet
+// (BlueprintCallable, BlueprintEvent)
+
+void AworkStationEquipmentBase_C::GizmoSet()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.GizmoSet");
+
+	AworkStationEquipmentBase_C_GizmoSet_Params params;
 
 	auto flags = fn->FunctionFlags;
 

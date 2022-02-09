@@ -131,7 +131,7 @@
     push(0x11FF)
 
     currentMixStringID = this.drugReceived[mixStringIDs_i]
-    currentMixStringID_i = KismetArrayLibrary::Array_Find(drugStringIds, mix)
+    currentMixStringID_i = KismetArrayLibrary::Array_Find(drugStringIds, currentMixStringID)
 
     if !(currentMixStringID_i > -1)
         pop() // => jmp 0x11FF

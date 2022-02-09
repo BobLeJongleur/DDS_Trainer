@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass drugItemSlot.drugItemSlot_C
-// 0x0118 (0x0320 - 0x0208)
+// 0x0120 (0x0328 - 0x0208)
 class UdrugItemSlot_C : public UUserWidget
 {
 public:
@@ -31,6 +31,7 @@ public:
 	struct FdrugData                                   drugData;                                                 // 0x0258(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
 	class UorderDropOverlay_C*                         dropWidgetRef;                                            // 0x0308(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	struct FString                                     Tag;                                                      // 0x0310(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       DrugID;                                                   // 0x0320(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -41,7 +42,7 @@ public:
 
 	void OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Setup(const struct FdrugData& drugData, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload);
+	void Setup(const struct FdrugData& drugData, const struct FName& DrugID, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload);
 	void BndEvt__btnRemoveElement_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_drugItemSlot(int EntryPoint);

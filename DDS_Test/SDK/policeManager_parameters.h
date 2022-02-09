@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,8 +91,8 @@ struct ApoliceManager_C_UserConstructionScript_Params
 {
 };
 
-// Function policeManager.policeManager_C.ReceiveBeginPlay
-struct ApoliceManager_C_ReceiveBeginPlay_Params
+// Function policeManager.policeManager_C.checkRequestQuery
+struct ApoliceManager_C_checkRequestQuery_Params
 {
 };
 
@@ -102,11 +102,6 @@ struct ApoliceManager_C_requestPatrolArea_Params
 	class APolicemanBaseClass_C*                       Querier;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function policeManager.policeManager_C.checkRequestQuery
-struct ApoliceManager_C_checkRequestQuery_Params
-{
-};
-
 // Function policeManager.policeManager_C.playRadioComs
 struct ApoliceManager_C_playRadioComs_Params
 {
@@ -114,6 +109,11 @@ struct ApoliceManager_C_playRadioComs_Params
 
 // Function policeManager.policeManager_C.trySpawnPatrol
 struct ApoliceManager_C_trySpawnPatrol_Params
+{
+};
+
+// Function policeManager.policeManager_C.ReceiveBeginPlay
+struct ApoliceManager_C_ReceiveBeginPlay_Params
 {
 };
 

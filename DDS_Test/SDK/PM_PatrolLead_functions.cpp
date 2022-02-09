@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,26 @@ void APM_PatrolLead_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.UserConstructionScript");
 
 	APM_PatrolLead_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.ShortRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void APM_PatrolLead_C::ShortRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.ShortRadiusChanged");
+
+	APM_PatrolLead_C_ShortRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -190,6 +210,82 @@ void APM_PatrolLead_C::unlockRespawnPartner()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.unlockRespawnPartner");
 
 	APM_PatrolLead_C_unlockRespawnPartner_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.LongRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void APM_PatrolLead_C::LongRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.LongRadiusChanged");
+
+	APM_PatrolLead_C_LongRadiusChanged_Params params;
+	params.InRadius = InRadius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void APM_PatrolLead_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	APM_PatrolLead_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.WipePatrol
+// (BlueprintCallable, BlueprintEvent)
+
+void APM_PatrolLead_C::WipePatrol()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.WipePatrol");
+
+	APM_PatrolLead_C_WipePatrol_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.RetryWipe
+// (BlueprintCallable, BlueprintEvent)
+
+void APM_PatrolLead_C::RetryWipe()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.RetryWipe");
+
+	APM_PatrolLead_C_RetryWipe_Params params;
 
 	auto flags = fn->FunctionFlags;
 

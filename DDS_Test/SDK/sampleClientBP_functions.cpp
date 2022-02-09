@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -92,6 +92,23 @@ void AsampleClientBP_C::makeGoHome()
 	static auto fn = UObject::FindObject<UFunction>("Function sampleClientBP.sampleClientBP_C.makeGoHome");
 
 	AsampleClientBP_C_makeGoHome_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function sampleClientBP.sampleClientBP_C.RamaLoadedEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void AsampleClientBP_C::RamaLoadedEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function sampleClientBP.sampleClientBP_C.RamaLoadedEvent");
+
+	AsampleClientBP_C_RamaLoadedEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
 

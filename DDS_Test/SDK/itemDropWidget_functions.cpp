@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,72 +37,6 @@ bool UitemDropWidget_C::OnDrop(const struct FGeometry& MyGeometry, const struct 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function itemDropWidget.itemDropWidget_C.OnDragEnter
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UDragDropOperation*      Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UitemDropWidget_C::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropWidget.itemDropWidget_C.OnDragEnter");
-
-	UitemDropWidget_C_OnDragEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.PointerEvent = PointerEvent;
-	params.Operation = Operation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function itemDropWidget.itemDropWidget_C.OnDragLeave
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UDragDropOperation*      Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UitemDropWidget_C::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropWidget.itemDropWidget_C.OnDragLeave");
-
-	UitemDropWidget_C_OnDragLeave_Params params;
-	params.PointerEvent = PointerEvent;
-	params.Operation = Operation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function itemDropWidget.itemDropWidget_C.ExecuteUbergraph_itemDropWidget
-// (Final, HasDefaults)
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UitemDropWidget_C::ExecuteUbergraph_itemDropWidget(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropWidget.itemDropWidget_C.ExecuteUbergraph_itemDropWidget");
-
-	UitemDropWidget_C_ExecuteUbergraph_itemDropWidget_Params params;
-	params.EntryPoint = EntryPoint;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

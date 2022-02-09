@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass dayTimeControler.dayTimeControler_C
-// 0x00BC (0x03E4 - 0x0328)
+// 0x00E0 (0x0408 - 0x0328)
 class AdayTimeControler_C : public AActor
 {
 public:
@@ -56,6 +56,9 @@ public:
 	int                                                lastDayDisplayed;                                         // 0x03D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              baseFogDensity;                                           // 0x03DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              minFogDensity;                                            // 0x03E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x03E4(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    ClearTrashBins;                                           // 0x03E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    SwitchLanterns;                                           // 0x03F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -73,20 +76,25 @@ public:
 	void setupReferences(bool* Valid);
 	void calculateSky();
 	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 	void updateSun();
 	void disableStreetLight();
 	void enableStreetLight();
 	void sunDefaults();
 	void AddTime(float Hours, float Minutes);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
 	void refreshSun();
 	void openSunGate();
 	void CloseSunGate();
 	void checkPoliceHoursAlarm();
 	void updateCepTime();
 	void retrySetDefaultTime();
+	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
+	void SetupLanterns();
+	void DisplayDayID();
 	void ExecuteUbergraph_dayTimeControler(int EntryPoint);
+	void SwitchLanterns__DelegateSignature(bool TurnedOn);
+	void ClearTrashBins__DelegateSignature(bool TotalPurge);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function dialogueInstance.dialogueInstance_C.GetDialogueData
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AdialogueInstance_C::GetDialogueData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.GetDialogueData");
+
+	AdialogueInstance_C_GetDialogueData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function dialogueInstance.dialogueInstance_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -98,6 +115,62 @@ void AdialogueInstance_C::openTrading(bool regularShop)
 
 	AdialogueInstance_C_openTrading_Params params;
 	params.regularShop = regularShop;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dialogueInstance.dialogueInstance_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AdialogueInstance_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AdialogueInstance_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dialogueInstance.dialogueInstance_C.DialogueLoaded
+// (BlueprintCallable, BlueprintEvent)
+
+void AdialogueInstance_C::DialogueLoaded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.DialogueLoaded");
+
+	AdialogueInstance_C_DialogueLoaded_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dialogueInstance.dialogueInstance_C.DialogueActivated
+// (BlueprintCallable, BlueprintEvent)
+
+void AdialogueInstance_C::DialogueActivated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.DialogueActivated");
+
+	AdialogueInstance_C_DialogueActivated_Params params;
 
 	auto flags = fn->FunctionFlags;
 

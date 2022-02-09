@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function shopInstance.shopInstance_C.GetShopMeta
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FShopDataStruct         ShopData                       (Parm, OutParm)
+
+void AshopInstance_C::GetShopMeta(struct FShopDataStruct* ShopData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shopInstance.shopInstance_C.GetShopMeta");
+
+	AshopInstance_C_GetShopMeta_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ShopData != nullptr)
+		*ShopData = params.ShopData;
+}
+
 
 // Function shopInstance.shopInstance_C.updateShopClassDefaults
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -47,14 +69,14 @@ void AshopInstance_C::UserConstructionScript()
 }
 
 
-// Function shopInstance.shopInstance_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function shopInstance.shopInstance_C.checkShopResupply
+// (BlueprintCallable, BlueprintEvent)
 
-void AshopInstance_C::ReceiveBeginPlay()
+void AshopInstance_C::checkShopResupply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shopInstance.shopInstance_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function shopInstance.shopInstance_C.checkShopResupply");
 
-	AshopInstance_C_ReceiveBeginPlay_Params params;
+	AshopInstance_C_checkShopResupply_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -81,14 +103,14 @@ void AshopInstance_C::resupplyShop()
 }
 
 
-// Function shopInstance.shopInstance_C.checkShopResupply
-// (BlueprintCallable, BlueprintEvent)
+// Function shopInstance.shopInstance_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AshopInstance_C::checkShopResupply()
+void AshopInstance_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shopInstance.shopInstance_C.checkShopResupply");
+	static auto fn = UObject::FindObject<UFunction>("Function shopInstance.shopInstance_C.ReceiveBeginPlay");
 
-	AshopInstance_C_checkShopResupply_Params params;
+	AshopInstance_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -116,7 +138,7 @@ void AshopInstance_C::scriptResupplyEvent()
 
 
 // Function shopInstance.shopInstance_C.ExecuteUbergraph_shopInstance
-// (Final, HasDefaults)
+// (Final)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

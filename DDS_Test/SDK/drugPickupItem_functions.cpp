@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,45 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function drugPickupItem.drugPickupItem_C.GetItemName
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   OutName                        (Parm, OutParm)
+
+void AdrugPickupItem_C::GetItemName(struct FText* OutName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function drugPickupItem.drugPickupItem_C.GetItemName");
+
+	AdrugPickupItem_C_GetItemName_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutName != nullptr)
+		*OutName = params.OutName;
+}
+
+
+// Function drugPickupItem.drugPickupItem_C.ReconstructRama
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AdrugPickupItem_C::ReconstructRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function drugPickupItem.drugPickupItem_C.ReconstructRama");
+
+	AdrugPickupItem_C_ReconstructRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function drugPickupItem.drugPickupItem_C.makeAdditiveTypeModel
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -43,15 +82,17 @@ void AdrugPickupItem_C::makeAdditiveTypeModel(const struct FdrugData& drugData, 
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           BigPackage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UStaticMesh*             OutModel                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AdrugPickupItem_C::makePackageTypeModel(const struct FdrugData& drugData, bool BigPackage, class UStaticMesh** OutModel)
+void AdrugPickupItem_C::makePackageTypeModel(const struct FdrugData& drugData, const struct FMixProportionsStruct& MixProportions, bool BigPackage, class UStaticMesh** OutModel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function drugPickupItem.drugPickupItem_C.makePackageTypeModel");
 
 	AdrugPickupItem_C_makePackageTypeModel_Params params;
 	params.drugData = drugData;
+	params.MixProportions = MixProportions;
 	params.BigPackage = BigPackage;
 
 	auto flags = fn->FunctionFlags;
@@ -175,6 +216,23 @@ void AdrugPickupItem_C::retryConfig()
 	static auto fn = UObject::FindObject<UFunction>("Function drugPickupItem.drugPickupItem_C.retryConfig");
 
 	AdrugPickupItem_C_retryConfig_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function drugPickupItem.drugPickupItem_C.SubclassRamaLoaded
+// (BlueprintCallable, BlueprintEvent)
+
+void AdrugPickupItem_C::SubclassRamaLoaded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function drugPickupItem.drugPickupItem_C.SubclassRamaLoaded");
+
+	AdrugPickupItem_C_SubclassRamaLoaded_Params params;
 
 	auto flags = fn->FunctionFlags;
 

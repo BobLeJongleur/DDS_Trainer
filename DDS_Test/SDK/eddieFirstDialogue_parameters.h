@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,8 +74,8 @@ struct AeddieFirstDialogue_C_playInpatientQuote_Params
 {
 };
 
-// Function eddieFirstDialogue.eddieFirstDialogue_C.playerSatDown
-struct AeddieFirstDialogue_C_playerSatDown_Params
+// Function eddieFirstDialogue.eddieFirstDialogue_C.PlayerSatDown
+struct AeddieFirstDialogue_C_PlayerSatDown_Params
 {
 };
 

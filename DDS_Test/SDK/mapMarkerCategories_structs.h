@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,8 @@ enum class EmapMarkerCategories : uint8_t
 	mapMarkerCategories__NewEnumerator7 = 7,
 	mapMarkerCategories__NewEnumerator8 = 8,
 	mapMarkerCategories__NewEnumerator9 = 9,
-	mapMarkerCategories__mapMarkerCategories_MAX = 10
+	mapMarkerCategories__NewEnumerator10 = 10,
+	mapMarkerCategories__mapMarkerCategories_MAX = 11
 };
 
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function orderDropOverlay.orderDropOverlay_C.GetText_1
+struct UorderDropOverlay_C_GetText_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function orderDropOverlay.orderDropOverlay_C.GetPlayerOrderLimit
+struct UorderDropOverlay_C_GetPlayerOrderLimit_Params
+{
+	float                                              OrderLimit;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function orderDropOverlay.orderDropOverlay_C.Get_btnEvenCrypto_ToolTipWidget_1
 struct UorderDropOverlay_C_Get_btnEvenCrypto_ToolTipWidget_1_Params
@@ -34,7 +46,7 @@ struct UorderDropOverlay_C_checkOrderButtons_Params
 // Function orderDropOverlay.orderDropOverlay_C.removeFromOrder
 struct UorderDropOverlay_C_removeFromOrder_Params
 {
-	struct FdrugData                                   drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FName                                       DrugID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function orderDropOverlay.orderDropOverlay_C.recalcTotalOrder
@@ -133,10 +145,20 @@ struct UorderDropOverlay_C_BndEvt__btnBalanceAccept_K2Node_ComponentBoundEvent_6
 {
 };
 
+// Function orderDropOverlay.orderDropOverlay_C.BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
+struct UorderDropOverlay_C_BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
 // Function orderDropOverlay.orderDropOverlay_C.ExecuteUbergraph_orderDropOverlay
 struct UorderDropOverlay_C_ExecuteUbergraph_orderDropOverlay_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function orderDropOverlay.orderDropOverlay_C.ClickedBuytPTC__DelegateSignature
+struct UorderDropOverlay_C_ClickedBuytPTC__DelegateSignature_Params
+{
 };
 
 }

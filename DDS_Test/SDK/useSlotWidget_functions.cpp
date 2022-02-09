@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,7 +84,7 @@ void UuseSlotWidget_C::createUsedPackage(struct FinventoryItemStruct* NewData, b
 
 
 // Function useSlotWidget.useSlotWidget_C.useSlotItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UuseSlotWidget_C::useSlotItem()
 {
@@ -101,7 +101,7 @@ void UuseSlotWidget_C::useSlotItem()
 
 
 // Function useSlotWidget.useSlotWidget_C.clearSlot
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UuseSlotWidget_C::clearSlot()
 {
@@ -118,7 +118,7 @@ void UuseSlotWidget_C::clearSlot()
 
 
 // Function useSlotWidget.useSlotWidget_C.checkItemAvailable
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           itemAvailable                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -194,6 +194,26 @@ void UuseSlotWidget_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function useSlotWidget.useSlotWidget_C.Construct");
 
 	UuseSlotWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function useSlotWidget.useSlotWidget_C.SetupSlot
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGuid                   LocalGuid                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UuseSlotWidget_C::SetupSlot(const struct FGuid& LocalGuid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function useSlotWidget.useSlotWidget_C.SetupSlot");
+
+	UuseSlotWidget_C_SetupSlot_Params params;
+	params.LocalGuid = LocalGuid;
 
 	auto flags = fn->FunctionFlags;
 

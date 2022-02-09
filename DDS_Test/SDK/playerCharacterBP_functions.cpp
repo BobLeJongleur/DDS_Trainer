@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,94 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::CheckFallDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage");
+
+	AplayerCharacterBP_C_CheckFallDamage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.FallDamageRegen
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AplayerCharacterBP_C::FallDamageRegen(float Delta)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.FallDamageRegen");
+
+	AplayerCharacterBP_C_FallDamageRegen_Params params;
+	params.Delta = Delta;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ExpandRama
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ExpandRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ExpandRama");
+
+	AplayerCharacterBP_C_ExpandRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ReconstructOldInventory
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ReconstructOldInventory()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ReconstructOldInventory");
+
+	AplayerCharacterBP_C_ReconstructOldInventory_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckInfluenceSphere
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::CheckInfluenceSphere()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.CheckInfluenceSphere");
+
+	AplayerCharacterBP_C_CheckInfluenceSphere_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function playerCharacterBP.playerCharacterBP_C.convertUsedDrugData
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -128,7 +216,7 @@ void AplayerCharacterBP_C::restoreGuardLocation()
 
 
 // Function playerCharacterBP.playerCharacterBP_C.checkBobbyPins
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           RemoveOne                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           HasBobbyPins                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -179,7 +267,7 @@ void AplayerCharacterBP_C::convertBackpackData(const struct FinventoryItemStruct
 
 
 // Function playerCharacterBP.playerCharacterBP_C.checkSeedsInventory
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AplayerCharacterBP_C::checkSeedsInventory()
 {
@@ -364,16 +452,18 @@ void AplayerCharacterBP_C::usedDrugCountdown(float Delta)
 
 
 // Function playerCharacterBP.playerCharacterBP_C.useDrugDose
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   NameOverride                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::useDrugDose(const struct FdrugData& drugData)
+void AplayerCharacterBP_C::useDrugDose(const struct FdrugData& drugData, const struct FText& NameOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.useDrugDose");
 
 	AplayerCharacterBP_C_useDrugDose_Params params;
 	params.drugData = drugData;
+	params.NameOverride = NameOverride;
 
 	auto flags = fn->FunctionFlags;
 
@@ -455,7 +545,7 @@ void AplayerCharacterBP_C::updateSkillAbilities()
 
 
 // Function playerCharacterBP.playerCharacterBP_C.refreshBackpackData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AplayerCharacterBP_C::refreshBackpackData()
 {
@@ -706,9 +796,9 @@ void AplayerCharacterBP_C::updateNotifyIcons()
 // Parameters:
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::checkInventorySizing(const struct FinventoryItemStruct& Data, int Quantity, bool* CanFit)
+void AplayerCharacterBP_C::checkInventorySizing(const struct FinventoryItemStruct& Data, int Quantity, bool* canFit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.checkInventorySizing");
 
@@ -722,8 +812,8 @@ void AplayerCharacterBP_C::checkInventorySizing(const struct FinventoryItemStruc
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
 }
 
 
@@ -803,7 +893,7 @@ void AplayerCharacterBP_C::addCryptocurrency(int Amount)
 
 
 // Function playerCharacterBP.playerCharacterBP_C.countAllMoney
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            allMoneyCount                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -825,7 +915,7 @@ void AplayerCharacterBP_C::countAllMoney(int* allMoneyCount)
 
 
 // Function playerCharacterBP.playerCharacterBP_C.chargeMoney
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NoPopup                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -847,17 +937,19 @@ void AplayerCharacterBP_C::chargeMoney(int Amount, bool NoPopup)
 
 
 // Function playerCharacterBP.playerCharacterBP_C.addMoney
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           SkipCounting                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::addMoney(int Amount, bool* Success)
+void AplayerCharacterBP_C::addMoney(int Amount, bool SkipCounting, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.addMoney");
 
 	AplayerCharacterBP_C_addMoney_Params params;
 	params.Amount = Amount;
+	params.SkipCounting = SkipCounting;
 
 	auto flags = fn->FunctionFlags;
 
@@ -925,7 +1017,7 @@ void AplayerCharacterBP_C::calcVisibilityMultiplier()
 
 
 // Function playerCharacterBP.playerCharacterBP_C.calcSuspicionMultiplier
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AplayerCharacterBP_C::calcSuspicionMultiplier()
 {
@@ -1082,18 +1174,22 @@ void AplayerCharacterBP_C::clearBackpack()
 // Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AbackpackBase_C*         Backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AbackpackBase_C*         backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AitemInventoryHolder_C*  itemHolder                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FinventoryItemStruct    backpackData                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   BackpackItemID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::setCurrentBackpack(class AbackpackBase_C* Backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData)
+void AplayerCharacterBP_C::setCurrentBackpack(class AbackpackBase_C* backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData, const struct FName& BackpackItemID, bool FromVendor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack");
 
 	AplayerCharacterBP_C_setCurrentBackpack_Params params;
-	params.Backpack = Backpack;
+	params.backpack = backpack;
 	params.itemHolder = itemHolder;
 	params.backpackData = backpackData;
+	params.BackpackItemID = BackpackItemID;
+	params.FromVendor = FromVendor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1204,10 +1300,10 @@ void AplayerCharacterBP_C::phoneNewMessage(int From, const struct FText& Message
 // Parameters:
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MaxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            maxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::checkContainerSizing(const struct FinventoryItemStruct& Data, int Quantity, bool* CanFit, int* MaxQuantity)
+void AplayerCharacterBP_C::checkContainerSizing(const struct FinventoryItemStruct& Data, int Quantity, bool* canFit, int* maxQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.checkContainerSizing");
 
@@ -1221,10 +1317,10 @@ void AplayerCharacterBP_C::checkContainerSizing(const struct FinventoryItemStruc
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
-	if (MaxQuantity != nullptr)
-		*MaxQuantity = params.MaxQuantity;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
+	if (maxQuantity != nullptr)
+		*maxQuantity = params.maxQuantity;
 }
 
 
@@ -1262,17 +1358,17 @@ void AplayerCharacterBP_C::tryAddToPockets(const struct FinventoryItemStruct& Da
 // Parameters:
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           fromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::addBackpackContent(const struct FinventoryItemStruct& Data, int Quantity, bool fromVendor, int ItemPrice)
+void AplayerCharacterBP_C::addBackpackContent(const struct FinventoryItemStruct& Data, int Quantity, bool FromVendor, int ItemPrice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.addBackpackContent");
 
 	AplayerCharacterBP_C_addBackpackContent_Params params;
 	params.Data = Data;
 	params.Quantity = Quantity;
-	params.fromVendor = fromVendor;
+	params.FromVendor = FromVendor;
 	params.ItemPrice = ItemPrice;
 
 	auto flags = fn->FunctionFlags;
@@ -1288,10 +1384,10 @@ void AplayerCharacterBP_C::addBackpackContent(const struct FinventoryItemStruct&
 // Parameters:
 // struct FinventoryItemStruct    itemData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MaxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            maxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::checkBackpackSizing(const struct FinventoryItemStruct& itemData, int Quantity, bool* CanFit, int* MaxQuantity)
+void AplayerCharacterBP_C::checkBackpackSizing(const struct FinventoryItemStruct& itemData, int Quantity, bool* canFit, int* maxQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.checkBackpackSizing");
 
@@ -1305,10 +1401,10 @@ void AplayerCharacterBP_C::checkBackpackSizing(const struct FinventoryItemStruct
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
-	if (MaxQuantity != nullptr)
-		*MaxQuantity = params.MaxQuantity;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
+	if (maxQuantity != nullptr)
+		*maxQuantity = params.maxQuantity;
 }
 
 
@@ -1318,10 +1414,10 @@ void AplayerCharacterBP_C::checkBackpackSizing(const struct FinventoryItemStruct
 // struct FinventoryItemStruct    itemData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MaxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            maxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::checkPocketSizing(const struct FinventoryItemStruct& itemData, int Quantity, int Index, bool* CanFit, int* MaxQuantity)
+void AplayerCharacterBP_C::checkPocketSizing(const struct FinventoryItemStruct& itemData, int Quantity, int Index, bool* canFit, int* maxQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.checkPocketSizing");
 
@@ -1336,10 +1432,10 @@ void AplayerCharacterBP_C::checkPocketSizing(const struct FinventoryItemStruct& 
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
-	if (MaxQuantity != nullptr)
-		*MaxQuantity = params.MaxQuantity;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
+	if (maxQuantity != nullptr)
+		*maxQuantity = params.maxQuantity;
 }
 
 
@@ -1349,10 +1445,10 @@ void AplayerCharacterBP_C::checkPocketSizing(const struct FinventoryItemStruct& 
 // struct FinventoryItemStruct    itemData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            PocketIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           fromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            vendorPrice                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::setPocketContent(const struct FinventoryItemStruct& itemData, int PocketIndex, int Quantity, bool fromVendor, int vendorPrice)
+void AplayerCharacterBP_C::setPocketContent(const struct FinventoryItemStruct& itemData, int PocketIndex, int Quantity, bool FromVendor, int vendorPrice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.setPocketContent");
 
@@ -1360,7 +1456,7 @@ void AplayerCharacterBP_C::setPocketContent(const struct FinventoryItemStruct& i
 	params.itemData = itemData;
 	params.PocketIndex = PocketIndex;
 	params.Quantity = Quantity;
-	params.fromVendor = fromVendor;
+	params.FromVendor = FromVendor;
 	params.vendorPrice = vendorPrice;
 
 	auto flags = fn->FunctionFlags;
@@ -1994,16 +2090,16 @@ void AplayerCharacterBP_C::InpActEvt_InventoryToggle_K2Node_InputActionEvent_27(
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_6
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_7
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_Escape_K2Node_InputKeyEvent_6(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_Escape_K2Node_InputKeyEvent_7(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_6");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_7");
 
-	AplayerCharacterBP_C_InpActEvt_Escape_K2Node_InputKeyEvent_6_Params params;
+	AplayerCharacterBP_C_InpActEvt_Escape_K2Node_InputKeyEvent_7_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2014,16 +2110,16 @@ void AplayerCharacterBP_C::InpActEvt_Escape_K2Node_InputKeyEvent_6(const struct 
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_5
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_6
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_F10_K2Node_InputKeyEvent_5(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_F10_K2Node_InputKeyEvent_6(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_5");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_6");
 
-	AplayerCharacterBP_C_InpActEvt_F10_K2Node_InputKeyEvent_5_Params params;
+	AplayerCharacterBP_C_InpActEvt_F10_K2Node_InputKeyEvent_6_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2134,16 +2230,16 @@ void AplayerCharacterBP_C::InpActEvt_phoneBack_K2Node_InputActionEvent_22(const 
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_4
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_5
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_H_K2Node_InputKeyEvent_4(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_H_K2Node_InputKeyEvent_5(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_4");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_5");
 
-	AplayerCharacterBP_C_InpActEvt_H_K2Node_InputKeyEvent_4_Params params;
+	AplayerCharacterBP_C_InpActEvt_H_K2Node_InputKeyEvent_5_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2394,16 +2490,16 @@ void AplayerCharacterBP_C::InpActEvt_InfoToggle_K2Node_InputActionEvent_10(const
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_3
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_4
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_Y_K2Node_InputKeyEvent_4(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_3");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_4");
 
-	AplayerCharacterBP_C_InpActEvt_Y_K2Node_InputKeyEvent_3_Params params;
+	AplayerCharacterBP_C_InpActEvt_Y_K2Node_InputKeyEvent_4_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2574,6 +2670,26 @@ void AplayerCharacterBP_C::InpActEvt_QuickUse04_K2Node_InputActionEvent_2(const 
 }
 
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_3
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_L_K2Node_InputKeyEvent_3(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_3");
+
+	AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_3_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_2
 // (BlueprintEvent)
 // Parameters:
@@ -2594,26 +2710,6 @@ void AplayerCharacterBP_C::InpActEvt_L_K2Node_InputKeyEvent_2(const struct FKey&
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_1
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void AplayerCharacterBP_C::InpActEvt_L_K2Node_InputKeyEvent_1(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_1");
-
-	AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_1_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
@@ -2624,6 +2720,26 @@ void AplayerCharacterBP_C::InpActEvt_MapToggle_K2Node_InputActionEvent_1(const s
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1");
 
 	AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_1_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_N_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1");
+
+	AplayerCharacterBP_C_InpActEvt_N_K2Node_InputKeyEvent_1_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -3888,6 +4004,102 @@ void AplayerCharacterBP_C::ResetLand()
 }
 
 
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AplayerCharacterBP_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AplayerCharacterBP_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature
+// (BlueprintEvent)
+
+void AplayerCharacterBP_C::BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature");
+
+	AplayerCharacterBP_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ContinueSprint
+// (BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ContinueSprint()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ContinueSprint");
+
+	AplayerCharacterBP_C_ContinueSprint_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AplayerCharacterBP_C::BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature(bool FromVendor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature");
+
+	AplayerCharacterBP_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature_Params params;
+	params.FromVendor = FromVendor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.TestUseWater
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AplayerCharacterBP_C::TestUseWater(int Amount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.TestUseWater");
+
+	AplayerCharacterBP_C_TestUseWater_Params params;
+	params.Amount = Amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function playerCharacterBP.playerCharacterBP_C.ExecuteUbergraph_playerCharacterBP
 // (Final, HasDefaults)
 // Parameters:
@@ -3899,6 +4111,23 @@ void AplayerCharacterBP_C::ExecuteUbergraph_playerCharacterBP(int EntryPoint)
 
 	AplayerCharacterBP_C_ExecuteUbergraph_playerCharacterBP_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.FullLoadInitiated__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::FullLoadInitiated__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.FullLoadInitiated__DelegateSignature");
+
+	AplayerCharacterBP_C_FullLoadInitiated__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

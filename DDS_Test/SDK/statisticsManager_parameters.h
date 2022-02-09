@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,34 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function statisticsManager.statisticsManager_C.ExpandRama
+struct AstatisticsManager_C_ExpandRama_Params
+{
+};
+
+// Function statisticsManager.statisticsManager_C.GetTimecode
+struct AstatisticsManager_C_GetTimecode_Params
+{
+	int                                                OutTimecode;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function statisticsManager.statisticsManager_C.UpdateExpositionLevel
+struct AstatisticsManager_C_UpdateExpositionLevel_Params
+{
+};
+
+// Function statisticsManager.statisticsManager_C.NewExpoSale
+struct AstatisticsManager_C_NewExpoSale_Params
+{
+	int                                                AmountGrams;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function statisticsManager.statisticsManager_C.NewExpoEvent
+struct AstatisticsManager_C_NewExpoEvent_Params
+{
+	struct FName                                       EventID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function statisticsManager.statisticsManager_C.adaptDifficulty
 struct AstatisticsManager_C_adaptDifficulty_Params
@@ -120,6 +148,18 @@ struct AstatisticsManager_C_checkStatuses_Params
 // Function statisticsManager.statisticsManager_C.tryShowLevel
 struct AstatisticsManager_C_tryShowLevel_Params
 {
+};
+
+// Function statisticsManager.statisticsManager_C.reInitiate
+struct AstatisticsManager_C_reInitiate_Params
+{
+};
+
+// Function statisticsManager.statisticsManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AstatisticsManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function statisticsManager.statisticsManager_C.ExecuteUbergraph_statisticsManager

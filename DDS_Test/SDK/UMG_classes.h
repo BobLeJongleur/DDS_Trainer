@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1371,6 +1371,23 @@ public:
 };
 
 
+// Class UMG.MovieSceneWidgetMaterialTrack
+// 0x0018 (0x0080 - 0x0068)
+class UMovieSceneWidgetMaterialTrack : public UMovieSceneMaterialTrack
+{
+public:
+	TArray<struct FName>                               BrushPropertyNamePath;                                    // 0x0068(0x0010) (ZeroConstructor)
+	struct FName                                       TrackName;                                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.MovieSceneWidgetMaterialTrack");
+		return ptr;
+	}
+
+};
+
+
 // Class UMG.TextLayoutWidget
 // 0x0020 (0x0120 - 0x0100)
 class UTextLayoutWidget : public UWidget
@@ -1498,23 +1515,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class UMG.NamedSlotInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class UMG.MovieSceneWidgetMaterialTrack
-// 0x0018 (0x0080 - 0x0068)
-class UMovieSceneWidgetMaterialTrack : public UMovieSceneMaterialTrack
-{
-public:
-	TArray<struct FName>                               BrushPropertyNamePath;                                    // 0x0068(0x0010) (ZeroConstructor)
-	struct FName                                       TrackName;                                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.MovieSceneWidgetMaterialTrack");
 		return ptr;
 	}
 
@@ -2899,7 +2899,6 @@ class UWidgetTree : public UObject
 {
 public:
 	class UWidget*                                     RootWidget;                                               // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	//TArray<UWidget*>								   AllWidgets;
 
 	static UClass* StaticClass()
 	{

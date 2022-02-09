@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,6 +78,17 @@ struct AdayTimeControler_C_UserConstructionScript_Params
 {
 };
 
+// Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay
+struct AdayTimeControler_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function dayTimeControler.dayTimeControler_C.ReceiveTick
+struct AdayTimeControler_C_ReceiveTick_Params
+{
+	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function dayTimeControler.dayTimeControler_C.updateSun
 struct AdayTimeControler_C_updateSun_Params
 {
@@ -103,17 +114,6 @@ struct AdayTimeControler_C_AddTime_Params
 {
 	float                                              Hours;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Minutes;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function dayTimeControler.dayTimeControler_C.ReceiveTick
-struct AdayTimeControler_C_ReceiveTick_Params
-{
-	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function dayTimeControler.dayTimeControler_C.ReceiveBeginPlay
-struct AdayTimeControler_C_ReceiveBeginPlay_Params
-{
 };
 
 // Function dayTimeControler.dayTimeControler_C.refreshSun
@@ -146,10 +146,39 @@ struct AdayTimeControler_C_retrySetDefaultTime_Params
 {
 };
 
+// Function dayTimeControler.dayTimeControler_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AdayTimeControler_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function dayTimeControler.dayTimeControler_C.SetupLanterns
+struct AdayTimeControler_C_SetupLanterns_Params
+{
+};
+
+// Function dayTimeControler.dayTimeControler_C.DisplayDayID
+struct AdayTimeControler_C_DisplayDayID_Params
+{
+};
+
 // Function dayTimeControler.dayTimeControler_C.ExecuteUbergraph_dayTimeControler
 struct AdayTimeControler_C_ExecuteUbergraph_dayTimeControler_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function dayTimeControler.dayTimeControler_C.SwitchLanterns__DelegateSignature
+struct AdayTimeControler_C_SwitchLanterns__DelegateSignature_Params
+{
+	bool                                               TurnedOn;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function dayTimeControler.dayTimeControler_C.ClearTrashBins__DelegateSignature
+struct AdayTimeControler_C_ClearTrashBins__DelegateSignature_Params
+{
+	bool                                               TotalPurge;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

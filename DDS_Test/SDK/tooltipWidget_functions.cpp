@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,8 +30,28 @@ void UtooltipWidget_C::Construct()
 }
 
 
+// Function tooltipWidget.tooltipWidget_C.SetText
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UtooltipWidget_C::SetText(const struct FText& Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function tooltipWidget.tooltipWidget_C.SetText");
+
+	UtooltipWidget_C_SetText_Params params;
+	params.Text = Text;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function tooltipWidget.tooltipWidget_C.ExecuteUbergraph_tooltipWidget
-// (Final)
+// (Final, HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,6 +17,17 @@ namespace SDK
 // Function decoOldschoolCeilingLamp4.decoOldschoolCeilingLamp4_C.UserConstructionScript
 struct AdecoOldschoolCeilingLamp4_C_UserConstructionScript_Params
 {
+};
+
+// Function decoOldschoolCeilingLamp4.decoOldschoolCeilingLamp4_C.ReceiveBeginPlay
+struct AdecoOldschoolCeilingLamp4_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function decoOldschoolCeilingLamp4.decoOldschoolCeilingLamp4_C.ExecuteUbergraph_decoOldschoolCeilingLamp4
+struct AdecoOldschoolCeilingLamp4_C_ExecuteUbergraph_decoOldschoolCeilingLamp4_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

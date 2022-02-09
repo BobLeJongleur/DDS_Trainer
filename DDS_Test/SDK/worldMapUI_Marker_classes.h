@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass worldMapUI_Marker.worldMapUI_Marker_C
-// 0x0058 (0x0260 - 0x0208)
+// 0x0059 (0x0261 - 0x0208)
 class UworldMapUI_Marker_C : public UUserWidget
 {
 public:
@@ -28,6 +28,7 @@ public:
 	bool                                               isCustom;                                                 // 0x0248(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0249(0x0007) MISSED OFFSET
 	struct FString                                     AreaString;                                               // 0x0250(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               NameOnHover;                                              // 0x0260(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -36,10 +37,12 @@ public:
 	}
 
 
-	void checkAreaUnlocked(bool* Unlocked);
+	void checkAreaUnlocked(bool* unlocked);
 	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
 	class UWidget* Get_mainCanvas_ToolTipWidget_1();
 	bool Get_mainCanvas_bIsEnabled_1();
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void Setup(const struct FText& MarkerName, TEnumAsByte<EmapMarkerCategories> MarkerType, const struct FVector2D& basePos, const struct FText& ToolTip, bool dealer, const struct FString& AreaString);
 	void ExecuteUbergraph_worldMapUI_Marker(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,6 +49,13 @@ struct FPolygonID : public FElementID
 
 };
 
+// ScriptStruct MeshDescription.VertexID
+// 0x0000 (0x0004 - 0x0004)
+struct FVertexID : public FElementID
+{
+
+};
+
 // ScriptStruct MeshDescription.EdgeID
 // 0x0000 (0x0004 - 0x0004)
 struct FEdgeID : public FElementID
@@ -59,13 +66,6 @@ struct FEdgeID : public FElementID
 // ScriptStruct MeshDescription.VertexInstanceID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexInstanceID : public FElementID
-{
-
-};
-
-// ScriptStruct MeshDescription.VertexID
-// 0x0000 (0x0004 - 0x0004)
-struct FVertexID : public FElementID
 {
 
 };

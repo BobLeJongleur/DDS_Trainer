@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,6 +69,12 @@ struct UuseSlotWidget_C_PreConstruct_Params
 // Function useSlotWidget.useSlotWidget_C.Construct
 struct UuseSlotWidget_C_Construct_Params
 {
+};
+
+// Function useSlotWidget.useSlotWidget_C.SetupSlot
+struct UuseSlotWidget_C_SetupSlot_Params
+{
+	struct FGuid                                       LocalGuid;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function useSlotWidget.useSlotWidget_C.ExecuteUbergraph_useSlotWidget

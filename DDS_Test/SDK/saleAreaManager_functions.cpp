@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function saleAreaManager.saleAreaManager_C.VerifyNewAreas
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AsaleAreaManager_C::VerifyNewAreas()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManager.saleAreaManager_C.VerifyNewAreas");
+
+	AsaleAreaManager_C_VerifyNewAreas_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function saleAreaManager.saleAreaManager_C.onLoadScripts
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -31,7 +48,7 @@ void AsaleAreaManager_C::onLoadScripts()
 
 
 // Function saleAreaManager.saleAreaManager_C.adaptDifficulty
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AsaleAreaManager_C::adaptDifficulty()
 {
@@ -137,7 +154,7 @@ void AsaleAreaManager_C::returnAvailableAreas(TArray<struct FString>* AreaList, 
 
 
 // Function saleAreaManager.saleAreaManager_C.addAreaExposure
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 stringnam                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -291,6 +308,28 @@ void AsaleAreaManager_C::checkAreaAvailability()
 	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManager.saleAreaManager_C.checkAreaAvailability");
 
 	AsaleAreaManager_C_checkAreaAvailability_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function saleAreaManager.saleAreaManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AsaleAreaManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManager.saleAreaManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AsaleAreaManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

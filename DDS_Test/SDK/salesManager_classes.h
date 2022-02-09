@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass salesManager.salesManager_C
-// 0x04BA (0x07E2 - 0x0328)
+// 0x0568 (0x0890 - 0x0328)
 class AsalesManager_C : public AActor
 {
 public:
@@ -21,7 +21,7 @@ public:
 	class URamaSaveComponent*                          RamaSave;                                                 // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBillboardComponent*                         Billboard;                                                // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AplayerCharacterBP_C*                        playerRef;                                                // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AcontactsManager_C*                          contactsManager;                                          // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AstatisticsManager_C*                        statisticsManager;                                        // 0x0358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AmainComputer_C*                             mainComputerRef;                                          // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
@@ -33,7 +33,7 @@ public:
 	TArray<int>                                        clientsAvailable;                                         // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               clientsNicknames;                                         // 0x0388(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       clientsMale;                                              // 0x0398(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<bool>                                       ClientsLost;                                              // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       clientsLost;                                              // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       clientsOD;                                                // 0x03B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       clientAwaitingResponse;                                   // 0x03C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       clientsSuspended;                                         // 0x03D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -80,48 +80,65 @@ public:
 	unsigned char                                      UnknownData02[0x7];                                       // 0x05F1(0x0007) MISSED OFFSET
 	TArray<struct FdrugData>                           curDrugsAvailable;                                        // 0x05F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        curDrugsAvailableSourceID;                                // 0x0608(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              orderInvervalMinimum;                                     // 0x0618(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              orderIntervalMaximum;                                     // 0x061C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              badReputationMultiplier;                                  // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              badReputationDropTempo;                                   // 0x0624(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              badRepBadSale;                                            // 0x0628(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              badRepLostClient;                                         // 0x062C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              badRepOverdose;                                           // 0x0630(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0634(0x0004) MISSED OFFSET
-	TArray<struct FString>                             clientAreas;                                              // 0x0638(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<int>                                        clientAreaQuantities;                                     // 0x0648(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FclientLooksData>                    clientsLookData;                                          // 0x0658(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<float>                                      clientAreaTimeMultiplier;                                 // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                clientSuspendResignCount;                                 // 0x0678(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x067C(0x0004) MISSED OFFSET
-	TArray<int>                                        clientsResignTimes;                                       // 0x0680(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              priceMultiplierDef;                                       // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0694(0x0004) MISSED OFFSET
-	class AsaleAreaManager_C*                          saleAreaManager;                                          // 0x0698(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	int                                                maxClientsPerArea;                                        // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                lastAreaSampleSpawnID;                                    // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              skillPirceMultiplier;                                     // 0x06A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              skillSaleSpeedMultiplier;                                 // 0x06AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               sampleGuysEnabled;                                        // 0x06B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x06B1(0x0007) MISSED OFFSET
-	TArray<struct FString>                             clientNamesMale;                                          // 0x06B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FString>                             clientNamesFemale;                                        // 0x06C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FString>                             clientSurnames;                                           // 0x06D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                lastAvatarID;                                             // 0x06E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                lastNameGenerated;                                        // 0x06EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FText>                               clientStateQueueName;                                     // 0x06F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FText>                               clientStateQueueDrug;                                     // 0x0700(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<bool>                                       clientStateQueueOD;                                       // 0x0710(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FdrugData                                   debugLastDrugData;                                        // 0x0720(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               nightSaleToggle;                                          // 0x07D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               firstDealerSentOffer;                                     // 0x07D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2];                                       // 0x07D2(0x0002) MISSED OFFSET
-	float                                              earlyGameSaleBoost;                                       // 0x07D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ballenaProtected;                                         // 0x07D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x07D9(0x0003) MISSED OFFSET
-	float                                              difficultySaleMultiplier;                                 // 0x07DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EdifficultyLevels>                     difficulty;                                               // 0x07E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               addictedTaskDone;                                         // 0x07E1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<float>                                      curDrugsAvailableWeight;                                  // 0x0618(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              orderInvervalMinimum;                                     // 0x0628(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              orderIntervalMaximum;                                     // 0x062C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              badReputationMultiplier;                                  // 0x0630(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              badReputationDropTempo;                                   // 0x0634(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              badRepBadSale;                                            // 0x0638(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              badRepLostClient;                                         // 0x063C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              badRepOverdose;                                           // 0x0640(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0644(0x0004) MISSED OFFSET
+	TArray<struct FString>                             clientAreas;                                              // 0x0648(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        clientAreaQuantities;                                     // 0x0658(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FclientLooksData>                    clientsLookData;                                          // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<float>                                      clientAreaTimeMultiplier;                                 // 0x0678(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                clientSuspendResignCount;                                 // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x068C(0x0004) MISSED OFFSET
+	TArray<int>                                        clientsResignTimes;                                       // 0x0690(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              priceMultiplierDef;                                       // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x06A4(0x0004) MISSED OFFSET
+	class AsaleAreaManager_C*                          saleAreaManager;                                          // 0x06A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	int                                                maxClientsPerArea;                                        // 0x06B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                lastAreaSampleSpawnID;                                    // 0x06B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              skillPirceMultiplier;                                     // 0x06B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              skillSaleSpeedMultiplier;                                 // 0x06BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               sampleGuysEnabled;                                        // 0x06C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x06C1(0x0007) MISSED OFFSET
+	TArray<struct FString>                             clientNamesMale;                                          // 0x06C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FString>                             clientNamesFemale;                                        // 0x06D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FString>                             clientSurnames;                                           // 0x06E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                lastAvatarID;                                             // 0x06F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                lastNameGenerated;                                        // 0x06FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FText>                               clientStateQueueName;                                     // 0x0700(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FText>                               clientStateQueueDrug;                                     // 0x0710(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       clientStateQueueOD;                                       // 0x0720(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FdrugData                                   debugLastDrugData;                                        // 0x0730(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               nightSaleToggle;                                          // 0x07E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               firstDealerSentOffer;                                     // 0x07E1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x2];                                       // 0x07E2(0x0002) MISSED OFFSET
+	float                                              earlyGameSaleBoost;                                       // 0x07E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ballenaProtected;                                         // 0x07E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x07E9(0x0003) MISSED OFFSET
+	float                                              difficultySaleMultiplier;                                 // 0x07EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EdifficultyLevels>                     difficulty;                                               // 0x07F0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               addictedTaskDone;                                         // 0x07F1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x6];                                       // 0x07F2(0x0006) MISSED OFFSET
+	class UDataTable*                                  AreaDatabase;                                             // 0x07F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<int>                                        ClientWishlist;                                           // 0x0800(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              SampleMaxBoost;                                           // 0x0810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SampleBoostPerGram;                                       // 0x0814(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<float>                                      ClientDealerExp;                                          // 0x0818(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        ArrestedClients;                                          // 0x0828(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        ArrestedDayOver;                                          // 0x0838(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       ArrestedHasBail;                                          // 0x0848(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class AdayTimeControler_C*                         daytimeManager;                                           // 0x0858(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              WeekendOrderIntervalMultiplier;                           // 0x0860(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x4];                                       // 0x0864(0x0004) MISSED OFFSET
+	TArray<struct FText>                               ArrestedDisplayPool;                                      // 0x0868(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       ArrestedDisplayReleased;                                  // 0x0878(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              DealerOrderMultiplier;                                    // 0x0888(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DealerCashMultiplier;                                     // 0x088C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -130,8 +147,22 @@ public:
 	}
 
 
+	void ReleaseAllClients();
+	void CalcArrestBail(int ArrestedIndex, int* OutBailAmount);
+	void CheckArrestReleases();
+	void TryDepositCashToSafe(int Amount, const struct FString& AreaID, bool* Success);
+	void AddDealerExp(int ClientId, int SaleQuantity, float expAmount);
+	void GetClientMeta(int ClientId, bool* ClientFound, struct FClientMeta* OutMeta);
+	void ReleaseClient(int ClientId);
+	void GetClientArrestChance(int ClientId, float* OutChance);
+	void IsClientArrested(int ClientId, bool* IsArrested);
+	void ArrestClient(int ClientId);
+	void ReconstructClientList();
+	void ExpandRama();
+	void UpdateFlags();
+	void AddDrugWishlist(int DrugIndex);
 	void countAddictedClients(int* ClientCount);
-	void countMaxDealers(int* NumDealers);
+	void countMaxDealers(int ClientId, bool* CanHaveMore);
 	void adaptDifficulty();
 	void generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool priceHigh, struct FText* Message);
 	void recalcClientCount();
@@ -143,7 +174,7 @@ public:
 	void updateAreaTimeMultiplier();
 	void loopCheckPrices(bool* someAffordable);
 	void getOrderedDrugName(int DrugIndex, struct FText* Output);
-	void checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* priceHigh);
+	void checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* priceHigh, bool* Wish);
 	void badSaleResponse(bool ClientLost, int ClientId);
 	void sendDealerOffer(int ClientId);
 	bool dealerOfferChance(int ClientId);
@@ -156,9 +187,9 @@ public:
 	void calcIntervalMultiplier(float baseInterval, float* OutInterval);
 	void selectClientArea(struct FString* SelectedAreaID);
 	void getOrderedDrugIndex(int RandomIndex, int* OutIndex);
-	void refreshAvailableDrugs(bool* DrugsAreAvailable);
+	void refreshAvailableDrugs(int ClientId, bool* DrugsAreAvailable);
 	void countClientStatistics();
-	void calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int* OutQuantity);
+	void calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int DrugID, int* OutQuantity, bool* Critical);
 	void clientSendNewOrder(int ClientId, bool nightTime);
 	void clientOrderCountdown(float Delta);
 	void generateNewClient(bool Force);
@@ -168,6 +199,17 @@ public:
 	void tryInitialise();
 	void checkClientState();
 	void trySpawnSampleGuy();
+	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
+	void ForceArrestAllClients();
+	void AddArrestClients(int Count);
+	void AddArrestScreen();
+	void DealerLeveledUp(int NewLevel);
+	void AllDealersAddExp(float expAmount);
+	void DealerGotArrested();
+	void DisplayArrestPopup();
+	void ForceReleaseAllClients();
+	void DisableBallenaBlock();
+	void KillSalesManager();
 	void ExecuteUbergraph_salesManager(int EntryPoint);
 };
 

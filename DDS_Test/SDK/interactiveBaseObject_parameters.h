@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing
+struct AinteractiveBaseObject_C_VerifyBaseSizing_Params
+{
+	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetEquipmentMeta
+struct AinteractiveBaseObject_C_GetEquipmentMeta_Params
+{
+	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FappartmentEquipment                        EquipmentMeta;                                            // (Parm, OutParm)
+};
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetItemMeta
+struct AinteractiveBaseObject_C_GetItemMeta_Params
+{
+	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FNewItemStructure                           ItemMeta;                                                 // (Parm, OutParm)
+};
 
 // Function interactiveBaseObject.interactiveBaseObject_C.CheckForInnerClasses
 struct AinteractiveBaseObject_C_CheckForInnerClasses_Params

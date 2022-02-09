@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,23 +14,13 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function pickupItemBase.pickupItemBase_C.RamaExtend
+struct ApickupItemBase_C_RamaExtend_Params
+{
+};
+
 // Function pickupItemBase.pickupItemBase_C.UserConstructionScript
 struct ApickupItemBase_C_UserConstructionScript_Params
-{
-};
-
-// Function pickupItemBase.pickupItemBase_C.ReceiveBeginPlay
-struct ApickupItemBase_C_ReceiveBeginPlay_Params
-{
-};
-
-// Function pickupItemBase.pickupItemBase_C.objectPickup
-struct ApickupItemBase_C_objectPickup_Params
-{
-};
-
-// Function pickupItemBase.pickupItemBase_C.pickupEventScript
-struct ApickupItemBase_C_pickupEventScript_Params
 {
 };
 
@@ -55,6 +45,45 @@ struct ApickupItemBase_C_resetDroped_Params
 struct ApickupItemBase_C_ReceiveActorBeginOverlap_Params
 {
 	class AActor*                                      OtherActor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function pickupItemBase.pickupItemBase_C.pickupEventScript
+struct ApickupItemBase_C_pickupEventScript_Params
+{
+};
+
+// Function pickupItemBase.pickupItemBase_C.objectPickup
+struct ApickupItemBase_C_objectPickup_Params
+{
+};
+
+// Function pickupItemBase.pickupItemBase_C.ReceiveBeginPlay
+struct ApickupItemBase_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function pickupItemBase.pickupItemBase_C.ShortRadiusChanged
+struct ApickupItemBase_C_ShortRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function pickupItemBase.pickupItemBase_C.LongRadiusChanged
+struct ApickupItemBase_C_LongRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function pickupItemBase.pickupItemBase_C.SubclassRamaLoaded
+struct ApickupItemBase_C_SubclassRamaLoaded_Params
+{
+};
+
+// Function pickupItemBase.pickupItemBase_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+struct ApickupItemBase_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function pickupItemBase.pickupItemBase_C.ExecuteUbergraph_pickupItemBase

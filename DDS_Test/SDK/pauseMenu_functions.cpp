@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,16 +18,16 @@ namespace SDK
 // Parameters:
 // struct FText                   Header                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Desc                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            confirmActionIndex             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ConfirmActionIndex             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UpauseMenu_C::showConfirm(const struct FText& Header, const struct FText& Desc, int confirmActionIndex)
+void UpauseMenu_C::showConfirm(const struct FText& Header, const struct FText& Desc, int ConfirmActionIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function pauseMenu.pauseMenu_C.showConfirm");
 
 	UpauseMenu_C_showConfirm_Params params;
 	params.Header = Header;
 	params.Desc = Desc;
-	params.confirmActionIndex = confirmActionIndex;
+	params.ConfirmActionIndex = ConfirmActionIndex;
 
 	auto flags = fn->FunctionFlags;
 

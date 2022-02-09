@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function symbolChoiceWidget.symbolChoiceWidget_C.Get_btnClose_Visibility_1
+struct UsymbolChoiceWidget_C_Get_btnClose_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function symbolChoiceWidget.symbolChoiceWidget_C.setBtns
 struct UsymbolChoiceWidget_C_setBtns_Params
@@ -73,6 +79,11 @@ struct UsymbolChoiceWidget_C_BndEvt__btnSymbol7_K2Node_ComponentBoundEvent_7_OnB
 
 // Function symbolChoiceWidget.symbolChoiceWidget_C.BndEvt__btnSymbol8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature
 struct UsymbolChoiceWidget_C_BndEvt__btnSymbol8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function symbolChoiceWidget.symbolChoiceWidget_C.BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature
+struct UsymbolChoiceWidget_C_BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

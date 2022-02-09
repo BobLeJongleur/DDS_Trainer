@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function equipmentShop.equipmentShop_C.GetShopData
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FShopDataStruct         ShopData                       (Parm, OutParm)
+
+void AequipmentShop_C::GetShopData(struct FShopDataStruct* ShopData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function equipmentShop.equipmentShop_C.GetShopData");
+
+	AequipmentShop_C_GetShopData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ShopData != nullptr)
+		*ShopData = params.ShopData;
+}
+
 
 // Function equipmentShop.equipmentShop_C.removeItems
 // (Public, BlueprintCallable, BlueprintEvent)

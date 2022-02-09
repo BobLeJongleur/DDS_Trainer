@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function saleAreaManager.saleAreaManager_C.VerifyNewAreas
+struct AsaleAreaManager_C_VerifyNewAreas_Params
+{
+};
 
 // Function saleAreaManager.saleAreaManager_C.onLoadScripts
 struct AsaleAreaManager_C_onLoadScripts_Params
@@ -96,6 +101,13 @@ struct AsaleAreaManager_C_checkAreaStatuses_Params
 // Function saleAreaManager.saleAreaManager_C.checkAreaAvailability
 struct AsaleAreaManager_C_checkAreaAvailability_Params
 {
+};
+
+// Function saleAreaManager.saleAreaManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AsaleAreaManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function saleAreaManager.saleAreaManager_C.ExecuteUbergraph_saleAreaManager

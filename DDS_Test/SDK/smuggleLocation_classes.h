@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ public:
 	struct FText                                       locationName;                                             // 0x0348(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               nightOnly;                                                // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               dayOnly;                                                  // 0x0361(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               available;                                                // 0x0362(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Available;                                                // 0x0362(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x5];                                       // 0x0363(0x0005) MISSED OFFSET
 	struct FString                                     locationIDNam;                                            // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 

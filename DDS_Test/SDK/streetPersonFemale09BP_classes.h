@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass streetPersonFemale09BP.streetPersonFemale09BP_C
-// 0x0000 (0x0ABC - 0x0ABC)
+// 0x0000 (0x0AD4 - 0x0AD4)
 class AstreetPersonFemale09BP_C : public AbaseNPC_C
 {
 public:

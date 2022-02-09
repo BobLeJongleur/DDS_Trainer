@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function playerHUD.playerHUD_C.UpdateHP
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          HpLevel                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UplayerHUD_C::UpdateHP(float HpLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerHUD.playerHUD_C.UpdateHP");
+
+	UplayerHUD_C_UpdateHP_Params params;
+	params.HpLevel = HpLevel;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function playerHUD.playerHUD_C.Get_txtActionBtn_ColorAndOpacity_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)

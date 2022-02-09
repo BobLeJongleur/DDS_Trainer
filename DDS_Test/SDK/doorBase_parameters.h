@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function doorBase.doorBase_C.DoorCanInteract
+struct AdoorBase_C_DoorCanInteract_Params
+{
+	bool                                               CanInteract;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       FailReason;                                               // (Parm, OutParm)
+};
 
 // Function doorBase.doorBase_C.playDoorSound
 struct AdoorBase_C_playDoorSound_Params
@@ -112,6 +119,13 @@ struct AdoorBase_C_eventDoorActivated_Params
 // Function doorBase.doorBase_C.lockpickReset
 struct AdoorBase_C_lockpickReset_Params
 {
+};
+
+// Function doorBase.doorBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AdoorBase_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function doorBase.doorBase_C.ExecuteUbergraph_doorBase

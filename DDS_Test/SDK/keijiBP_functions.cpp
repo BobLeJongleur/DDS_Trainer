@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -141,14 +141,14 @@ void AkeijiBP_C::ReceiveBeginPlay()
 }
 
 
-// Function keijiBP.keijiBP_C.playerSatDown
+// Function keijiBP.keijiBP_C.PlayerSatDown
 // (BlueprintCallable, BlueprintEvent)
 
-void AkeijiBP_C::playerSatDown()
+void AkeijiBP_C::PlayerSatDown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function keijiBP.keijiBP_C.playerSatDown");
+	static auto fn = UObject::FindObject<UFunction>("Function keijiBP.keijiBP_C.PlayerSatDown");
 
-	AkeijiBP_C_playerSatDown_Params params;
+	AkeijiBP_C_PlayerSatDown_Params params;
 
 	auto flags = fn->FunctionFlags;
 

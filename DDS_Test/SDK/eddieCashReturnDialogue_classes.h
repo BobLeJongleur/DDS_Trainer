@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass eddieCashReturnDialogue.eddieCashReturnDialogue_C
-// 0x0000 (0x0389 - 0x0389)
+// 0x0000 (0x0392 - 0x0392)
 class AeddieCashReturnDialogue_C : public AdialogueInstance_C
 {
 public:

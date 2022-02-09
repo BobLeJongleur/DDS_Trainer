@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -125,12 +125,15 @@ void AdeaRaidManager_C::ReceiveTick(float DeltaSeconds)
 
 // Function deaRaidManager.deaRaidManager_C.StartKurwaRaid
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ArentAppartmentArea_C*   ApartmentRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AdeaRaidManager_C::StartKurwaRaid()
+void AdeaRaidManager_C::StartKurwaRaid(class ArentAppartmentArea_C* ApartmentRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function deaRaidManager.deaRaidManager_C.StartKurwaRaid");
 
 	AdeaRaidManager_C_StartKurwaRaid_Params params;
+	params.ApartmentRef = ApartmentRef;
 
 	auto flags = fn->FunctionFlags;
 

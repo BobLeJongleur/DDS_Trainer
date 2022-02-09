@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,31 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function doorBase.doorBase_C.DoorCanInteract
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           CanInteract                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText                   FailReason                     (Parm, OutParm)
+
+void AdoorBase_C::DoorCanInteract(bool* CanInteract, struct FText* FailReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function doorBase.doorBase_C.DoorCanInteract");
+
+	AdoorBase_C_DoorCanInteract_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CanInteract != nullptr)
+		*CanInteract = params.CanInteract;
+	if (FailReason != nullptr)
+		*FailReason = params.FailReason;
+}
+
 
 // Function doorBase.doorBase_C.playDoorSound
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -337,6 +362,28 @@ void AdoorBase_C::lockpickReset()
 	static auto fn = UObject::FindObject<UFunction>("Function doorBase.doorBase_C.lockpickReset");
 
 	AdoorBase_C_lockpickReset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function doorBase.doorBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AdoorBase_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function doorBase.doorBase_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AdoorBase_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

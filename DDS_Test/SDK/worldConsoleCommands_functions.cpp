@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CountClassNum
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::CountClassNum()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.CountClassNum");
+
+	AworldConsoleCommands_C_CountClassNum_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function worldConsoleCommands.worldConsoleCommands_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -548,6 +565,219 @@ void AworldConsoleCommands_C::TeleportSectorC()
 	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.TeleportSectorC");
 
 	AworldConsoleCommands_C_TeleportSectorC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestDrugDemand
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::TestDrugDemand()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.TestDrugDemand");
+
+	AworldConsoleCommands_C_TestDrugDemand_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderMoney
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::AddLaunderMoney(float Amount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderMoney");
+
+	AworldConsoleCommands_C_AddLaunderMoney_Params params;
+	params.Amount = Amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderedMoney
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::AddLaunderedMoney(float Amount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.AddLaunderedMoney");
+
+	AworldConsoleCommands_C_AddLaunderedMoney_Params params;
+	params.Amount = Amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.SetExpoLevel
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          expoFactorLevel                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::SetExpoLevel(float expoFactorLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.SetExpoLevel");
+
+	AworldConsoleCommands_C_SetExpoLevel_Params params;
+	params.expoFactorLevel = expoFactorLevel;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.addInventoryItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::addInventoryItem(const struct FName& ItemID, int Quantity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.addInventoryItem");
+
+	AworldConsoleCommands_C_addInventoryItem_Params params;
+	params.ItemID = ItemID;
+	params.Quantity = Quantity;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestGetItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::TestGetItem(const struct FName& ItemID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.TestGetItem");
+
+	AworldConsoleCommands_C_TestGetItem_Params params;
+	params.ItemID = ItemID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.TestDealerExp
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Exp                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::TestDealerExp(float Exp)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.TestDealerExp");
+
+	AworldConsoleCommands_C_TestDealerExp_Params params;
+	params.Exp = Exp;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   EventID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::RegisterExpoEvent(const struct FName& EventID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoEvent");
+
+	AworldConsoleCommands_C_RegisterExpoEvent_Params params;
+	params.EventID = EventID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoSale
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            AmountGrams                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AworldConsoleCommands_C::RegisterExpoSale(int AmountGrams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.RegisterExpoSale");
+
+	AworldConsoleCommands_C_RegisterExpoSale_Params params;
+	params.AmountGrams = AmountGrams;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CountKurwaEverything
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::CountKurwaEverything()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.CountKurwaEverything");
+
+	AworldConsoleCommands_C_CountKurwaEverything_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.WyjebChuj
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::WyjebChuj()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.WyjebChuj");
+
+	AworldConsoleCommands_C_WyjebChuj_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,6 +22,12 @@ struct AenviroLightBase_C_checkDayTime_Params
 // Function enviroLightBase.enviroLightBase_C.UserConstructionScript
 struct AenviroLightBase_C_UserConstructionScript_Params
 {
+};
+
+// Function enviroLightBase.enviroLightBase_C.LongRadiusChanged
+struct AenviroLightBase_C_LongRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function enviroLightBase.enviroLightBase_C.ReceiveBeginPlay
@@ -62,6 +68,18 @@ struct AenviroLightBase_C_openOutLightRange_Params
 // Function enviroLightBase.enviroLightBase_C.retryGather
 struct AenviroLightBase_C_retryGather_Params
 {
+};
+
+// Function enviroLightBase.enviroLightBase_C.ShortRadiusChanged
+struct AenviroLightBase_C_ShortRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function enviroLightBase.enviroLightBase_C.ToggleShadows
+struct AenviroLightBase_C_ToggleShadows_Params
+{
+	bool                                               on;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function enviroLightBase.enviroLightBase_C.ExecuteUbergraph_enviroLightBase

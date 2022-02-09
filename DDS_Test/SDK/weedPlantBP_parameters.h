@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function weedPlantBP.weedPlantBP_C.CheckPlayerWater
+struct AweedPlantBP_C_CheckPlayerWater_Params
+{
+	class AplayerCharacterBP_C*                        AsPlayer_Character_BP;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               PlayerHasWater;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function weedPlantBP.weedPlantBP_C.onLoadNamingUpdate
 struct AweedPlantBP_C_onLoadNamingUpdate_Params
@@ -79,22 +86,6 @@ struct AweedPlantBP_C_useWater_Params
 
 // Function weedPlantBP.weedPlantBP_C.UserConstructionScript
 struct AweedPlantBP_C_UserConstructionScript_Params
-{
-};
-
-// Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay
-struct AweedPlantBP_C_ReceiveBeginPlay_Params
-{
-};
-
-// Function weedPlantBP.weedPlantBP_C.ReceiveTick
-struct AweedPlantBP_C_ReceiveTick_Params
-{
-	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function weedPlantBP.weedPlantBP_C.updateGrowth
-struct AweedPlantBP_C_updateGrowth_Params
 {
 };
 
@@ -175,6 +166,22 @@ struct AweedPlantBP_C_startTestCompromised_Params
 
 // Function weedPlantBP.weedPlantBP_C.testCompromised
 struct AweedPlantBP_C_testCompromised_Params
+{
+};
+
+// Function weedPlantBP.weedPlantBP_C.updateGrowth
+struct AweedPlantBP_C_updateGrowth_Params
+{
+};
+
+// Function weedPlantBP.weedPlantBP_C.ReceiveTick
+struct AweedPlantBP_C_ReceiveTick_Params
+{
+	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay
+struct AweedPlantBP_C_ReceiveBeginPlay_Params
 {
 };
 

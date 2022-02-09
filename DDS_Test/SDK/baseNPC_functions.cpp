@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function baseNPC.baseNPC_C.ExpandRama
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AbaseNPC_C::ExpandRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.ExpandRama");
+
+	AbaseNPC_C_ExpandRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function baseNPC.baseNPC_C.calcSaleExp
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -369,24 +386,24 @@ void AbaseNPC_C::processReceivedDrugs()
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            DrugQuantity                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   CharacterName                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   characterName                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          expectedPrice                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            OrderId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            orderID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isMale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isDealer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ExpectationLevel               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& CharacterName, float expectedPrice, int OrderId, int TaskID, bool isMale, bool isDealer, float ExpectationLevel)
+void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int TaskID, bool isMale, bool isDealer, float ExpectationLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.setupNewDrugSale");
 
 	AbaseNPC_C_setupNewDrugSale_Params params;
 	params.drugData = drugData;
 	params.DrugQuantity = DrugQuantity;
-	params.CharacterName = CharacterName;
+	params.characterName = characterName;
 	params.expectedPrice = expectedPrice;
-	params.OrderId = OrderId;
+	params.orderID = orderID;
 	params.TaskID = TaskID;
 	params.isMale = isMale;
 	params.isDealer = isDealer;
@@ -641,23 +658,6 @@ void AbaseNPC_C::failGoHome()
 }
 
 
-// Function baseNPC.baseNPC_C.testAroundPlayer
-// (BlueprintCallable, BlueprintEvent)
-
-void AbaseNPC_C::testAroundPlayer()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.testAroundPlayer");
-
-	AbaseNPC_C_testAroundPlayer_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function baseNPC.baseNPC_C.togglePoseCalc
 // (BlueprintCallable, BlueprintEvent)
 
@@ -700,6 +700,85 @@ void AbaseNPC_C::RetryDialAssign()
 	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.RetryDialAssign");
 
 	AbaseNPC_C_RetryDialAssign_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function baseNPC.baseNPC_C.LongRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AbaseNPC_C::LongRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.LongRadiusChanged");
+
+	AbaseNPC_C_LongRadiusChanged_Params params;
+	params.InRadius = InRadius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function baseNPC.baseNPC_C.ShortRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AbaseNPC_C::ShortRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.ShortRadiusChanged");
+
+	AbaseNPC_C_ShortRadiusChanged_Params params;
+	params.InRadius = InRadius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function baseNPC.baseNPC_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AbaseNPC_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AbaseNPC_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function baseNPC.baseNPC_C.RamaLoadedEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void AbaseNPC_C::RamaLoadedEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.RamaLoadedEvent");
+
+	AbaseNPC_C_RamaLoadedEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
 

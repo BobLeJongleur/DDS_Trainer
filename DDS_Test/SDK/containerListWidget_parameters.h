@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,33 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function containerListWidget.containerListWidget_C.RemoveTradedItem
+struct UcontainerListWidget_C_RemoveTradedItem_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function containerListWidget.containerListWidget_C.ClearTradedItems
+struct UcontainerListWidget_C_ClearTradedItems_Params
+{
+};
+
+// Function containerListWidget.containerListWidget_C.AddTradedItem
+struct UcontainerListWidget_C_AddTradedItem_Params
+{
+	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                itemQuantity;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ItemAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FMixProportionsStruct                       MixProportions;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function containerListWidget.containerListWidget_C.SetListSizing
+struct UcontainerListWidget_C_SetListSizing_Params
+{
+	int                                                Width;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Height;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function containerListWidget.containerListWidget_C.showQunatityDialogue
 struct UcontainerListWidget_C_showQunatityDialogue_Params
@@ -66,6 +93,12 @@ struct UcontainerListWidget_C_clearContainer_Params
 struct UcontainerListWidget_C_addContainerItem_Params
 {
 	class UinventoryItemWidget_C*                      itemWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function containerListWidget.containerListWidget_C.PreConstruct
+struct UcontainerListWidget_C_PreConstruct_Params
+{
+	bool                                               IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function containerListWidget.containerListWidget_C.Construct

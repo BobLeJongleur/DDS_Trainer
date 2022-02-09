@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ public:
 	}
 
 
-	void Setup(const struct FappartmentEquipment& Data, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* parentRef);
+	void Setup(const struct FName& NewParam, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* parentRef);
 	void BndEvt__btnQuanSub_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnQuanAdd_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_2_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();

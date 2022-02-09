@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,43 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function questManager.questManager_C.ReportLaunderDoor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AlaunderDoor_C*          Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AquestManager_C::ReportLaunderDoor(class AlaunderDoor_C* Door)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.ReportLaunderDoor");
+
+	AquestManager_C_ReportLaunderDoor_Params params;
+	params.Door = Door;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.RamaExpand
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::RamaExpand()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.RamaExpand");
+
+	AquestManager_C_RamaExpand_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function questManager.questManager_C.fixTaskDuplicates
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -2284,6 +2321,232 @@ void AquestManager_C::eddieEndPsychedelicsEnd()
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieEndPsychedelicsEnd");
 
 	AquestManager_C_eddieEndPsychedelicsEnd_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieCallSectorC
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieCallSectorC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieCallSectorC");
+
+	AquestManager_C_eddieCallSectorC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieRepeatSectorc
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieRepeatSectorc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieRepeatSectorc");
+
+	AquestManager_C_eddieRepeatSectorc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.retryEddieSecotrc
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::retryEddieSecotrc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.retryEddieSecotrc");
+
+	AquestManager_C_retryEddieSecotrc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieCallLaundry
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieCallLaundry()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieCallLaundry");
+
+	AquestManager_C_eddieCallLaundry_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieRepeatLaundry
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieRepeatLaundry()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieRepeatLaundry");
+
+	AquestManager_C_eddieRepeatLaundry_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.retryEddieLaundry
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::retryEddieLaundry()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.retryEddieLaundry");
+
+	AquestManager_C_retryEddieLaundry_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieEndSectorc
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieEndSectorc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieEndSectorc");
+
+	AquestManager_C_eddieEndSectorc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieEndLaundry
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieEndLaundry()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieEndLaundry");
+
+	AquestManager_C_eddieEndLaundry_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.UnlockSectorC
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::UnlockSectorC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.UnlockSectorC");
+
+	AquestManager_C_UnlockSectorC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AquestManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AquestManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.TrySectorC_Quests
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::TrySectorC_Quests()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.TrySectorC_Quests");
+
+	AquestManager_C_TrySectorC_Quests_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.NewLaunderHidout
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::NewLaunderHidout()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.NewLaunderHidout");
+
+	AquestManager_C_NewLaunderHidout_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.ReopenNewLaunder
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::ReopenNewLaunder()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.ReopenNewLaunder");
+
+	AquestManager_C_ReopenNewLaunder_Params params;
 
 	auto flags = fn->FunctionFlags;
 

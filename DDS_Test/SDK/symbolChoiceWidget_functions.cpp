@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,27 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function symbolChoiceWidget.symbolChoiceWidget_C.Get_btnClose_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UsymbolChoiceWidget_C::Get_btnClose_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function symbolChoiceWidget.symbolChoiceWidget_C.Get_btnClose_Visibility_1");
+
+	UsymbolChoiceWidget_C_Get_btnClose_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function symbolChoiceWidget.symbolChoiceWidget_C.setBtns
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -213,6 +234,23 @@ void UsymbolChoiceWidget_C::BndEvt__btnSymbol8_K2Node_ComponentBoundEvent_8_OnBu
 	static auto fn = UObject::FindObject<UFunction>("Function symbolChoiceWidget.symbolChoiceWidget_C.BndEvt__btnSymbol8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature");
 
 	UsymbolChoiceWidget_C_BndEvt__btnSymbol8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function symbolChoiceWidget.symbolChoiceWidget_C.BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UsymbolChoiceWidget_C::BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function symbolChoiceWidget.symbolChoiceWidget_C.BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
+
+	UsymbolChoiceWidget_C_BndEvt__btnClose_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

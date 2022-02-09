@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,78 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AinteractiveBaseObject_C::VerifyBaseSizing(bool* ok)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing");
+
+	AinteractiveBaseObject_C_VerifyBaseSizing_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ok != nullptr)
+		*ok = params.ok;
+}
+
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetEquipmentMeta
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FappartmentEquipment    EquipmentMeta                  (Parm, OutParm)
+
+void AinteractiveBaseObject_C::GetEquipmentMeta(bool* Success, struct FappartmentEquipment* EquipmentMeta)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.GetEquipmentMeta");
+
+	AinteractiveBaseObject_C_GetEquipmentMeta_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Success != nullptr)
+		*Success = params.Success;
+	if (EquipmentMeta != nullptr)
+		*EquipmentMeta = params.EquipmentMeta;
+}
+
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetItemMeta
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FNewItemStructure       ItemMeta                       (Parm, OutParm)
+
+void AinteractiveBaseObject_C::GetItemMeta(bool* Success, struct FNewItemStructure* ItemMeta)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.GetItemMeta");
+
+	AinteractiveBaseObject_C_GetItemMeta_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Success != nullptr)
+		*Success = params.Success;
+	if (ItemMeta != nullptr)
+		*ItemMeta = params.ItemMeta;
+}
+
 
 // Function interactiveBaseObject.interactiveBaseObject_C.CheckForInnerClasses
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)

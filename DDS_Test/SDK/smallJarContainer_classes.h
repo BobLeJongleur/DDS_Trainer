@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass smallJarContainer.smallJarContainer_C
-// 0x0000 (0x0794 - 0x0794)
+// 0x0000 (0x082C - 0x082C)
 class AsmallJarContainer_C : public AadditiveContainerBase_C
 {
 public:

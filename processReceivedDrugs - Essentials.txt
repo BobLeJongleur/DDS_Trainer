@@ -7,21 +7,39 @@ maxAddict = 13.0
 repFactor = 100.0
 clientSaleSatisfactionRange = 0.3
 
+// 1.0.8
 def hasODed(tox):
-    if tox < minOD:
+    if tox <= minOD:
         return false
 
     if tox > highTox:
         return random() < 0.25
     else:
-        return random() < mid(0.001, (tox / minOD - 1) / 20, 0.08)
+        return random() < mid(0.001, ((tox - minODToxicity) / minODToxicity) / 20, 0.08)
 
+// 1.1.0
+def hasODed(tox):
+    if tox <= minOD:
+        return false
+        
+    if tox > highTox:
+        return random() < 0.25
+    else:
+        return random() < mid(0.001, ((tox - minODToxicity) / minODToxicity) / 20, 0.08)
 
+// 1.0.8
 def isAddicted(addict):
-    if addict < minAddict:
+    if addict <= minAddict:
         return false
 
     return random() < mid(0.01, (((addict - (minAddict / 2.0)) / maxAddict) / 3.0), 0.1)
+    
+// 1.1.0
+def isAddicted(addict):
+    if addict <= minAddict:
+        return false
+        
+    return random() < mid(0.01, ((addict - (minAddict / 2.0)) / maxAddict) / 3.0, 0.12)
 
 // productQuality is % of expected drug in the drug received
 def saleRepGain(productQuality):

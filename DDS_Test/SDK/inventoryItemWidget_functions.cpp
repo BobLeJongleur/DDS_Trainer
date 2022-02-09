@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,232 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function inventoryItemWidget.inventoryItemWidget_C.DisplayMixProportions
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UinventoryItemWidget_C::DisplayMixProportions()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.DisplayMixProportions");
+
+	UinventoryItemWidget_C_DisplayMixProportions_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.OnDrop
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UDragDropOperation*      Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UinventoryItemWidget_C::OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.OnDrop");
+
+	UinventoryItemWidget_C_OnDrop_Params params;
+	params.MyGeometry = MyGeometry;
+	params.PointerEvent = PointerEvent;
+	params.Operation = Operation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.Get_TextBlock_1_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UinventoryItemWidget_C::Get_TextBlock_1_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.Get_TextBlock_1_Visibility_1");
+
+	UinventoryItemWidget_C_Get_TextBlock_1_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_4
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UinventoryItemWidget_C::GetVisibility_4()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_4");
+
+	UinventoryItemWidget_C_GetVisibility_4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_3
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UinventoryItemWidget_C::GetVisibility_3()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_3");
+
+	UinventoryItemWidget_C_GetVisibility_3_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_2
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UinventoryItemWidget_C::GetVisibility_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_2");
+
+	UinventoryItemWidget_C_GetVisibility_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.SetLooted
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UinventoryItemWidget_C::SetLooted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.SetLooted");
+
+	UinventoryItemWidget_C_SetLooted_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.VerifyLooting
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UinventoryItemWidget_C::VerifyLooting()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.VerifyLooting");
+
+	UinventoryItemWidget_C_VerifyLooting_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.Get_bgImage_ToolTipWidget_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UinventoryItemWidget_C::Get_bgImage_ToolTipWidget_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.Get_bgImage_ToolTipWidget_1");
+
+	UinventoryItemWidget_C_Get_bgImage_ToolTipWidget_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.GetShortName
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ShortName                      (Parm, OutParm)
+
+void UinventoryItemWidget_C::GetShortName(struct FText* ShortName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.GetShortName");
+
+	UinventoryItemWidget_C_GetShortName_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ShortName != nullptr)
+		*ShortName = params.ShortName;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UinventoryItemWidget_C::GetVisibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.GetVisibility_1");
+
+	UinventoryItemWidget_C_GetVisibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function inventoryItemWidget.inventoryItemWidget_C.formToText
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -67,18 +293,24 @@ struct FEventReply UinventoryItemWidget_C::OnMouseButtonDoubleClick(const struct
 // Parameters:
 // int                            setPrice                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           showPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           fromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           workStation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ShowAsGrid                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            SetAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   CustomName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UinventoryItemWidget_C::widgetSetup(int setPrice, bool showPrice, bool fromVendor, bool workStation)
+void UinventoryItemWidget_C::widgetSetup(int setPrice, bool showPrice, bool FromVendor, bool workStation, bool ShowAsGrid, int SetAmount, const struct FText& CustomName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.widgetSetup");
 
 	UinventoryItemWidget_C_widgetSetup_Params params;
 	params.setPrice = setPrice;
 	params.showPrice = showPrice;
-	params.fromVendor = fromVendor;
+	params.FromVendor = FromVendor;
 	params.workStation = workStation;
+	params.ShowAsGrid = ShowAsGrid;
+	params.SetAmount = SetAmount;
+	params.CustomName = CustomName;
 
 	auto flags = fn->FunctionFlags;
 
@@ -189,6 +421,69 @@ void UinventoryItemWidget_C::OnDragCancelled(const struct FPointerEvent& Pointer
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.OnDragCancelled");
 
 	UinventoryItemWidget_C_OnDragCancelled_Params params;
+	params.PointerEvent = PointerEvent;
+	params.Operation = Operation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UinventoryItemWidget_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.Destruct");
+
+	UinventoryItemWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.OnDragEnter
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UDragDropOperation*      Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UinventoryItemWidget_C::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.OnDragEnter");
+
+	UinventoryItemWidget_C_OnDragEnter_Params params;
+	params.MyGeometry = MyGeometry;
+	params.PointerEvent = PointerEvent;
+	params.Operation = Operation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryItemWidget.inventoryItemWidget_C.OnDragLeave
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UDragDropOperation*      Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UinventoryItemWidget_C::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.OnDragLeave");
+
+	UinventoryItemWidget_C_OnDragLeave_Params params;
 	params.PointerEvent = PointerEvent;
 	params.Operation = Operation;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass questManager.questManager_C
-// 0x0D58 (0x1080 - 0x0328)
+// 0x0D90 (0x10B8 - 0x0328)
 class AquestManager_C : public AActor
 {
 public:
@@ -22,7 +22,7 @@ public:
 	class URamaSaveComponent*                          RamaSave;                                                 // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBillboardComponent*                         Billboard;                                                // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AplayerCharacterBP_C*                        playerRef;                                                // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FText>                               taskNames;                                                // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               tempDrugNames;                                            // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               taskDecriptions;                                          // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -162,6 +162,16 @@ public:
 	int                                                seedGuyContactID;                                         // 0x1068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData23[0x4];                                       // 0x106C(0x0004) MISSED OFFSET
 	TArray<class ApassageTraderDialogue_C*>            passageTraderDialoguesDelet;                              // 0x1070(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	bool                                               SectorCUnlocked;                                          // 0x1080(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData24[0x3];                                       // 0x1081(0x0003) MISSED OFFSET
+	int                                                SectorTaskHideoutID;                                      // 0x1084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                SectorTaskFactoryID;                                      // 0x1088(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                SectorTaskLaundryID;                                      // 0x108C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FString>                             LaunderDoorsReported;                                     // 0x1090(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FText>                               UserMessages;                                             // 0x10A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               NewLaunderPresented;                                      // 0x10B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x3];                                       // 0x10B1(0x0003) MISSED OFFSET
+	int                                                NewLaunderTaskID;                                         // 0x10B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -170,6 +180,8 @@ public:
 	}
 
 
+	void ReportLaunderDoor(class AlaunderDoor_C* Door);
+	void RamaExpand();
 	void fixTaskDuplicates();
 	void countUnlockedHideouts(bool* AllRented);
 	void checkSecondZoneUnlock(bool* checkPositive);
@@ -297,6 +309,19 @@ public:
 	void retryEddiePsychedelicsEnd();
 	void eddieEndPsychedelics();
 	void eddieEndPsychedelicsEnd();
+	void eddieCallSectorC();
+	void eddieRepeatSectorc();
+	void retryEddieSecotrc();
+	void eddieCallLaundry();
+	void eddieRepeatLaundry();
+	void retryEddieLaundry();
+	void eddieEndSectorc();
+	void eddieEndLaundry();
+	void UnlockSectorC();
+	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
+	void TrySectorC_Quests();
+	void NewLaunderHidout();
+	void ReopenNewLaunder();
 	void ExecuteUbergraph_questManager(int EntryPoint);
 };
 

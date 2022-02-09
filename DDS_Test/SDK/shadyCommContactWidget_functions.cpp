@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,27 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function shadyCommContactWidget.shadyCommContactWidget_C.Get_arrestCover_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UshadyCommContactWidget_C::Get_arrestCover_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactWidget.shadyCommContactWidget_C.Get_arrestCover_Visibility_1");
+
+	UshadyCommContactWidget_C_Get_arrestCover_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function shadyCommContactWidget.shadyCommContactWidget_C.OnMouseButtonDoubleClick
 // (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -73,8 +94,10 @@ struct FEventReply UshadyCommContactWidget_C::OnMouseButtonDown(const struct FGe
 // int                            newMessageNumber               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isDead                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Addicted                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AsalesManager_C*         salesManager                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommContactWidget_C::Setup(int userID, bool active, class UshadyCommInterface_C* shadyRef, const struct FcontactPersonStruct& userData, int newMessageNumber, bool isDead, bool Addicted)
+void UshadyCommContactWidget_C::Setup(int userID, bool active, class UshadyCommInterface_C* shadyRef, const struct FcontactPersonStruct& userData, int newMessageNumber, bool isDead, bool Addicted, int ClientId, class AsalesManager_C* salesManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactWidget.shadyCommContactWidget_C.Setup");
 
@@ -86,6 +109,8 @@ void UshadyCommContactWidget_C::Setup(int userID, bool active, class UshadyCommI
 	params.newMessageNumber = newMessageNumber;
 	params.isDead = isDead;
 	params.Addicted = Addicted;
+	params.ClientId = ClientId;
+	params.salesManager = salesManager;
 
 	auto flags = fn->FunctionFlags;
 

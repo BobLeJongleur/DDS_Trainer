@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,14 +81,17 @@ void AblockEntranceLight_C::turnLightOff()
 }
 
 
-// Function blockEntranceLight.blockEntranceLight_C.testDistance
+// Function blockEntranceLight.blockEntranceLight_C.ToggleShadows
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           on                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AblockEntranceLight_C::testDistance()
+void AblockEntranceLight_C::ToggleShadows(bool on)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function blockEntranceLight.blockEntranceLight_C.testDistance");
+	static auto fn = UObject::FindObject<UFunction>("Function blockEntranceLight.blockEntranceLight_C.ToggleShadows");
 
-	AblockEntranceLight_C_testDistance_Params params;
+	AblockEntranceLight_C_ToggleShadows_Params params;
+	params.on = on;
 
 	auto flags = fn->FunctionFlags;
 
@@ -99,7 +102,7 @@ void AblockEntranceLight_C::testDistance()
 
 
 // Function blockEntranceLight.blockEntranceLight_C.ExecuteUbergraph_blockEntranceLight
-// (Final, HasDefaults)
+// (Final)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

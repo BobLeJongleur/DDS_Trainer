@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function backpackBase.backpackBase_C.NewRamaVars
+struct AbackpackBase_C_NewRamaVars_Params
+{
+};
+
+// Function backpackBase.backpackBase_C.TransferInventory
+struct AbackpackBase_C_TransferInventory_Params
+{
+	class UInventoryComponent_C*                       PlayerInventory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function backpackBase.backpackBase_C.ReconstructOldInventory
+struct AbackpackBase_C_ReconstructOldInventory_Params
+{
+};
 
 // Function backpackBase.backpackBase_C.checkBackpackEmpty
 struct AbackpackBase_C_checkBackpackEmpty_Params
@@ -43,6 +59,28 @@ struct AbackpackBase_C_BndEvt__Model_K2Node_ComponentBoundEvent_0_ComponentHitSi
 	class UPrimitiveComponent*                         OtherComp;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FVector                                     NormalImpulse;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  Hit;                                                      // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function backpackBase.backpackBase_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AbackpackBase_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function backpackBase.backpackBase_C.DelayedPhysics
+struct AbackpackBase_C_DelayedPhysics_Params
+{
+};
+
+// Function backpackBase.backpackBase_C.Playerbinding
+struct AbackpackBase_C_Playerbinding_Params
+{
+};
+
+// Function backpackBase.backpackBase_C.RetryPlayerBind
+struct AbackpackBase_C_RetryPlayerBind_Params
+{
 };
 
 // Function backpackBase.backpackBase_C.ExecuteUbergraph_backpackBase

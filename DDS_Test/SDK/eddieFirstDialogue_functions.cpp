@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -208,14 +208,14 @@ void AeddieFirstDialogue_C::playInpatientQuote()
 }
 
 
-// Function eddieFirstDialogue.eddieFirstDialogue_C.playerSatDown
+// Function eddieFirstDialogue.eddieFirstDialogue_C.PlayerSatDown
 // (BlueprintCallable, BlueprintEvent)
 
-void AeddieFirstDialogue_C::playerSatDown()
+void AeddieFirstDialogue_C::PlayerSatDown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function eddieFirstDialogue.eddieFirstDialogue_C.playerSatDown");
+	static auto fn = UObject::FindObject<UFunction>("Function eddieFirstDialogue.eddieFirstDialogue_C.PlayerSatDown");
 
-	AeddieFirstDialogue_C_playerSatDown_Params params;
+	AeddieFirstDialogue_C_PlayerSatDown_Params params;
 
 	auto flags = fn->FunctionFlags;
 

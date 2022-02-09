@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function equipmentListWidget.equipmentListWidget_C.getSurfaceData
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   SurfaceID                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EVillaListCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVillaSurfaceFinish     SurfaceData                    (Parm, OutParm)
+
+void UequipmentListWidget_C::getSurfaceData(const struct FName& SurfaceID, TEnumAsByte<EVillaListCategories> Category, struct FVillaSurfaceFinish* SurfaceData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function equipmentListWidget.equipmentListWidget_C.getSurfaceData");
+
+	UequipmentListWidget_C_getSurfaceData_Params params;
+	params.SurfaceID = SurfaceID;
+	params.Category = Category;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SurfaceData != nullptr)
+		*SurfaceData = params.SurfaceData;
+}
+
 
 // Function equipmentListWidget.equipmentListWidget_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
@@ -34,15 +60,19 @@ void UequipmentListWidget_C::Construct()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FappartmentEquipment    eqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   EqID                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EVillaListCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UequipmentListWidget_C::Setup(const struct FappartmentEquipment& eqData, int Quantity, bool selected)
+void UequipmentListWidget_C::Setup(const struct FappartmentEquipment& eqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function equipmentListWidget.equipmentListWidget_C.Setup");
 
 	UequipmentListWidget_C_Setup_Params params;
 	params.eqData = eqData;
+	params.EqID = EqID;
+	params.Category = Category;
 	params.Quantity = Quantity;
 	params.selected = selected;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,10 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass sampleClientWidget.sampleClientWidget_C
-// 0x0000 (0x0208 - 0x0208)
+// 0x0010 (0x0218 - 0x0208)
 class UsampleClientWidget_C : public UUserWidget
 {
 public:
+	struct FString                                     MyArea;                                                   // 0x0208(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

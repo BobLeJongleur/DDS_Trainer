@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,18 +68,20 @@ struct FEventReply UdrugItemSlot_C::OnMouseButtonDown(const struct FGeometry& My
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   DrugID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          GramPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UorderDropOverlay_C*     dropOverlayParent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FString                 Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           DragPayload                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UdrugItemSlot_C::Setup(const struct FdrugData& drugData, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload)
+void UdrugItemSlot_C::Setup(const struct FdrugData& drugData, const struct FName& DrugID, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function drugItemSlot.drugItemSlot_C.Setup");
 
 	UdrugItemSlot_C_Setup_Params params;
 	params.drugData = drugData;
+	params.DrugID = DrugID;
 	params.GramPrice = GramPrice;
 	params.Quantity = Quantity;
 	params.dropOverlayParent = dropOverlayParent;

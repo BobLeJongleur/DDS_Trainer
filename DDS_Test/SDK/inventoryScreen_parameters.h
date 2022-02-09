@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function inventoryScreen.inventoryScreen_C.Get_btnAcceptTrade_bIsEnabled_1
+struct UinventoryScreen_C_Get_btnAcceptTrade_bIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function inventoryScreen.inventoryScreen_C.RefreshInventory
+struct UinventoryScreen_C_RefreshInventory_Params
+{
+};
 
 // Function inventoryScreen.inventoryScreen_C.resetUseContent
 struct UinventoryScreen_C_resetUseContent_Params
@@ -55,10 +66,11 @@ struct UinventoryScreen_C_countTotalDrugGrams_Params
 // Function inventoryScreen.inventoryScreen_C.checkSubstanceSame
 struct UinventoryScreen_C_checkSubstanceSame_Params
 {
-	TArray<struct FinventoryItemStruct>                Substances;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FMixProportionsStruct>               Mixes;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        Quantities;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	bool                                               TheSame;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FdrugData                                   dataAverage;                                              // (Parm, OutParm)
+	struct FMixProportionsStruct                       MixAverage;                                               // (Parm, OutParm)
 };
 
 // Function inventoryScreen.inventoryScreen_C.renderQuestList
@@ -74,7 +86,7 @@ struct UinventoryScreen_C_acceptBoughtItems_Params
 // Function inventoryScreen.inventoryScreen_C.countBoughtItemValue
 struct UinventoryScreen_C_countBoughtItemValue_Params
 {
-	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Value;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -118,6 +130,8 @@ struct UinventoryScreen_C_checkSelledDrugs_Params
 {
 	bool                                               CheckedPositive;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FdrugData                                   endDrugAverage;                                           // (Parm, OutParm)
+	struct FMixProportionsStruct                       OutMixAverage;                                            // (Parm, OutParm)
+	struct FText                                       OutMixName;                                               // (Parm, OutParm)
 };
 
 // Function inventoryScreen.inventoryScreen_C.renderBuyerNeeded
@@ -128,7 +142,7 @@ struct UinventoryScreen_C_renderBuyerNeeded_Params
 // Function inventoryScreen.inventoryScreen_C.checkItemsFitPockets
 struct UinventoryScreen_C_checkItemsFitPockets_Params
 {
-	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               NoFit;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -159,7 +173,6 @@ struct UinventoryScreen_C_renderShopItems_Params
 // Function inventoryScreen.inventoryScreen_C.renderContainer
 struct UinventoryScreen_C_renderContainer_Params
 {
-	TArray<struct FinventoryItemStruct>                containerItems;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class AcontainerBase_C*                            container;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -168,20 +181,19 @@ struct UinventoryScreen_C_prepareInventoryMode_Params
 {
 	class AcontainerBase_C*                            ContainerRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AbaseNPC_C*                                  sellerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function inventoryScreen.inventoryScreen_C.renderPockets
 struct UinventoryScreen_C_renderPockets_Params
 {
-	TArray<struct FinventoryItemStruct>                pocketItems;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class AplayerCharacterBP_C*                        Player;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function inventoryScreen.inventoryScreen_C.renderBackpack
 struct UinventoryScreen_C_renderBackpack_Params
 {
-	TArray<struct FinventoryItemStruct>                backpackItems;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class UInventoryComponent_C*                       InvComponent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function inventoryScreen.inventoryScreen_C.PreConstruct

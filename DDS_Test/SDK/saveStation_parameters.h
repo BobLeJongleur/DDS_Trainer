@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,6 +77,18 @@ struct AsaveStation_C_drawCheck_Params
 
 // Function saveStation.saveStation_C.updateDisplayState
 struct AsaveStation_C_updateDisplayState_Params
+{
+};
+
+// Function saveStation.saveStation_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AsaveStation_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_2_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function saveStation.saveStation_C.CheckTimer
+struct AsaveStation_C_CheckTimer_Params
 {
 };
 

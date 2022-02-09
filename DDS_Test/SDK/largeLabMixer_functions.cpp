@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,6 +58,23 @@ void AlargeLabMixer_C::ReceiveTick(float DeltaSeconds)
 
 	AlargeLabMixer_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function largeLabMixer.largeLabMixer_C.GizmoSet
+// (BlueprintCallable, BlueprintEvent)
+
+void AlargeLabMixer_C::GizmoSet()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function largeLabMixer.largeLabMixer_C.GizmoSet");
+
+	AlargeLabMixer_C_GizmoSet_Params params;
 
 	auto flags = fn->FunctionFlags;
 

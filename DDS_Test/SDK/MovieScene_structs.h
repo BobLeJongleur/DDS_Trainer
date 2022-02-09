@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,6 +82,15 @@ enum class EUpdateClockSource : uint8_t
 };
 
 
+// Enum MovieScene.EMovieSceneEvaluationType
+enum class EMovieSceneEvaluationType : uint8_t
+{
+	EMovieSceneEvaluationType__FrameLocked = 0,
+	EMovieSceneEvaluationType__WithSubFrames = 1,
+	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
+};
+
+
 // Enum MovieScene.EMovieScenePlayerStatus
 enum class EMovieScenePlayerStatus : uint8_t
 {
@@ -132,15 +141,6 @@ enum class ESpawnOwnership : uint8_t
 	ESpawnOwnership__MasterSequence = 1,
 	ESpawnOwnership__External      = 2,
 	ESpawnOwnership__ESpawnOwnership_MAX = 3
-};
-
-
-// Enum MovieScene.EMovieSceneEvaluationType
-enum class EMovieSceneEvaluationType : uint8_t
-{
-	EMovieSceneEvaluationType__FrameLocked = 0,
-	EMovieSceneEvaluationType__WithSubFrames = 1,
-	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
 };
 
 

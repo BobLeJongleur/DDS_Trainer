@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function deadDropBase.deadDropBase_C.checkNoDrugs
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           DrugsTaken                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -128,14 +128,17 @@ void AdeadDropBase_C::closeEventScript()
 }
 
 
-// Function deadDropBase.deadDropBase_C.testPlayerDistance
-// (BlueprintCallable, BlueprintEvent)
+// Function deadDropBase.deadDropBase_C.LongRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AdeadDropBase_C::testPlayerDistance()
+void AdeadDropBase_C::LongRadiusChanged(bool InRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function deadDropBase.deadDropBase_C.testPlayerDistance");
+	static auto fn = UObject::FindObject<UFunction>("Function deadDropBase.deadDropBase_C.LongRadiusChanged");
 
-	AdeadDropBase_C_testPlayerDistance_Params params;
+	AdeadDropBase_C_LongRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -187,6 +190,26 @@ void AdeadDropBase_C::openEventScript()
 	static auto fn = UObject::FindObject<UFunction>("Function deadDropBase.deadDropBase_C.openEventScript");
 
 	AdeadDropBase_C_openEventScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function deadDropBase.deadDropBase_C.ShortRadiusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           InRadius                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AdeadDropBase_C::ShortRadiusChanged(bool InRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function deadDropBase.deadDropBase_C.ShortRadiusChanged");
+
+	AdeadDropBase_C_ShortRadiusChanged_Params params;
+	params.InRadius = InRadius;
 
 	auto flags = fn->FunctionFlags;
 

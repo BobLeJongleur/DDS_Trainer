@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,47 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function containerBase.containerBase_C.ExpandRama
+struct AcontainerBase_C_ExpandRama_Params
+{
+};
+
+// Function containerBase.containerBase_C.ParseOldInventory
+struct AcontainerBase_C_ParseOldInventory_Params
+{
+};
+
+// Function containerBase.containerBase_C.CanAccessContainer
+struct AcontainerBase_C_CanAccessContainer_Params
+{
+	bool                                               CanAccess;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       DeclineReason;                                            // (Parm, OutParm)
+};
+
+// Function containerBase.containerBase_C.AcceptsCategory
+struct AcontainerBase_C_AcceptsCategory_Params
+{
+	TEnumAsByte<EitemCategories>                       Category;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function containerBase.containerBase_C.CheckFullyLooted
+struct AcontainerBase_C_CheckFullyLooted_Params
+{
+	bool                                               NotLooted;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function containerBase.containerBase_C.EndLootingSound
+struct AcontainerBase_C_EndLootingSound_Params
+{
+};
+
+// Function containerBase.containerBase_C.GetOpenState
+struct AcontainerBase_C_GetOpenState_Params
+{
+	bool                                               IsOpen;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function containerBase.containerBase_C.reconstructContentsReferences
 struct AcontainerBase_C_reconstructContentsReferences_Params
@@ -42,8 +83,8 @@ struct AcontainerBase_C_resetContentSizes_Params
 {
 };
 
-// Function containerBase.containerBase_C.removeItem
-struct AcontainerBase_C_removeItem_Params
+// Function containerBase.containerBase_C.RemoveItem
+struct AcontainerBase_C_RemoveItem_Params
 {
 	int                                                ItemIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -54,6 +95,7 @@ struct AcontainerBase_C_AddItem_Params
 {
 	struct FinventoryItemStruct                        itemData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                itemQuantity;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ForceLooted;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                AddedIndex;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               QuanChanged;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -90,6 +132,23 @@ struct AcontainerBase_C_closeEventScript_Params
 
 // Function containerBase.containerBase_C.purgeContainer
 struct AcontainerBase_C_purgeContainer_Params
+{
+};
+
+// Function containerBase.containerBase_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AcontainerBase_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function containerBase.containerBase_C.RamaLoaded
+struct AcontainerBase_C_RamaLoaded_Params
+{
+};
+
+// Function containerBase.containerBase_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature
+struct AcontainerBase_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature_Params
 {
 };
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,8 +13,28 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function inventoryCharacterBP.inventoryCharacterBP_C.UpdateBackpack
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   BackpackID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AinventoryCharacterBP_C::UpdateBackpack(const struct FName& BackpackID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryCharacterBP.inventoryCharacterBP_C.UpdateBackpack");
+
+	AinventoryCharacterBP_C_UpdateBackpack_Params params;
+	params.BackpackID = BackpackID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function inventoryCharacterBP.inventoryCharacterBP_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AinventoryCharacterBP_C::UserConstructionScript()
 {

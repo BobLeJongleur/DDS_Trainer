@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass policeManager.policeManager_C
-// 0x0144 (0x046C - 0x0328)
+// 0x0145 (0x046D - 0x0328)
 class ApoliceManager_C : public AActor
 {
 public:
@@ -56,6 +56,7 @@ public:
 	TArray<int>                                        penaltyDisplayQueueAmounts;                               // 0x0440(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	struct FText                                       drugQuanPenaltyNam;                                       // 0x0450(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	int                                                lastLeashID;                                              // 0x0468(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CheatPoliceBlinded;                                       // 0x046C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -78,11 +79,11 @@ public:
 	void assignPatrolArea();
 	void refreshAreaStatus();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void requestPatrolArea(class APolicemanBaseClass_C* Querier);
 	void checkRequestQuery();
+	void requestPatrolArea(class APolicemanBaseClass_C* Querier);
 	void playRadioComs();
 	void trySpawnPatrol();
+	void ReceiveBeginPlay();
 	void BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void tryDisplayPenalty();
 	void ExecuteUbergraph_policeManager(int EntryPoint);

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,85 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckTabletops
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ArentAppartmentArea_C::CheckTabletops()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.CheckTabletops");
+
+	ArentAppartmentArea_C_CheckTabletops_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.VerifyInventory
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ArentAppartmentArea_C::VerifyInventory()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.VerifyInventory");
+
+	ArentAppartmentArea_C_VerifyInventory_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.GetHideoutMeta
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FHideoutData            HideoutMeta                    (Parm, OutParm)
+
+void ArentAppartmentArea_C::GetHideoutMeta(bool* Success, struct FHideoutData* HideoutMeta)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.GetHideoutMeta");
+
+	ArentAppartmentArea_C_GetHideoutMeta_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Success != nullptr)
+		*Success = params.Success;
+	if (HideoutMeta != nullptr)
+		*HideoutMeta = params.HideoutMeta;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.PassDataToOriginal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                 Object                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ArentAppartmentArea_C::PassDataToOriginal(class UObject* Object)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.PassDataToOriginal");
+
+	ArentAppartmentArea_C_PassDataToOriginal_Params params;
+	params.Object = Object;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function rentAppartmentArea.rentAppartmentArea_C.checkWeedStatus
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -196,14 +275,16 @@ void ArentAppartmentArea_C::spawnFlashBang()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FappartmentEquipment    eqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   EquipmentID                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ArentAppartmentArea_C::addInventoryItem(const struct FappartmentEquipment& eqData, int Quantity)
+void ArentAppartmentArea_C::addInventoryItem(const struct FappartmentEquipment& eqData, const struct FName& EquipmentID, int Quantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.addInventoryItem");
 
 	ArentAppartmentArea_C_addInventoryItem_Params params;
 	params.eqData = eqData;
+	params.EquipmentID = EquipmentID;
 	params.Quantity = Quantity;
 
 	auto flags = fn->FunctionFlags;
@@ -568,23 +649,6 @@ void ArentAppartmentArea_C::PlayerBustedByDEA()
 }
 
 
-// Function rentAppartmentArea.rentAppartmentArea_C.tryRestoreWallPicker
-// (BlueprintCallable, BlueprintEvent)
-
-void ArentAppartmentArea_C::tryRestoreWallPicker()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.tryRestoreWallPicker");
-
-	ArentAppartmentArea_C_tryRestoreWallPicker_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function rentAppartmentArea.rentAppartmentArea_C.resetApartment
 // (BlueprintCallable, BlueprintEvent)
 
@@ -678,6 +742,62 @@ void ArentAppartmentArea_C::resetFilterWarning()
 	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.resetFilterWarning");
 
 	ArentAppartmentArea_C_resetFilterWarning_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void ArentAppartmentArea_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	ArentAppartmentArea_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.DisplayItems
+// (BlueprintCallable, BlueprintEvent)
+
+void ArentAppartmentArea_C::DisplayItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.DisplayItems");
+
+	ArentAppartmentArea_C_DisplayItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.OldLoadReinit
+// (BlueprintCallable, BlueprintEvent)
+
+void ArentAppartmentArea_C::OldLoadReinit()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.OldLoadReinit");
+
+	ArentAppartmentArea_C_OldLoadReinit_Params params;
 
 	auto flags = fn->FunctionFlags;
 

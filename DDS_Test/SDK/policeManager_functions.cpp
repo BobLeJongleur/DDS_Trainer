@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -273,14 +273,14 @@ void ApoliceManager_C::UserConstructionScript()
 }
 
 
-// Function policeManager.policeManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function policeManager.policeManager_C.checkRequestQuery
+// (BlueprintCallable, BlueprintEvent)
 
-void ApoliceManager_C::ReceiveBeginPlay()
+void ApoliceManager_C::checkRequestQuery()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function policeManager.policeManager_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function policeManager.policeManager_C.checkRequestQuery");
 
-	ApoliceManager_C_ReceiveBeginPlay_Params params;
+	ApoliceManager_C_checkRequestQuery_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -301,23 +301,6 @@ void ApoliceManager_C::requestPatrolArea(class APolicemanBaseClass_C* Querier)
 
 	ApoliceManager_C_requestPatrolArea_Params params;
 	params.Querier = Querier;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function policeManager.policeManager_C.checkRequestQuery
-// (BlueprintCallable, BlueprintEvent)
-
-void ApoliceManager_C::checkRequestQuery()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function policeManager.policeManager_C.checkRequestQuery");
-
-	ApoliceManager_C_checkRequestQuery_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -352,6 +335,23 @@ void ApoliceManager_C::trySpawnPatrol()
 	static auto fn = UObject::FindObject<UFunction>("Function policeManager.policeManager_C.trySpawnPatrol");
 
 	ApoliceManager_C_trySpawnPatrol_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function policeManager.policeManager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ApoliceManager_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function policeManager.policeManager_C.ReceiveBeginPlay");
+
+	ApoliceManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ void UpackageProductWidget_C::choosePackageIcon(TEnumAsByte<EdrugForm> Form, int
 
 
 // Function packageProductWidget.packageProductWidget_C.addToPlayerInventory
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           AllAdded                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -79,7 +79,7 @@ void UpackageProductWidget_C::checkFitInventory()
 
 
 // Function packageProductWidget.packageProductWidget_C.renderPackageList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UpackageProductWidget_C::renderPackageList()
 {
@@ -163,9 +163,9 @@ void UpackageProductWidget_C::checkButtonActivity()
 // Function packageProductWidget.packageProductWidget_C.checkCanFitInventory
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           CanFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           canFit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UpackageProductWidget_C::checkCanFitInventory(bool* CanFit)
+void UpackageProductWidget_C::checkCanFitInventory(bool* canFit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function packageProductWidget.packageProductWidget_C.checkCanFitInventory");
 
@@ -177,8 +177,8 @@ void UpackageProductWidget_C::checkCanFitInventory(bool* CanFit)
 
 	fn->FunctionFlags = flags;
 
-	if (CanFit != nullptr)
-		*CanFit = params.CanFit;
+	if (canFit != nullptr)
+		*canFit = params.canFit;
 }
 
 

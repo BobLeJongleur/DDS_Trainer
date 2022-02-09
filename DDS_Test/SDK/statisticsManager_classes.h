@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass statisticsManager.statisticsManager_C
-// 0x00F0 (0x0418 - 0x0328)
+// 0x0164 (0x048C - 0x0328)
 class AstatisticsManager_C : public AActor
 {
 public:
@@ -72,6 +72,15 @@ public:
 	float                                              displayWarningsTimeout;                                   // 0x040C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              displayWarningTimer2;                                     // 0x0410(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              deaChanceMultiplier;                                      // 0x0414(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<int>                                        ExpoSalesDay;                                             // 0x0418(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        ExpoSalesAmount;                                          // 0x0428(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       ExpoSalesNight;                                           // 0x0438(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class AdayTimeControler_C*                         dayTimeCon;                                               // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	TArray<int>                                        ExpoEventsDay;                                            // 0x0450(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               ExpoEventName;                                            // 0x0460(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<bool>                                       ExpoEventNight;                                           // 0x0470(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UDataTable*                                  ExpoEventDatabase;                                        // 0x0480(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ExpoFactorMultiplier;                                     // 0x0488(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -80,6 +89,11 @@ public:
 	}
 
 
+	void ExpandRama();
+	void GetTimecode(int* OutTimecode);
+	void UpdateExpositionLevel();
+	void NewExpoSale(int AmountGrams);
+	void NewExpoEvent(const struct FName& EventID);
 	void adaptDifficulty();
 	void tryDisplayExpPopup();
 	void upgradeSkill(int SkillID, float UpgradeAmount);
@@ -99,6 +113,8 @@ public:
 	void levelUpWidget();
 	void checkStatuses();
 	void tryShowLevel();
+	void reInitiate();
+	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
 	void ExecuteUbergraph_statisticsManager(int EntryPoint);
 };
 

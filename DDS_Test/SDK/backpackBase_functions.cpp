@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,60 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function backpackBase.backpackBase_C.NewRamaVars
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AbackpackBase_C::NewRamaVars()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.NewRamaVars");
+
+	AbackpackBase_C_NewRamaVars_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.TransferInventory
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UInventoryComponent_C*   PlayerInventory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void AbackpackBase_C::TransferInventory(class UInventoryComponent_C* PlayerInventory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.TransferInventory");
+
+	AbackpackBase_C_TransferInventory_Params params;
+	params.PlayerInventory = PlayerInventory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.ReconstructOldInventory
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AbackpackBase_C::ReconstructOldInventory()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.ReconstructOldInventory");
+
+	AbackpackBase_C_ReconstructOldInventory_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function backpackBase.backpackBase_C.checkBackpackEmpty
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -31,7 +85,7 @@ void AbackpackBase_C::checkBackpackEmpty()
 
 
 // Function backpackBase.backpackBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AbackpackBase_C::UserConstructionScript()
 {
@@ -103,6 +157,79 @@ void AbackpackBase_C::BndEvt__Model_K2Node_ComponentBoundEvent_0_ComponentHitSig
 	params.OtherComp = OtherComp;
 	params.NormalImpulse = NormalImpulse;
 	params.Hit = Hit;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AbackpackBase_C::BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AbackpackBase_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.DelayedPhysics
+// (BlueprintCallable, BlueprintEvent)
+
+void AbackpackBase_C::DelayedPhysics()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.DelayedPhysics");
+
+	AbackpackBase_C_DelayedPhysics_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.Playerbinding
+// (BlueprintCallable, BlueprintEvent)
+
+void AbackpackBase_C::Playerbinding()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.Playerbinding");
+
+	AbackpackBase_C_Playerbinding_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function backpackBase.backpackBase_C.RetryPlayerBind
+// (BlueprintCallable, BlueprintEvent)
+
+void AbackpackBase_C::RetryPlayerBind()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function backpackBase.backpackBase_C.RetryPlayerBind");
+
+	AbackpackBase_C_RetryPlayerBind_Params params;
 
 	auto flags = fn->FunctionFlags;
 

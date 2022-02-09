@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,6 +17,12 @@ namespace SDK
 // Function tooltipWidget.tooltipWidget_C.Construct
 struct UtooltipWidget_C_Construct_Params
 {
+};
+
+// Function tooltipWidget.tooltipWidget_C.SetText
+struct UtooltipWidget_C_SetText_Params
+{
+	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function tooltipWidget.tooltipWidget_C.ExecuteUbergraph_tooltipWidget

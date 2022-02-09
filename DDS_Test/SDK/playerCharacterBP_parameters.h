@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage
+struct AplayerCharacterBP_C_CheckFallDamage_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.FallDamageRegen
+struct AplayerCharacterBP_C_FallDamageRegen_Params
+{
+	float                                              Delta;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ExpandRama
+struct AplayerCharacterBP_C_ExpandRama_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ReconstructOldInventory
+struct AplayerCharacterBP_C_ReconstructOldInventory_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckInfluenceSphere
+struct AplayerCharacterBP_C_CheckInfluenceSphere_Params
+{
+};
 
 // Function playerCharacterBP.playerCharacterBP_C.convertUsedDrugData
 struct AplayerCharacterBP_C_convertUsedDrugData_Params
@@ -122,6 +148,7 @@ struct AplayerCharacterBP_C_usedDrugCountdown_Params
 struct AplayerCharacterBP_C_useDrugDose_Params
 {
 	struct FdrugData                                   drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       NameOverride;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.quickUseItem
@@ -222,7 +249,7 @@ struct AplayerCharacterBP_C_checkInventorySizing_Params
 {
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.checkAllPocketsSizing
@@ -265,6 +292,7 @@ struct AplayerCharacterBP_C_chargeMoney_Params
 struct AplayerCharacterBP_C_addMoney_Params
 {
 	int                                                Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               SkipCounting;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -336,9 +364,11 @@ struct AplayerCharacterBP_C_clearBackpack_Params
 // Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack
 struct AplayerCharacterBP_C_setCurrentBackpack_Params
 {
-	class AbackpackBase_C*                             Backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AbackpackBase_C*                             backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AitemInventoryHolder_C*                      itemHolder;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        backpackData;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FName                                       BackpackItemID;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.phoneCallFunction
@@ -378,8 +408,8 @@ struct AplayerCharacterBP_C_checkContainerSizing_Params
 {
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                MaxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                maxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.tryAddToPockets
@@ -396,7 +426,7 @@ struct AplayerCharacterBP_C_addBackpackContent_Params
 {
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               fromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ItemPrice;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -405,8 +435,8 @@ struct AplayerCharacterBP_C_checkBackpackSizing_Params
 {
 	struct FinventoryItemStruct                        itemData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                MaxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                maxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.checkPocketSizing
@@ -415,8 +445,8 @@ struct AplayerCharacterBP_C_checkPocketSizing_Params
 	struct FinventoryItemStruct                        itemData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                MaxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canFit;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                maxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.setPocketContent
@@ -425,7 +455,7 @@ struct AplayerCharacterBP_C_setPocketContent_Params
 	struct FinventoryItemStruct                        itemData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                PocketIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               fromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                vendorPrice;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -617,14 +647,14 @@ struct AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_27
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_6
-struct AplayerCharacterBP_C_InpActEvt_Escape_K2Node_InputKeyEvent_6_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Escape_K2Node_InputKeyEvent_7
+struct AplayerCharacterBP_C_InpActEvt_Escape_K2Node_InputKeyEvent_7_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_5
-struct AplayerCharacterBP_C_InpActEvt_F10_K2Node_InputKeyEvent_5_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_F10_K2Node_InputKeyEvent_6
+struct AplayerCharacterBP_C_InpActEvt_F10_K2Node_InputKeyEvent_6_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -659,8 +689,8 @@ struct AplayerCharacterBP_C_InpActEvt_phoneBack_K2Node_InputActionEvent_22_Param
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_4
-struct AplayerCharacterBP_C_InpActEvt_H_K2Node_InputKeyEvent_4_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_H_K2Node_InputKeyEvent_5
+struct AplayerCharacterBP_C_InpActEvt_H_K2Node_InputKeyEvent_5_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -737,8 +767,8 @@ struct AplayerCharacterBP_C_InpActEvt_InfoToggle_K2Node_InputActionEvent_10_Para
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_3
-struct AplayerCharacterBP_C_InpActEvt_Y_K2Node_InputKeyEvent_3_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Y_K2Node_InputKeyEvent_4
+struct AplayerCharacterBP_C_InpActEvt_Y_K2Node_InputKeyEvent_4_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -791,20 +821,26 @@ struct AplayerCharacterBP_C_InpActEvt_QuickUse04_K2Node_InputActionEvent_2_Param
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_3
+struct AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_3_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_2
 struct AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_2_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_L_K2Node_InputKeyEvent_1
-struct AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_1_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1
+struct AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_1_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1
-struct AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_1_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1
+struct AplayerCharacterBP_C_InpActEvt_N_K2Node_InputKeyEvent_1_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -1180,10 +1216,44 @@ struct AplayerCharacterBP_C_ResetLand_Params
 {
 };
 
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AplayerCharacterBP_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature
+struct AplayerCharacterBP_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_1_InventoryStateChanged__DelegateSignature_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ContinueSprint
+struct AplayerCharacterBP_C_ContinueSprint_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature
+struct AplayerCharacterBP_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature_Params
+{
+	bool                                               FromVendor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.TestUseWater
+struct AplayerCharacterBP_C_TestUseWater_Params
+{
+	int                                                Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function playerCharacterBP.playerCharacterBP_C.ExecuteUbergraph_playerCharacterBP
 struct AplayerCharacterBP_C_ExecuteUbergraph_playerCharacterBP_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.FullLoadInitiated__DelegateSignature
+struct AplayerCharacterBP_C_FullLoadInitiated__DelegateSignature_Params
+{
 };
 
 }

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9085,6 +9085,74 @@ struct AGameModeBase_CanSpectate_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.GameMode.StartMatch
+struct AGameMode_StartMatch_Params
+{
+};
+
+// Function Engine.GameMode.SetBandwidthLimit
+struct AGameMode_SetBandwidthLimit_Params
+{
+	float                                              AsyncIOBandwidthLimit;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameMode.Say
+struct AGameMode_Say_Params
+{
+	struct FString                                     Msg;                                                      // (Parm, ZeroConstructor)
+};
+
+// Function Engine.GameMode.RestartGame
+struct AGameMode_RestartGame_Params
+{
+};
+
+// Function Engine.GameMode.ReadyToStartMatch
+struct AGameMode_ReadyToStartMatch_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameMode.ReadyToEndMatch
+struct AGameMode_ReadyToEndMatch_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameMode.K2_OnSetMatchState
+struct AGameMode_K2_OnSetMatchState_Params
+{
+	struct FName                                       newState;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameMode.IsMatchInProgress
+struct AGameMode_IsMatchInProgress_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameMode.HasMatchEnded
+struct AGameMode_HasMatchEnded_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameMode.GetMatchState
+struct AGameMode_GetMatchState_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameMode.EndMatch
+struct AGameMode_EndMatch_Params
+{
+};
+
+// Function Engine.GameMode.AbortMatch
+struct AGameMode_AbortMatch_Params
+{
+};
+
 // Function Engine.GameplayStatics.UnloadStreamLevel
 struct UGameplayStatics_UnloadStreamLevel_Params
 {
@@ -10704,74 +10772,6 @@ struct UImportanceSamplingLibrary_BreakImportanceTexture_Params
 	struct FImportanceTexture                          ImportanceTexture;                                        // (ConstParm, Parm, OutParm, ReferenceParm)
 	class UTexture2D*                                  Texture;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EImportanceWeight>                     WeightingFunc;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameMode.StartMatch
-struct AGameMode_StartMatch_Params
-{
-};
-
-// Function Engine.GameMode.SetBandwidthLimit
-struct AGameMode_SetBandwidthLimit_Params
-{
-	float                                              AsyncIOBandwidthLimit;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameMode.Say
-struct AGameMode_Say_Params
-{
-	struct FString                                     Msg;                                                      // (Parm, ZeroConstructor)
-};
-
-// Function Engine.GameMode.RestartGame
-struct AGameMode_RestartGame_Params
-{
-};
-
-// Function Engine.GameMode.ReadyToStartMatch
-struct AGameMode_ReadyToStartMatch_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameMode.ReadyToEndMatch
-struct AGameMode_ReadyToEndMatch_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameMode.K2_OnSetMatchState
-struct AGameMode_K2_OnSetMatchState_Params
-{
-	struct FName                                       newState;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameMode.IsMatchInProgress
-struct AGameMode_IsMatchInProgress_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameMode.HasMatchEnded
-struct AGameMode_HasMatchEnded_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameMode.GetMatchState
-struct AGameMode_GetMatchState_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameMode.EndMatch
-struct AGameMode_EndMatch_Params
-{
-};
-
-// Function Engine.GameMode.AbortMatch
-struct AGameMode_AbortMatch_Params
-{
 };
 
 // Function Engine.InputComponent.WasControllerKeyJustReleased
@@ -18292,57 +18292,6 @@ struct UParticleSystem_ContainsEmitterType_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Engine.PawnNoiseEmitterComponent.MakeNoise
-struct UPawnNoiseEmitterComponent_MakeNoise_Params
-{
-	class AActor*                                      NoiseMaker;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Loudness;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     NoiseLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
-struct UPhysicalAnimationComponent_SetStrengthMultiplyer_Params
-{
-	float                                              InStrengthMultiplyer;                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
-struct UPhysicalAnimationComponent_SetSkeletalMeshComponent_Params
-{
-	class USkeletalMeshComponent*                      InSkeletalMeshComponent;                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
-struct UPhysicalAnimationComponent_GetBodyTargetTransform_Params
-{
-	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
-struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow_Params
-{
-	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FPhysicalAnimationData                      PhysicalAnimationData;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bIncludeSelf;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
-struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettings_Params
-{
-	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FPhysicalAnimationData                      PhysicalAnimationData;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
-struct UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow_Params
-{
-	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ProfileName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bIncludeSelf;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bClearNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Engine.ParticleSystemComponent.SetVectorParameter
 struct UParticleSystemComponent_SetVectorParameter_Params
 {
@@ -18583,6 +18532,57 @@ struct UParticleSystemComponent_BeginTrails_Params
 	struct FName                                       InSecondSocketName;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETrailWidthMode>                       InWidthMode;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InWidth;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PawnNoiseEmitterComponent.MakeNoise
+struct UPawnNoiseEmitterComponent_MakeNoise_Params
+{
+	class AActor*                                      NoiseMaker;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Loudness;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NoiseLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
+struct UPhysicalAnimationComponent_SetStrengthMultiplyer_Params
+{
+	float                                              InStrengthMultiplyer;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
+struct UPhysicalAnimationComponent_SetSkeletalMeshComponent_Params
+{
+	class USkeletalMeshComponent*                      InSkeletalMeshComponent;                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
+struct UPhysicalAnimationComponent_GetBodyTargetTransform_Params
+{
+	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
+struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow_Params
+{
+	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FPhysicalAnimationData                      PhysicalAnimationData;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bIncludeSelf;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
+struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettings_Params
+{
+	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FPhysicalAnimationData                      PhysicalAnimationData;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
+struct UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow_Params
+{
+	struct FName                                       BodyName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ProfileName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bIncludeSelf;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bClearNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
@@ -18933,6 +18933,12 @@ struct UPhysicsSpringComponent_GetNormalizedCompressionScalar_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.PlanarReflection.OnInterpToggle
+struct APlanarReflection_OnInterpToggle_Params
+{
+	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.SceneCaptureComponent.ShowOnlyComponent
 struct USceneCaptureComponent_ShowOnlyComponent_Params
 {
@@ -18986,10 +18992,27 @@ struct USceneCaptureComponent_ClearHiddenComponents_Params
 {
 };
 
-// Function Engine.PlanarReflection.OnInterpToggle
-struct APlanarReflection_OnInterpToggle_Params
+// Function Engine.PlatformEventsComponent.SupportsConvertibleLaptops
+struct UPlatformEventsComponent_SupportsConvertibleLaptops_Params
 {
-	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// DelegateFunction Engine.PlatformEventsComponent.PlatformEventDelegate__DelegateSignature
+struct UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature_Params
+{
+};
+
+// Function Engine.PlatformEventsComponent.IsInTabletMode
+struct UPlatformEventsComponent_IsInTabletMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlatformEventsComponent.IsInLaptopMode
+struct UPlatformEventsComponent_IsInLaptopMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.PlatformInterfaceWebResponse.GetNumHeaders
@@ -19236,29 +19259,6 @@ struct UPlayerInput_ClearSmoothing_Params
 {
 };
 
-// Function Engine.PlatformEventsComponent.SupportsConvertibleLaptops
-struct UPlatformEventsComponent_SupportsConvertibleLaptops_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// DelegateFunction Engine.PlatformEventsComponent.PlatformEventDelegate__DelegateSignature
-struct UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature_Params
-{
-};
-
-// Function Engine.PlatformEventsComponent.IsInTabletMode
-struct UPlatformEventsComponent_IsInTabletMode_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlatformEventsComponent.IsInLaptopMode
-struct UPlatformEventsComponent_IsInLaptopMode_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Engine.PlayerState.ReceiveOverrideWith
 struct APlayerState_ReceiveOverrideWith_Params
 {
@@ -19421,6 +19421,13 @@ struct UPostProcessComponent_AddOrUpdateBlendable_Params
 	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.PostProcessVolume.AddOrUpdateBlendable
+struct APostProcessVolume_AddOrUpdateBlendable_Params
+{
+	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.ProjectileMovementComponent.StopSimulating
 struct UProjectileMovementComponent_StopSimulating_Params
 {
@@ -19553,13 +19560,6 @@ struct USceneCaptureComponent2D_AddOrUpdateBlendable_Params
 // Function Engine.SceneCaptureComponentCube.CaptureScene
 struct USceneCaptureComponentCube_CaptureScene_Params
 {
-};
-
-// Function Engine.PostProcessVolume.AddOrUpdateBlendable
-struct APostProcessVolume_AddOrUpdateBlendable_Params
-{
-	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.SceneCaptureCube.OnInterpToggle

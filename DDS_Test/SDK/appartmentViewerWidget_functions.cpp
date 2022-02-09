@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -157,15 +157,15 @@ void UappartmentViewerWidget_C::closeConfirmPanel()
 // Function appartmentViewerWidget.appartmentViewerWidget_C.rentConfirmed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            DaysLeft                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            DAYSLEFT                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UappartmentViewerWidget_C::rentConfirmed(int DaysLeft, float Price)
+void UappartmentViewerWidget_C::rentConfirmed(int DAYSLEFT, float Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentViewerWidget.appartmentViewerWidget_C.rentConfirmed");
 
 	UappartmentViewerWidget_C_rentConfirmed_Params params;
-	params.DaysLeft = DaysLeft;
+	params.DAYSLEFT = DAYSLEFT;
 	params.Price = Price;
 
 	auto flags = fn->FunctionFlags;
@@ -196,14 +196,14 @@ void UappartmentViewerWidget_C::rentWentBad()
 // Function appartmentViewerWidget.appartmentViewerWidget_C.rentTerminated
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            DaysLeft                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            DAYSLEFT                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UappartmentViewerWidget_C::rentTerminated(int DaysLeft)
+void UappartmentViewerWidget_C::rentTerminated(int DAYSLEFT)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentViewerWidget.appartmentViewerWidget_C.rentTerminated");
 
 	UappartmentViewerWidget_C_rentTerminated_Params params;
-	params.DaysLeft = DaysLeft;
+	params.DAYSLEFT = DAYSLEFT;
 
 	auto flags = fn->FunctionFlags;
 

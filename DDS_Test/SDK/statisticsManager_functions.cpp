@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,102 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function statisticsManager.statisticsManager_C.ExpandRama
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AstatisticsManager_C::ExpandRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.ExpandRama");
+
+	AstatisticsManager_C_ExpandRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.GetTimecode
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int                            OutTimecode                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AstatisticsManager_C::GetTimecode(int* OutTimecode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.GetTimecode");
+
+	AstatisticsManager_C_GetTimecode_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutTimecode != nullptr)
+		*OutTimecode = params.OutTimecode;
+}
+
+
+// Function statisticsManager.statisticsManager_C.UpdateExpositionLevel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AstatisticsManager_C::UpdateExpositionLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.UpdateExpositionLevel");
+
+	AstatisticsManager_C_UpdateExpositionLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.NewExpoSale
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            AmountGrams                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AstatisticsManager_C::NewExpoSale(int AmountGrams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.NewExpoSale");
+
+	AstatisticsManager_C_NewExpoSale_Params params;
+	params.AmountGrams = AmountGrams;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.NewExpoEvent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   EventID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AstatisticsManager_C::NewExpoEvent(const struct FName& EventID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.NewExpoEvent");
+
+	AstatisticsManager_C_NewExpoEvent_Params params;
+	params.EventID = EventID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function statisticsManager.statisticsManager_C.adaptDifficulty
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -369,6 +465,45 @@ void AstatisticsManager_C::tryShowLevel()
 	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.tryShowLevel");
 
 	AstatisticsManager_C_tryShowLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.reInitiate
+// (BlueprintCallable, BlueprintEvent)
+
+void AstatisticsManager_C::reInitiate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.reInitiate");
+
+	AstatisticsManager_C_reInitiate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AstatisticsManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AstatisticsManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

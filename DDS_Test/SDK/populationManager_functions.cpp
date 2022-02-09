@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,30 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function populationManager.populationManager_C.RefreshGoHomePoints
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ApopulationManager_C::RefreshGoHomePoints()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function populationManager.populationManager_C.RefreshGoHomePoints");
+
+	ApopulationManager_C_RefreshGoHomePoints_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function populationManager.populationManager_C.chooseNpcClass
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Class                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           CanSpawn                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ApopulationManager_C::chooseNpcClass(class UClass** Class)
+void ApopulationManager_C::chooseNpcClass(class UClass** Class, bool* CanSpawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function populationManager.populationManager_C.chooseNpcClass");
 
@@ -32,6 +50,8 @@ void ApopulationManager_C::chooseNpcClass(class UClass** Class)
 
 	if (Class != nullptr)
 		*Class = params.Class;
+	if (CanSpawn != nullptr)
+		*CanSpawn = params.CanSpawn;
 }
 
 

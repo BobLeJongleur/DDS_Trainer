@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -222,13 +222,6 @@ struct FPaperSpriteAtlasSlot
 	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Paper2D.SpriteAssetInitParameters
-// 0x0040
-struct FSpriteAssetInitParameters
-{
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
-};
-
 // ScriptStruct Paper2D.SpriteDrawCallRecord
 // 0x00D0
 struct FSpriteDrawCallRecord
@@ -239,6 +232,13 @@ struct FSpriteDrawCallRecord
 	unsigned char                                      UnknownData01[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
 	struct FColor                                      Color;                                                    // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x84];                                      // 0x004C(0x0084) MISSED OFFSET
+};
+
+// ScriptStruct Paper2D.SpriteAssetInitParameters
+// 0x0040
+struct FSpriteAssetInitParameters
+{
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
 };
 
 }

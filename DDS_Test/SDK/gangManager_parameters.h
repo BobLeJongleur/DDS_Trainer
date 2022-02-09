@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,6 +133,18 @@ struct AgangManager_C_checkDeliveryTime_Params
 // Function gangManager.gangManager_C.unlockDeliveryMessage
 struct AgangManager_C_unlockDeliveryMessage_Params
 {
+};
+
+// Function gangManager.gangManager_C.TestGangOrder
+struct AgangManager_C_TestGangOrder_Params
+{
+};
+
+// Function gangManager.gangManager_C.TestGangMultiplier
+struct AgangManager_C_TestGangMultiplier_Params
+{
+	int                                                Level;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Rep;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function gangManager.gangManager_C.ExecuteUbergraph_gangManager

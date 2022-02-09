@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,6 +83,19 @@ struct FMovieSceneActorReferenceData : public FMovieSceneChannel
 	unsigned char                                      UnknownData01[0x60];                                      // 0x0040(0x0060) MISSED OFFSET
 };
 
+// ScriptStruct MovieSceneTracks.MovieSceneCameraAnimSectionData
+// 0x0020
+struct FMovieSceneCameraAnimSectionData
+{
+	class UCameraAnim*                                 CameraAnim;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRate;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              PlayScale;                                                // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BlendInTime;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BlendOutTime;                                             // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bLooping;                                                 // 0x0018(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct MovieSceneTracks.MovieSceneCameraShakeSectionData
 // 0x0020
 struct FMovieSceneCameraShakeSectionData
@@ -95,17 +108,11 @@ struct FMovieSceneCameraShakeSectionData
 	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct MovieSceneTracks.MovieSceneCameraAnimSectionData
-// 0x0020
-struct FMovieSceneCameraAnimSectionData
+// ScriptStruct MovieSceneTracks.MovieSceneEvent
+// 0x0008
+struct FMovieSceneEvent
 {
-	class UCameraAnim*                                 CameraAnim;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PlayScale;                                                // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BlendInTime;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BlendOutTime;                                             // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x0018(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+	struct FName                                       FunctionName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEventParameters
@@ -130,13 +137,6 @@ struct FMovieSceneEventSectionData : public FMovieSceneChannel
 	TArray<struct FFrameNumber>                        Times;                                                    // 0x0008(0x0010) (ZeroConstructor)
 	TArray<struct FEventPayload>                       KeyValues;                                                // 0x0018(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneEvent
-// 0x0008
-struct FMovieSceneEvent
-{
-	struct FName                                       FunctionName;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEventChannel
@@ -253,20 +253,20 @@ struct FMovieScene3DTransformKeyStruct : public FMovieSceneKeyStruct
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0030(0x0018) MISSED OFFSET
 };
 
-// ScriptStruct MovieSceneTracks.MovieScene3DRotationKeyStruct
-// 0x0028 (0x0030 - 0x0008)
-struct FMovieScene3DRotationKeyStruct : public FMovieSceneKeyStruct
-{
-	struct FRotator                                    Rotation;                                                 // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFrameNumber                                Time;                                                     // 0x0014(0x0004) (Edit)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0018(0x0018) MISSED OFFSET
-};
-
 // ScriptStruct MovieSceneTracks.MovieScene3DScaleKeyStruct
 // 0x0028 (0x0030 - 0x0008)
 struct FMovieScene3DScaleKeyStruct : public FMovieSceneKeyStruct
 {
 	struct FVector                                     Scale;                                                    // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                Time;                                                     // 0x0014(0x0004) (Edit)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0018(0x0018) MISSED OFFSET
+};
+
+// ScriptStruct MovieSceneTracks.MovieScene3DRotationKeyStruct
+// 0x0028 (0x0030 - 0x0008)
+struct FMovieScene3DRotationKeyStruct : public FMovieSceneKeyStruct
+{
+	struct FRotator                                    Rotation;                                                 // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FFrameNumber                                Time;                                                     // 0x0014(0x0004) (Edit)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0018(0x0018) MISSED OFFSET
 };
@@ -432,15 +432,6 @@ struct FMovieSceneFadeSectionTemplate : public FMovieSceneEvalTemplate
 	unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct MovieSceneTracks.MovieSceneParameterSectionTemplate
-// 0x0030 (0x0050 - 0x0020)
-struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate
-{
-	TArray<struct FScalarParameterNameAndCurve>        Scalars;                                                  // 0x0020(0x0010) (ZeroConstructor)
-	TArray<struct FVectorParameterNameAndCurves>       Vectors;                                                  // 0x0030(0x0010) (ZeroConstructor)
-	TArray<struct FColorParameterNameAndCurves>        Colors;                                                   // 0x0040(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct MovieSceneTracks.MovieSceneLevelVisibilitySectionTemplate
 // 0x0018 (0x0038 - 0x0020)
 struct FMovieSceneLevelVisibilitySectionTemplate : public FMovieSceneEvalTemplate
@@ -448,6 +439,15 @@ struct FMovieSceneLevelVisibilitySectionTemplate : public FMovieSceneEvalTemplat
 	ELevelVisibility                                   Visibility;                                               // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 	TArray<struct FName>                               LevelNames;                                               // 0x0028(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneParameterSectionTemplate
+// 0x0030 (0x0050 - 0x0020)
+struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate
+{
+	TArray<struct FScalarParameterNameAndCurve>        Scalars;                                                  // 0x0020(0x0010) (ZeroConstructor)
+	TArray<struct FVectorParameterNameAndCurves>       Vectors;                                                  // 0x0030(0x0010) (ZeroConstructor)
+	TArray<struct FColorParameterNameAndCurves>        Colors;                                                   // 0x0040(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneMaterialParameterCollectionTemplate

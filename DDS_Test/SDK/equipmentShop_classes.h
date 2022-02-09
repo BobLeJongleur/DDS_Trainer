@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass equipmentShop.equipmentShop_C
-// 0x00B1 (0x03D9 - 0x0328)
+// 0x00C1 (0x03E9 - 0x0328)
 class AequipmentShop_C : public AActor
 {
 public:
@@ -32,6 +32,9 @@ public:
 	unsigned char                                      UnknownData00[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
 	struct FText                                       shopName;                                                 // 0x03C0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               blockRestore;                                             // 0x03D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x03D9(0x0007) MISSED OFFSET
+	struct FName                                       ShopID;                                                   // 0x03E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DisableFromMap;                                           // 0x03E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -40,6 +43,7 @@ public:
 	}
 
 
+	void GetShopData(struct FShopDataStruct* ShopData);
 	void removeItems(const struct FappartmentEquipment& Data, int Quantity);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

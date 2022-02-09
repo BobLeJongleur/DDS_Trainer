@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,6 +17,12 @@ namespace SDK
 // Function PM_PatrolLead.PM_PatrolLead_C.UserConstructionScript
 struct APM_PatrolLead_C_UserConstructionScript_Params
 {
+};
+
+// Function PM_PatrolLead.PM_PatrolLead_C.ShortRadiusChanged
+struct APM_PatrolLead_C_ShortRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PM_PatrolLead.PM_PatrolLead_C.ReceiveBeginPlay
@@ -68,6 +74,29 @@ struct APM_PatrolLead_C_checkForPartner_Params
 
 // Function PM_PatrolLead.PM_PatrolLead_C.unlockRespawnPartner
 struct APM_PatrolLead_C_unlockRespawnPartner_Params
+{
+};
+
+// Function PM_PatrolLead.PM_PatrolLead_C.LongRadiusChanged
+struct APM_PatrolLead_C_LongRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PM_PatrolLead.PM_PatrolLead_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature
+struct APM_PatrolLead_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_1_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function PM_PatrolLead.PM_PatrolLead_C.WipePatrol
+struct APM_PatrolLead_C_WipePatrol_Params
+{
+};
+
+// Function PM_PatrolLead.PM_PatrolLead_C.RetryWipe
+struct APM_PatrolLead_C_RetryWipe_Params
 {
 };
 

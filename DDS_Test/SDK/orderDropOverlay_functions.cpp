@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,49 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function orderDropOverlay.orderDropOverlay_C.GetText_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UorderDropOverlay_C::GetText_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderDropOverlay.orderDropOverlay_C.GetText_1");
+
+	UorderDropOverlay_C_GetText_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function orderDropOverlay.orderDropOverlay_C.GetPlayerOrderLimit
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          OrderLimit                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UorderDropOverlay_C::GetPlayerOrderLimit(float* OrderLimit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderDropOverlay.orderDropOverlay_C.GetPlayerOrderLimit");
+
+	UorderDropOverlay_C_GetPlayerOrderLimit_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OrderLimit != nullptr)
+		*OrderLimit = params.OrderLimit;
+}
+
 
 // Function orderDropOverlay.orderDropOverlay_C.Get_btnEvenCrypto_ToolTipWidget_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -74,14 +117,14 @@ void UorderDropOverlay_C::checkOrderButtons()
 // Function orderDropOverlay.orderDropOverlay_C.removeFromOrder
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   DrugID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UorderDropOverlay_C::removeFromOrder(const struct FdrugData& drugData)
+void UorderDropOverlay_C::removeFromOrder(const struct FName& DrugID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderDropOverlay.orderDropOverlay_C.removeFromOrder");
 
 	UorderDropOverlay_C_removeFromOrder_Params params;
-	params.drugData = drugData;
+	params.DrugID = DrugID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -169,7 +212,7 @@ void UorderDropOverlay_C::OnDragDetected(const struct FGeometry& MyGeometry, con
 
 
 // Function orderDropOverlay.orderDropOverlay_C.OnDrop
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -404,6 +447,23 @@ void UorderDropOverlay_C::BndEvt__btnBalanceAccept_K2Node_ComponentBoundEvent_6_
 }
 
 
+// Function orderDropOverlay.orderDropOverlay_C.BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UorderDropOverlay_C::BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderDropOverlay.orderDropOverlay_C.BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature");
+
+	UorderDropOverlay_C_BndEvt__buyPTC_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function orderDropOverlay.orderDropOverlay_C.ExecuteUbergraph_orderDropOverlay
 // (Final, HasDefaults)
 // Parameters:
@@ -415,6 +475,23 @@ void UorderDropOverlay_C::ExecuteUbergraph_orderDropOverlay(int EntryPoint)
 
 	UorderDropOverlay_C_ExecuteUbergraph_orderDropOverlay_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function orderDropOverlay.orderDropOverlay_C.ClickedBuytPTC__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UorderDropOverlay_C::ClickedBuytPTC__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderDropOverlay.orderDropOverlay_C.ClickedBuytPTC__DelegateSignature");
+
+	UorderDropOverlay_C_ClickedBuytPTC__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

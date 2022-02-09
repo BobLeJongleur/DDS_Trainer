@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,6 +26,22 @@ struct AdecorativeFurniture_C_UserConstructionScript_Params
 
 // Function decorativeFurniture.decorativeFurniture_C.ReceiveBeginPlay
 struct AdecorativeFurniture_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function decorativeFurniture.decorativeFurniture_C.InteractionActivate
+struct AdecorativeFurniture_C_InteractionActivate_Params
+{
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function decorativeFurniture.decorativeFurniture_C.InputToggleOn
+struct AdecorativeFurniture_C_InputToggleOn_Params
+{
+};
+
+// Function decorativeFurniture.decorativeFurniture_C.InputToggleOff
+struct AdecorativeFurniture_C_InputToggleOff_Params
 {
 };
 

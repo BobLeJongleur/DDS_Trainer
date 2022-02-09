@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function questManager.questManager_C.ReportLaunderDoor
+struct AquestManager_C_ReportLaunderDoor_Params
+{
+	class AlaunderDoor_C*                              Door;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.RamaExpand
+struct AquestManager_C_RamaExpand_Params
+{
+};
 
 // Function questManager.questManager_C.fixTaskDuplicates
 struct AquestManager_C_fixTaskDuplicates_Params
@@ -689,6 +700,73 @@ struct AquestManager_C_eddieEndPsychedelics_Params
 
 // Function questManager.questManager_C.eddieEndPsychedelicsEnd
 struct AquestManager_C_eddieEndPsychedelicsEnd_Params
+{
+};
+
+// Function questManager.questManager_C.eddieCallSectorC
+struct AquestManager_C_eddieCallSectorC_Params
+{
+};
+
+// Function questManager.questManager_C.eddieRepeatSectorc
+struct AquestManager_C_eddieRepeatSectorc_Params
+{
+};
+
+// Function questManager.questManager_C.retryEddieSecotrc
+struct AquestManager_C_retryEddieSecotrc_Params
+{
+};
+
+// Function questManager.questManager_C.eddieCallLaundry
+struct AquestManager_C_eddieCallLaundry_Params
+{
+};
+
+// Function questManager.questManager_C.eddieRepeatLaundry
+struct AquestManager_C_eddieRepeatLaundry_Params
+{
+};
+
+// Function questManager.questManager_C.retryEddieLaundry
+struct AquestManager_C_retryEddieLaundry_Params
+{
+};
+
+// Function questManager.questManager_C.eddieEndSectorc
+struct AquestManager_C_eddieEndSectorc_Params
+{
+};
+
+// Function questManager.questManager_C.eddieEndLaundry
+struct AquestManager_C_eddieEndLaundry_Params
+{
+};
+
+// Function questManager.questManager_C.UnlockSectorC
+struct AquestManager_C_UnlockSectorC_Params
+{
+};
+
+// Function questManager.questManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AquestManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function questManager.questManager_C.TrySectorC_Quests
+struct AquestManager_C_TrySectorC_Quests_Params
+{
+};
+
+// Function questManager.questManager_C.NewLaunderHidout
+struct AquestManager_C_NewLaunderHidout_Params
+{
+};
+
+// Function questManager.questManager_C.ReopenNewLaunder
+struct AquestManager_C_ReopenNewLaunder_Params
 {
 };
 

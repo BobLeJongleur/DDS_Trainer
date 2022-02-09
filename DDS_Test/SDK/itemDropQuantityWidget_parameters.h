@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,7 @@ struct UitemDropQuantityWidget_C_getMaxQuantity_Params
 	class UUserWidget*                                 Widget;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	int                                                sourceQuan;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                MaxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                maxQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function itemDropQuantityWidget.itemDropQuantityWidget_C.PreConstruct
@@ -44,7 +44,7 @@ struct UitemDropQuantityWidget_C_BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_
 struct UitemDropQuantityWidget_C_Setup_Params
 {
 	struct FString                                     targetString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	int                                                QuanMax;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                quanMax;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UUserWidget*                                 TargetWidget;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UinventoryItemWidget_C*                      Payload;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
@@ -57,6 +57,11 @@ struct UitemDropQuantityWidget_C_BndEvt__quantitySlider_K2Node_ComponentBoundEve
 
 // Function itemDropQuantityWidget.itemDropQuantityWidget_C.BndEvt__btnAdd_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 struct UitemDropQuantityWidget_C_BndEvt__btnAdd_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function itemDropQuantityWidget.itemDropQuantityWidget_C.BreakPriceLoop
+struct UitemDropQuantityWidget_C_BreakPriceLoop_Params
 {
 };
 

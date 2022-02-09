@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function orderInstance.orderInstance_C.CheckRama
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AorderInstance_C::CheckRama()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.CheckRama");
+
+	AorderInstance_C_CheckRama_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function orderInstance.orderInstance_C.choosePackageIcon
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -117,9 +134,12 @@ void AorderInstance_C::calcPackagingPattern(const struct FdrugData& drugData, in
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FinventoryItemStruct> OutInventory                   (Parm, OutParm, ZeroConstructor)
+// TArray<struct FName>           OutIDs                         (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    OutQuantity                    (Parm, OutParm, ZeroConstructor)
+// TArray<int>                    OutAmounts                     (Parm, OutParm, ZeroConstructor)
+// TArray<struct FMixProportionsStruct> OutMixProportions              (Parm, OutParm, ZeroConstructor)
 
-void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruct>* OutInventory, TArray<int>* OutQuantity)
+void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruct>* OutInventory, TArray<struct FName>* OutIDs, TArray<int>* OutQuantity, TArray<int>* OutAmounts, TArray<struct FMixProportionsStruct>* OutMixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.generatePackageContents");
 
@@ -133,8 +153,14 @@ void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruc
 
 	if (OutInventory != nullptr)
 		*OutInventory = params.OutInventory;
+	if (OutIDs != nullptr)
+		*OutIDs = params.OutIDs;
 	if (OutQuantity != nullptr)
 		*OutQuantity = params.OutQuantity;
+	if (OutAmounts != nullptr)
+		*OutAmounts = params.OutAmounts;
+	if (OutMixProportions != nullptr)
+		*OutMixProportions = params.OutMixProportions;
 }
 
 
@@ -294,15 +320,17 @@ void AorderInstance_C::ReceiveTick(float DeltaSeconds)
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FdrugData>       drugData                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FName>           DrugIDs                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    DrugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          spawnTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AorderInstance_C::SetupOrder(int ID, float spawnTime, TArray<struct FdrugData>* drugData, TArray<int>* DrugQuantities)
+void AorderInstance_C::SetupOrder(TArray<struct FName> DrugIDs, int ID, float spawnTime, TArray<struct FdrugData>* drugData, TArray<int>* DrugQuantities)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.SetupOrder");
 
 	AorderInstance_C_SetupOrder_Params params;
+	params.DrugIDs = DrugIDs;
 	params.ID = ID;
 	params.spawnTime = spawnTime;
 
@@ -344,6 +372,28 @@ void AorderInstance_C::spawnOrderNow()
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.spawnOrderNow");
 
 	AorderInstance_C_spawnOrderNow_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function orderInstance.orderInstance_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AorderInstance_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AorderInstance_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

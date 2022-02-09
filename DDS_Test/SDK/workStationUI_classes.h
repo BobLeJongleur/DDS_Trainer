@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -97,7 +97,8 @@ public:
 	}
 
 
-	void getSubstanceName(class AworkStationEquipmentBase_C* Eq, struct FText* Name);
+	struct FSlateColor Get_tabWorkStation_ColorAndOpacity_1();
+	void GetSubstanceName(class AworkStationEquipmentBase_C* Eq, struct FText* Name);
 	void calcPrecisionText(class AworkStationEquipmentBase_C* EquipmentRef);
 	void scrollEqUp();
 	void scrollEqDown();

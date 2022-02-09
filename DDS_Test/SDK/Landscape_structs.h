@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,6 +101,17 @@ enum class ELandscapeLayerBlendType : uint8_t
 };
 
 
+// Enum Landscape.ETerrainCoordMappingType
+enum class ETerrainCoordMappingType : uint8_t
+{
+	TCMT_Auto                      = 0,
+	TCMT_XY                        = 1,
+	TCMT_XZ                        = 2,
+	TCMT_YZ                        = 3,
+	TCMT_MAX                       = 4
+};
+
+
 // Enum Landscape.ELandscapeCustomizedCoordType
 enum class ELandscapeCustomizedCoordType : uint8_t
 {
@@ -110,17 +121,6 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_CustomUV2                 = 3,
 	LCCT_WeightMapUV               = 4,
 	LCCT_MAX                       = 5
-};
-
-
-// Enum Landscape.ETerrainCoordMappingType
-enum class ETerrainCoordMappingType : uint8_t
-{
-	TCMT_Auto                      = 0,
-	TCMT_XY                        = 1,
-	TCMT_XZ                        = 2,
-	TCMT_YZ                        = 3,
-	TCMT_MAX                       = 4
 };
 
 
@@ -305,6 +305,13 @@ struct FForeignWorldSplineData
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
+// ScriptStruct Landscape.ForeignSplineSegmentData
+// 0x0001
+struct FForeignSplineSegmentData
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct Landscape.ForeignControlPointData
 // 0x0001
 struct FForeignControlPointData
@@ -328,13 +335,6 @@ struct FLandscapeSplineMeshEntry
 	TEnumAsByte<ESplineMeshAxis>                       ForwardAxis;                                              // 0x0035(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ESplineMeshAxis>                       UpAxis;                                                   // 0x0036(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x1];                                       // 0x0037(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Landscape.ForeignSplineSegmentData
-// 0x0001
-struct FForeignSplineSegmentData
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

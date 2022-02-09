@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,12 +17,14 @@ namespace SDK
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FinventoryItemStruct> Items                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FMixProportionsStruct> ItemMixes                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    Quantities                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int>                    Amounts                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           Trade_canceled                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FdialogueData           ReturnData                     (Parm, OutParm)
 // TArray<int>                    ReturnIndexes                  (Parm, OutParm, ZeroConstructor)
 
-void ApsychedelicWeedJoe_C::getReturnLine(bool Trade_canceled, TArray<struct FinventoryItemStruct>* Items, TArray<int>* Quantities, struct FdialogueData* ReturnData, TArray<int>* ReturnIndexes)
+void ApsychedelicWeedJoe_C::getReturnLine(bool Trade_canceled, TArray<struct FinventoryItemStruct>* Items, TArray<struct FMixProportionsStruct>* ItemMixes, TArray<int>* Quantities, TArray<int>* Amounts, struct FdialogueData* ReturnData, TArray<int>* ReturnIndexes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function psychedelicWeedJoe.psychedelicWeedJoe_C.getReturnLine");
 
@@ -37,8 +39,12 @@ void ApsychedelicWeedJoe_C::getReturnLine(bool Trade_canceled, TArray<struct Fin
 
 	if (Items != nullptr)
 		*Items = params.Items;
+	if (ItemMixes != nullptr)
+		*ItemMixes = params.ItemMixes;
 	if (Quantities != nullptr)
 		*Quantities = params.Quantities;
+	if (Amounts != nullptr)
+		*Amounts = params.Amounts;
 	if (ReturnData != nullptr)
 		*ReturnData = params.ReturnData;
 	if (ReturnIndexes != nullptr)

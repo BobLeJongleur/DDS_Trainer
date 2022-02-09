@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function musicAreaPlaylist.musicAreaPlaylist_C.GetNewTrack
+struct AmusicAreaPlaylist_C_GetNewTrack_Params
+{
+	class USoundBase*                                  Output;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function musicAreaPlaylist.musicAreaPlaylist_C.getMusicVolume
 struct AmusicAreaPlaylist_C_getMusicVolume_Params

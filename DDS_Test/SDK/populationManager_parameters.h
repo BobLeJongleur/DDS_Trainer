@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,16 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function populationManager.populationManager_C.RefreshGoHomePoints
+struct ApopulationManager_C_RefreshGoHomePoints_Params
+{
+};
+
 // Function populationManager.populationManager_C.chooseNpcClass
 struct ApopulationManager_C_chooseNpcClass_Params
 {
 	class UClass*                                      Class;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanSpawn;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function populationManager.populationManager_C.UserConstructionScript

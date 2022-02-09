@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,6 +17,27 @@ namespace SDK
 // Function decoModernFloorLamp4.decoModernFloorLamp4_C.UserConstructionScript
 struct AdecoModernFloorLamp4_C_UserConstructionScript_Params
 {
+};
+
+// Function decoModernFloorLamp4.decoModernFloorLamp4_C.ReceiveBeginPlay
+struct AdecoModernFloorLamp4_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function decoModernFloorLamp4.decoModernFloorLamp4_C.InputToggleOff
+struct AdecoModernFloorLamp4_C_InputToggleOff_Params
+{
+};
+
+// Function decoModernFloorLamp4.decoModernFloorLamp4_C.InputToggleOn
+struct AdecoModernFloorLamp4_C_InputToggleOn_Params
+{
+};
+
+// Function decoModernFloorLamp4.decoModernFloorLamp4_C.ExecuteUbergraph_decoModernFloorLamp4
+struct AdecoModernFloorLamp4_C_ExecuteUbergraph_decoModernFloorLamp4_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass populationManager.populationManager_C
-// 0x0074 (0x039C - 0x0328)
+// 0x0089 (0x03B1 - 0x0328)
 class ApopulationManager_C : public AActor
 {
 public:
@@ -31,6 +31,9 @@ public:
 	TArray<class UClass*>                              npcClasses;                                               // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       isOnStreets;                                              // 0x0388(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int                                                lastSpawnIndex;                                           // 0x0398(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x039C(0x0004) MISSED OFFSET
+	TArray<class AgoHomePoint_C*>                      ActivePoints;                                             // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	bool                                               DisableSpawning;                                          // 0x03B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -39,7 +42,8 @@ public:
 	}
 
 
-	void chooseNpcClass(class UClass** Class);
+	void RefreshGoHomePoints();
+	void chooseNpcClass(class UClass** Class, bool* CanSpawn);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void refreshCitizenStatus();

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function cheatManagerWidget.cheatManagerWidget_C.AddAllFurniture
+struct UcheatManagerWidget_C_AddAllFurniture_Params
+{
+};
 
 // Function cheatManagerWidget.cheatManagerWidget_C.Construct
 struct UcheatManagerWidget_C_Construct_Params
@@ -111,6 +116,56 @@ struct UcheatManagerWidget_C_BndEvt__btnSpamBlockades_K2Node_ComponentBoundEvent
 
 // Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__btnSpawnBlockade_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature
 struct UcheatManagerWidget_C_BndEvt__btnSpawnBlockade_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_7_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_7_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_10_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_10_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_12_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_12_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_11_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_11_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_13_K2Node_ComponentBoundEvent_22_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_13_K2Node_ComponentBoundEvent_22_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_14_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_14_K2Node_ComponentBoundEvent_23_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_15_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_15_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_16_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_16_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_17_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_17_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

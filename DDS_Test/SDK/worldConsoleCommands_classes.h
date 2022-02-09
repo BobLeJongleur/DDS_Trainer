@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass worldConsoleCommands.worldConsoleCommands_C
-// 0x0064 (0x038C - 0x0328)
+// 0x00A0 (0x03C8 - 0x0328)
 class AworldConsoleCommands_C : public AActor
 {
 public:
@@ -26,6 +26,11 @@ public:
 	int                                                TempSelector;                                             // 0x0378(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                GameDifficultyDebug;                                      // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     SectorCTeleport;                                          // 0x0380(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x038C(0x0004) MISSED OFFSET
+	class UDataTable*                                  DrugDatabase;                                             // 0x0390(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<float>                                      NewVar_2;                                                 // 0x0398(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        TestArray;                                                // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ComponentClasses;                                         // 0x03B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -34,6 +39,7 @@ public:
 	}
 
 
+	void CountClassNum();
 	void UserConstructionScript();
 	void giveMoney(int Amount);
 	void giveBankMoney(float Amount);
@@ -63,6 +69,17 @@ public:
 	void LTS_ClearEnt(int EntranceIndex);
 	void KillAllPolicemen();
 	void TeleportSectorC();
+	void TestDrugDemand();
+	void AddLaunderMoney(float Amount);
+	void AddLaunderedMoney(float Amount);
+	void SetExpoLevel(float expoFactorLevel);
+	void addInventoryItem(const struct FName& ItemID, int Quantity);
+	void TestGetItem(const struct FName& ItemID);
+	void TestDealerExp(float Exp);
+	void RegisterExpoEvent(const struct FName& EventID);
+	void RegisterExpoSale(int AmountGrams);
+	void CountKurwaEverything();
+	void WyjebChuj();
 	void ExecuteUbergraph_worldConsoleCommands(int EntryPoint);
 };
 

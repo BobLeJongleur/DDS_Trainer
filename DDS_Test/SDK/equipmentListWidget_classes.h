@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass equipmentListWidget.equipmentListWidget_C
-// 0x00B0 (0x02B8 - 0x0208)
+// 0x00B8 (0x02C0 - 0x0208)
 class UequipmentListWidget_C : public UUserWidget
 {
 public:
@@ -27,6 +27,7 @@ public:
 	int                                                Quantity;                                                 // 0x0288(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x028C(0x0004) MISSED OFFSET
 	struct FSlateColor                                 activeElementsColor;                                      // 0x0290(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FName                                       EqID;                                                     // 0x02B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,8 +36,9 @@ public:
 	}
 
 
+	void getSurfaceData(const struct FName& SurfaceID, TEnumAsByte<EVillaListCategories> Category, struct FVillaSurfaceFinish* SurfaceData);
 	void Construct();
-	void Setup(const struct FappartmentEquipment& eqData, int Quantity, bool selected);
+	void Setup(const struct FappartmentEquipment& eqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool selected);
 	void ExecuteUbergraph_equipmentListWidget(int EntryPoint);
 };
 

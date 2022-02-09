@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,7 +65,7 @@ void AgangManager_C::reconstructDropRef()
 
 
 // Function gangManager.gangManager_C.modifyGangSatisfaction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -85,7 +85,7 @@ void AgangManager_C::modifyGangSatisfaction(float Value)
 
 
 // Function gangManager.gangManager_C.restartOrderTimer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AgangManager_C::restartOrderTimer()
 {
@@ -413,6 +413,45 @@ void AgangManager_C::unlockDeliveryMessage()
 	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.unlockDeliveryMessage");
 
 	AgangManager_C_unlockDeliveryMessage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function gangManager.gangManager_C.TestGangOrder
+// (BlueprintCallable, BlueprintEvent)
+
+void AgangManager_C::TestGangOrder()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.TestGangOrder");
+
+	AgangManager_C_TestGangOrder_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function gangManager.gangManager_C.TestGangMultiplier
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Rep                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AgangManager_C::TestGangMultiplier(int Level, float Rep)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.TestGangMultiplier");
+
+	AgangManager_C_TestGangMultiplier_Params params;
+	params.Level = Level;
+	params.Rep = Rep;
 
 	auto flags = fn->FunctionFlags;
 

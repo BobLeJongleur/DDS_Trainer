@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,120 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_btnAddToOrder_bIsEnabled_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UshadyCommInterface_C::Get_btnAddToOrder_bIsEnabled_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.Get_btnAddToOrder_bIsEnabled_1");
+
+	UshadyCommInterface_C_Get_btnAddToOrder_bIsEnabled_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.GetText_1
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UshadyCommInterface_C::GetText_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.GetText_1");
+
+	UshadyCommInterface_C_GetText_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.PopulatePTCCombo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UshadyCommInterface_C::PopulatePTCCombo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.PopulatePTCCombo");
+
+	UshadyCommInterface_C_PopulatePTCCombo_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.CloseArrestList
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UshadyCommInterface_C::CloseArrestList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.CloseArrestList");
+
+	UshadyCommInterface_C_CloseArrestList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.OpenArrestList
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UshadyCommInterface_C::OpenArrestList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.OpenArrestList");
+
+	UshadyCommInterface_C_OpenArrestList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_TextBlock_28_Text_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UshadyCommInterface_C::Get_TextBlock_28_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.Get_TextBlock_28_Text_1");
+
+	UshadyCommInterface_C_Get_TextBlock_28_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function shadyCommInterface.shadyCommInterface_C.determineSector
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -42,16 +156,16 @@ void UshadyCommInterface_C::determineSector(const struct FString& AreaNam, int* 
 // Parameters:
 // bool                           Show                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 AreaString                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// bool                           Unlocked                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           unlocked                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::toggleAreaDetails(bool Show, const struct FString& AreaString, bool Unlocked)
+void UshadyCommInterface_C::toggleAreaDetails(bool Show, const struct FString& AreaString, bool unlocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.toggleAreaDetails");
 
 	UshadyCommInterface_C_toggleAreaDetails_Params params;
 	params.Show = Show;
 	params.AreaString = AreaString;
-	params.Unlocked = Unlocked;
+	params.unlocked = unlocked;
 
 	auto flags = fn->FunctionFlags;
 
@@ -143,11 +257,11 @@ class UWidget* UshadyCommInterface_C::Get_txtStatusDeliveryTime_ToolTipWidget_1(
 // Function shadyCommInterface.shadyCommInterface_C.countAverageSatisfaction
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<bool>                   ClientsLost                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<bool>                   clientsLost                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  ClientSatisfaction             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    ClientNumSales                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UshadyCommInterface_C::countAverageSatisfaction(TArray<bool>* ClientsLost, TArray<float>* ClientSatisfaction, TArray<int>* ClientNumSales)
+void UshadyCommInterface_C::countAverageSatisfaction(TArray<bool>* clientsLost, TArray<float>* ClientSatisfaction, TArray<int>* ClientNumSales)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.countAverageSatisfaction");
 
@@ -159,8 +273,8 @@ void UshadyCommInterface_C::countAverageSatisfaction(TArray<bool>* ClientsLost, 
 
 	fn->FunctionFlags = flags;
 
-	if (ClientsLost != nullptr)
-		*ClientsLost = params.ClientsLost;
+	if (clientsLost != nullptr)
+		*clientsLost = params.clientsLost;
 	if (ClientSatisfaction != nullptr)
 		*ClientSatisfaction = params.ClientSatisfaction;
 	if (ClientNumSales != nullptr)
@@ -466,15 +580,15 @@ void UshadyCommInterface_C::findSalePointByAreaID(const struct FString& stringID
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AsalesManager_C*         SaleManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            OrderId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            orderID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::spawnClientOnMap(class AsalesManager_C* SaleManager, int OrderId)
+void UshadyCommInterface_C::spawnClientOnMap(class AsalesManager_C* SaleManager, int orderID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.spawnClientOnMap");
 
 	UshadyCommInterface_C_spawnClientOnMap_Params params;
 	params.SaleManager = SaleManager;
-	params.OrderId = OrderId;
+	params.orderID = orderID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -639,7 +753,7 @@ void UshadyCommInterface_C::renderMessages(int userID)
 
 
 // Function shadyCommInterface.shadyCommInterface_C.renderDrugs
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AmainComputer_C*         Computer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1299,6 +1413,130 @@ void UshadyCommInterface_C::randomWobble()
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.randomWobble");
 
 	UshadyCommInterface_C_randomWobble_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.OpenBuyPTC
+// (BlueprintCallable, BlueprintEvent)
+
+void UshadyCommInterface_C::OpenBuyPTC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.OpenBuyPTC");
+
+	UshadyCommInterface_C_OpenBuyPTC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UshadyCommInterface_C::BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature");
+
+	UshadyCommInterface_C_BndEvt__btnBuyPtc01_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature
+// (BlueprintEvent)
+
+void UshadyCommInterface_C::BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature");
+
+	UshadyCommInterface_C_BndEvt__orderDropOverlay_K2Node_ComponentBoundEvent_25_ClickedBuytPTC__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UshadyCommInterface_C::BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature");
+
+	UshadyCommInterface_C_BndEvt__BuyPtcSourceCombo_K2Node_ComponentBoundEvent_26_OnSelectionChangedEvent__DelegateSignature_Params params;
+	params.SelectedItem = SelectedItem;
+	params.SelectionType = SelectionType;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UshadyCommInterface_C::BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature");
+
+	UshadyCommInterface_C_BndEvt__btnAddToOrder_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UshadyCommInterface_C::BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature");
+
+	UshadyCommInterface_C_BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function shadyCommInterface.shadyCommInterface_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UshadyCommInterface_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.Destruct");
+
+	UshadyCommInterface_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

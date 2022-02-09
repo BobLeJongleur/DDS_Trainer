@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ws_shelfSmall.ws_shelfSmall_C
-// 0x0000 (0x04AD - 0x04AD)
+// 0x0000 (0x04C5 - 0x04C5)
 class Aws_shelfSmall_C : public AdrugWorkStation_C
 {
 public:

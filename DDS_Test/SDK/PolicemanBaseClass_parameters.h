@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function PolicemanBaseClass.PolicemanBaseClass_C.CheckCanReachPlayer
+struct APolicemanBaseClass_C_CheckCanReachPlayer_Params
+{
+	bool                                               CanReach;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PolicemanBaseClass.PolicemanBaseClass_C.adaptDifficulty
 struct APolicemanBaseClass_C_adaptDifficulty_Params
@@ -40,7 +46,7 @@ struct APolicemanBaseClass_C_checkPlayerRunning_Params
 // Function PolicemanBaseClass.PolicemanBaseClass_C.finishChasing
 struct APolicemanBaseClass_C_finishChasing_Params
 {
-	bool                                               StayAlerted;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               stayAlerted;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PolicemanBaseClass.PolicemanBaseClass_C.checkChasingPolicemen
@@ -51,7 +57,7 @@ struct APolicemanBaseClass_C_checkChasingPolicemen_Params
 // Function PolicemanBaseClass.PolicemanBaseClass_C.calcControlMultiplier
 struct APolicemanBaseClass_C_calcControlMultiplier_Params
 {
-	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PolicemanBaseClass.PolicemanBaseClass_C.alertedCountdown
@@ -174,7 +180,7 @@ struct APolicemanBaseClass_C_SetChaseMode_Params
 // Function PolicemanBaseClass.PolicemanBaseClass_C.EndChase
 struct APolicemanBaseClass_C_EndChase_Params
 {
-	bool                                               StayAlerted;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               stayAlerted;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               cancelAllChasers;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -210,6 +216,16 @@ struct APolicemanBaseClass_C_tryDespawn_Params
 
 // Function PolicemanBaseClass.PolicemanBaseClass_C.resetHear
 struct APolicemanBaseClass_C_resetHear_Params
+{
+};
+
+// Function PolicemanBaseClass.PolicemanBaseClass_C.InitBehaviour
+struct APolicemanBaseClass_C_InitBehaviour_Params
+{
+};
+
+// Function PolicemanBaseClass.PolicemanBaseClass_C.CameraAlert
+struct APolicemanBaseClass_C_CameraAlert_Params
 {
 };
 

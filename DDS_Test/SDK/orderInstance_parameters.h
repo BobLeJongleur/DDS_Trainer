@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function orderInstance.orderInstance_C.CheckRama
+struct AorderInstance_C_CheckRama_Params
+{
+};
 
 // Function orderInstance.orderInstance_C.choosePackageIcon
 struct AorderInstance_C_choosePackageIcon_Params
@@ -49,7 +54,10 @@ struct AorderInstance_C_calcPackagingPattern_Params
 struct AorderInstance_C_generatePackageContents_Params
 {
 	TArray<struct FinventoryItemStruct>                OutInventory;                                             // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FName>                               OutIDs;                                                   // (Parm, OutParm, ZeroConstructor)
 	TArray<int>                                        OutQuantity;                                              // (Parm, OutParm, ZeroConstructor)
+	TArray<int>                                        OutAmounts;                                               // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FMixProportionsStruct>               OutMixProportions;                                        // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function orderInstance.orderInstance_C.spawnOrderPackage
@@ -100,6 +108,7 @@ struct AorderInstance_C_ReceiveTick_Params
 struct AorderInstance_C_SetupOrder_Params
 {
 	TArray<struct FdrugData>                           drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FName>                               DrugIDs;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        DrugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                ID;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              spawnTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -113,6 +122,13 @@ struct AorderInstance_C_checkOrderSpawnTime_Params
 // Function orderInstance.orderInstance_C.spawnOrderNow
 struct AorderInstance_C_spawnOrderNow_Params
 {
+};
+
+// Function orderInstance.orderInstance_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AorderInstance_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function orderInstance.orderInstance_C.ExecuteUbergraph_orderInstance

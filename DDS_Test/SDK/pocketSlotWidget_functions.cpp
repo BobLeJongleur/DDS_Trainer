@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,54 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function pocketSlotWidget.pocketSlotWidget_C.Get_TextBlock_1_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UpocketSlotWidget_C::Get_TextBlock_1_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function pocketSlotWidget.pocketSlotWidget_C.Get_TextBlock_1_Visibility_1");
+
+	UpocketSlotWidget_C_Get_TextBlock_1_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function pocketSlotWidget.pocketSlotWidget_C.CanDropItem
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                 Object                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OutSize                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UpocketSlotWidget_C::CanDropItem(class UObject* Object, float* OutSize)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function pocketSlotWidget.pocketSlotWidget_C.CanDropItem");
+
+	UpocketSlotWidget_C_CanDropItem_Params params;
+	params.Object = Object;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutSize != nullptr)
+		*OutSize = params.OutSize;
+
+	return params.ReturnValue;
+}
+
 
 // Function pocketSlotWidget.pocketSlotWidget_C.checkDataSame
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -60,7 +108,7 @@ void UpocketSlotWidget_C::showQuantityDialogue(int Quan, class UinventoryItemWid
 
 
 // Function pocketSlotWidget.pocketSlotWidget_C.processDropOperation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -106,7 +154,7 @@ void UpocketSlotWidget_C::checkSource(class UObject* Object, const struct FStrin
 
 
 // Function pocketSlotWidget.pocketSlotWidget_C.Get_itemIcon_ToolTipWidget_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -127,7 +175,7 @@ class UWidget* UpocketSlotWidget_C::Get_itemIcon_ToolTipWidget_1()
 
 
 // Function pocketSlotWidget.pocketSlotWidget_C.OnDragDetected
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           PointerEvent                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -195,7 +243,7 @@ void UpocketSlotWidget_C::clearSlot()
 
 
 // Function pocketSlotWidget.pocketSlotWidget_C.OnDrop
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -225,19 +273,27 @@ bool UpocketSlotWidget_C::OnDrop(const struct FGeometry& MyGeometry, const struc
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           fromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   CustomTagName                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UpocketSlotWidget_C::setSlot(const struct FinventoryItemStruct& Data, int Index, int Quantity, bool fromVendor)
+void UpocketSlotWidget_C::setSlot(const struct FinventoryItemStruct& Data, const struct FName& ItemID, int Index, int Quantity, int Amount, bool FromVendor, const struct FText& CustomTagName, const struct FMixProportionsStruct& MixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function pocketSlotWidget.pocketSlotWidget_C.setSlot");
 
 	UpocketSlotWidget_C_setSlot_Params params;
 	params.Data = Data;
+	params.ItemID = ItemID;
 	params.Index = Index;
 	params.Quantity = Quantity;
-	params.fromVendor = fromVendor;
+	params.Amount = Amount;
+	params.FromVendor = FromVendor;
+	params.CustomTagName = CustomTagName;
+	params.MixProportions = MixProportions;
 
 	auto flags = fn->FunctionFlags;
 

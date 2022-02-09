@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,29 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckTabletops
+struct ArentAppartmentArea_C_CheckTabletops_Params
+{
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.VerifyInventory
+struct ArentAppartmentArea_C_VerifyInventory_Params
+{
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.GetHideoutMeta
+struct ArentAppartmentArea_C_GetHideoutMeta_Params
+{
+	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FHideoutData                                HideoutMeta;                                              // (Parm, OutParm)
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.PassDataToOriginal
+struct ArentAppartmentArea_C_PassDataToOriginal_Params
+{
+	class UObject*                                     Object;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function rentAppartmentArea.rentAppartmentArea_C.checkWeedStatus
 struct ArentAppartmentArea_C_checkWeedStatus_Params
@@ -71,6 +94,7 @@ struct ArentAppartmentArea_C_spawnFlashBang_Params
 struct ArentAppartmentArea_C_addInventoryItem_Params
 {
 	struct FappartmentEquipment                        eqData;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FName                                       EquipmentID;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -179,11 +203,6 @@ struct ArentAppartmentArea_C_PlayerBustedByDEA_Params
 {
 };
 
-// Function rentAppartmentArea.rentAppartmentArea_C.tryRestoreWallPicker
-struct ArentAppartmentArea_C_tryRestoreWallPicker_Params
-{
-};
-
 // Function rentAppartmentArea.rentAppartmentArea_C.resetApartment
 struct ArentAppartmentArea_C_resetApartment_Params
 {
@@ -211,6 +230,23 @@ struct ArentAppartmentArea_C_resetFailStatusRefresh_Params
 
 // Function rentAppartmentArea.rentAppartmentArea_C.resetFilterWarning
 struct ArentAppartmentArea_C_resetFilterWarning_Params
+{
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct ArentAppartmentArea_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.DisplayItems
+struct ArentAppartmentArea_C_DisplayItems_Params
+{
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.OldLoadReinit
+struct ArentAppartmentArea_C_OldLoadReinit_Params
 {
 };
 

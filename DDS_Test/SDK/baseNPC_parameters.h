@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function baseNPC.baseNPC_C.ExpandRama
+struct AbaseNPC_C_ExpandRama_Params
+{
+};
 
 // Function baseNPC.baseNPC_C.calcSaleExp
 struct AbaseNPC_C_calcSaleExp_Params
@@ -122,9 +127,9 @@ struct AbaseNPC_C_setupNewDrugSale_Params
 {
 	struct FdrugData                                   drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                DrugQuantity;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       CharacterName;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       characterName;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              expectedPrice;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                OrderId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                orderID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                TaskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isMale;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isDealer;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -202,11 +207,6 @@ struct AbaseNPC_C_failGoHome_Params
 {
 };
 
-// Function baseNPC.baseNPC_C.testAroundPlayer
-struct AbaseNPC_C_testAroundPlayer_Params
-{
-};
-
 // Function baseNPC.baseNPC_C.togglePoseCalc
 struct AbaseNPC_C_togglePoseCalc_Params
 {
@@ -219,6 +219,30 @@ struct AbaseNPC_C_waitTimeMultiplierCheck_Params
 
 // Function baseNPC.baseNPC_C.RetryDialAssign
 struct AbaseNPC_C_RetryDialAssign_Params
+{
+};
+
+// Function baseNPC.baseNPC_C.LongRadiusChanged
+struct AbaseNPC_C_LongRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function baseNPC.baseNPC_C.ShortRadiusChanged
+struct AbaseNPC_C_ShortRadiusChanged_Params
+{
+	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function baseNPC.baseNPC_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AbaseNPC_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function baseNPC.baseNPC_C.RamaLoadedEvent
+struct AbaseNPC_C_RamaLoadedEvent_Params
 {
 };
 

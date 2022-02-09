@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -172,6 +172,40 @@ void UsaveLoadWidget_C::Destruct()
 	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.Destruct");
 
 	UsaveLoadWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function saveLoadWidget.saveLoadWidget_C.BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UsaveLoadWidget_C::BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+
+	UsaveLoadWidget_C_BndEvt__btnAddSlot_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function saveLoadWidget.saveLoadWidget_C.RefreshList
+// (BlueprintCallable, BlueprintEvent)
+
+void UsaveLoadWidget_C::RefreshList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.RefreshList");
+
+	UsaveLoadWidget_C_RefreshList_Params params;
 
 	auto flags = fn->FunctionFlags;
 

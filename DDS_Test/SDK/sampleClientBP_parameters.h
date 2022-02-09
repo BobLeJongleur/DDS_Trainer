@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,6 +37,11 @@ struct AsampleClientBP_C_testPlayerSee_Params
 
 // Function sampleClientBP.sampleClientBP_C.makeGoHome
 struct AsampleClientBP_C_makeGoHome_Params
+{
+};
+
+// Function sampleClientBP.sampleClientBP_C.RamaLoadedEvent
+struct AsampleClientBP_C_RamaLoadedEvent_Params
 {
 };
 

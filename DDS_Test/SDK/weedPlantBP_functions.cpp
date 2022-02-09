@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,31 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function weedPlantBP.weedPlantBP_C.CheckPlayerWater
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AplayerCharacterBP_C*    AsPlayer_Character_BP          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           PlayerHasWater                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AweedPlantBP_C::CheckPlayerWater(class AplayerCharacterBP_C** AsPlayer_Character_BP, bool* PlayerHasWater)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.CheckPlayerWater");
+
+	AweedPlantBP_C_CheckPlayerWater_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (AsPlayer_Character_BP != nullptr)
+		*AsPlayer_Character_BP = params.AsPlayer_Character_BP;
+	if (PlayerHasWater != nullptr)
+		*PlayerHasWater = params.PlayerHasWater;
+}
+
 
 // Function weedPlantBP.weedPlantBP_C.onLoadNamingUpdate
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -235,60 +260,6 @@ void AweedPlantBP_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.UserConstructionScript");
 
 	AweedPlantBP_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AweedPlantBP_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay");
-
-	AweedPlantBP_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function weedPlantBP.weedPlantBP_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AweedPlantBP_C::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.ReceiveTick");
-
-	AweedPlantBP_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function weedPlantBP.weedPlantBP_C.updateGrowth
-// (BlueprintCallable, BlueprintEvent)
-
-void AweedPlantBP_C::updateGrowth()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.updateGrowth");
-
-	AweedPlantBP_C_updateGrowth_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -549,6 +520,60 @@ void AweedPlantBP_C::testCompromised()
 	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.testCompromised");
 
 	AweedPlantBP_C_testCompromised_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function weedPlantBP.weedPlantBP_C.updateGrowth
+// (BlueprintCallable, BlueprintEvent)
+
+void AweedPlantBP_C::updateGrowth()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.updateGrowth");
+
+	AweedPlantBP_C_updateGrowth_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function weedPlantBP.weedPlantBP_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AweedPlantBP_C::ReceiveTick(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.ReceiveTick");
+
+	AweedPlantBP_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AweedPlantBP_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.ReceiveBeginPlay");
+
+	AweedPlantBP_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 

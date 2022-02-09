@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: , Version: 1.1.0
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,13 +54,8 @@ struct UEquipmentShopInterfaceWidget_C_recalcCheckout_Params
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem
 struct UEquipmentShopInterfaceWidget_C_addListItem_Params
 {
-	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Price;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  Icon;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FappartmentEquipment                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Description;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UequipmentShopItemWidget_C*                  ItemRef;                                                  // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
@@ -75,7 +70,7 @@ struct UEquipmentShopInterfaceWidget_C_Setup_Params
 	TArray<struct FappartmentEquipment>                baseEq;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<float>                                      basePrices;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class AequipmentShop_C*                            ParentShopRef;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<bool>                                       Unlocked;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<bool>                                       unlocked;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnOrderPay_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
