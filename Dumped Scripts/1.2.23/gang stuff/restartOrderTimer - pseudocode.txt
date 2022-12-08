@@ -3,24 +3,15 @@
     randomInterval = 0.0
 
     GANG_MAX_LEVEL = BlueprintHelpers.GetBalanceFlag("GANG-MAX-LEVEL")
-    // CallFunc_GetBalanceFlag_FlagData
     GANG_INTERVAL_MAX_DROP = BlueprintHelpers.GetBalanceFlag("GANG-INTERVAL-MAX-DROP")
-    // CallFunc_GetBalanceFlag_FlagData2
     GANG_ORDER_INTERVAL = BlueprintHelpers.GetBalanceFlag("GANG-ORDER-INTERVAL")
 
-    // CallFunc_Add_FloatFloat_ReturnValue
     currentGangSatisfaction = this.gangLevel * this.gangSatisfactionMax + this.gangSatisfaction
-
-    // CallFunc_Multiply_IntFloat_ReturnValue1
     maxGangSatisfaction = GANG_MAX_LEVEL * this.gangSatisfactionMax
 
-    // CallFunc_Divide_FloatFloat_ReturnValue
     gangSatisfactionProgress = currentGangSatisfaction / maxGangSatisfaction
 
-    // CallFunc_MapRangeClamped_ReturnValue
     intervalBonus = KismetMathLibrary.MapRangeClamped(gangSatisfactionProgress, 0.0, 1.0, 0.0, GANG_INTERVAL_MAX_DROP)
-
-    // CallFunc_Subtract_FloatFloat_ReturnValue
     interval = GANG_ORDER_INTERVAL - GANG_ORDER_INTERVAL * intervalBonus
 
     this.nextOrderCountdown = interval
