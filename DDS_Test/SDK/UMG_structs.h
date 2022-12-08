@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,15 +84,6 @@ enum class EUMGSequencePlayMode : uint8_t
 };
 
 
-// Enum UMG.EWidgetTickFrequency
-enum class EWidgetTickFrequency : uint8_t
-{
-	EWidgetTickFrequency__Never    = 0,
-	EWidgetTickFrequency__Auto     = 1,
-	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
-};
-
-
 // Enum UMG.EWidgetDesignFlags
 enum class EWidgetDesignFlags : uint8_t
 {
@@ -129,6 +120,15 @@ enum class EWidgetBlendMode : uint8_t
 	EWidgetBlendMode__Masked       = 1,
 	EWidgetBlendMode__Transparent  = 2,
 	EWidgetBlendMode__EWidgetBlendMode_MAX = 3
+};
+
+
+// Enum UMG.EWidgetTickFrequency
+enum class EWidgetTickFrequency : uint8_t
+{
+	EWidgetTickFrequency__Never    = 0,
+	EWidgetTickFrequency__Auto     = 1,
+	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
 };
 
 
@@ -320,18 +320,18 @@ struct FMovieSceneWidgetMaterialSectionTemplate : public FMovieSceneParameterSec
 	TArray<struct FName>                               BrushPropertyNamePath;                                    // 0x0050(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct UMG.RichTextStyleRow
-// 0x01E8 (0x01F0 - 0x0008)
-struct FRichTextStyleRow : public FTableRowBase
-{
-	struct FTextBlockStyle                             TextStyle;                                                // 0x0008(0x01E8) (Edit)
-};
-
 // ScriptStruct UMG.RichImageRow
 // 0x0088 (0x0090 - 0x0008)
 struct FRichImageRow : public FTableRowBase
 {
 	struct FSlateBrush                                 Brush;                                                    // 0x0008(0x0088) (Edit)
+};
+
+// ScriptStruct UMG.RichTextStyleRow
+// 0x01E8 (0x01F0 - 0x0008)
+struct FRichTextStyleRow : public FTableRowBase
+{
+	struct FTextBlockStyle                             TextStyle;                                                // 0x0008(0x01E8) (Edit)
 };
 
 }

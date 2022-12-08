@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function dialogueResponseWidget.dialogueResponseWidget_C.Setup
+// Function dialogueResponseWidget.dialogueResponseWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   DialogueText                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -21,11 +21,11 @@ namespace SDK
 // class UdialogueWidget_C*       parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FdialogueResponseData   responseData                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UdialogueResponseWidget_C::Setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* parentRef, const struct FdialogueResponseData& responseData)
+void UdialogueResponseWidget_C::setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* parentRef, const struct FdialogueResponseData& responseData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function dialogueResponseWidget.dialogueResponseWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueResponseWidget.dialogueResponseWidget_C.setup");
 
-	UdialogueResponseWidget_C_Setup_Params params;
+	UdialogueResponseWidget_C_setup_Params params;
 	params.DialogueText = DialogueText;
 	params.responseID = responseID;
 	params.parentRef = parentRef;

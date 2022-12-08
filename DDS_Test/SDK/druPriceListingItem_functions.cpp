@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,26 +13,26 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function druPriceListingItem.druPriceListingItem_C.Setup
+// Function druPriceListingItem.druPriceListingItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          BuyPrice                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CurSellPrice                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            DrugIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AmainComputer_C*         computerRef                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AmainComputer_C*         ComputerRef                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           firstLocked                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UdruPriceListingItem_C::Setup(const struct FdrugData& drugData, float BuyPrice, float CurSellPrice, int DrugIndex, class AmainComputer_C* computerRef, bool firstLocked)
+void UdruPriceListingItem_C::setup(const struct FdrugData& drugData, float BuyPrice, float CurSellPrice, int DrugIndex, class AmainComputer_C* ComputerRef, bool firstLocked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function druPriceListingItem.druPriceListingItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function druPriceListingItem.druPriceListingItem_C.setup");
 
-	UdruPriceListingItem_C_Setup_Params params;
+	UdruPriceListingItem_C_setup_Params params;
 	params.drugData = drugData;
 	params.BuyPrice = BuyPrice;
 	params.CurSellPrice = CurSellPrice;
 	params.DrugIndex = DrugIndex;
-	params.computerRef = computerRef;
+	params.ComputerRef = ComputerRef;
 	params.firstLocked = firstLocked;
 
 	auto flags = fn->FunctionFlags;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,7 +54,7 @@ public:
 	void ExpandRama();
 	void ParseOldInventory();
 	void CanAccessContainer(bool* CanAccess, struct FText* DeclineReason);
-	void AcceptsCategory(TEnumAsByte<EitemCategories> Category, bool* ok);
+	void AcceptsCategory(TEnumAsByte<EitemCategories> Category, bool* OK);
 	void CheckFullyLooted(bool* NotLooted);
 	void EndLootingSound();
 	void GetOpenState(bool* IsOpen);
@@ -63,7 +63,7 @@ public:
 	void setBackpackDefaults();
 	void returnItemSizing(const struct FinventoryItemStruct& Data, float* Size, float* Weight);
 	void resetContentSizes();
-	void RemoveItem(int ItemIndex, int Quantity);
+	void removeItem(int ItemIndex, int Quantity);
 	void AddItem(const struct FinventoryItemStruct& itemData, int itemQuantity, bool ForceLooted, int* AddedIndex, bool* QuanChanged);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

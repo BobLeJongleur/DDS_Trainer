@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,156 @@ void UcheatManagerWidget_C::AddAllFurniture()
 	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.AddAllFurniture");
 
 	UcheatManagerWidget_C_AddAllFurniture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E");
+
+	UcheatManagerWidget_C_OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E");
+
+	UcheatManagerWidget_C_OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   WrittenAchievementName         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          WrittenProgress                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            WrittenUserTag                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UcheatManagerWidget_C::OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23");
+
+	UcheatManagerWidget_C_OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23_Params params;
+	params.WrittenAchievementName = WrittenAchievementName;
+	params.WrittenProgress = WrittenProgress;
+	params.WrittenUserTag = WrittenUserTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   WrittenAchievementName         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          WrittenProgress                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            WrittenUserTag                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UcheatManagerWidget_C::OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23");
+
+	UcheatManagerWidget_C_OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23_Params params;
+	params.WrittenAchievementName = WrittenAchievementName;
+	params.WrittenProgress = WrittenProgress;
+	params.WrittenUserTag = WrittenUserTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE");
+
+	UcheatManagerWidget_C_OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE");
+
+	UcheatManagerWidget_C_OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_2147B21744FE388A347FD3A37FA2A11D
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnFailure_2147B21744FE388A347FD3A37FA2A11D()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_2147B21744FE388A347FD3A37FA2A11D");
+
+	UcheatManagerWidget_C_OnFailure_2147B21744FE388A347FD3A37FA2A11D_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_2147B21744FE388A347FD3A37FA2A11D
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::OnSuccess_2147B21744FE388A347FD3A37FA2A11D()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_2147B21744FE388A347FD3A37FA2A11D");
+
+	UcheatManagerWidget_C_OnSuccess_2147B21744FE388A347FD3A37FA2A11D_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -531,6 +681,142 @@ void UcheatManagerWidget_C::BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnBu
 	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature");
 
 	UcheatManagerWidget_C_BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.RunAchReset
+// (BlueprintCallable, BlueprintEvent)
+
+void UcheatManagerWidget_C::RunAchReset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.RunAchReset");
+
+	UcheatManagerWidget_C_RunAchReset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UcheatManagerWidget_C::BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature");
+
+	UcheatManagerWidget_C_BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

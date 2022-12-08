@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,11 +55,11 @@ struct ASewageExitPeekPawn_C_InpAxisEvt_LookSideways_K2Node_InputAxisEvent_1_Par
 	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SewageExitPeekPawn.SewageExitPeekPawn_C.Setup
-struct ASewageExitPeekPawn_C_Setup_Params
+// Function SewageExitPeekPawn.SewageExitPeekPawn_C.setup
+struct ASewageExitPeekPawn_C_setup_Params
 {
 	class AsewageExit_C*                               ExitLadderRef;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SewageExitPeekPawn.SewageExitPeekPawn_C.ReceivePossessed

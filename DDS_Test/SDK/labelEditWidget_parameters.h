@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,8 +32,8 @@ struct UlabelEditWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function labelEditWidget.labelEditWidget_C.Setup
-struct UlabelEditWidget_C_Setup_Params
+// Function labelEditWidget.labelEditWidget_C.setup
+struct UlabelEditWidget_C_setup_Params
 {
 	class AadditiveContainerBase_C*                    ParentContainer;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       DefaultName;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)

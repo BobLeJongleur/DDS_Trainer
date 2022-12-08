@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ public:
 	void clearAllButtons();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(class UpackageProductWidget_C* Parent);
+	void setup(class UpackageProductWidget_C* Parent);
 	void BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btn1g_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btn2g_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();

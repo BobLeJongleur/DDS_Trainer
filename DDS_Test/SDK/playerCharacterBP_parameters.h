@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,53 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function playerCharacterBP.playerCharacterBP_C.CheckRespawnDocuments
+struct AplayerCharacterBP_C_CheckRespawnDocuments_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.GetMovementForwardVector
+struct AplayerCharacterBP_C_GetMovementForwardVector_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckCashAchievements
+struct AplayerCharacterBP_C_CheckCashAchievements_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.GetSurfaceActionName
+struct AplayerCharacterBP_C_GetSurfaceActionName_Params
+{
+	struct FString                                     SurfaceID;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FText                                       OutAction;                                                // (Parm, OutParm)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.StartRenovationMode
+struct AplayerCharacterBP_C_StartRenovationMode_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.RenovationInteraction
+struct AplayerCharacterBP_C_RenovationInteraction_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ClearRenovationMode
+struct AplayerCharacterBP_C_ClearRenovationMode_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.RenovationModeTrace
+struct AplayerCharacterBP_C_RenovationModeTrace_Params
+{
+};
+
 // Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage
 struct AplayerCharacterBP_C_CheckFallDamage_Params
 {
+	float                                              OverrideDamage;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.FallDamageRegen
@@ -364,7 +408,7 @@ struct AplayerCharacterBP_C_clearBackpack_Params
 // Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack
 struct AplayerCharacterBP_C_setCurrentBackpack_Params
 {
-	class AbackpackBase_C*                             backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AbackpackBase_C*                             Backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AitemInventoryHolder_C*                      itemHolder;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        backpackData;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FName                                       BackpackItemID;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -611,38 +655,38 @@ struct AplayerCharacterBP_C_headBobbTimeline__footStep__EventFunc_Params
 {
 };
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_33
+struct AplayerCharacterBP_C_InpActEvt_SprintToggle_K2Node_InputActionEvent_33_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_32
 struct AplayerCharacterBP_C_InpActEvt_SprintToggle_K2Node_InputActionEvent_32_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_31
-struct AplayerCharacterBP_C_InpActEvt_SprintToggle_K2Node_InputActionEvent_31_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_31
+struct AplayerCharacterBP_C_InpActEvt_CrouchToggle_K2Node_InputActionEvent_31_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_30
-struct AplayerCharacterBP_C_InpActEvt_CrouchToggle_K2Node_InputActionEvent_30_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_30
+struct AplayerCharacterBP_C_InpActEvt_JumpObstacle_K2Node_InputActionEvent_30_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_29
-struct AplayerCharacterBP_C_InpActEvt_JumpObstacle_K2Node_InputActionEvent_29_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_29
+struct AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_29_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_28
 struct AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_28_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_27
-struct AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_27_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -659,32 +703,32 @@ struct AplayerCharacterBP_C_InpActEvt_F10_K2Node_InputKeyEvent_6_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_26
-struct AplayerCharacterBP_C_InpActEvt_Wait_K2Node_InputActionEvent_26_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_27
+struct AplayerCharacterBP_C_InpActEvt_Wait_K2Node_InputActionEvent_27_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_25
-struct AplayerCharacterBP_C_InpActEvt_phoneNext_K2Node_InputActionEvent_25_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_26
+struct AplayerCharacterBP_C_InpActEvt_phoneNext_K2Node_InputActionEvent_26_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_24
-struct AplayerCharacterBP_C_InpActEvt_phonePrevious_K2Node_InputActionEvent_24_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_25
+struct AplayerCharacterBP_C_InpActEvt_phonePrevious_K2Node_InputActionEvent_25_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_23
-struct AplayerCharacterBP_C_InpActEvt_phoneEnter_K2Node_InputActionEvent_23_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_24
+struct AplayerCharacterBP_C_InpActEvt_phoneEnter_K2Node_InputActionEvent_24_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_22
-struct AplayerCharacterBP_C_InpActEvt_phoneBack_K2Node_InputActionEvent_22_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_23
+struct AplayerCharacterBP_C_InpActEvt_phoneBack_K2Node_InputActionEvent_23_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -695,14 +739,20 @@ struct AplayerCharacterBP_C_InpActEvt_H_K2Node_InputKeyEvent_5_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_21
-struct AplayerCharacterBP_C_InpActEvt_ScrollUp_K2Node_InputActionEvent_21_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_22
+struct AplayerCharacterBP_C_InpActEvt_ScrollUp_K2Node_InputActionEvent_22_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_20
-struct AplayerCharacterBP_C_InpActEvt_ScrollDown_K2Node_InputActionEvent_20_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_21
+struct AplayerCharacterBP_C_InpActEvt_ScrollDown_K2Node_InputActionEvent_21_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20
+struct AplayerCharacterBP_C_InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -713,8 +763,8 @@ struct AplayerCharacterBP_C_InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18
-struct AplayerCharacterBP_C_InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18
+struct AplayerCharacterBP_C_InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -725,8 +775,8 @@ struct AplayerCharacterBP_C_InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16
-struct AplayerCharacterBP_C_InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16
+struct AplayerCharacterBP_C_InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -737,14 +787,14 @@ struct AplayerCharacterBP_C_InpActEvt_LeftClickPlace_K2Node_InputActionEvent_15_
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14
-struct AplayerCharacterBP_C_InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14
+struct AplayerCharacterBP_C_InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13
-struct AplayerCharacterBP_C_InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_13
+struct AplayerCharacterBP_C_InpActEvt_AppartmentMode_K2Node_InputActionEvent_13_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -755,14 +805,8 @@ struct AplayerCharacterBP_C_InpActEvt_AppartmentMode_K2Node_InputActionEvent_12_
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_11
-struct AplayerCharacterBP_C_InpActEvt_AppartmentMode_K2Node_InputActionEvent_11_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_10
-struct AplayerCharacterBP_C_InpActEvt_InfoToggle_K2Node_InputActionEvent_10_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_11
+struct AplayerCharacterBP_C_InpActEvt_InfoToggle_K2Node_InputActionEvent_11_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -773,14 +817,20 @@ struct AplayerCharacterBP_C_InpActEvt_Y_K2Node_InputKeyEvent_4_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_10
+struct AplayerCharacterBP_C_InpActEvt_DropBackpack_K2Node_InputActionEvent_10_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_9
 struct AplayerCharacterBP_C_InpActEvt_DropBackpack_K2Node_InputActionEvent_9_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_8
-struct AplayerCharacterBP_C_InpActEvt_DropBackpack_K2Node_InputActionEvent_8_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_8
+struct AplayerCharacterBP_C_InpActEvt_Action_K2Node_InputActionEvent_8_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -791,32 +841,26 @@ struct AplayerCharacterBP_C_InpActEvt_Action_K2Node_InputActionEvent_7_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_6
-struct AplayerCharacterBP_C_InpActEvt_Action_K2Node_InputActionEvent_6_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_6
+struct AplayerCharacterBP_C_InpActEvt_QuickUse01_K2Node_InputActionEvent_6_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_5
-struct AplayerCharacterBP_C_InpActEvt_QuickUse01_K2Node_InputActionEvent_5_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_5
+struct AplayerCharacterBP_C_InpActEvt_QuickUse02_K2Node_InputActionEvent_5_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_4
-struct AplayerCharacterBP_C_InpActEvt_QuickUse02_K2Node_InputActionEvent_4_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_4
+struct AplayerCharacterBP_C_InpActEvt_QuickUse03_K2Node_InputActionEvent_4_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_3
-struct AplayerCharacterBP_C_InpActEvt_QuickUse03_K2Node_InputActionEvent_3_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_2
-struct AplayerCharacterBP_C_InpActEvt_QuickUse04_K2Node_InputActionEvent_2_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_3
+struct AplayerCharacterBP_C_InpActEvt_QuickUse04_K2Node_InputActionEvent_3_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -833,14 +877,20 @@ struct AplayerCharacterBP_C_InpActEvt_L_K2Node_InputKeyEvent_2_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1
-struct AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_1_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_2
+struct AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_2_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1
-struct AplayerCharacterBP_C_InpActEvt_N_K2Node_InputKeyEvent_1_Params
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_RightClickFilters_K2Node_InputActionEvent_1
+struct AplayerCharacterBP_C_InpActEvt_RightClickFilters_K2Node_InputActionEvent_1_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1
+struct AplayerCharacterBP_C_InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -1023,8 +1073,8 @@ struct AplayerCharacterBP_C_lookAtCheck_Params
 {
 };
 
-// Function playerCharacterBP.playerCharacterBP_C.StartChaseMusic
-struct AplayerCharacterBP_C_StartChaseMusic_Params
+// Function playerCharacterBP.playerCharacterBP_C.startChaseMusic
+struct AplayerCharacterBP_C_startChaseMusic_Params
 {
 };
 
@@ -1243,6 +1293,21 @@ struct AplayerCharacterBP_C_BndEvt__InventoryComponent_K2Node_ComponentBoundEven
 struct AplayerCharacterBP_C_TestUseWater_Params
 {
 	int                                                Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ClearSave
+struct AplayerCharacterBP_C_ClearSave_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.AchievementCaught
+struct AplayerCharacterBP_C_AchievementCaught_Params
+{
+};
+
+// Function playerCharacterBP.playerCharacterBP_C.ToggleGhost
+struct AplayerCharacterBP_C_ToggleGhost_Params
+{
 };
 
 // Function playerCharacterBP.playerCharacterBP_C.ExecuteUbergraph_playerCharacterBP

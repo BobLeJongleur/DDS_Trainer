@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(class AweedPlantBP_C* PlantRef);
+	void setup(class AweedPlantBP_C* PlantRef);
 	void updateMe();
 	void Destruct();
 	void ExecuteUbergraph_plantStatsWidget(int EntryPoint);

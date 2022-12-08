@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.removeMe
+// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.RemoveMe
 // (BlueprintCallable, BlueprintEvent)
 
-void UnarratorSubtitlesWidget_C::removeMe()
+void UnarratorSubtitlesWidget_C::RemoveMe()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.removeMe");
+	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.RemoveMe");
 
-	UnarratorSubtitlesWidget_C_removeMe_Params params;
+	UnarratorSubtitlesWidget_C_RemoveMe_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -52,18 +52,18 @@ void UnarratorSubtitlesWidget_C::Tick(const struct FGeometry& MyGeometry, float 
 }
 
 
-// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.Setup
+// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Monologue                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UnarratorSubtitlesWidget_C::Setup(const struct FText& Monologue, float Duration, const struct FText& Name)
+void UnarratorSubtitlesWidget_C::setup(const struct FText& Monologue, float Duration, const struct FText& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.setup");
 
-	UnarratorSubtitlesWidget_C_Setup_Params params;
+	UnarratorSubtitlesWidget_C_setup_Params params;
 	params.Monologue = Monologue;
 	params.Duration = Duration;
 	params.Name = Name;

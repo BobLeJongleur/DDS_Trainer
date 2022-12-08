@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,21 +30,21 @@ void UmixListWidget_C::Construct()
 }
 
 
-// Function mixListWidget.mixListWidget_C.Setup
+// Function mixListWidget.mixListWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Substance                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          totalMass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          TotalMass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UmixListWidget_C::Setup(const struct FText& Substance, float Quantity, float totalMass)
+void UmixListWidget_C::setup(const struct FText& Substance, float Quantity, float TotalMass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function mixListWidget.mixListWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function mixListWidget.mixListWidget_C.setup");
 
-	UmixListWidget_C_Setup_Params params;
+	UmixListWidget_C_setup_Params params;
 	params.Substance = Substance;
 	params.Quantity = Quantity;
-	params.totalMass = totalMass;
+	params.TotalMass = TotalMass;
 
 	auto flags = fn->FunctionFlags;
 

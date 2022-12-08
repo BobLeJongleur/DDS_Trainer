@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass dealerSaleDialogueInstance.dealerSaleDialogueInstance_C
-// 0x0062 (0x03F4 - 0x0392)
+// 0x0076 (0x0408 - 0x0392)
 class AdealerSaleDialogueInstance_C : public AdialogueInstance_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 	unsigned char                                      UnknownData02[0x2];                                       // 0x03EA(0x0002) MISSED OFFSET
 	float                                              psychedelicChanceConcrete;                                // 0x03EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              psychedelicsChanceSomething;                              // 0x03F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x03F4(0x0004) MISSED OFFSET
+	TArray<struct FText>                               randomBossDialogueLines;                                  // 0x03F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -38,6 +40,7 @@ public:
 	}
 
 
+	void GetRandomDialogueLine(struct FText* Output);
 	void chooseKnowSomething(TArray<struct FText>* outResponses, bool* Success);
 	void UserConstructionScript();
 	void ConfigDialogue(bool male);

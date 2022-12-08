@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,13 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
-// 0x0001
-struct FSessionServiceLogUnsubscribe
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
 
 // ScriptStruct SessionMessages.SessionServiceLogSubscribe
 // 0x0001
@@ -36,6 +29,13 @@ struct FSessionServiceLog
 	double                                             TimeSeconds;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
+// 0x0001
+struct FSessionServiceLogUnsubscribe
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct SessionMessages.SessionServicePong

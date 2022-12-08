@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,6 +16,52 @@ namespace SDK
 
 // Function cheatManagerWidget.cheatManagerWidget_C.AddAllFurniture
 struct UcheatManagerWidget_C_AddAllFurniture_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E
+struct UcheatManagerWidget_C_OnFailure_DCBF03EC4DBEA13552F885B7A3CBB49E_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E
+struct UcheatManagerWidget_C_OnSuccess_DCBF03EC4DBEA13552F885B7A3CBB49E_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23
+struct UcheatManagerWidget_C_OnFailure_DB666ADE45AAAD1F9E73B5B8EEC5DD23_Params
+{
+	struct FName                                       WrittenAchievementName;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              WrittenProgress;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                WrittenUserTag;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23
+struct UcheatManagerWidget_C_OnSuccess_DB666ADE45AAAD1F9E73B5B8EEC5DD23_Params
+{
+	struct FName                                       WrittenAchievementName;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              WrittenProgress;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                WrittenUserTag;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE
+struct UcheatManagerWidget_C_OnFailure_CB4D884A4F54B34D4E1FF59FD93063EE_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE
+struct UcheatManagerWidget_C_OnSuccess_CB4D884A4F54B34D4E1FF59FD93063EE_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnFailure_2147B21744FE388A347FD3A37FA2A11D
+struct UcheatManagerWidget_C_OnFailure_2147B21744FE388A347FD3A37FA2A11D_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.OnSuccess_2147B21744FE388A347FD3A37FA2A11D
+struct UcheatManagerWidget_C_OnSuccess_2147B21744FE388A347FD3A37FA2A11D_Params
 {
 };
 
@@ -166,6 +212,46 @@ struct UcheatManagerWidget_C_BndEvt__Button_17_K2Node_ComponentBoundEvent_26_OnB
 
 // Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature
 struct UcheatManagerWidget_C_BndEvt__Button_18_K2Node_ComponentBoundEvent_27_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__btnAchievements_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.RunAchReset
+struct UcheatManagerWidget_C_RunAchReset_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_12_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_19_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_20_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_21_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_24_K2Node_ComponentBoundEvent_33_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function cheatManagerWidget.cheatManagerWidget_C.BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature
+struct UcheatManagerWidget_C_BndEvt__Button_23_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

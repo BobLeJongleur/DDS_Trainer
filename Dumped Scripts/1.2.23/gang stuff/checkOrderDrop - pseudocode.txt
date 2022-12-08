@@ -1,0 +1,16 @@
+0x0:
+    push(0xF70)
+    dropValid = KismetSystemLibrary.IsValid(this.selectedDrop)
+    if !(dropValid && this.awaitingOrder) || !expectingDrop:
+        jump(0x86A)
+    
+    // CallFunc_GetAllActorsOfClass_OutActors1
+    computer = GameplayStatics.GetAllActorsOfClass(mainComputer.mainComputer_C)
+
+    // CallFunc_GetItemList_OutItems
+    dropItems = None
+    // CallFunc_GetItemList_StackExceeded
+    stackExceeded = None
+
+    this.selectedDrop.InventoryComponent.GetItemList(None, True, 4, 0000-0000-0000-0000, False, &dropItems, &stackExceeded)
+    

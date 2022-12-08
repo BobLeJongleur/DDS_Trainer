@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 	}
 
 
-	void Setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* parentRef, const struct FdialogueResponseData& responseData);
+	void setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* parentRef, const struct FdialogueResponseData& responseData);
 	void BndEvt__btnResponse_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_dialogueResponseWidget(int EntryPoint);
 };

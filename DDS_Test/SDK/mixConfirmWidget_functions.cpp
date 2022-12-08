@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,16 +52,16 @@ void UmixConfirmWidget_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function mixConfirmWidget.mixConfirmWidget_C.Setup
+// Function mixConfirmWidget.mixConfirmWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AworkStationMixerBase_C* Mixer                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UmixConfirmWidget_C::Setup(class AworkStationMixerBase_C* Mixer)
+void UmixConfirmWidget_C::setup(class AworkStationMixerBase_C* Mixer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function mixConfirmWidget.mixConfirmWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function mixConfirmWidget.mixConfirmWidget_C.setup");
 
-	UmixConfirmWidget_C_Setup_Params params;
+	UmixConfirmWidget_C_setup_Params params;
 	params.Mixer = Mixer;
 
 	auto flags = fn->FunctionFlags;

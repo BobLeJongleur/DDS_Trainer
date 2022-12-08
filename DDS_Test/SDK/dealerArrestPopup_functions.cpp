@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,17 +30,17 @@ void UdealerArrestPopup_C::Construct()
 }
 
 
-// Function dealerArrestPopup.dealerArrestPopup_C.Setup
+// Function dealerArrestPopup.dealerArrestPopup_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ClientName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Released                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UdealerArrestPopup_C::Setup(const struct FText& ClientName, bool Released)
+void UdealerArrestPopup_C::setup(const struct FText& ClientName, bool Released)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function dealerArrestPopup.dealerArrestPopup_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function dealerArrestPopup.dealerArrestPopup_C.setup");
 
-	UdealerArrestPopup_C_Setup_Params params;
+	UdealerArrestPopup_C_setup_Params params;
 	params.ClientName = ClientName;
 	params.Released = Released;
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,18 +30,18 @@ void UintroCreditsWidget_C::Construct()
 }
 
 
-// Function introCreditsWidget.introCreditsWidget_C.Setup
+// Function introCreditsWidget.introCreditsWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Person                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Company                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UintroCreditsWidget_C::Setup(const struct FText& Title, const struct FText& Person, const struct FText& Company)
+void UintroCreditsWidget_C::setup(const struct FText& Title, const struct FText& Person, const struct FText& Company)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function introCreditsWidget.introCreditsWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function introCreditsWidget.introCreditsWidget_C.setup");
 
-	UintroCreditsWidget_C_Setup_Params params;
+	UintroCreditsWidget_C_setup_Params params;
 	params.Title = Title;
 	params.Person = Person;
 	params.Company = Company;

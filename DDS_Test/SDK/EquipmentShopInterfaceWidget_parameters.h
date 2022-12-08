@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,28 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Get_VillaHolder_Visibility_1
+struct UEquipmentShopInterfaceWidget_C_Get_VillaHolder_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.RenderFilters
+struct UEquipmentShopInterfaceWidget_C_RenderFilters_Params
+{
+};
+
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.SetFilter
+struct UEquipmentShopInterfaceWidget_C_SetFilter_Params
+{
+	bool                                               FilterEnabled;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EequipmentCategory>                    FilterCat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments
 struct UEquipmentShopInterfaceWidget_C_checkAvailableApartments_Params
 {
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.updateBalance
@@ -64,8 +82,8 @@ struct UEquipmentShopInterfaceWidget_C_Construct_Params
 {
 };
 
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Setup
-struct UEquipmentShopInterfaceWidget_C_Setup_Params
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.setup
+struct UEquipmentShopInterfaceWidget_C_setup_Params
 {
 	TArray<struct FappartmentEquipment>                baseEq;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<float>                                      basePrices;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -95,16 +113,6 @@ struct UEquipmentShopInterfaceWidget_C_BndEvt__btnCloseShop_K2Node_ComponentBoun
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowAll_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 struct UEquipmentShopInterfaceWidget_C_BndEvt__btnShowAll_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
-struct UEquipmentShopInterfaceWidget_C_BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
-struct UEquipmentShopInterfaceWidget_C_BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

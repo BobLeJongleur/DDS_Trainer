@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct UplantStatsWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function plantStatsWidget.plantStatsWidget_C.Setup
-struct UplantStatsWidget_C_Setup_Params
+// Function plantStatsWidget.plantStatsWidget_C.setup
+struct UplantStatsWidget_C_setup_Params
 {
 	class AweedPlantBP_C*                              PlantRef;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

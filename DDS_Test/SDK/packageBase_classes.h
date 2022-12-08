@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void takeContents();
-	void Setup(TArray<struct FinventoryItemStruct> Contents, TArray<int> Quantities, float TotalSize, float TotalWeight);
+	void setup(TArray<struct FinventoryItemStruct> Contents, TArray<int> Quantities, float TotalSize, float TotalWeight);
 	void ExecuteUbergraph_packageBase(int EntryPoint);
 };
 

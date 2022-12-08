@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function appartmentManager.appartmentManager_C.CheckAllAppartments
+struct AappartmentManager_C_CheckAllAppartments_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function appartmentManager.appartmentManager_C.SortHideouts
+struct AappartmentManager_C_SortHideouts_Params
+{
+	TArray<class ArentAppartmentArea_C*>               UnsortedArray;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class ArentAppartmentArea_C*>               SortedArray;                                              // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function appartmentManager.appartmentManager_C.getWallPicker
 struct AappartmentManager_C_getWallPicker_Params
@@ -44,6 +57,11 @@ struct AappartmentManager_C_UserConstructionScript_Params
 {
 };
 
+// Function appartmentManager.appartmentManager_C.prevViewAppartment
+struct AappartmentManager_C_prevViewAppartment_Params
+{
+};
+
 // Function appartmentManager.appartmentManager_C.rentAction
 struct AappartmentManager_C_rentAction_Params
 {
@@ -69,11 +87,6 @@ struct AappartmentManager_C_checkAppartmentPayments_Params
 {
 };
 
-// Function appartmentManager.appartmentManager_C.prevViewAppartment
-struct AappartmentManager_C_prevViewAppartment_Params
-{
-};
-
 // Function appartmentManager.appartmentManager_C.nextViewAppartment
 struct AappartmentManager_C_nextViewAppartment_Params
 {
@@ -81,11 +94,6 @@ struct AappartmentManager_C_nextViewAppartment_Params
 
 // Function appartmentManager.appartmentManager_C.refreshAppartments
 struct AappartmentManager_C_refreshAppartments_Params
-{
-};
-
-// Function appartmentManager.appartmentManager_C.terminateRenting
-struct AappartmentManager_C_terminateRenting_Params
 {
 };
 
@@ -97,6 +105,11 @@ struct AappartmentManager_C_ChangeViewAppartment_Params
 
 // Function appartmentManager.appartmentManager_C.startAppartmentViewer
 struct AappartmentManager_C_startAppartmentViewer_Params
+{
+};
+
+// Function appartmentManager.appartmentManager_C.terminateRenting
+struct AappartmentManager_C_terminateRenting_Params
 {
 };
 
@@ -126,6 +139,16 @@ struct AappartmentManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSa
 {
 	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function appartmentManager.appartmentManager_C.NewAppartmentsPopup
+struct AappartmentManager_C_NewAppartmentsPopup_Params
+{
+};
+
+// Function appartmentManager.appartmentManager_C.OpenPopup
+struct AappartmentManager_C_OpenPopup_Params
+{
 };
 
 // Function appartmentManager.appartmentManager_C.ExecuteUbergraph_appartmentManager

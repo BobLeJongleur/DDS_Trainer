@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,6 +89,23 @@ void AcomputerMirror_C::storeMeBack()
 	static auto fn = UObject::FindObject<UFunction>("Function computerMirror.computerMirror_C.storeMeBack");
 
 	AcomputerMirror_C_storeMeBack_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function computerMirror.computerMirror_C.verifyCorrectNaming
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AcomputerMirror_C::verifyCorrectNaming()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function computerMirror.computerMirror_C.verifyCorrectNaming");
+
+	AcomputerMirror_C_verifyCorrectNaming_Params params;
 
 	auto flags = fn->FunctionFlags;
 

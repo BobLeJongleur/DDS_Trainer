@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -104,17 +104,17 @@ void UworkStationSubstanceAddWidget_C::Construct()
 }
 
 
-// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.Setup
+// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AinteractiveBaseObject_C* SelectedSubstance              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AworkStationEquipmentBase_C* equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UworkStationSubstanceAddWidget_C::Setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* equipment)
+void UworkStationSubstanceAddWidget_C::setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* equipment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.setup");
 
-	UworkStationSubstanceAddWidget_C_Setup_Params params;
+	UworkStationSubstanceAddWidget_C_setup_Params params;
 	params.SelectedSubstance = SelectedSubstance;
 	params.equipment = equipment;
 

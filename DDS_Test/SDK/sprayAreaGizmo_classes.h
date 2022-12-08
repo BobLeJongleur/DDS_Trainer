@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sprayAreaGizmo.sprayAreaGizmo_C
-// 0x00A8 (0x03D0 - 0x0328)
+// 0x00B4 (0x03DC - 0x0328)
 class AsprayAreaGizmo_C : public AActor
 {
 public:
@@ -46,6 +46,8 @@ public:
 	int                                                curAreaID;                                                // 0x03B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UDataTable*                                  SaleAreas;                                                // 0x03B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<class AgoHomePoint_C*>                      OverlappedGoHomePoints;                                   // 0x03C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	class AVillaPropertyInstance_C*                    RelatedVilla;                                             // 0x03D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	float                                              VillaRespectBoost;                                        // 0x03D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

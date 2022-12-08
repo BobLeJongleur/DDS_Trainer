@@ -369,7 +369,10 @@ struct FString : private TArray<wchar_t>
 
 	std::string ToString() const
 	{
-		auto length = std::wcslen(Data);
+		size_t length = 0;
+
+		if (Count > 0)
+			length = std::wcslen(Data);
 
 		std::string str(length, '\0');
 
@@ -417,7 +420,10 @@ struct FString8 : TArray<char>
 
 	std::string ToString() const
 	{
-		auto length = std::strlen(Data);
+		size_t length = 0;
+
+		if (Count > 0)
+			length = std::strlen(Data);
 
 		std::string str(length, '\0');
 
@@ -428,7 +434,9 @@ struct FString8 : TArray<char>
 
 	inline FString8* operator+(const char* str)
 	{
-		size_t len = std::strlen(str);
+		size_t len = 0;
+		if (Count > 0)
+			len = std::strlen(str);
 
 		for (size_t i = 0; i < len; i++)
 		{

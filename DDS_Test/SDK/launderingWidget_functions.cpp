@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,16 +33,16 @@ void UlaunderingWidget_C::launderCashFunctions(int Amount)
 }
 
 
-// Function launderingWidget.launderingWidget_C.Setup
+// Function launderingWidget.launderingWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PlayerMoney                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UlaunderingWidget_C::Setup(int PlayerMoney)
+void UlaunderingWidget_C::setup(int PlayerMoney)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function launderingWidget.launderingWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function launderingWidget.launderingWidget_C.setup");
 
-	UlaunderingWidget_C_Setup_Params params;
+	UlaunderingWidget_C_setup_Params params;
 	params.PlayerMoney = PlayerMoney;
 
 	auto flags = fn->FunctionFlags;

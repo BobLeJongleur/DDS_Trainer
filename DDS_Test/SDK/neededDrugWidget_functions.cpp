@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function neededDrugWidget.neededDrugWidget_C.Setup
+// Function neededDrugWidget.neededDrugWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FdrugData               drugData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UneededDrugWidget_C::Setup(const struct FdrugData& drugData, int Quantity)
+void UneededDrugWidget_C::setup(const struct FdrugData& drugData, int Quantity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function neededDrugWidget.neededDrugWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function neededDrugWidget.neededDrugWidget_C.setup");
 
-	UneededDrugWidget_C_Setup_Params params;
+	UneededDrugWidget_C_setup_Params params;
 	params.drugData = drugData;
 	params.Quantity = Quantity;
 

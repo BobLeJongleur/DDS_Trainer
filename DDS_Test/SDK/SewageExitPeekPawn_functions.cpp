@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -150,19 +150,19 @@ void ASewageExitPeekPawn_C::InpAxisEvt_LookSideways_K2Node_InputAxisEvent_1(floa
 }
 
 
-// Function SewageExitPeekPawn.SewageExitPeekPawn_C.Setup
+// Function SewageExitPeekPawn.SewageExitPeekPawn_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AsewageExit_C*           ExitLadderRef                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ASewageExitPeekPawn_C::Setup(class AsewageExit_C* ExitLadderRef, class AplayerCharacterBP_C* PlayerRef)
+void ASewageExitPeekPawn_C::setup(class AsewageExit_C* ExitLadderRef, class AplayerCharacterBP_C* playerRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SewageExitPeekPawn.SewageExitPeekPawn_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function SewageExitPeekPawn.SewageExitPeekPawn_C.setup");
 
-	ASewageExitPeekPawn_C_Setup_Params params;
+	ASewageExitPeekPawn_C_setup_Params params;
 	params.ExitLadderRef = ExitLadderRef;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 

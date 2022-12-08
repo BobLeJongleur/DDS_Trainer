@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ public:
 
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(float respAmount, float respectNow, float respectAfter, float respectMax, int gangLevel, bool levelUp);
+	void setup(float respAmount, float respectNow, float respectAfter, float respectMax, int gangLevel, bool levelUp);
 	void ExecuteUbergraph_gangReputationWidget(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass AppManageShippmentListItem.AppManageShippmentListItem_C
-// 0x0080 (0x0288 - 0x0208)
+// 0x0088 (0x0290 - 0x0208)
 class UAppManageShippmentListItem_C : public UUserWidget
 {
 public:
@@ -29,6 +29,7 @@ public:
 	class ArentAppartmentArea_C*                       ShipAppartment;                                           // 0x0250(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FText                                       ToolTip;                                                  // 0x0258(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FText                                       AppNam;                                                   // 0x0270(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class AVillaPropertyInstance_C*                    VillaRef;                                                 // 0x0288(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -39,7 +40,7 @@ public:
 
 	class UWidget* Get_btnChose_ToolTipWidget_1();
 	void UserClickedCancel(const struct FString& ActionID);
-	void Setup(class ArentAppartmentArea_C* AppartmentRef, class UappartmentModeWidget_C* appModeWidget);
+	void setup(class ArentAppartmentArea_C* AppartmentRef, class UappartmentModeWidget_C* appModeWidget, class AVillaPropertyInstance_C* VillaRef);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void UserClickedConfirm(const struct FString& ActionID);
 	void ExecuteUbergraph_AppManageShippmentListItem(int EntryPoint);

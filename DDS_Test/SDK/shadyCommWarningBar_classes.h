@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 
 	class UWidget* Get_mainCanvas_ToolTipWidget_1();
 	void Construct();
-	void Setup(const struct FText& Content, const struct FText& ToolTip);
+	void setup(const struct FText& Content, const struct FText& ToolTip);
 	void playPing();
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);

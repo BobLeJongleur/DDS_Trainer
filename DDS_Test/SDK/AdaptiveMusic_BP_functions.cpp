@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -121,14 +121,14 @@ void AAdaptiveMusic_BP_C::ReceiveTick(float DeltaSeconds)
 // Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.InitiateMe
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAdaptiveMusic_BP_C::InitiateMe(class AplayerCharacterBP_C* PlayerRef)
+void AAdaptiveMusic_BP_C::InitiateMe(class AplayerCharacterBP_C* playerRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.InitiateMe");
 
 	AAdaptiveMusic_BP_C_InitiateMe_Params params;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 
@@ -138,14 +138,14 @@ void AAdaptiveMusic_BP_C::InitiateMe(class AplayerCharacterBP_C* PlayerRef)
 }
 
 
-// Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.StartChaseMusic
+// Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.startChaseMusic
 // (BlueprintCallable, BlueprintEvent)
 
-void AAdaptiveMusic_BP_C::StartChaseMusic()
+void AAdaptiveMusic_BP_C::startChaseMusic()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.StartChaseMusic");
+	static auto fn = UObject::FindObject<UFunction>("Function AdaptiveMusic_BP.AdaptiveMusic_BP_C.startChaseMusic");
 
-	AAdaptiveMusic_BP_C_StartChaseMusic_Params params;
+	AAdaptiveMusic_BP_C_startChaseMusic_Params params;
 
 	auto flags = fn->FunctionFlags;
 

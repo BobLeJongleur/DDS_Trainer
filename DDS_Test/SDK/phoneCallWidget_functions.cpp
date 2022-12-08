@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function phoneCallWidget.phoneCallWidget_C.Setup
+// Function phoneCallWidget.phoneCallWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   CallerName                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -21,11 +21,11 @@ namespace SDK
 // bool                           callDeclined                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 CallTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UphoneCallWidget_C::Setup(const struct FText& CallerName, int callerID, bool callDeclined, const struct FString& CallTime)
+void UphoneCallWidget_C::setup(const struct FText& CallerName, int callerID, bool callDeclined, const struct FString& CallTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function phoneCallWidget.phoneCallWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function phoneCallWidget.phoneCallWidget_C.setup");
 
-	UphoneCallWidget_C_Setup_Params params;
+	UphoneCallWidget_C_setup_Params params;
 	params.CallerName = CallerName;
 	params.callerID = callerID;
 	params.callDeclined = callDeclined;

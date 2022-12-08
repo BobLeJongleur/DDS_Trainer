@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function policePatrolArea.policePatrolArea_C.CheckSpecialFlag
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          AddChance                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ApolicePatrolArea_C::CheckSpecialFlag(float* AddChance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.CheckSpecialFlag");
+
+	ApolicePatrolArea_C_CheckSpecialFlag_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (AddChance != nullptr)
+		*AddChance = params.AddChance;
+}
+
 
 // Function policePatrolArea.policePatrolArea_C.GetPatrolSpawnChances
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -227,6 +249,23 @@ void ApolicePatrolArea_C::ResetSpawnGate()
 	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.ResetSpawnGate");
 
 	ApolicePatrolArea_C_ResetSpawnGate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function policePatrolArea.policePatrolArea_C.ForceSpawnPatrol
+// (BlueprintCallable, BlueprintEvent)
+
+void ApolicePatrolArea_C::ForceSpawnPatrol()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.ForceSpawnPatrol");
+
+	ApolicePatrolArea_C_ForceSpawnPatrol_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -171,6 +171,23 @@ void AdialogueInstance_C::DialogueActivated()
 	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.DialogueActivated");
 
 	AdialogueInstance_C_DialogueActivated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function dialogueInstance.dialogueInstance_C.SubclassLoaded
+// (BlueprintCallable, BlueprintEvent)
+
+void AdialogueInstance_C::SubclassLoaded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueInstance.dialogueInstance_C.SubclassLoaded");
+
+	AdialogueInstance_C_SubclassLoaded_Params params;
 
 	auto flags = fn->FunctionFlags;
 

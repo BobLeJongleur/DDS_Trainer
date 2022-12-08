@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,17 +30,17 @@ void UgameTipPopup_C::Construct()
 }
 
 
-// Function gameTipPopup.gameTipPopup_C.Setup
+// Function gameTipPopup.gameTipPopup_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UgameTipPopup_C::Setup(const struct FText& Title, const struct FText& Description)
+void UgameTipPopup_C::setup(const struct FText& Title, const struct FText& Description)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function gameTipPopup.gameTipPopup_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function gameTipPopup.gameTipPopup_C.setup");
 
-	UgameTipPopup_C_Setup_Params params;
+	UgameTipPopup_C_setup_Params params;
 	params.Title = Title;
 	params.Description = Description;
 

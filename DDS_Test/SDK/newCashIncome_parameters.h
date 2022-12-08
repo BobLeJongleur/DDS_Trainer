@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,8 +19,8 @@ struct UnewCashIncome_C_Construct_Params
 {
 };
 
-// Function newCashIncome.newCashIncome_C.Setup
-struct UnewCashIncome_C_Setup_Params
+// Function newCashIncome.newCashIncome_C.setup
+struct UnewCashIncome_C_setup_Params
 {
 	int                                                CashAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

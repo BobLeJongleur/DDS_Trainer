@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UtutorialTipWidget_C::Construct()
 }
 
 
-// Function tutorialTipWidget.tutorialTipWidget_C.Setup
+// Function tutorialTipWidget.tutorialTipWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UtutorialTipWidget_C::Setup(const struct FText& Text)
+void UtutorialTipWidget_C::setup(const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function tutorialTipWidget.tutorialTipWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function tutorialTipWidget.tutorialTipWidget_C.setup");
 
-	UtutorialTipWidget_C_Setup_Params params;
+	UtutorialTipWidget_C_setup_Params params;
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass useSlotWidget.useSlotWidget_C
-// 0x0158 (0x0360 - 0x0208)
+// 0x0178 (0x0380 - 0x0208)
 class UuseSlotWidget_C : public UUserWidget
 {
 public:
@@ -28,6 +28,8 @@ public:
 	struct FinventoryItemStruct                        Data;                                                     // 0x0250(0x0108) (Edit, BlueprintVisible, DisableEditOnInstance)
 	int                                                SourceIndex;                                              // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                useNum;                                                   // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ItemID;                                                   // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FText                                       Name;                                                     // 0x0368(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -36,6 +38,7 @@ public:
 	}
 
 
+	class UWidget* GetToolTipWidget_2();
 	void setUseContent(const struct FinventoryItemStruct& Data, int SourceIndex, const struct FString& SourceString);
 	class UWidget* GetToolTipWidget_1();
 	void createUsedPackage(struct FinventoryItemStruct* NewData, bool* UsedAll);

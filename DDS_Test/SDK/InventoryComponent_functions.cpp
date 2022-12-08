@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -404,17 +404,17 @@ void UInventoryComponent_C::RemoveItemOfType(const struct FName& ItemID, int Qua
 }
 
 
-// Function InventoryComponent.InventoryComponent_C.RemoveItem
+// Function InventoryComponent.InventoryComponent_C.removeItem
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGuid                   LocalGuid                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UInventoryComponent_C::RemoveItem(const struct FGuid& LocalGuid, int Quantity)
+void UInventoryComponent_C::removeItem(const struct FGuid& LocalGuid, int Quantity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryComponent.InventoryComponent_C.RemoveItem");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryComponent.InventoryComponent_C.removeItem");
 
-	UInventoryComponent_C_RemoveItem_Params params;
+	UInventoryComponent_C_removeItem_Params params;
 	params.LocalGuid = LocalGuid;
 	params.Quantity = Quantity;
 

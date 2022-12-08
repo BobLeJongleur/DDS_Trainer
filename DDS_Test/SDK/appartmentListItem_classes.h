@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void Construct();
-	void Setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool selected);
+	void setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool selected);
 	void ExecuteUbergraph_appartmentListItem(int EntryPoint);
 };
 

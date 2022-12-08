@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,10 +76,13 @@ struct UpackageProductWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function packageProductWidget.packageProductWidget_C.Setup
-struct UpackageProductWidget_C_Setup_Params
+// Function packageProductWidget.packageProductWidget_C.setup
+struct UpackageProductWidget_C_setup_Params
 {
 	class AworkStationEquipmentBase_C*                 EqRef;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       DrugOverride;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FMixProportionsStruct                       MixOverride;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	float                                              Mass;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function packageProductWidget.packageProductWidget_C.BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
@@ -106,6 +109,12 @@ struct UpackageProductWidget_C_BndEvt__btnAddInventory_K2Node_ComponentBoundEven
 struct UpackageProductWidget_C_ExecuteUbergraph_packageProductWidget_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function packageProductWidget.packageProductWidget_C.TookMass__DelegateSignature
+struct UpackageProductWidget_C_TookMass__DelegateSignature_Params
+{
+	float                                              Mass;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

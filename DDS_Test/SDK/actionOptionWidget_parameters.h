@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function actionOptionWidget.actionOptionWidget_C.Setup
-struct UactionOptionWidget_C_Setup_Params
+// Function actionOptionWidget.actionOptionWidget_C.setup
+struct UactionOptionWidget_C_setup_Params
 {
 	bool                                               InitActive;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ActionName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -24,7 +24,7 @@ struct UactionOptionWidget_C_Setup_Params
 // Function actionOptionWidget.actionOptionWidget_C.SetActive
 struct UactionOptionWidget_C_SetActive_Params
 {
-	bool                                               activated;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Activated;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function actionOptionWidget.actionOptionWidget_C.Construct

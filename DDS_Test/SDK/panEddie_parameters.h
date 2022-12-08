@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,6 +31,11 @@ struct ApanEddie_C_tryDisappear_Params
 
 // Function panEddie.panEddie_C.disappearCheck
 struct ApanEddie_C_disappearCheck_Params
+{
+};
+
+// Function panEddie.panEddie_C.ForceDisappear
+struct ApanEddie_C_ForceDisappear_Params
 {
 };
 

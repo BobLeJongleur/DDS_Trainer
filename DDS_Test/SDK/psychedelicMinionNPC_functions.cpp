@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,6 +72,57 @@ void ApsychedelicMinionNPC_C::retryInitiate()
 	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionNPC.psychedelicMinionNPC_C.retryInitiate");
 
 	ApsychedelicMinionNPC_C_retryInitiate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.RamaLoadedEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void ApsychedelicMinionNPC_C::RamaLoadedEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionNPC.psychedelicMinionNPC_C.RamaLoadedEvent");
+
+	ApsychedelicMinionNPC_C_RamaLoadedEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.SetEndgameDialogue
+// (BlueprintCallable, BlueprintEvent)
+
+void ApsychedelicMinionNPC_C::SetEndgameDialogue()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionNPC.psychedelicMinionNPC_C.SetEndgameDialogue");
+
+	ApsychedelicMinionNPC_C_SetEndgameDialogue_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.OpenedDialogueEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void ApsychedelicMinionNPC_C::OpenedDialogueEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionNPC.psychedelicMinionNPC_C.OpenedDialogueEndgame");
+
+	ApsychedelicMinionNPC_C_OpenedDialogueEndgame_Params params;
 
 	auto flags = fn->FunctionFlags;
 

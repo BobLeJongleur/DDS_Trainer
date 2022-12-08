@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,15 +16,15 @@ namespace SDK
 // Function PM_CheckpointGuard.PM_CheckpointGuard_C.checkBackpackForIllegals
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AbackpackBase_C*         backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AbackpackBase_C*         Backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APM_CheckpointGuard_C::checkBackpackForIllegals(class AbackpackBase_C* backpack, bool* Found)
+void APM_CheckpointGuard_C::checkBackpackForIllegals(class AbackpackBase_C* Backpack, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.checkBackpackForIllegals");
 
 	APM_CheckpointGuard_C_checkBackpackForIllegals_Params params;
-	params.backpack = backpack;
+	params.Backpack = Backpack;
 
 	auto flags = fn->FunctionFlags;
 
@@ -248,6 +248,23 @@ void APM_CheckpointGuard_C::ReceiveDestroyed()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.ReceiveDestroyed");
 
 	APM_CheckpointGuard_C_ReceiveDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_CheckpointGuard.PM_CheckpointGuard_C.PoliceFoundNothing
+// (BlueprintCallable, BlueprintEvent)
+
+void APM_CheckpointGuard_C::PoliceFoundNothing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_CheckpointGuard.PM_CheckpointGuard_C.PoliceFoundNothing");
+
+	APM_CheckpointGuard_C_PoliceFoundNothing_Params params;
 
 	auto flags = fn->FunctionFlags;
 

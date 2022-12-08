@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,7 +66,7 @@ public:
 	void CountInventoryMoney(bool IncludeValuables, int* AllMoney);
 	void GetItemOfGuid(const struct FGuid& LocalGuid, struct FInventoryListStructure* itemData, bool* ItemFound);
 	void RemoveItemOfType(const struct FName& ItemID, int Quantity);
-	void RemoveItem(const struct FGuid& LocalGuid, int Quantity);
+	void removeItem(const struct FGuid& LocalGuid, int Quantity);
 	void HandleOldBackpack(const struct FinventoryItemStruct& backpackData, struct FName* OutName);
 	void GetItemAtPocket(int PocketIndex, bool* HasItem, struct FInventoryListStructure* OutItem, int* ArrayIndex);
 	void GetTotalWeight(float* TotalWeight);

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,7 +106,7 @@ struct FEventReply UAppManageListItem_C::OnMouseButtonDown(const struct FGeometr
 }
 
 
-// Function AppManageListItem.AppManageListItem_C.Setup
+// Function AppManageListItem.AppManageListItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FappartmentEquipment    EqMeta                         (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -114,11 +114,11 @@ struct FEventReply UAppManageListItem_C::OnMouseButtonDown(const struct FGeometr
 // class UAppManageList_C*        MyList                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Quan                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAppManageListItem_C::Setup(const struct FappartmentEquipment& EqMeta, int SourceIndex, class UAppManageList_C* MyList, int Quan)
+void UAppManageListItem_C::setup(const struct FappartmentEquipment& EqMeta, int SourceIndex, class UAppManageList_C* MyList, int Quan)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AppManageListItem.AppManageListItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function AppManageListItem.AppManageListItem_C.setup");
 
-	UAppManageListItem_C_Setup_Params params;
+	UAppManageListItem_C_setup_Params params;
 	params.EqMeta = EqMeta;
 	params.SourceIndex = SourceIndex;
 	params.MyList = MyList;

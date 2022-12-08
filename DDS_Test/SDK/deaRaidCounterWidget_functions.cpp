@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function deaRaidCounterWidget.deaRaidCounterWidget_C.secondsToTime
+// Function deaRaidCounterWidget.deaRaidCounterWidget_C.SecondsToTime
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Seconds                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   timeText                       (Parm, OutParm)
 
-void UdeaRaidCounterWidget_C::secondsToTime(int Seconds, struct FText* timeText)
+void UdeaRaidCounterWidget_C::SecondsToTime(int Seconds, struct FText* timeText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function deaRaidCounterWidget.deaRaidCounterWidget_C.secondsToTime");
+	static auto fn = UObject::FindObject<UFunction>("Function deaRaidCounterWidget.deaRaidCounterWidget_C.SecondsToTime");
 
-	UdeaRaidCounterWidget_C_secondsToTime_Params params;
+	UdeaRaidCounterWidget_C_SecondsToTime_Params params;
 	params.Seconds = Seconds;
 
 	auto flags = fn->FunctionFlags;
@@ -54,16 +54,16 @@ void UdeaRaidCounterWidget_C::Construct()
 }
 
 
-// Function deaRaidCounterWidget.deaRaidCounterWidget_C.Setup
+// Function deaRaidCounterWidget.deaRaidCounterWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            baseSeconds                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UdeaRaidCounterWidget_C::Setup(int baseSeconds)
+void UdeaRaidCounterWidget_C::setup(int baseSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function deaRaidCounterWidget.deaRaidCounterWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function deaRaidCounterWidget.deaRaidCounterWidget_C.setup");
 
-	UdeaRaidCounterWidget_C_Setup_Params params;
+	UdeaRaidCounterWidget_C_setup_Params params;
 	params.baseSeconds = baseSeconds;
 
 	auto flags = fn->FunctionFlags;

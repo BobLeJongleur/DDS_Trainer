@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,43 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_Button_0_bIsEnabled_1
+struct UshadyCommInterface_C_Get_Button_0_bIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_btnSellPtcOpen_bIsEnabled_1
+struct UshadyCommInterface_C_Get_btnSellPtcOpen_bIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.CheckFilter
+struct UshadyCommInterface_C_CheckFilter_Params
+{
+	struct FString                                     Filter;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AssignedArea;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.RenderAreaListDropdown
+struct UshadyCommInterface_C_RenderAreaListDropdown_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_btnEditNickname_Visibility_1
+struct UshadyCommInterface_C_Get_btnEditNickname_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.Get_Button_15_bIsEnabled_1
+struct UshadyCommInterface_C_Get_Button_15_bIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function shadyCommInterface.shadyCommInterface_C.Get_btnAddToOrder_bIsEnabled_1
 struct UshadyCommInterface_C_Get_btnAddToOrder_bIsEnabled_1_Params
@@ -242,6 +279,18 @@ struct UshadyCommInterface_C_renderContacts_Params
 {
 };
 
+// Function shadyCommInterface.shadyCommInterface_C.UserClickedCancel
+struct UshadyCommInterface_C_UserClickedCancel_Params
+{
+	struct FString                                     ActionID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.PreConstruct
+struct UshadyCommInterface_C_PreConstruct_Params
+{
+	bool                                               IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function shadyCommInterface.shadyCommInterface_C.Construct
 struct UshadyCommInterface_C_Construct_Params
 {
@@ -254,8 +303,8 @@ struct UshadyCommInterface_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function shadyCommInterface.shadyCommInterface_C.Setup
-struct UshadyCommInterface_C_Setup_Params
+// Function shadyCommInterface.shadyCommInterface_C.setup
+struct UshadyCommInterface_C_setup_Params
 {
 	class AmainComputer_C*                             parentRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -464,6 +513,61 @@ struct UshadyCommInterface_C_BndEvt__btnPtcCancel_K2Node_ComponentBoundEvent_28_
 
 // Function shadyCommInterface.shadyCommInterface_C.Destruct
 struct UshadyCommInterface_C_Destruct_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnEditNickname_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__btnEditNickname_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__NicknameEdit_K2Node_ComponentBoundEvent_30_OnEditableTextChangedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__NicknameEdit_K2Node_ComponentBoundEvent_30_OnEditableTextChangedEvent__DelegateSignature_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__closeNickname_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__closeNickname_K2Node_ComponentBoundEvent_31_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.UserClickedConfirm
+struct UshadyCommInterface_C_UserClickedConfirm_Params
+{
+	struct FString                                     ActionID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__Button_15_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__Button_15_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__ContactListFilter_K2Node_ComponentBoundEvent_33_OnSelectionChangedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__ContactListFilter_K2Node_ComponentBoundEvent_33_OnSelectionChangedEvent__DelegateSignature_Params
+{
+	struct FString                                     SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnSellPtcOpen_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__btnSellPtcOpen_K2Node_ComponentBoundEvent_34_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_35_OnSpinBoxValueChangedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_35_OnSpinBoxValueChangedEvent__DelegateSignature_Params
+{
+	float                                              InValue;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_36_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_36_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function shadyCommInterface.shadyCommInterface_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature
+struct UshadyCommInterface_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

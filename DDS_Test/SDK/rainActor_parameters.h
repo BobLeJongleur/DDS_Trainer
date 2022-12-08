@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,6 +42,11 @@ struct ArainActor_C_retrySetup_Params
 
 // Function rainActor.rainActor_C.checkWeatherConditions
 struct ArainActor_C_checkWeatherConditions_Params
+{
+};
+
+// Function rainActor.rainActor_C.EngageMaxRain
+struct ArainActor_C_EngageMaxRain_Params
 {
 };
 

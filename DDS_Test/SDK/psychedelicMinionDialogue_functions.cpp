@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -213,6 +213,23 @@ void ApsychedelicMinionDialogue_C::checkDestroy()
 	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionDialogue.psychedelicMinionDialogue_C.checkDestroy");
 
 	ApsychedelicMinionDialogue_C_checkDestroy_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function psychedelicMinionDialogue.psychedelicMinionDialogue_C.EnablePsychBypass
+// (BlueprintCallable, BlueprintEvent)
+
+void ApsychedelicMinionDialogue_C::EnablePsychBypass()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function psychedelicMinionDialogue.psychedelicMinionDialogue_C.EnablePsychBypass");
+
+	ApsychedelicMinionDialogue_C_EnablePsychBypass_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,15 +93,15 @@ void UskillLevelWidget_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 // Function skillLevelWidget.skillLevelWidget_C.SetValues
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          skillLevel                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          SkillLevel                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SkillMax                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UskillLevelWidget_C::SetValues(float skillLevel, float SkillMax)
+void UskillLevelWidget_C::SetValues(float SkillLevel, float SkillMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function skillLevelWidget.skillLevelWidget_C.SetValues");
 
 	UskillLevelWidget_C_SetValues_Params params;
-	params.skillLevel = skillLevel;
+	params.SkillLevel = SkillLevel;
 	params.SkillMax = SkillMax;
 
 	auto flags = fn->FunctionFlags;

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,12 +19,12 @@ struct UmixListWidget_C_Construct_Params
 {
 };
 
-// Function mixListWidget.mixListWidget_C.Setup
-struct UmixListWidget_C_Setup_Params
+// Function mixListWidget.mixListWidget_C.setup
+struct UmixListWidget_C_setup_Params
 {
 	struct FText                                       Substance;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              totalMass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              TotalMass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function mixListWidget.mixListWidget_C.ExecuteUbergraph_mixListWidget

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function settingsWidget.settingsWidget_C.UpdateActiveColor
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UsettingsWidget_C::UpdateActiveColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function settingsWidget.settingsWidget_C.UpdateActiveColor");
+
+	UsettingsWidget_C_UpdateActiveColor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function settingsWidget.settingsWidget_C.Get_imgHudActiveColor_ColorAndOpacity_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)

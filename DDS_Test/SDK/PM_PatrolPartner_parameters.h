@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function PM_PatrolPartner.PM_PatrolPartner_C.CheckHasPartner
+struct APM_PatrolPartner_C_CheckHasPartner_Params
+{
+	bool                                               HasPartner;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PM_PatrolPartner.PM_PatrolPartner_C.UserConstructionScript
 struct APM_PatrolPartner_C_UserConstructionScript_Params

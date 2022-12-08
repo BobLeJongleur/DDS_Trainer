@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function ws_deskIndustrialSmall.ws_deskIndustrialSmall_C.UserConstructionScript
+struct Aws_deskIndustrialSmall_C_UserConstructionScript_Params
+{
+};
 
 }
 

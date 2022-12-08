@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,13 +36,13 @@ void AweedMoneyTable_C::depositeSafeMoney(int Quantity)
 // Function weedMoneyTable.weedMoneyTable_C.parseInventory
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FinventoryItemStruct> backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FinventoryItemStruct> Backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    backpackQuan                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FinventoryItemStruct> pockets                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    pocketQuan                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            quantityFound                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AweedMoneyTable_C::parseInventory(TArray<struct FinventoryItemStruct>* backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* pockets, TArray<int>* pocketQuan, int* quantityFound)
+void AweedMoneyTable_C::parseInventory(TArray<struct FinventoryItemStruct>* Backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* pockets, TArray<int>* pocketQuan, int* quantityFound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function weedMoneyTable.weedMoneyTable_C.parseInventory");
 
@@ -54,8 +54,8 @@ void AweedMoneyTable_C::parseInventory(TArray<struct FinventoryItemStruct>* back
 
 	fn->FunctionFlags = flags;
 
-	if (backpack != nullptr)
-		*backpack = params.backpack;
+	if (Backpack != nullptr)
+		*Backpack = params.Backpack;
 	if (backpackQuan != nullptr)
 		*backpackQuan = params.backpackQuan;
 	if (pockets != nullptr)

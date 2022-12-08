@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,6 +41,11 @@ struct AcontactsManager_C_generateWeedGuy_Params
 
 // Function contactsManager.contactsManager_C.generatePsychedelicGuy
 struct AcontactsManager_C_generatePsychedelicGuy_Params
+{
+};
+
+// Function contactsManager.contactsManager_C.GenerateGreene
+struct AcontactsManager_C_GenerateGreene_Params
 {
 };
 

@@ -22,7 +22,7 @@ def addict_chances(addict):
     if addict < MIN_ADDICT:
         return 0.0
 
-    return clamp(0.01, (((addict - (MIN_ADDICT / 2.0)) / MAX_ADDICT) / 3.0), 0.1)
+    return clamp(0.01, (((addict - (MIN_ADDICT / 2.0)) / MAX_ADDICT) / 3.0), 0.12)
 
 def main(args):
     print("Toxicity: {:.4f}; Addictiveness: {:.4f}".format(args.tox, args.addict))

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass policePatrolArea.policePatrolArea_C
-// 0x006C (0x0394 - 0x0328)
+// 0x0080 (0x03A8 - 0x0328)
 class ApolicePatrolArea_C : public AActor
 {
 public:
@@ -32,6 +32,9 @@ public:
 	unsigned char                                      UnknownData01[0x6];                                       // 0x0382(0x0006) MISSED OFFSET
 	class APM_PatrolLead_C*                            CurPatrolLead;                                            // 0x0388(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	float                                              spawnTimer;                                               // 0x0390(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
+	struct FName                                       BalanceFlagchanceAdd;                                     // 0x0398(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ApolicePatrolPoint_C*                        SpawnedPoint;                                             // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -40,6 +43,7 @@ public:
 	}
 
 
+	void CheckSpecialFlag(float* AddChance);
 	void GetPatrolSpawnChances(float* Timeout, float* ChanceLow, float* ChanceHigh);
 	void SpawnPatrol(class ApolicePatrolPoint_C* spawnPoint);
 	void chooseSpawnPoint(class ApolicePatrolPoint_C** OutPoint, bool* Succeded, struct FName* FailID);
@@ -51,6 +55,7 @@ public:
 	void restartArea();
 	void LongRadiusChanged(bool InRadius);
 	void ResetSpawnGate();
+	void ForceSpawnPatrol();
 	void ExecuteUbergraph_policePatrolArea(int EntryPoint);
 };
 

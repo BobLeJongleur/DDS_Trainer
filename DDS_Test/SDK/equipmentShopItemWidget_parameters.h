@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,8 +20,8 @@ struct UequipmentShopItemWidget_C_Get_mainHolder_ToolTipWidget_1_Params
 	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
-// Function equipmentShopItemWidget.equipmentShopItemWidget_C.Setup
-struct UequipmentShopItemWidget_C_Setup_Params
+// Function equipmentShopItemWidget.equipmentShopItemWidget_C.setup
+struct UequipmentShopItemWidget_C_setup_Params
 {
 	struct FName                                       EqID;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Price;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

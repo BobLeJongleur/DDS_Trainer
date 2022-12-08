@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct UlevelUpWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function levelUpWidget.levelUpWidget_C.Setup
-struct UlevelUpWidget_C_Setup_Params
+// Function levelUpWidget.levelUpWidget_C.setup
+struct UlevelUpWidget_C_setup_Params
 {
 	int                                                NewLevel;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

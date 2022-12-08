@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,60 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function interactiveBaseObject.interactiveBaseObject_C.GetTargetRot
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AinteractiveBaseObject_C::GetTargetRot()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.GetTargetRot");
+
+	AinteractiveBaseObject_C_GetTargetRot_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetTargetLoc
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector                 InLoc                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Grid                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          InRot                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OutLoc                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutRot                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AinteractiveBaseObject_C::GetTargetLoc(const struct FVector& InLoc, bool Grid, float InRot, struct FVector* OutLoc, float* OutRot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.GetTargetLoc");
+
+	AinteractiveBaseObject_C_GetTargetLoc_Params params;
+	params.InLoc = InLoc;
+	params.Grid = Grid;
+	params.InRot = InRot;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutLoc != nullptr)
+		*OutLoc = params.OutLoc;
+	if (OutRot != nullptr)
+		*OutRot = params.OutRot;
+}
+
+
 // Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AinteractiveBaseObject_C::VerifyBaseSizing(bool* ok)
+void AinteractiveBaseObject_C::VerifyBaseSizing(bool* OK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing");
 
@@ -30,8 +78,8 @@ void AinteractiveBaseObject_C::VerifyBaseSizing(bool* ok)
 
 	fn->FunctionFlags = flags;
 
-	if (ok != nullptr)
-		*ok = params.ok;
+	if (OK != nullptr)
+		*OK = params.OK;
 }
 
 

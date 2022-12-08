@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	void UserConstructionScript();
 	void InpActEvt_Action_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void SitDown(class AplayerCharacterBP_C* PlayerRef);
+	void SitDown(class AplayerCharacterBP_C* playerRef);
 	void Activate();
 	void ExecuteUbergraph_sitDownPlace(int EntryPoint);
 };

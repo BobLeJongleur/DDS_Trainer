@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -486,13 +486,6 @@ struct FMovieSceneEulerTransformPropertySectionTemplate : public FMovieSceneProp
 	struct FMovieScene3DTransformTemplateData          TemplateData;                                             // 0x0048(0x0650)
 };
 
-// ScriptStruct MovieSceneTracks.MovieSceneTransformPropertySectionTemplate
-// 0x0650 (0x0698 - 0x0048)
-struct FMovieSceneTransformPropertySectionTemplate : public FMovieScenePropertySectionTemplate
-{
-	struct FMovieScene3DTransformTemplateData          TemplateData;                                             // 0x0048(0x0650)
-};
-
 // ScriptStruct MovieSceneTracks.MovieSceneVectorPropertySectionTemplate
 // 0x0288 (0x02D0 - 0x0048)
 struct FMovieSceneVectorPropertySectionTemplate : public FMovieScenePropertySectionTemplate
@@ -508,6 +501,13 @@ struct FMovieSceneVectorPropertySectionTemplate : public FMovieScenePropertySect
 struct FMovieSceneStringPropertySectionTemplate : public FMovieScenePropertySectionTemplate
 {
 	struct FMovieSceneStringChannel                    StringCurve;                                              // 0x0048(0x00A0)
+};
+
+// ScriptStruct MovieSceneTracks.MovieSceneTransformPropertySectionTemplate
+// 0x0650 (0x0698 - 0x0048)
+struct FMovieSceneTransformPropertySectionTemplate : public FMovieScenePropertySectionTemplate
+{
+	struct FMovieScene3DTransformTemplateData          TemplateData;                                             // 0x0048(0x0650)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneIntegerPropertySectionTemplate

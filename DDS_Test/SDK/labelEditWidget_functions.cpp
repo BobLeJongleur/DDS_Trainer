@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,18 +73,18 @@ void UlabelEditWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 }
 
 
-// Function labelEditWidget.labelEditWidget_C.Setup
+// Function labelEditWidget.labelEditWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AadditiveContainerBase_C* ParentContainer                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   DefaultName                    (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           DisableCancel                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UlabelEditWidget_C::Setup(class AadditiveContainerBase_C* ParentContainer, const struct FText& DefaultName, bool DisableCancel)
+void UlabelEditWidget_C::setup(class AadditiveContainerBase_C* ParentContainer, const struct FText& DefaultName, bool DisableCancel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function labelEditWidget.labelEditWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function labelEditWidget.labelEditWidget_C.setup");
 
-	UlabelEditWidget_C_Setup_Params params;
+	UlabelEditWidget_C_setup_Params params;
 	params.ParentContainer = ParentContainer;
 	params.DefaultName = DefaultName;
 	params.DisableCancel = DisableCancel;

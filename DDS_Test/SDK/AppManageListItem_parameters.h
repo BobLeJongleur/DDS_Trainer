@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,8 +42,8 @@ struct UAppManageListItem_C_OnMouseButtonDown_Params
 	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function AppManageListItem.AppManageListItem_C.Setup
-struct UAppManageListItem_C_Setup_Params
+// Function AppManageListItem.AppManageListItem_C.setup
+struct UAppManageListItem_C_setup_Params
 {
 	struct FappartmentEquipment                        EqMeta;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                SourceIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

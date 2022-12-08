@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,27 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function saleAreaManagementWidget.saleAreaManagementWidget_C.Get_btnChangeSpray_ToolTipWidget_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UsaleAreaManagementWidget_C::Get_btnChangeSpray_ToolTipWidget_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManagementWidget.saleAreaManagementWidget_C.Get_btnChangeSpray_ToolTipWidget_1");
+
+	UsaleAreaManagementWidget_C_Get_btnChangeSpray_ToolTipWidget_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function saleAreaManagementWidget.saleAreaManagementWidget_C.markerSetAreaVisuals
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

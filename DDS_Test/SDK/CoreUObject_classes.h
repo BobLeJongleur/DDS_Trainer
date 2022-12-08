@@ -78,6 +78,31 @@ public:
 	}
 
 	template<typename T>
+	static T* FindSecondObject()
+	{
+		T* first = nullptr;
+		auto v = T::StaticClass();
+		for (int i = 0; i < SDK::UObject::GetGlobalObjects().Num(); i++)
+		{
+			auto object = SDK::UObject::GetGlobalObjects().GetByIndex(i);
+
+			if (object == nullptr)
+			{
+				continue;
+			}
+
+			if (object->IsA(v))
+			{
+				if (first == nullptr)
+					first = static_cast<T*>(object);
+				else
+					return static_cast<T*>(object);
+			}
+		}
+		return first;
+	}
+
+	template<typename T>
 	static T* FindObjectReversed()
 	{
 		auto v = T::StaticClass();

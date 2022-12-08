@@ -2,6 +2,7 @@
 #include <fstream>
 #include <unordered_set>
 #include <windows.h>
+#include <stdlib.h>
 #include "pch.h"
 #include "ScriptDisassembler.h"
 //#include "utils/mem.h"
@@ -13,6 +14,40 @@ static SDK::AbaseNPC_C* chosenNPC = nullptr;
 static bool lightsEnabled = false;
 static int loopCount = 0;
 
+void refreshMenu(int32_t objCount, void* player, void* statsManager)
+{
+	//system("cls");
+	wprintf_s(L"Global obj count: %d; Player addr: 0x%p; statsManager addr: 0x%p\n\n", objCount, player, statsManager);
+	wprintf_s(L"Commands: \n\
+		Home: Enables debug widets\n\
+		Ins: Add psychedelic offers\n\
+		End: Check client state\n\
+		Page Up: Dump a bunch of scripts\n\
+		F1: Dump some function ptr\n\
+		F2: Sales Manager data\n\
+		F3: Show all available drugs\n\
+		F4: Dump some gang info\n\
+		F5: Get NPCs that have an active order\n\
+		F6: Backpack content\n\
+		F7: Open computer interface\n\
+		F9: Add $1\n\
+		F10: Burst Mothafuckers\n\
+		Pause: Unhook from process\n\n");
+}
+
+void printFlagData(const char* flagName, SDK::UObject* context, SDK::UBlueprintHelpers_C* bpHelper)
+{
+	SDK::FFlagStruct flagData;
+	bool flagExists;
+	auto flagFName = SDK::FName(flagName);
+	bpHelper->STATIC_GetBalanceFlag(flagFName, context, &flagData, &flagExists);
+
+	if (flagExists)
+		wprintf_s(L"%hs: %d; %.2f\n", flagName, flagData.IntValue_11_FA91B6C3429E0A1C69544190AECC9E7B, flagData.FloatValue_4_84C339BE4BFFA59BE99714B615C3B3F7);
+	else
+		wprintf_s(L"%hs doesn't exist in flag table\n", flagName);
+}
+
 DWORD WINAPI InjectedThread(HANDLE hModule)
 {
 	kill = FALSE;
@@ -21,9 +56,13 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 	wprintf_s(L"Hooked\n");
 
+	//1.2.23
+	uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE89A0 - 0x10, 0x2DA5710));
+	//uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
+	
 	//1.1.0
 	// Same as 1.0.8 it seems.
-	uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
+	//uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
 
 	//1.0.8
 	// Found 0x2EE77A0 from a pointer search in CheatEngine, it points to the GObjects in memory. The GObject position in memory comes from UFT 3.1.0.
@@ -43,23 +82,26 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 	SDK::AclothesWardrobeBP_C* wardrobe = SDK::UObject::FindObjectReversed<SDK::AclothesWardrobeBP_C>();
 	SDK::AsalesManager_C* salesManager = SDK::UObject::FindObjectReversed<SDK::AsalesManager_C>();
 	SDK::AstatisticsManager_C* statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
+	auto gangManager = SDK::UObject::FindObjectReversed<SDK::AgangManager_C>();
+	auto bpHelper = SDK::UObject::FindObjectReversed<SDK::UBlueprintHelpers_C>();
 
 	int32_t objCount = SDK::UObject::GetGlobalObjects().Num();
-	wprintf_s(L"Global obj count: %d; Player addr: 0x%p; statsManager addr: 0x%p\n\n", objCount, player, statsManager);
-	wprintf_s(L"Commands: \n\
-		Home: Enables debug widets\n\
-		Ins: Add psychedelic offers\n\
-		End: Check client state\n\
-		Page Up: Dump a bunch of scripts\n\
-		F1: Dump some function ptr\n\
-		F2: Sales Manager data\n\
-		F3: Show all available drugs\n\
-		F4: Give 0xFF exp\n\
-		F5: Get NPCs that have an active order\n\
-		F6: Backpack content\n\
-		F7: Open computer interface\n\
-		F9: Add $1\n\
-		Pause: Unhook from process\n\n");
+	refreshMenu(objCount, player, statsManager);
+	//wprintf_s(L"Global obj count: %d; Player addr: 0x%p; statsManager addr: 0x%p\n\n", objCount, player, statsManager);
+	//wprintf_s(L"Commands: \n\
+	//	Home: Enables debug widets\n\
+	//	Ins: Add psychedelic offers\n\
+	//	End: Check client state\n\
+	//	Page Up: Dump a bunch of scripts\n\
+	//	F1: Dump some function ptr\n\
+	//	F2: Sales Manager data\n\
+	//	F3: Show all available drugs\n\
+	//	F4: Give 0xFF exp\n\
+	//	F5: Get NPCs that have an active order\n\
+	//	F6: Backpack content\n\
+	//	F7: Open computer interface\n\
+	//	F9: Add $1\n\
+	//	Pause: Unhook from process\n\n");
 	while (!kill)
 	{
 		bool updateStatus = false;
@@ -120,6 +162,10 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 			FKismetBytecodeDisassembler disasm = FKismetBytecodeDisassembler();
 			std::vector<std::string> funcNames = std::vector<std::string>();
+			funcNames.push_back("Function gangManager.gangManager_C.restartOrderTimer");
+			funcNames.push_back("Function gangManager.gangManager_C.testDropForQuantity");
+			funcNames.push_back("Function gangManager.gangManager_C.checkOrderDrop");
+			funcNames.push_back("Function gangManager.gangManager_C.constructNewGangOrder");
 			funcNames.push_back("Function playerCharacterBP.playerCharacterBP_C.addMoney");
 			funcNames.push_back("Function salesManager.salesManager_C.addStatsOD");
 			funcNames.push_back("Function salesManager.salesManager_C.checkClientState");
@@ -131,7 +177,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			funcNames.push_back("Function saleAreaManager.saleAreaManager_C.addAreaExposure");
 			funcNames.push_back("Function baseNPC.baseNPC_C.saleReputationUpdate");
 			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.applyMix");
-			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.processMix");
+			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.processMix"); //=> !CRASHES!
 			funcNames.push_back("Function statisticsManager.statisticsManager_C.modifyReputation");
 			funcNames.push_back("Function mainComputer.mainComputer_C.prepareOrderResponse");
 			funcNames.push_back("Function salesManager.salesManager_C.tryDisplayClientState");
@@ -146,7 +192,9 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			funcNames.push_back("Function saleAreaManager.saleAreaManager_C.addAreaExposure");
 			funcNames.push_back("Function baseNPC.baseNPC_C.drugSaleSuccesfull");
 			funcNames.push_back("Function sampleClientBP.sampleClientBP_C.ReceiveBeginPlay");
-			//funcNames.push_back("Function mainComputer.mainComputer_C.ExecuteUbergraph_mainComputer"); => !CRASHES! maybe look into it? read on ubergraph functions first
+			funcNames.push_back("Function mainComputer.mainComputer_C.ExecuteUbergraph_mainComputer"); //=> !CRASHES! maybe look into it? read on ubergraph functions first
+
+			funcNames.push_back("Function BlueprintHelpers.BlueprintHelpers_C.GetBalanceFlag");
 
 			printf_s("Processing %zu scripts\n", funcNames.size());
 			for (auto funcName : funcNames)
@@ -252,17 +300,29 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 				//wprintf_s(L"\t=> %p\n", drug);
 			}
 
-			auto shops = SDK::UObject::FindObjects<SDK::AshopInstance_C>();
-
 			auto additives = std::unordered_set<SDK::FinventoryItemStruct, SDK::FinventoryItemStruct>();
-			for (auto shop : shops)
+
+			auto shopPharmacyInstances = SDK::UObject::FindObjects<SDK::AshopPharmacy_C>();
+			for (auto shop : shopPharmacyInstances)
 			{
 				auto inventory = shop->currentInventory;
 				for (int i = 0; i < inventory.Num(); i++)
 				{
 					auto item = &inventory[i];
-					if (item->Category == SDK::EitemCategories::Drug || item->Category == SDK::EitemCategories::Additives)
+					if (item->Category == SDK::EitemCategories::Drug  || item->Category == SDK::EitemCategories::Additives)
 						additives.insert(*item);
+				}
+			}
+
+			auto shopGasStationInstances = SDK::UObject::FindObjects<SDK::AshopAmyGasStaion_C>();
+			for (auto shop : shopGasStationInstances)
+			{
+				auto inventory = shop->currentInventory;
+				for (int i = 0; i < inventory.Num(); i++)
+				{
+					auto item = &inventory[i];
+					//if (item->Category == SDK::EitemCategories::Drug || item->Category == SDK::EitemCategories::Additives)
+					additives.insert(*item);
 				}
 			}
 
@@ -279,7 +339,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 					drugName = additive.Name.Get();
 
 				wprintf_s(L"tox: %.2f; str: %.2f; mixStr: %.2f; addict: %.2f; ", drug->toxicity, drug->strength, drug->mixStr, drug->addictiveness);
-				wprintf_s(L"name: %ls\n", drugName == nullptr ? L"[NULL]" : drugName);
+				wprintf_s(L"name: %ls; cat: %d\n", drugName == nullptr ? L"[NULL]" : drugName, additive.Category);
 				//wprintf_s(L"\t=> %p\n", drug);
 			}
 		}
@@ -300,12 +360,28 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 		//		wprintf_s(L"\n\t%dg of %ls [tox: %.2f; str: %.2f; add: %.2f] => %p\n", receivedDrugQty, drugName == nullptr ? L"[NULLPTR]" : drugName, receivedDrug->toxicity, receivedDrug->strength, receivedDrug->addictiveness, receivedDrug);
 		//	}
 		//}
+		//if (GetAsyncKeyState(VK_F4) & 1)
+		//{
+		//	/*auto drugStoreUnlocker = SDK::UObject::FindObjectReversed<SDK::AdrugStoreUnlocker_C>();
+		//	drugStoreUnlocker->UnlockStore();*/
+		//	//auto statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
+		//	statsManager->addExp(0xFF);
+		//}
+
 		if (GetAsyncKeyState(VK_F4) & 1)
-		{
-			/*auto drugStoreUnlocker = SDK::UObject::FindObjectReversed<SDK::AdrugStoreUnlocker_C>();
-			drugStoreUnlocker->UnlockStore();*/
-			//auto statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
-			statsManager->addExp(0xFF);
+		{			
+			wprintf_s(L"\nCurrent Order:\n\tSize: %d; Quantity: %d; Quality: %.2f\n\tNext order: %.2f\nInterval range: [%.2f, %.2f]\n\tPrice per gram: %d$\n\tSatisfaction: %.2f; Satisfaction Max: %.2f; Level: %d\n\n",
+				gangManager->curOrderPackageSize, gangManager->curOrderPackageQuantity, gangManager->curOrderPackageQuality,
+				gangManager->nextOrderCountdown,
+				gangManager->gangOrderIntervalMin, gangManager->gangOrderIntervalMax,
+				gangManager->ballenaPricePerGram,
+				gangManager->gangSatisfaction, gangManager->gangSatisfactionMax, gangManager->gangLevel);
+
+			auto context = SDK::UObject::FindObject<SDK::UWorld>();
+			printFlagData("GANG-INTERVAL-MAX-DROP", context, bpHelper);
+			printFlagData("GANG-MAX-LEVEL", context, bpHelper);
+			printFlagData("GANG-ORDER-INTERVAL", context, bpHelper);
+			wprintf_s(L"\n");
 		}
 
 		if (GetAsyncKeyState(VK_F5) & 1)
@@ -376,23 +452,35 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 		}
 
 		if (GetAsyncKeyState(VK_F6) & 1)
-			updateStatus = true;
+		{
+			//updateStatus = true;
+			auto itemNames = player->InventoryComponent->ItemNames;
+			auto inv = player->InventoryComponent;
+			wprintf_s(L"\nInventory stuff [%d]:", itemNames.Num());
+
+			for (int i = 0; i < itemNames.Num(); i++)
+			{
+				wprintf_s(L"\n\t%d: %hs (%d; %d)", i, itemNames[i].GetName(), inv->itemQuantities[i], inv->ItemCurAmount[i]);
+			}
+
+			wprintf_s(L"\n");
+		}
 
 		if (GetAsyncKeyState(VK_F7) & 1)
 		{
-			//computer->openComputer();
-			auto dayTimeController = SDK::UObject::FindObjectReversed<SDK::AdayTimeControler_C>();
+			computer->openComputer();
+			//auto dayTimeController = SDK::UObject::FindObjectReversed<SDK::AdayTimeControler_C>();
 
-			if (lightsEnabled)
-			{
-				dayTimeController->disableStreetLight();
-				lightsEnabled = false;
-			}
-			else
-			{
-				dayTimeController->enableStreetLight();
-				lightsEnabled = true;
-			}
+			//if (lightsEnabled)
+			//{
+			//	dayTimeController->disableStreetLight();
+			//	lightsEnabled = false;
+			//}
+			//else
+			//{
+			//	dayTimeController->enableStreetLight();
+			//	lightsEnabled = true;
+			//}
 		}
 
 		//if (GetAsyncKeyState(VK_F8) & 1)
@@ -508,6 +596,12 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 		{
 			bool success = false;
 			player->addMoney(1, false, &success);
+		}
+
+		if (GetAsyncKeyState(VK_F10) & 1)
+		{
+			auto popManager = SDK::UObject::FindObjectReversed<SDK::ApopulationManager_C>();
+			popManager->burstMothafuckers();
 		}
 
 		if (updateStatus)

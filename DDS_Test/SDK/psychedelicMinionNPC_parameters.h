@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,6 +31,21 @@ struct ApsychedelicMinionNPC_C_checkCanTalk_Params
 
 // Function psychedelicMinionNPC.psychedelicMinionNPC_C.retryInitiate
 struct ApsychedelicMinionNPC_C_retryInitiate_Params
+{
+};
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.RamaLoadedEvent
+struct ApsychedelicMinionNPC_C_RamaLoadedEvent_Params
+{
+};
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.SetEndgameDialogue
+struct ApsychedelicMinionNPC_C_SetEndgameDialogue_Params
+{
+};
+
+// Function psychedelicMinionNPC.psychedelicMinionNPC_C.OpenedDialogueEndgame
+struct ApsychedelicMinionNPC_C_OpenedDialogueEndgame_Params
 {
 };
 

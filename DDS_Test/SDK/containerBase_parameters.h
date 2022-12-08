@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ struct AcontainerBase_C_CanAccessContainer_Params
 struct AcontainerBase_C_AcceptsCategory_Params
 {
 	TEnumAsByte<EitemCategories>                       Category;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function containerBase.containerBase_C.CheckFullyLooted
@@ -83,8 +83,8 @@ struct AcontainerBase_C_resetContentSizes_Params
 {
 };
 
-// Function containerBase.containerBase_C.RemoveItem
-struct AcontainerBase_C_RemoveItem_Params
+// Function containerBase.containerBase_C.removeItem
+struct AcontainerBase_C_removeItem_Params
 {
 	int                                                ItemIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

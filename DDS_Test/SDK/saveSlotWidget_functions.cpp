@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,7 +101,7 @@ void UsaveSlotWidget_C::Construct()
 }
 
 
-// Function saveSlotWidget.saveSlotWidget_C.Setup
+// Function saveSlotWidget.saveSlotWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Occupied                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -110,11 +110,11 @@ void UsaveSlotWidget_C::Construct()
 // int                            Slot_Num                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UsaveLoadWidget_C*       Parent                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UsaveSlotWidget_C::Setup(bool Occupied, const struct FString& SlotCustomName, const struct FString& saveDateTime, int Slot_Num, class UsaveLoadWidget_C* Parent)
+void UsaveSlotWidget_C::setup(bool Occupied, const struct FString& SlotCustomName, const struct FString& saveDateTime, int Slot_Num, class UsaveLoadWidget_C* Parent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function saveSlotWidget.saveSlotWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function saveSlotWidget.saveSlotWidget_C.setup");
 
-	UsaveSlotWidget_C_Setup_Params params;
+	UsaveSlotWidget_C_setup_Params params;
 	params.Occupied = Occupied;
 	params.SlotCustomName = SlotCustomName;
 	params.saveDateTime = saveDateTime;

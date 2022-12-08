@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,8 +25,8 @@ struct UInventoryItemTooltip_C_Construct_Params
 {
 };
 
-// Function InventoryItemTooltip.InventoryItemTooltip_C.Setup
-struct UInventoryItemTooltip_C_Setup_Params
+// Function InventoryItemTooltip.InventoryItemTooltip_C.setup
+struct UInventoryItemTooltip_C_setup_Params
 {
 	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)

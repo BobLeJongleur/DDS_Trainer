@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass newCashIncome.newCashIncome_C
-// 0x0058 (0x0260 - 0x0208)
+// 0x0080 (0x0288 - 0x0208)
 class UnewCashIncome_C : public UUserWidget
 {
 public:
@@ -25,6 +25,7 @@ public:
 	int                                                Amount;                                                   // 0x0230(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0234(0x0004) MISSED OFFSET
 	struct FSlateColor                                 colorRed;                                                 // 0x0238(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                                 activeElementsColor;                                      // 0x0260(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +35,7 @@ public:
 
 
 	void Construct();
-	void Setup(int CashAmount);
+	void setup(int CashAmount);
 	void ExecuteUbergraph_newCashIncome(int EntryPoint);
 };
 

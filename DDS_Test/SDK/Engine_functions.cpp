@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17793,6 +17793,27 @@ int UInstancedStaticMeshComponent::AddInstance(const struct FTransform& Instance
 }
 
 
+// Function Engine.StaticMeshActor.SetMobility
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EComponentMobility> InMobility                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStaticMeshActor::SetMobility(TEnumAsByte<EComponentMobility> InMobility)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshActor.SetMobility");
+
+	AStaticMeshActor_SetMobility_Params params;
+	params.InMobility = InMobility;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.HierarchicalInstancedStaticMeshComponent.RemoveInstances
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -17814,27 +17835,6 @@ bool UHierarchicalInstancedStaticMeshComponent::RemoveInstances(TArray<int> Inst
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMeshActor.SetMobility
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EComponentMobility> InMobility                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void AStaticMeshActor::SetMobility(TEnumAsByte<EComponentMobility> InMobility)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshActor.SetMobility");
-
-	AStaticMeshActor_SetMobility_Params params;
-	params.InMobility = InMobility;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -29301,24 +29301,6 @@ void AEmitter::Activate()
 }
 
 
-// Function Engine.ExponentialHeightFog.OnRep_bEnabled
-// (Native, Public)
-
-void AExponentialHeightFog::OnRep_bEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.ExponentialHeightFog.OnRep_bEnabled");
-
-	AExponentialHeightFog_OnRep_bEnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.ExponentialHeightFogComponent.SetVolumetricFogScatteringDistribution
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -29928,6 +29910,24 @@ void UForceFeedbackComponent::AdjustAttenuation(const struct FForceFeedbackAtten
 
 	UForceFeedbackComponent_AdjustAttenuation_Params params;
 	params.InAttenuationSettings = InAttenuationSettings;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ExponentialHeightFog.OnRep_bEnabled
+// (Native, Public)
+
+void AExponentialHeightFog::OnRep_bEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ExponentialHeightFog.OnRep_bEnabled");
+
+	AExponentialHeightFog_OnRep_bEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30805,6 +30805,1668 @@ void AGameMode::AbortMatch()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameMode.AbortMatch");
 
 	AGameMode_AbortMatch_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameStateBase.OnRep_SpectatorClass
+// (Native, Protected)
+
+void AGameStateBase::OnRep_SpectatorClass()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_SpectatorClass");
+
+	AGameStateBase_OnRep_SpectatorClass_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds
+// (Native, Protected)
+
+void AGameStateBase::OnRep_ReplicatedWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds");
+
+	AGameStateBase_OnRep_ReplicatedWorldTimeSeconds_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay
+// (Native, Protected)
+
+void AGameStateBase::OnRep_ReplicatedHasBegunPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay");
+
+	AGameStateBase_OnRep_ReplicatedHasBegunPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameStateBase.OnRep_GameModeClass
+// (Native, Protected)
+
+void AGameStateBase::OnRep_GameModeClass()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_GameModeClass");
+
+	AGameStateBase_OnRep_GameModeClass_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameStateBase.HasMatchStarted
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AGameStateBase::HasMatchStarted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.HasMatchStarted");
+
+	AGameStateBase_HasMatchStarted_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameStateBase.HasBegunPlay
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AGameStateBase::HasBegunPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.HasBegunPlay");
+
+	AGameStateBase_HasBegunPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameStateBase.GetServerWorldTimeSeconds
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AGameStateBase::GetServerWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetServerWorldTimeSeconds");
+
+	AGameStateBase_GetServerWorldTimeSeconds_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameStateBase.GetPlayerStartTime
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AGameStateBase::GetPlayerStartTime(class AController* Controller)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetPlayerStartTime");
+
+	AGameStateBase_GetPlayerStartTime_Params params;
+	params.Controller = Controller;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameStateBase.GetPlayerRespawnDelay
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AGameStateBase::GetPlayerRespawnDelay(class AController* Controller)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetPlayerRespawnDelay");
+
+	AGameStateBase_GetPlayerRespawnDelay_Params params;
+	params.Controller = Controller;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameState.OnRep_MatchState
+// (Native, Public)
+
+void AGameState::OnRep_MatchState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameState.OnRep_MatchState");
+
+	AGameState_OnRep_MatchState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameState.OnRep_ElapsedTime
+// (Native, Public)
+
+void AGameState::OnRep_ElapsedTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameState.OnRep_ElapsedTime");
+
+	AGameState_OnRep_ElapsedTime_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ValidateSettings
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::ValidateSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ValidateSettings");
+
+	UGameUserSettings_ValidateSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SupportsHDRDisplayOutput
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::SupportsHDRDisplayOutput()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SupportsHDRDisplayOutput");
+
+	UGameUserSettings_SupportsHDRDisplayOutput_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.SetVSyncEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetVSyncEnabled(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetVSyncEnabled");
+
+	UGameUserSettings_SetVSyncEnabled_Params params;
+	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetVisualEffectQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetVisualEffectQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetVisualEffectQuality");
+
+	UGameUserSettings_SetVisualEffectQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetViewDistanceQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetViewDistanceQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetViewDistanceQuality");
+
+	UGameUserSettings_SetViewDistanceQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetToDefaults
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::SetToDefaults()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetToDefaults");
+
+	UGameUserSettings_SetToDefaults_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetTextureQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetTextureQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetTextureQuality");
+
+	UGameUserSettings_SetTextureQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetShadowQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetShadowQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetShadowQuality");
+
+	UGameUserSettings_SetShadowQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetScreenResolution
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FIntPoint               Resolution                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetScreenResolution(const struct FIntPoint& Resolution)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetScreenResolution");
+
+	UGameUserSettings_SetScreenResolution_Params params;
+	params.Resolution = Resolution;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetResolutionScaleValueEx
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewScaleValue                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetResolutionScaleValueEx(float NewScaleValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleValueEx");
+
+	UGameUserSettings_SetResolutionScaleValueEx_Params params;
+	params.NewScaleValue = NewScaleValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetResolutionScaleValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewScaleValue                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetResolutionScaleValue(int NewScaleValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleValue");
+
+	UGameUserSettings_SetResolutionScaleValue_Params params;
+	params.NewScaleValue = NewScaleValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetResolutionScaleNormalized
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewScaleNormalized             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetResolutionScaleNormalized(float NewScaleNormalized)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleNormalized");
+
+	UGameUserSettings_SetResolutionScaleNormalized_Params params;
+	params.NewScaleNormalized = NewScaleNormalized;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetPostProcessingQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetPostProcessingQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetPostProcessingQuality");
+
+	UGameUserSettings_SetPostProcessingQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetOverallScalabilityLevel
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetOverallScalabilityLevel(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetOverallScalabilityLevel");
+
+	UGameUserSettings_SetOverallScalabilityLevel_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetFullscreenMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EWindowMode>       InFullscreenMode               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetFullscreenMode(TEnumAsByte<EWindowMode> InFullscreenMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFullscreenMode");
+
+	UGameUserSettings_SetFullscreenMode_Params params;
+	params.InFullscreenMode = InFullscreenMode;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetFrameRateLimit
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewLimit                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetFrameRateLimit(float NewLimit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFrameRateLimit");
+
+	UGameUserSettings_SetFrameRateLimit_Params params;
+	params.NewLimit = NewLimit;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetFoliageQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetFoliageQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFoliageQuality");
+
+	UGameUserSettings_SetFoliageQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetDynamicResolutionEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetDynamicResolutionEnabled(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetDynamicResolutionEnabled");
+
+	UGameUserSettings_SetDynamicResolutionEnabled_Params params;
+	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetBenchmarkFallbackValues
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameUserSettings::SetBenchmarkFallbackValues()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetBenchmarkFallbackValues");
+
+	UGameUserSettings_SetBenchmarkFallbackValues_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetAudioQualityLevel
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            QualityLevel                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetAudioQualityLevel(int QualityLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetAudioQualityLevel");
+
+	UGameUserSettings_SetAudioQualityLevel_Params params;
+	params.QualityLevel = QualityLevel;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SetAntiAliasingQuality
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::SetAntiAliasingQuality(int Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetAntiAliasingQuality");
+
+	UGameUserSettings_SetAntiAliasingQuality_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.SaveSettings
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::SaveSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SaveSettings");
+
+	UGameUserSettings_SaveSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.RunHardwareBenchmark
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            WorkScale                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CPUMultiplier                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          GPUMultiplier                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::RunHardwareBenchmark(int WorkScale, float CPUMultiplier, float GPUMultiplier)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.RunHardwareBenchmark");
+
+	UGameUserSettings_RunHardwareBenchmark_Params params;
+	params.WorkScale = WorkScale;
+	params.CPUMultiplier = CPUMultiplier;
+	params.GPUMultiplier = GPUMultiplier;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.RevertVideoMode
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameUserSettings::RevertVideoMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.RevertVideoMode");
+
+	UGameUserSettings_RevertVideoMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ResetToCurrentSettings
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::ResetToCurrentSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ResetToCurrentSettings");
+
+	UGameUserSettings_ResetToCurrentSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.LoadSettings
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bForceReload                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::LoadSettings(bool bForceReload)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.LoadSettings");
+
+	UGameUserSettings_LoadSettings_Params params;
+	params.bForceReload = bForceReload;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.IsVSyncEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsVSyncEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsVSyncEnabled");
+
+	UGameUserSettings_IsVSyncEnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsVSyncDirty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsVSyncDirty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsVSyncDirty");
+
+	UGameUserSettings_IsVSyncDirty_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsScreenResolutionDirty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsScreenResolutionDirty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsScreenResolutionDirty");
+
+	UGameUserSettings_IsScreenResolutionDirty_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsHDREnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsHDREnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsHDREnabled");
+
+	UGameUserSettings_IsHDREnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsFullscreenModeDirty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsFullscreenModeDirty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsFullscreenModeDirty");
+
+	UGameUserSettings_IsFullscreenModeDirty_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsDynamicResolutionEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsDynamicResolutionEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDynamicResolutionEnabled");
+
+	UGameUserSettings_IsDynamicResolutionEnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsDynamicResolutionDirty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsDynamicResolutionDirty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDynamicResolutionDirty");
+
+	UGameUserSettings_IsDynamicResolutionDirty_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.IsDirty
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGameUserSettings::IsDirty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDirty");
+
+	UGameUserSettings_IsDirty_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetVisualEffectQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetVisualEffectQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetVisualEffectQuality");
+
+	UGameUserSettings_GetVisualEffectQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetViewDistanceQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetViewDistanceQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetViewDistanceQuality");
+
+	UGameUserSettings_GetViewDistanceQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetTextureQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetTextureQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetTextureQuality");
+
+	UGameUserSettings_GetTextureQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetShadowQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetShadowQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetShadowQuality");
+
+	UGameUserSettings_GetShadowQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetScreenResolution
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FIntPoint UGameUserSettings::GetScreenResolution()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetScreenResolution");
+
+	UGameUserSettings_GetScreenResolution_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetResolutionScaleInformationEx
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          CurrentScaleNormalized         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentScaleValue              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MinScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::GetResolutionScaleInformationEx(float* CurrentScaleNormalized, float* CurrentScaleValue, float* MinScaleValue, float* MaxScaleValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetResolutionScaleInformationEx");
+
+	UGameUserSettings_GetResolutionScaleInformationEx_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CurrentScaleNormalized != nullptr)
+		*CurrentScaleNormalized = params.CurrentScaleNormalized;
+	if (CurrentScaleValue != nullptr)
+		*CurrentScaleValue = params.CurrentScaleValue;
+	if (MinScaleValue != nullptr)
+		*MinScaleValue = params.MinScaleValue;
+	if (MaxScaleValue != nullptr)
+		*MaxScaleValue = params.MaxScaleValue;
+}
+
+
+// Function Engine.GameUserSettings.GetResolutionScaleInformation
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          CurrentScaleNormalized         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            CurrentScaleValue              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            MinScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            MaxScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::GetResolutionScaleInformation(float* CurrentScaleNormalized, int* CurrentScaleValue, int* MinScaleValue, int* MaxScaleValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetResolutionScaleInformation");
+
+	UGameUserSettings_GetResolutionScaleInformation_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CurrentScaleNormalized != nullptr)
+		*CurrentScaleNormalized = params.CurrentScaleNormalized;
+	if (CurrentScaleValue != nullptr)
+		*CurrentScaleValue = params.CurrentScaleValue;
+	if (MinScaleValue != nullptr)
+		*MinScaleValue = params.MinScaleValue;
+	if (MaxScaleValue != nullptr)
+		*MaxScaleValue = params.MaxScaleValue;
+}
+
+
+// Function Engine.GameUserSettings.GetRecommendedResolutionScale
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UGameUserSettings::GetRecommendedResolutionScale()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetRecommendedResolutionScale");
+
+	UGameUserSettings_GetRecommendedResolutionScale_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetPreferredFullscreenMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EWindowMode> UGameUserSettings::GetPreferredFullscreenMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetPreferredFullscreenMode");
+
+	UGameUserSettings_GetPreferredFullscreenMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetPostProcessingQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetPostProcessingQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetPostProcessingQuality");
+
+	UGameUserSettings_GetPostProcessingQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetOverallScalabilityLevel
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetOverallScalabilityLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetOverallScalabilityLevel");
+
+	UGameUserSettings_GetOverallScalabilityLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FIntPoint UGameUserSettings::GetLastConfirmedScreenResolution()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetLastConfirmedScreenResolution");
+
+	UGameUserSettings_GetLastConfirmedScreenResolution_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EWindowMode> UGameUserSettings::GetLastConfirmedFullscreenMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode");
+
+	UGameUserSettings_GetLastConfirmedFullscreenMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetGameUserSettings
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UGameUserSettings*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGameUserSettings* UGameUserSettings::STATIC_GetGameUserSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetGameUserSettings");
+
+	UGameUserSettings_GetGameUserSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetFullscreenMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EWindowMode> UGameUserSettings::GetFullscreenMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFullscreenMode");
+
+	UGameUserSettings_GetFullscreenMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetFrameRateLimit
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UGameUserSettings::GetFrameRateLimit()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFrameRateLimit");
+
+	UGameUserSettings_GetFrameRateLimit_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetFoliageQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetFoliageQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFoliageQuality");
+
+	UGameUserSettings_GetFoliageQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetDesktopResolution
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FIntPoint UGameUserSettings::GetDesktopResolution()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDesktopResolution");
+
+	UGameUserSettings_GetDesktopResolution_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetDefaultWindowPosition
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FIntPoint UGameUserSettings::STATIC_GetDefaultWindowPosition()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultWindowPosition");
+
+	UGameUserSettings_GetDefaultWindowPosition_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetDefaultWindowMode
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EWindowMode> UGameUserSettings::STATIC_GetDefaultWindowMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultWindowMode");
+
+	UGameUserSettings_GetDefaultWindowMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetDefaultResolutionScale
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UGameUserSettings::GetDefaultResolutionScale()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultResolutionScale");
+
+	UGameUserSettings_GetDefaultResolutionScale_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetDefaultResolution
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FIntPoint UGameUserSettings::STATIC_GetDefaultResolution()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultResolution");
+
+	UGameUserSettings_GetDefaultResolution_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetCurrentHDRDisplayNits()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetCurrentHDRDisplayNits");
+
+	UGameUserSettings_GetCurrentHDRDisplayNits_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetAudioQualityLevel
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetAudioQualityLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetAudioQualityLevel");
+
+	UGameUserSettings_GetAudioQualityLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.GetAntiAliasingQuality
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UGameUserSettings::GetAntiAliasingQuality()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetAntiAliasingQuality");
+
+	UGameUserSettings_GetAntiAliasingQuality_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GameUserSettings.EnableHDRDisplayOutput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            DisplayNits                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::EnableHDRDisplayOutput(bool bEnable, int DisplayNits)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.EnableHDRDisplayOutput");
+
+	UGameUserSettings_EnableHDRDisplayOutput_Params params;
+	params.bEnable = bEnable;
+	params.DisplayNits = DisplayNits;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ConfirmVideoMode
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::ConfirmVideoMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ConfirmVideoMode");
+
+	UGameUserSettings_ConfirmVideoMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ApplySettings
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bCheckForCommandLineOverrides  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::ApplySettings(bool bCheckForCommandLineOverrides)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplySettings");
+
+	UGameUserSettings_ApplySettings_Params params;
+	params.bCheckForCommandLineOverrides = bCheckForCommandLineOverrides;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ApplyResolutionSettings
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bCheckForCommandLineOverrides  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGameUserSettings::ApplyResolutionSettings(bool bCheckForCommandLineOverrides)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyResolutionSettings");
+
+	UGameUserSettings_ApplyResolutionSettings_Params params;
+	params.bCheckForCommandLineOverrides = bCheckForCommandLineOverrides;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ApplyNonResolutionSettings
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::ApplyNonResolutionSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyNonResolutionSettings");
+
+	UGameUserSettings_ApplyNonResolutionSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
+// (Native, Public, BlueprintCallable)
+
+void UGameUserSettings::ApplyHardwareBenchmarkResults()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults");
+
+	UGameUserSettings_ApplyHardwareBenchmarkResults_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SpotLight.SetOuterConeAngle
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewOuterConeAngle              (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpotLight::SetOuterConeAngle(float NewOuterConeAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpotLight.SetOuterConeAngle");
+
+	ASpotLight_SetOuterConeAngle_Params params;
+	params.NewOuterConeAngle = NewOuterConeAngle;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SpotLight.SetInnerConeAngle
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewInnerConeAngle              (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpotLight::SetInnerConeAngle(float NewInnerConeAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpotLight.SetInnerConeAngle");
+
+	ASpotLight_SetInnerConeAngle_Params params;
+	params.NewInnerConeAngle = NewInnerConeAngle;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -34003,1668 +35665,6 @@ void UGameplayStatics::STATIC_ActivateReverbEffect(class UObject* WorldContextOb
 }
 
 
-// Function Engine.GameStateBase.OnRep_SpectatorClass
-// (Native, Protected)
-
-void AGameStateBase::OnRep_SpectatorClass()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_SpectatorClass");
-
-	AGameStateBase_OnRep_SpectatorClass_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds
-// (Native, Protected)
-
-void AGameStateBase::OnRep_ReplicatedWorldTimeSeconds()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds");
-
-	AGameStateBase_OnRep_ReplicatedWorldTimeSeconds_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay
-// (Native, Protected)
-
-void AGameStateBase::OnRep_ReplicatedHasBegunPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay");
-
-	AGameStateBase_OnRep_ReplicatedHasBegunPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameStateBase.OnRep_GameModeClass
-// (Native, Protected)
-
-void AGameStateBase::OnRep_GameModeClass()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.OnRep_GameModeClass");
-
-	AGameStateBase_OnRep_GameModeClass_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameStateBase.HasMatchStarted
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AGameStateBase::HasMatchStarted()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.HasMatchStarted");
-
-	AGameStateBase_HasMatchStarted_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameStateBase.HasBegunPlay
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AGameStateBase::HasBegunPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.HasBegunPlay");
-
-	AGameStateBase_HasBegunPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameStateBase.GetServerWorldTimeSeconds
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AGameStateBase::GetServerWorldTimeSeconds()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetServerWorldTimeSeconds");
-
-	AGameStateBase_GetServerWorldTimeSeconds_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameStateBase.GetPlayerStartTime
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AGameStateBase::GetPlayerStartTime(class AController* Controller)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetPlayerStartTime");
-
-	AGameStateBase_GetPlayerStartTime_Params params;
-	params.Controller = Controller;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameStateBase.GetPlayerRespawnDelay
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AGameStateBase::GetPlayerRespawnDelay(class AController* Controller)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameStateBase.GetPlayerRespawnDelay");
-
-	AGameStateBase_GetPlayerRespawnDelay_Params params;
-	params.Controller = Controller;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameState.OnRep_MatchState
-// (Native, Public)
-
-void AGameState::OnRep_MatchState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameState.OnRep_MatchState");
-
-	AGameState_OnRep_MatchState_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameState.OnRep_ElapsedTime
-// (Native, Public)
-
-void AGameState::OnRep_ElapsedTime()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameState.OnRep_ElapsedTime");
-
-	AGameState_OnRep_ElapsedTime_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ValidateSettings
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::ValidateSettings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ValidateSettings");
-
-	UGameUserSettings_ValidateSettings_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SupportsHDRDisplayOutput
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::SupportsHDRDisplayOutput()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SupportsHDRDisplayOutput");
-
-	UGameUserSettings_SupportsHDRDisplayOutput_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.SetVSyncEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetVSyncEnabled(bool bEnable)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetVSyncEnabled");
-
-	UGameUserSettings_SetVSyncEnabled_Params params;
-	params.bEnable = bEnable;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetVisualEffectQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetVisualEffectQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetVisualEffectQuality");
-
-	UGameUserSettings_SetVisualEffectQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetViewDistanceQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetViewDistanceQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetViewDistanceQuality");
-
-	UGameUserSettings_SetViewDistanceQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetToDefaults
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::SetToDefaults()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetToDefaults");
-
-	UGameUserSettings_SetToDefaults_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetTextureQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetTextureQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetTextureQuality");
-
-	UGameUserSettings_SetTextureQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetShadowQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetShadowQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetShadowQuality");
-
-	UGameUserSettings_SetShadowQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetScreenResolution
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FIntPoint               Resolution                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetScreenResolution(const struct FIntPoint& Resolution)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetScreenResolution");
-
-	UGameUserSettings_SetScreenResolution_Params params;
-	params.Resolution = Resolution;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetResolutionScaleValueEx
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewScaleValue                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetResolutionScaleValueEx(float NewScaleValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleValueEx");
-
-	UGameUserSettings_SetResolutionScaleValueEx_Params params;
-	params.NewScaleValue = NewScaleValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetResolutionScaleValue
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            NewScaleValue                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetResolutionScaleValue(int NewScaleValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleValue");
-
-	UGameUserSettings_SetResolutionScaleValue_Params params;
-	params.NewScaleValue = NewScaleValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetResolutionScaleNormalized
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewScaleNormalized             (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetResolutionScaleNormalized(float NewScaleNormalized)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetResolutionScaleNormalized");
-
-	UGameUserSettings_SetResolutionScaleNormalized_Params params;
-	params.NewScaleNormalized = NewScaleNormalized;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetPostProcessingQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetPostProcessingQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetPostProcessingQuality");
-
-	UGameUserSettings_SetPostProcessingQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetOverallScalabilityLevel
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetOverallScalabilityLevel(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetOverallScalabilityLevel");
-
-	UGameUserSettings_SetOverallScalabilityLevel_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetFullscreenMode
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EWindowMode>       InFullscreenMode               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetFullscreenMode(TEnumAsByte<EWindowMode> InFullscreenMode)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFullscreenMode");
-
-	UGameUserSettings_SetFullscreenMode_Params params;
-	params.InFullscreenMode = InFullscreenMode;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetFrameRateLimit
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewLimit                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetFrameRateLimit(float NewLimit)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFrameRateLimit");
-
-	UGameUserSettings_SetFrameRateLimit_Params params;
-	params.NewLimit = NewLimit;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetFoliageQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetFoliageQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetFoliageQuality");
-
-	UGameUserSettings_SetFoliageQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetDynamicResolutionEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetDynamicResolutionEnabled(bool bEnable)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetDynamicResolutionEnabled");
-
-	UGameUserSettings_SetDynamicResolutionEnabled_Params params;
-	params.bEnable = bEnable;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetBenchmarkFallbackValues
-// (Final, Native, Public, BlueprintCallable)
-
-void UGameUserSettings::SetBenchmarkFallbackValues()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetBenchmarkFallbackValues");
-
-	UGameUserSettings_SetBenchmarkFallbackValues_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetAudioQualityLevel
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            QualityLevel                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetAudioQualityLevel(int QualityLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetAudioQualityLevel");
-
-	UGameUserSettings_SetAudioQualityLevel_Params params;
-	params.QualityLevel = QualityLevel;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SetAntiAliasingQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::SetAntiAliasingQuality(int Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SetAntiAliasingQuality");
-
-	UGameUserSettings_SetAntiAliasingQuality_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.SaveSettings
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::SaveSettings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.SaveSettings");
-
-	UGameUserSettings_SaveSettings_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.RunHardwareBenchmark
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            WorkScale                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CPUMultiplier                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          GPUMultiplier                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::RunHardwareBenchmark(int WorkScale, float CPUMultiplier, float GPUMultiplier)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.RunHardwareBenchmark");
-
-	UGameUserSettings_RunHardwareBenchmark_Params params;
-	params.WorkScale = WorkScale;
-	params.CPUMultiplier = CPUMultiplier;
-	params.GPUMultiplier = GPUMultiplier;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.RevertVideoMode
-// (Final, Native, Public, BlueprintCallable)
-
-void UGameUserSettings::RevertVideoMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.RevertVideoMode");
-
-	UGameUserSettings_RevertVideoMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ResetToCurrentSettings
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::ResetToCurrentSettings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ResetToCurrentSettings");
-
-	UGameUserSettings_ResetToCurrentSettings_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.LoadSettings
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bForceReload                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::LoadSettings(bool bForceReload)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.LoadSettings");
-
-	UGameUserSettings_LoadSettings_Params params;
-	params.bForceReload = bForceReload;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.IsVSyncEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsVSyncEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsVSyncEnabled");
-
-	UGameUserSettings_IsVSyncEnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsVSyncDirty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsVSyncDirty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsVSyncDirty");
-
-	UGameUserSettings_IsVSyncDirty_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsScreenResolutionDirty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsScreenResolutionDirty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsScreenResolutionDirty");
-
-	UGameUserSettings_IsScreenResolutionDirty_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsHDREnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsHDREnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsHDREnabled");
-
-	UGameUserSettings_IsHDREnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsFullscreenModeDirty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsFullscreenModeDirty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsFullscreenModeDirty");
-
-	UGameUserSettings_IsFullscreenModeDirty_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsDynamicResolutionEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsDynamicResolutionEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDynamicResolutionEnabled");
-
-	UGameUserSettings_IsDynamicResolutionEnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsDynamicResolutionDirty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsDynamicResolutionDirty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDynamicResolutionDirty");
-
-	UGameUserSettings_IsDynamicResolutionDirty_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.IsDirty
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UGameUserSettings::IsDirty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.IsDirty");
-
-	UGameUserSettings_IsDirty_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetVisualEffectQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetVisualEffectQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetVisualEffectQuality");
-
-	UGameUserSettings_GetVisualEffectQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetViewDistanceQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetViewDistanceQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetViewDistanceQuality");
-
-	UGameUserSettings_GetViewDistanceQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetTextureQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetTextureQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetTextureQuality");
-
-	UGameUserSettings_GetTextureQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetShadowQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetShadowQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetShadowQuality");
-
-	UGameUserSettings_GetShadowQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetScreenResolution
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FIntPoint UGameUserSettings::GetScreenResolution()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetScreenResolution");
-
-	UGameUserSettings_GetScreenResolution_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetResolutionScaleInformationEx
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          CurrentScaleNormalized         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentScaleValue              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          MinScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          MaxScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::GetResolutionScaleInformationEx(float* CurrentScaleNormalized, float* CurrentScaleValue, float* MinScaleValue, float* MaxScaleValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetResolutionScaleInformationEx");
-
-	UGameUserSettings_GetResolutionScaleInformationEx_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (CurrentScaleNormalized != nullptr)
-		*CurrentScaleNormalized = params.CurrentScaleNormalized;
-	if (CurrentScaleValue != nullptr)
-		*CurrentScaleValue = params.CurrentScaleValue;
-	if (MinScaleValue != nullptr)
-		*MinScaleValue = params.MinScaleValue;
-	if (MaxScaleValue != nullptr)
-		*MaxScaleValue = params.MaxScaleValue;
-}
-
-
-// Function Engine.GameUserSettings.GetResolutionScaleInformation
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          CurrentScaleNormalized         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            CurrentScaleValue              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MinScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MaxScaleValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::GetResolutionScaleInformation(float* CurrentScaleNormalized, int* CurrentScaleValue, int* MinScaleValue, int* MaxScaleValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetResolutionScaleInformation");
-
-	UGameUserSettings_GetResolutionScaleInformation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (CurrentScaleNormalized != nullptr)
-		*CurrentScaleNormalized = params.CurrentScaleNormalized;
-	if (CurrentScaleValue != nullptr)
-		*CurrentScaleValue = params.CurrentScaleValue;
-	if (MinScaleValue != nullptr)
-		*MinScaleValue = params.MinScaleValue;
-	if (MaxScaleValue != nullptr)
-		*MaxScaleValue = params.MaxScaleValue;
-}
-
-
-// Function Engine.GameUserSettings.GetRecommendedResolutionScale
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UGameUserSettings::GetRecommendedResolutionScale()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetRecommendedResolutionScale");
-
-	UGameUserSettings_GetRecommendedResolutionScale_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetPreferredFullscreenMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EWindowMode> UGameUserSettings::GetPreferredFullscreenMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetPreferredFullscreenMode");
-
-	UGameUserSettings_GetPreferredFullscreenMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetPostProcessingQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetPostProcessingQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetPostProcessingQuality");
-
-	UGameUserSettings_GetPostProcessingQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetOverallScalabilityLevel
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetOverallScalabilityLevel()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetOverallScalabilityLevel");
-
-	UGameUserSettings_GetOverallScalabilityLevel_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FIntPoint UGameUserSettings::GetLastConfirmedScreenResolution()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetLastConfirmedScreenResolution");
-
-	UGameUserSettings_GetLastConfirmedScreenResolution_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EWindowMode> UGameUserSettings::GetLastConfirmedFullscreenMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode");
-
-	UGameUserSettings_GetLastConfirmedFullscreenMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetGameUserSettings
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UGameUserSettings*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UGameUserSettings* UGameUserSettings::STATIC_GetGameUserSettings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetGameUserSettings");
-
-	UGameUserSettings_GetGameUserSettings_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetFullscreenMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EWindowMode> UGameUserSettings::GetFullscreenMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFullscreenMode");
-
-	UGameUserSettings_GetFullscreenMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetFrameRateLimit
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UGameUserSettings::GetFrameRateLimit()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFrameRateLimit");
-
-	UGameUserSettings_GetFrameRateLimit_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetFoliageQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetFoliageQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetFoliageQuality");
-
-	UGameUserSettings_GetFoliageQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetDesktopResolution
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FIntPoint UGameUserSettings::GetDesktopResolution()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDesktopResolution");
-
-	UGameUserSettings_GetDesktopResolution_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetDefaultWindowPosition
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FIntPoint UGameUserSettings::STATIC_GetDefaultWindowPosition()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultWindowPosition");
-
-	UGameUserSettings_GetDefaultWindowPosition_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetDefaultWindowMode
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EWindowMode>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EWindowMode> UGameUserSettings::STATIC_GetDefaultWindowMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultWindowMode");
-
-	UGameUserSettings_GetDefaultWindowMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetDefaultResolutionScale
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UGameUserSettings::GetDefaultResolutionScale()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultResolutionScale");
-
-	UGameUserSettings_GetDefaultResolutionScale_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetDefaultResolution
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FIntPoint UGameUserSettings::STATIC_GetDefaultResolution()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetDefaultResolution");
-
-	UGameUserSettings_GetDefaultResolution_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetCurrentHDRDisplayNits()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetCurrentHDRDisplayNits");
-
-	UGameUserSettings_GetCurrentHDRDisplayNits_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetAudioQualityLevel
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetAudioQualityLevel()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetAudioQualityLevel");
-
-	UGameUserSettings_GetAudioQualityLevel_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.GetAntiAliasingQuality
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UGameUserSettings::GetAntiAliasingQuality()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.GetAntiAliasingQuality");
-
-	UGameUserSettings_GetAntiAliasingQuality_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.GameUserSettings.EnableHDRDisplayOutput
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DisplayNits                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::EnableHDRDisplayOutput(bool bEnable, int DisplayNits)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.EnableHDRDisplayOutput");
-
-	UGameUserSettings_EnableHDRDisplayOutput_Params params;
-	params.bEnable = bEnable;
-	params.DisplayNits = DisplayNits;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ConfirmVideoMode
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::ConfirmVideoMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ConfirmVideoMode");
-
-	UGameUserSettings_ConfirmVideoMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ApplySettings
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bCheckForCommandLineOverrides  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::ApplySettings(bool bCheckForCommandLineOverrides)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplySettings");
-
-	UGameUserSettings_ApplySettings_Params params;
-	params.bCheckForCommandLineOverrides = bCheckForCommandLineOverrides;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ApplyResolutionSettings
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bCheckForCommandLineOverrides  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UGameUserSettings::ApplyResolutionSettings(bool bCheckForCommandLineOverrides)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyResolutionSettings");
-
-	UGameUserSettings_ApplyResolutionSettings_Params params;
-	params.bCheckForCommandLineOverrides = bCheckForCommandLineOverrides;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ApplyNonResolutionSettings
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::ApplyNonResolutionSettings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyNonResolutionSettings");
-
-	UGameUserSettings_ApplyNonResolutionSettings_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
-// (Native, Public, BlueprintCallable)
-
-void UGameUserSettings::ApplyHardwareBenchmarkResults()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults");
-
-	UGameUserSettings_ApplyHardwareBenchmarkResults_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SpotLight.SetOuterConeAngle
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewOuterConeAngle              (Parm, ZeroConstructor, IsPlainOldData)
-
-void ASpotLight::SetOuterConeAngle(float NewOuterConeAngle)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpotLight.SetOuterConeAngle");
-
-	ASpotLight_SetOuterConeAngle_Params params;
-	params.NewOuterConeAngle = NewOuterConeAngle;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SpotLight.SetInnerConeAngle
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewInnerConeAngle              (Parm, ZeroConstructor, IsPlainOldData)
-
-void ASpotLight::SetInnerConeAngle(float NewInnerConeAngle)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpotLight.SetInnerConeAngle");
-
-	ASpotLight_SetInnerConeAngle_Params params;
-	params.NewInnerConeAngle = NewInnerConeAngle;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.HealthSnapshotBlueprintLibrary.StopPerformanceSnapshots
 // (Final, Exec, Native, Static, Public, BlueprintCallable)
 
@@ -38457,144 +38457,6 @@ void UKismetInternationalizationLibrary::STATIC_ClearCurrentAssetGroupCulture(co
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.KismetMaterialLibrary.SetVectorParameterValue
-// (Final, RequiredAPI, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            ParameterValue                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UKismetMaterialLibrary::STATIC_SetVectorParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName, const struct FLinearColor& ParameterValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.SetVectorParameterValue");
-
-	UKismetMaterialLibrary_SetVectorParameterValue_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Collection = Collection;
-	params.ParameterName = ParameterName;
-	params.ParameterValue = ParameterValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.KismetMaterialLibrary.SetScalarParameterValue
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ParameterValue                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKismetMaterialLibrary::STATIC_SetScalarParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName, float ParameterValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.SetScalarParameterValue");
-
-	UKismetMaterialLibrary_SetScalarParameterValue_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Collection = Collection;
-	params.ParameterName = ParameterName;
-	params.ParameterValue = ParameterValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.KismetMaterialLibrary.GetVectorParameterValue
-// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FLinearColor UKismetMaterialLibrary::STATIC_GetVectorParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.GetVectorParameterValue");
-
-	UKismetMaterialLibrary_GetVectorParameterValue_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Collection = Collection;
-	params.ParameterName = ParameterName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.KismetMaterialLibrary.GetScalarParameterValue
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKismetMaterialLibrary::STATIC_GetScalarParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.GetScalarParameterValue");
-
-	UKismetMaterialLibrary_GetScalarParameterValue_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Collection = Collection;
-	params.ParameterName = ParameterName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialInterface*      Parent                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   OptionalName                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UMaterialInstanceDynamic* UKismetMaterialLibrary::STATIC_CreateDynamicMaterialInstance(class UObject* WorldContextObject, class UMaterialInterface* Parent, const struct FName& OptionalName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance");
-
-	UKismetMaterialLibrary_CreateDynamicMaterialInstance_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Parent = Parent;
-	params.OptionalName = OptionalName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -51827,6 +51689,144 @@ TArray<struct FString> UKismetStringTableLibrary::STATIC_GetKeysFromStringTable(
 }
 
 
+// Function Engine.KismetMaterialLibrary.SetVectorParameterValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            ParameterValue                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UKismetMaterialLibrary::STATIC_SetVectorParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName, const struct FLinearColor& ParameterValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.SetVectorParameterValue");
+
+	UKismetMaterialLibrary_SetVectorParameterValue_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Collection = Collection;
+	params.ParameterName = ParameterName;
+	params.ParameterValue = ParameterValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.KismetMaterialLibrary.SetScalarParameterValue
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ParameterValue                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKismetMaterialLibrary::STATIC_SetScalarParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName, float ParameterValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.SetScalarParameterValue");
+
+	UKismetMaterialLibrary_SetScalarParameterValue_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Collection = Collection;
+	params.ParameterName = ParameterName;
+	params.ParameterValue = ParameterValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.KismetMaterialLibrary.GetVectorParameterValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FLinearColor UKismetMaterialLibrary::STATIC_GetVectorParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.GetVectorParameterValue");
+
+	UKismetMaterialLibrary_GetVectorParameterValue_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Collection = Collection;
+	params.ParameterName = ParameterName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMaterialLibrary.GetScalarParameterValue
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKismetMaterialLibrary::STATIC_GetScalarParameterValue(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const struct FName& ParameterName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.GetScalarParameterValue");
+
+	UKismetMaterialLibrary_GetScalarParameterValue_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Collection = Collection;
+	params.ParameterName = ParameterName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInterface*      Parent                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   OptionalName                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaterialInstanceDynamic* UKismetMaterialLibrary::STATIC_CreateDynamicMaterialInstance(class UObject* WorldContextObject, class UMaterialInterface* Parent, const struct FName& OptionalName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance");
+
+	UKismetMaterialLibrary_CreateDynamicMaterialInstance_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Parent = Parent;
+	params.OptionalName = OptionalName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.KismetSystemLibrary.UnregisterForRemoteNotifications
 // (Final, Native, Static, Public, BlueprintCallable)
 
@@ -61137,31 +61137,6 @@ void UParticleSystemComponent::BeginTrails(const struct FName& InFirstSocketName
 }
 
 
-// Function Engine.PawnNoiseEmitterComponent.MakeNoise
-// (BlueprintAuthorityOnly, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// class AActor*                  NoiseMaker                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NoiseLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UPawnNoiseEmitterComponent::MakeNoise(class AActor* NoiseMaker, float Loudness, const struct FVector& NoiseLocation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnNoiseEmitterComponent.MakeNoise");
-
-	UPawnNoiseEmitterComponent_MakeNoise_Params params;
-	params.NoiseMaker = NoiseMaker;
-	params.Loudness = Loudness;
-	params.NoiseLocation = NoiseLocation;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -61293,6 +61268,31 @@ void UPhysicalAnimationComponent::ApplyPhysicalAnimationProfileBelow(const struc
 	params.ProfileName = ProfileName;
 	params.bIncludeSelf = bIncludeSelf;
 	params.bClearNotFound = bClearNotFound;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PawnNoiseEmitterComponent.MakeNoise
+// (BlueprintAuthorityOnly, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                  NoiseMaker                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NoiseLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UPawnNoiseEmitterComponent::MakeNoise(class AActor* NoiseMaker, float Loudness, const struct FVector& NoiseLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnNoiseEmitterComponent.MakeNoise");
+
+	UPawnNoiseEmitterComponent_MakeNoise_Params params;
+	params.NoiseMaker = NoiseMaker;
+	params.Loudness = Loudness;
+	params.NoiseLocation = NoiseLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -67598,27 +67598,6 @@ bool UTwitterIntegrationBase::AuthorizeAccounts()
 }
 
 
-// Function Engine.VectorFieldComponent.SetIntensity
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewIntensity                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UVectorFieldComponent::SetIntensity(float NewIntensity)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.VectorFieldComponent.SetIntensity");
-
-	UVectorFieldComponent_SetIntensity_Params params;
-	params.NewIntensity = NewIntensity;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.VisualLoggerKismetLibrary.RedirectVislog
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -68050,6 +68029,27 @@ void AWorldSettings::OnRep_WorldGravityZ()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.WorldSettings.OnRep_WorldGravityZ");
 
 	AWorldSettings_OnRep_WorldGravityZ_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.VectorFieldComponent.SetIntensity
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewIntensity                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UVectorFieldComponent::SetIntensity(float NewIntensity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.VectorFieldComponent.SetIntensity");
+
+	UVectorFieldComponent_SetIntensity_Params params;
+	params.NewIntensity = NewIntensity;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

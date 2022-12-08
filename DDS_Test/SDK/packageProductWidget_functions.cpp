@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,17 +221,23 @@ void UpackageProductWidget_C::Tick(const struct FGeometry& MyGeometry, float InD
 }
 
 
-// Function packageProductWidget.packageProductWidget_C.Setup
+// Function packageProductWidget.packageProductWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AworkStationEquipmentBase_C* EqRef                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   DrugOverride                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FMixProportionsStruct   MixOverride                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                          Mass                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UpackageProductWidget_C::Setup(class AworkStationEquipmentBase_C* EqRef)
+void UpackageProductWidget_C::setup(class AworkStationEquipmentBase_C* EqRef, const struct FName& DrugOverride, const struct FMixProportionsStruct& MixOverride, float Mass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function packageProductWidget.packageProductWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function packageProductWidget.packageProductWidget_C.setup");
 
-	UpackageProductWidget_C_Setup_Params params;
+	UpackageProductWidget_C_setup_Params params;
 	params.EqRef = EqRef;
+	params.DrugOverride = DrugOverride;
+	params.MixOverride = MixOverride;
+	params.Mass = Mass;
 
 	auto flags = fn->FunctionFlags;
 
@@ -320,6 +326,26 @@ void UpackageProductWidget_C::ExecuteUbergraph_packageProductWidget(int EntryPoi
 
 	UpackageProductWidget_C_ExecuteUbergraph_packageProductWidget_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function packageProductWidget.packageProductWidget_C.TookMass__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Mass                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UpackageProductWidget_C::TookMass__DelegateSignature(float Mass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function packageProductWidget.packageProductWidget_C.TookMass__DelegateSignature");
+
+	UpackageProductWidget_C_TookMass__DelegateSignature_Params params;
+	params.Mass = Mass;
 
 	auto flags = fn->FunctionFlags;
 

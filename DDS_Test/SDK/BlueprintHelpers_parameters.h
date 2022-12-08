@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BlueprintHelpers.BlueprintHelpers_C.SecondsToTime
+struct UBlueprintHelpers_C_SecondsToTime_Params
+{
+	float                                              TimeSeconds;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       OutTextTime;                                              // (Parm, OutParm)
+};
 
 // Function BlueprintHelpers.BlueprintHelpers_C.DrugFormToText
 struct UBlueprintHelpers_C_DrugFormToText_Params

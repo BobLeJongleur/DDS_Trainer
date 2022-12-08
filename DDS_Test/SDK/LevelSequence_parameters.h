@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,11 +86,6 @@ struct ULevelSequenceBurnIn_GetSettingsClass_Params
 	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-struct ULevelSequenceDirector_OnCreated_Params
-{
-};
-
 // Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
 struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
 {
@@ -99,6 +94,11 @@ struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
 	struct FMovieSceneSequencePlaybackSettings         Settings;                                                 // (Parm)
 	class ALevelSequenceActor*                         OutActor;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class ULevelSequencePlayer*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+struct ULevelSequenceDirector_OnCreated_Params
+{
 };
 
 }

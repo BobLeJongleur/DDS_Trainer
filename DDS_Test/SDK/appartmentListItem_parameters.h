@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ struct UappartmentListItem_C_Construct_Params
 {
 };
 
-// Function appartmentListItem.appartmentListItem_C.Setup
-struct UappartmentListItem_C_Setup_Params
+// Function appartmentListItem.appartmentListItem_C.setup
+struct UappartmentListItem_C_setup_Params
 {
 	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Address;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)

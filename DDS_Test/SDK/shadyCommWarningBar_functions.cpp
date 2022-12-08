@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,17 +51,17 @@ void UshadyCommWarningBar_C::Construct()
 }
 
 
-// Function shadyCommWarningBar.shadyCommWarningBar_C.Setup
+// Function shadyCommWarningBar.shadyCommWarningBar_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Content                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   ToolTip                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UshadyCommWarningBar_C::Setup(const struct FText& Content, const struct FText& ToolTip)
+void UshadyCommWarningBar_C::setup(const struct FText& Content, const struct FText& ToolTip)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shadyCommWarningBar.shadyCommWarningBar_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommWarningBar.shadyCommWarningBar_C.setup");
 
-	UshadyCommWarningBar_C_Setup_Params params;
+	UshadyCommWarningBar_C_setup_Params params;
 	params.Content = Content;
 	params.ToolTip = ToolTip;
 

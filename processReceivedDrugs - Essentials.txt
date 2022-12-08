@@ -51,7 +51,7 @@ def saleRepGain(productQuality):
 def clientSatisfactionGain(strength, expectedDrugProportion, expectedDrugStrength, clientExpectedQuality):
     productStrengthRatio = strength / expectedDrugStrength
 
-    temp = productContentExpectationRatio * 0.2
+    temp = expectedDrugProportion * 0.2
     temp2 = mid(0, productStrengthRatio, 1.5)
 
     productQualityRatio = temp * temp2 + expectedDrugProportion

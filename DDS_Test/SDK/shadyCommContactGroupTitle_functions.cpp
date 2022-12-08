@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,16 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function shadyCommContactGroupTitle.shadyCommContactGroupTitle_C.Setup
+// Function shadyCommContactGroupTitle.shadyCommContactGroupTitle_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UshadyCommContactGroupTitle_C::Setup(const struct FText& Name)
+void UshadyCommContactGroupTitle_C::setup(const struct FText& Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactGroupTitle.shadyCommContactGroupTitle_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactGroupTitle.shadyCommContactGroupTitle_C.setup");
 
-	UshadyCommContactGroupTitle_C_Setup_Params params;
+	UshadyCommContactGroupTitle_C_setup_Params params;
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;

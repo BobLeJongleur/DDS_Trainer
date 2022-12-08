@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,8 +19,8 @@ struct UclientAddictedPopup_C_Construct_Params
 {
 };
 
-// Function clientAddictedPopup.clientAddictedPopup_C.Setup
-struct UclientAddictedPopup_C_Setup_Params
+// Function clientAddictedPopup.clientAddictedPopup_C.setup
+struct UclientAddictedPopup_C_setup_Params
 {
 	struct FText                                       ClientName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       ClientAddictionDrug;                                      // (BlueprintVisible, BlueprintReadOnly, Parm)

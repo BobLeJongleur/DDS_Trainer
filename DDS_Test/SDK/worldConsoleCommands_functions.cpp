@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -778,6 +778,74 @@ void AworldConsoleCommands_C::WyjebChuj()
 	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.WyjebChuj");
 
 	AworldConsoleCommands_C_WyjebChuj_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.KillAllSectants
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::KillAllSectants()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.KillAllSectants");
+
+	AworldConsoleCommands_C_KillAllSectants_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.BuildAllVillas
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::BuildAllVillas()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.BuildAllVillas");
+
+	AworldConsoleCommands_C_BuildAllVillas_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.PsycheDone
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::PsycheDone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.PsycheDone");
+
+	AworldConsoleCommands_C_PsycheDone_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CheatAddExposition
+// (BlueprintCallable, BlueprintEvent)
+
+void AworldConsoleCommands_C::CheatAddExposition()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.CheatAddExposition");
+
+	AworldConsoleCommands_C_CheatAddExposition_Params params;
 
 	auto flags = fn->FunctionFlags;
 

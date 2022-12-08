@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function saleAreaManageMarker.saleAreaManageMarker_C.CheckAllAreas
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            CurAreas                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AsaleAreaManager_C*      saleAreaManager                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           AllAreas                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UsaleAreaManageMarker_C::CheckAllAreas(int CurAreas, class AsaleAreaManager_C* saleAreaManager, bool* AllAreas)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saleAreaManageMarker.saleAreaManageMarker_C.CheckAllAreas");
+
+	UsaleAreaManageMarker_C_CheckAllAreas_Params params;
+	params.CurAreas = CurAreas;
+	params.saleAreaManager = saleAreaManager;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (AllAreas != nullptr)
+		*AllAreas = params.AllAreas;
+}
+
 
 // Function saleAreaManageMarker.saleAreaManageMarker_C.setParentReference
 // (Public, BlueprintCallable, BlueprintEvent)

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,26 @@ void AdecoOldschoolCeilingLamp2_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.UserConstructionScript");
 
 	AdecoOldschoolCeilingLamp2_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.SetLightState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           LightOn                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AdecoOldschoolCeilingLamp2_C::SetLightState(bool LightOn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.SetLightState");
+
+	AdecoOldschoolCeilingLamp2_C_SetLightState_Params params;
+	params.LightOn = LightOn;
 
 	auto flags = fn->FunctionFlags;
 

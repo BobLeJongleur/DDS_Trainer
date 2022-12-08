@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,18 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.Setup
+// Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Source                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UbankHistoryRecordWidget_C::Setup(const struct FText& Source, const struct FText& Title, float Amount)
+void UbankHistoryRecordWidget_C::setup(const struct FText& Source, const struct FText& Title, float Amount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.setup");
 
-	UbankHistoryRecordWidget_C_Setup_Params params;
+	UbankHistoryRecordWidget_C_setup_Params params;
 	params.Source = Source;
 	params.Title = Title;
 	params.Amount = Amount;

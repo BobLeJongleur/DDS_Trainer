@@ -1,0 +1,532 @@
+
+Label_0x0:
+  
+    $19: Context
+      ObjectExpression:
+        $1: Instance variable named InventoryComponent
+      Skip Bytes:
+        0xA4
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named AddItem
+          $21: literal name ITEM-MONEY
+        
+          $29: literal text - empty
+        
+          $0: Local variable named Amount
+        
+          $1D: literal int32_t 0
+        
+          $2F: literal struct MixProportionsStruct (serialized size: 64)
+            $65: set array const - elements number: 0, inner property: MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16
+              $66: EX_EndArrayConst
+            
+          
+            $65: set array const - elements number: 0, inner property: MixProportions_7_B6CEC0E14F7E77A2F3CFCEB78B49F4C0
+              $66: EX_EndArrayConst
+            
+          
+            $24: literal byte 0
+          
+            $1E: literal float 0.000000
+          
+            $29: literal text - empty
+          
+            $30: EX_EndStructConst
+          
+        
+          $2F: literal struct Guid (serialized size: 16)
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $30: EX_EndStructConst
+          
+        
+          $28: EX_False
+        
+          $28: EX_False
+        
+          $1D: literal int32_t -1
+        
+          $28: EX_False
+        
+          $27: EX_True
+        
+          $0: Local variable named CallFunc_AddItem_AllAdded1
+        
+          $0: Local variable named CallFunc_AddItem_QuantityLeft1
+        
+          $0: Local variable named CallFunc_AddItem_OutLocalGuid1
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0xBA:
+  
+    $7: Jump to offset 0x377 if not expr:
+      $0: Local variable named CallFunc_AddItem_AllAdded1
+    
+  
+
+Label_0xC8:
+  
+    $19: Context
+      ObjectExpression:
+        $1: Instance variable named InventoryComponent
+      Skip Bytes:
+        0xA4
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named AddItem
+          $21: literal name ITEM-MONEY
+        
+          $29: literal text - empty
+        
+          $0: Local variable named Amount
+        
+          $1D: literal int32_t 0
+        
+          $2F: literal struct MixProportionsStruct (serialized size: 64)
+            $65: set array const - elements number: 0, inner property: MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16
+              $66: EX_EndArrayConst
+            
+          
+            $65: set array const - elements number: 0, inner property: MixProportions_7_B6CEC0E14F7E77A2F3CFCEB78B49F4C0
+              $66: EX_EndArrayConst
+            
+          
+            $24: literal byte 0
+          
+            $1E: literal float 0.000000
+          
+            $29: literal text - empty
+          
+            $30: EX_EndStructConst
+          
+        
+          $2F: literal struct Guid (serialized size: 16)
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $1D: literal int32_t 0
+          
+            $30: EX_EndStructConst
+          
+        
+          $28: EX_False
+        
+          $28: EX_False
+        
+          $1D: literal int32_t -1
+        
+          $28: EX_False
+        
+          $28: EX_False
+        
+          $0: Local variable named CallFunc_AddItem_AllAdded
+        
+          $0: Local variable named CallFunc_AddItem_QuantityLeft
+        
+          $0: Local variable named CallFunc_AddItem_OutLocalGuid
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x182:
+  
+    $5F: Let Obj (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (00000242218A4B40:WidgetBlueprintLibrary UMG.Default__WidgetBlueprintLibrary)
+          Skip Bytes:
+            0x15
+          R-Value Property
+            CallFunc_Create_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node WidgetBlueprintLibrary::Create)
+              $17: EX_Self
+            
+              $20: EX_ObjectConst (0000024235785100:WidgetBlueprintGeneratedClass newCashIncome.newCashIncome_C)
+            
+              $2A: EX_NoObject
+            
+              $16: EX_EndFunctionParms
+            
+          
+        
+      
+    
+  
+
+Label_0x1B7:
+  
+    $7: Jump to offset 0x387 if not expr:
+      $0: Local variable named SkipCounting
+    
+  
+
+Label_0x1C5:
+  
+    $7: Jump to offset 0x3E3 if not expr:
+      $1: Instance variable named bankIntroduced
+    
+  
+
+Label_0x1D3:
+  
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x37
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $19: Context
+            ObjectExpression:
+              $1: Instance variable named questManagerRef
+            Skip Bytes:
+              0x9
+            R-Value Property
+              eddieCalls
+            ContextExpression:
+              $1: Instance variable named eddieCalls
+            
+          
+        
+          $1D: literal int32_t 4
+        
+          $0: Local variable named CallFunc_Array_Get_Item1
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x220:
+  
+    $7: Jump to offset 0x315 if not expr:
+      $0: Local variable named CallFunc_Array_Get_Item1
+    
+  
+
+Label_0x22E:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::GreaterEqual_IntInt)
+          $1: Instance variable named allEarnedMoney
+        
+          $1D: literal int32_t 1000
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x250:
+  
+    $7: Jump to offset 0x315 if not expr:
+      $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue
+    
+  
+
+Label_0x25E:
+  
+    $31: set array
+      $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+    
+      $32: EX_EndArray
+    
+  
+
+Label_0x269:
+  
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
+      Skip Bytes:
+        0x1D
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+          $17: EX_Self
+        
+          $20: EX_ObjectConst (0000024232293400:BlueprintGeneratedClass mainComputer.mainComputer_C)
+        
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x29C:
+  
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x21
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+        
+          $1D: literal int32_t 0
+        
+          $0: Local variable named CallFunc_Array_Get_Item
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x2D3:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $19: Context
+          ObjectExpression:
+            $0: Local variable named CallFunc_Array_Get_Item
+          Skip Bytes:
+            0x9
+          R-Value Property
+            launderingAvailable
+          ContextExpression:
+            $1: Instance variable named launderingAvailable
+          
+        
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x2F4:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $19: Context
+          ObjectExpression:
+            $1: Instance variable named questManagerRef
+          Skip Bytes:
+            0x9
+          R-Value Property
+            NewLaunderPresented
+          ContextExpression:
+            $1: Instance variable named NewLaunderPresented
+          
+        
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x315:
+  
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Skip Bytes:
+        0x17
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named setup
+          $0: Local variable named Amount
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x342:
+  
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Create_ReturnValue
+      Skip Bytes:
+        0xF
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node UserWidget::AddToViewport)
+          $1D: literal int32_t 7
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x367:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named Success
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x372:
+  
+    $6: Jump to offset 0x447
+  
+
+Label_0x377:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named Success
+      Expression:
+        $28: EX_False
+      
+    
+  
+
+Label_0x382:
+  
+    $6: Jump to offset 0x447
+  
+
+Label_0x387:
+  
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
+          $1: Instance variable named allEarnedMoney
+        
+          $0: Local variable named Amount
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x3B5:
+  
+    $F: Let (Variable = Expression)
+      Variable:
+        $1: Instance variable named allEarnedMoney
+      Expression:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+      
+    
+  
+
+Label_0x3D0:
+  
+    $1B: Virtual Function named CheckCashAchievements
+      $16: EX_EndFunctionParms
+    
+  
+
+Label_0x3DE:
+  
+    $6: Jump to offset 0x1C5
+  
+
+Label_0x3E3:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue1
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::GreaterEqual_IntInt)
+          $1: Instance variable named allEarnedMoney
+        
+          $1D: literal int32_t 600
+        
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x405:
+  
+    $7: Jump to offset 0x315 if not expr:
+      $0: Local variable named CallFunc_GreaterEqual_IntInt_ReturnValue1
+    
+  
+
+Label_0x413:
+  
+    $19: Context
+      ObjectExpression:
+        $1: Instance variable named questManagerRef
+      Skip Bytes:
+        0xE
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named introduceBank
+          $16: EX_EndFunctionParms
+        
+      
+    
+  
+
+Label_0x437:
+  
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $1: Instance variable named bankIntroduced
+      Expression:
+        $27: EX_True
+      
+    
+  
+
+Label_0x442:
+  
+    $6: Jump to offset 0x315
+  
+
+Label_0x447:
+  
+    $4: Return expression
+      $B: EX_Nothing
+    
+  
+
+Label_0x449:
+  
+    $53: EX_EndOfScript
+  

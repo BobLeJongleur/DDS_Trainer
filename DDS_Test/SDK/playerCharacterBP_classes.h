@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass playerCharacterBP.playerCharacterBP_C
-// 0x0EA8 (0x15E8 - 0x0740)
+// 0x0EC9 (0x1609 - 0x0740)
 class AplayerCharacterBP_C : public ACharacter
 {
 public:
@@ -108,7 +108,7 @@ public:
 	int                                                pocketCount;                                              // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               hasBackpack;                                              // 0x093C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x3];                                       // 0x093D(0x0003) MISSED OFFSET
-	struct FinventoryItemStruct                        backpack;                                                 // 0x0940(0x0108) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FinventoryItemStruct                        Backpack;                                                 // 0x0940(0x0108) (Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FinventoryItemStruct>                backpackItems;                                            // 0x0A48(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        backpackItemQuantity;                                     // 0x0A58(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       backpackItemVendor;                                       // 0x0A68(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -344,13 +344,19 @@ public:
 	bool                                               underground;                                              // 0x15BC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               LastWallPassageType;                                      // 0x15BD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData53[0x2];                                       // 0x15BE(0x0002) MISSED OFFSET
-	class ERROR_XXX*                                   CurVilla;                                                 // 0x15C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AVillaPropertyInstance_C*                    CurVilla;                                                 // 0x15C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	bool                                               SprintHeldDown;                                           // 0x15C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData54[0x3];                                       // 0x15C9(0x0003) MISSED OFFSET
 	float                                              FallDamageHealth;                                         // 0x15CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallDmgRegenSpeed;                                        // 0x15D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData55[0x4];                                       // 0x15D4(0x0004) MISSED OFFSET
 	struct FScriptMulticastDelegate                    FullLoadInitiated;                                        // 0x15D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               RenovationMode;                                           // 0x15E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData56[0x7];                                       // 0x15E9(0x0007) MISSED OFFSET
+	class URenovationModeWidget_C*                     RenovationWidget;                                         // 0x15F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class AActor*                                      LastRenovationHitActor;                                   // 0x15F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UPrimitiveComponent*                         LastRenovationHitComponent;                               // 0x1600(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               GizmoGridLock;                                            // 0x1608(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -359,7 +365,15 @@ public:
 	}
 
 
-	void CheckFallDamage();
+	void CheckRespawnDocuments();
+	struct FVector GetMovementForwardVector();
+	void CheckCashAchievements();
+	void GetSurfaceActionName(const struct FString& SurfaceID, struct FText* OutAction);
+	void StartRenovationMode();
+	void RenovationInteraction();
+	void ClearRenovationMode();
+	void RenovationModeTrace();
+	void CheckFallDamage(float OverrideDamage);
 	void FallDamageRegen(float Delta);
 	void ExpandRama();
 	void ReconstructOldInventory();
@@ -416,7 +430,7 @@ public:
 	void displayPopup(const struct FText& Title, const struct FText& Description, const struct FText& ButtonText, bool ShowMouse);
 	void checkItemContents(const struct FString& Source, int Index);
 	void clearBackpack();
-	void setCurrentBackpack(class AbackpackBase_C* backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData, const struct FName& BackpackItemID, bool FromVendor);
+	void setCurrentBackpack(class AbackpackBase_C* Backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData, const struct FName& BackpackItemID, bool FromVendor);
 	void phoneCallFunction(const struct FString& functionToCall);
 	void phoneNewNote(bool Done, const struct FText& noteText);
 	void phoneNewCall(int callerID, class USoundWave* callAudio, const struct FString& functionOnAnswer, const struct FString& functionOnDecline, const struct FString& functionOnEnd, const struct FText& CallText);
@@ -453,45 +467,46 @@ public:
 	void headBobbTimeline__FinishedFunc();
 	void headBobbTimeline__UpdateFunc();
 	void headBobbTimeline__footStep__EventFunc();
+	void InpActEvt_SprintToggle_K2Node_InputActionEvent_33(const struct FKey& Key);
 	void InpActEvt_SprintToggle_K2Node_InputActionEvent_32(const struct FKey& Key);
-	void InpActEvt_SprintToggle_K2Node_InputActionEvent_31(const struct FKey& Key);
-	void InpActEvt_CrouchToggle_K2Node_InputActionEvent_30(const struct FKey& Key);
-	void InpActEvt_JumpObstacle_K2Node_InputActionEvent_29(const struct FKey& Key);
+	void InpActEvt_CrouchToggle_K2Node_InputActionEvent_31(const struct FKey& Key);
+	void InpActEvt_JumpObstacle_K2Node_InputActionEvent_30(const struct FKey& Key);
+	void InpActEvt_InventoryToggle_K2Node_InputActionEvent_29(const struct FKey& Key);
 	void InpActEvt_InventoryToggle_K2Node_InputActionEvent_28(const struct FKey& Key);
-	void InpActEvt_InventoryToggle_K2Node_InputActionEvent_27(const struct FKey& Key);
 	void InpActEvt_Escape_K2Node_InputKeyEvent_7(const struct FKey& Key);
 	void InpActEvt_F10_K2Node_InputKeyEvent_6(const struct FKey& Key);
-	void InpActEvt_Wait_K2Node_InputActionEvent_26(const struct FKey& Key);
-	void InpActEvt_phoneNext_K2Node_InputActionEvent_25(const struct FKey& Key);
-	void InpActEvt_phonePrevious_K2Node_InputActionEvent_24(const struct FKey& Key);
-	void InpActEvt_phoneEnter_K2Node_InputActionEvent_23(const struct FKey& Key);
-	void InpActEvt_phoneBack_K2Node_InputActionEvent_22(const struct FKey& Key);
+	void InpActEvt_Wait_K2Node_InputActionEvent_27(const struct FKey& Key);
+	void InpActEvt_phoneNext_K2Node_InputActionEvent_26(const struct FKey& Key);
+	void InpActEvt_phonePrevious_K2Node_InputActionEvent_25(const struct FKey& Key);
+	void InpActEvt_phoneEnter_K2Node_InputActionEvent_24(const struct FKey& Key);
+	void InpActEvt_phoneBack_K2Node_InputActionEvent_23(const struct FKey& Key);
 	void InpActEvt_H_K2Node_InputKeyEvent_5(const struct FKey& Key);
-	void InpActEvt_ScrollUp_K2Node_InputActionEvent_21(const struct FKey& Key);
-	void InpActEvt_ScrollDown_K2Node_InputActionEvent_20(const struct FKey& Key);
+	void InpActEvt_ScrollUp_K2Node_InputActionEvent_22(const struct FKey& Key);
+	void InpActEvt_ScrollDown_K2Node_InputActionEvent_21(const struct FKey& Key);
+	void InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20(const struct FKey& Key);
 	void InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_19(const struct FKey& Key);
-	void InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18(const struct FKey& Key);
+	void InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18(const struct FKey& Key);
 	void InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_17(const struct FKey& Key);
-	void InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16(const struct FKey& Key);
+	void InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_LeftClickPlace_K2Node_InputActionEvent_15(const struct FKey& Key);
-	void InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14(const struct FKey& Key);
-	void InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13(const struct FKey& Key);
+	void InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14(const struct FKey& Key);
+	void InpActEvt_AppartmentMode_K2Node_InputActionEvent_13(const struct FKey& Key);
 	void InpActEvt_AppartmentMode_K2Node_InputActionEvent_12(const struct FKey& Key);
-	void InpActEvt_AppartmentMode_K2Node_InputActionEvent_11(const struct FKey& Key);
-	void InpActEvt_InfoToggle_K2Node_InputActionEvent_10(const struct FKey& Key);
+	void InpActEvt_InfoToggle_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_Y_K2Node_InputKeyEvent_4(const struct FKey& Key);
+	void InpActEvt_DropBackpack_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_DropBackpack_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void InpActEvt_DropBackpack_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void InpActEvt_Action_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_Action_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void InpActEvt_Action_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void InpActEvt_QuickUse01_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void InpActEvt_QuickUse02_K2Node_InputActionEvent_4(const struct FKey& Key);
-	void InpActEvt_QuickUse03_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpActEvt_QuickUse04_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void InpActEvt_QuickUse01_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void InpActEvt_QuickUse02_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void InpActEvt_QuickUse03_K2Node_InputActionEvent_4(const struct FKey& Key);
+	void InpActEvt_QuickUse04_K2Node_InputActionEvent_3(const struct FKey& Key);
 	void InpActEvt_L_K2Node_InputKeyEvent_3(const struct FKey& Key);
 	void InpActEvt_L_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_MapToggle_K2Node_InputActionEvent_1(const struct FKey& Key);
-	void InpActEvt_N_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_MapToggle_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void InpActEvt_RightClickFilters_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
@@ -525,7 +540,7 @@ public:
 	void openTrade();
 	void closeTrade();
 	void lookAtCheck();
-	void StartChaseMusic();
+	void startChaseMusic();
 	void endChaseMusic();
 	void tasedDown();
 	void enableTasingDown();
@@ -568,6 +583,9 @@ public:
 	void ContinueSprint();
 	void BndEvt__InventoryComponent_K2Node_ComponentBoundEvent_2_BackpackChanged__DelegateSignature(bool FromVendor);
 	void TestUseWater(int Amount);
+	void ClearSave();
+	void AchievementCaught();
+	void ToggleGhost();
 	void ExecuteUbergraph_playerCharacterBP(int EntryPoint);
 	void FullLoadInitiated__DelegateSignature();
 };

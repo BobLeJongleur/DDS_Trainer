@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function questManager.questManager_C.EndgameSecondCallCheck
+struct AquestManager_C_EndgameSecondCallCheck_Params
+{
+};
+
+// Function questManager.questManager_C.ClearEddie
+struct AquestManager_C_ClearEddie_Params
+{
+};
+
+// Function questManager.questManager_C.DisplayOneTimeTutorial
+struct AquestManager_C_DisplayOneTimeTutorial_Params
+{
+	struct FName                                       TutorialID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.MarkFirstVilla
+struct AquestManager_C_MarkFirstVilla_Params
+{
+};
+
+// Function questManager.questManager_C.ActivateDeathSites
+struct AquestManager_C_ActivateDeathSites_Params
+{
+};
 
 // Function questManager.questManager_C.ReportLaunderDoor
 struct AquestManager_C_ReportLaunderDoor_Params
@@ -80,7 +106,7 @@ struct AquestManager_C_addNewQuest_Params
 // Function questManager.questManager_C.checkCanAddWidget
 struct AquestManager_C_checkCanAddWidget_Params
 {
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function questManager.questManager_C.playerAvailable
@@ -92,7 +118,7 @@ struct AquestManager_C_playerAvailable_Params
 // Function questManager.questManager_C.checkTaskRelatedMarkers
 struct AquestManager_C_checkTaskRelatedMarkers_Params
 {
-	int                                                TaskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                taskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function questManager.questManager_C.checkDisplayNewTask
@@ -105,6 +131,8 @@ struct AquestManager_C_playNarration_Params
 {
 	class USoundWave*                                  Sound;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       MonologueText;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       NameOverride;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                               Mute;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Length;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -139,6 +167,42 @@ struct AquestManager_C_setupDefaultReferences_Params
 
 // Function questManager.questManager_C.UserConstructionScript
 struct AquestManager_C_UserConstructionScript_Params
+{
+};
+
+// Function questManager.questManager_C.OnFailure_214E326344AEE6B434437487B8B049E3
+struct AquestManager_C_OnFailure_214E326344AEE6B434437487B8B049E3_Params
+{
+	struct FName                                       WrittenAchievementName;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              WrittenProgress;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                WrittenUserTag;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.OnSuccess_214E326344AEE6B434437487B8B049E3
+struct AquestManager_C_OnSuccess_214E326344AEE6B434437487B8B049E3_Params
+{
+	struct FName                                       WrittenAchievementName;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              WrittenProgress;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                WrittenUserTag;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.OnFailure_241AACF344E2259B70F21A95DD93254A
+struct AquestManager_C_OnFailure_241AACF344E2259B70F21A95DD93254A_Params
+{
+};
+
+// Function questManager.questManager_C.OnSuccess_241AACF344E2259B70F21A95DD93254A
+struct AquestManager_C_OnSuccess_241AACF344E2259B70F21A95DD93254A_Params
+{
+};
+
+// Function questManager.questManager_C.OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03
+struct AquestManager_C_OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03_Params
+{
+};
+
+// Function questManager.questManager_C.OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03
+struct AquestManager_C_OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03_Params
 {
 };
 
@@ -264,7 +328,7 @@ struct AquestManager_C_workStationTask_Params
 // Function questManager.questManager_C.firstOwnOrderReceived
 struct AquestManager_C_firstOwnOrderReceived_Params
 {
-	int                                                TaskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                taskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function questManager.questManager_C.tutWorkPlayerPutDrug
@@ -770,10 +834,106 @@ struct AquestManager_C_ReopenNewLaunder_Params
 {
 };
 
+// Function questManager.questManager_C.eddieCallEndgame
+struct AquestManager_C_eddieCallEndgame_Params
+{
+};
+
+// Function questManager.questManager_C.eddieRepeatEndgame
+struct AquestManager_C_eddieRepeatEndgame_Params
+{
+};
+
+// Function questManager.questManager_C.retryEddieEndgame
+struct AquestManager_C_retryEddieEndgame_Params
+{
+};
+
+// Function questManager.questManager_C.eddieEndEndgame
+struct AquestManager_C_eddieEndEndgame_Params
+{
+};
+
+// Function questManager.questManager_C.eddieCallEndgame02
+struct AquestManager_C_eddieCallEndgame02_Params
+{
+};
+
+// Function questManager.questManager_C.eddieRepeatEndgame02
+struct AquestManager_C_eddieRepeatEndgame02_Params
+{
+};
+
+// Function questManager.questManager_C.retryEddieEndgame02
+struct AquestManager_C_retryEddieEndgame02_Params
+{
+};
+
+// Function questManager.questManager_C.eddieEndEndgame02
+struct AquestManager_C_eddieEndEndgame02_Params
+{
+};
+
+// Function questManager.questManager_C.PlayerFinishedGame
+struct AquestManager_C_PlayerFinishedGame_Params
+{
+};
+
+// Function questManager.questManager_C.BuildFirstVilla
+struct AquestManager_C_BuildFirstVilla_Params
+{
+};
+
+// Function questManager.questManager_C.RunEndgame
+struct AquestManager_C_RunEndgame_Params
+{
+};
+
+// Function questManager.questManager_C.VerifyEddieEndgame2
+struct AquestManager_C_VerifyEddieEndgame2_Params
+{
+};
+
+// Function questManager.questManager_C.AchievementUnlocked
+struct AquestManager_C_AchievementUnlocked_Params
+{
+	struct FName                                       AchievementName;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.AddSectorCTask
+struct AquestManager_C_AddSectorCTask_Params
+{
+};
+
+// Function questManager.questManager_C.SectSearchTask
+struct AquestManager_C_SectSearchTask_Params
+{
+};
+
+// Function questManager.questManager_C.SectSearchTaskComplete
+struct AquestManager_C_SectSearchTaskComplete_Params
+{
+};
+
+// Function questManager.questManager_C.SetOneAchievement
+struct AquestManager_C_SetOneAchievement_Params
+{
+};
+
 // Function questManager.questManager_C.ExecuteUbergraph_questManager
 struct AquestManager_C_ExecuteUbergraph_questManager_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function questManager.questManager_C.OutroNarrEnd__DelegateSignature
+struct AquestManager_C_OutroNarrEnd__DelegateSignature_Params
+{
+};
+
+// Function questManager.questManager_C.EddieFinalCallEnded__DelegateSignature
+struct AquestManager_C_EddieFinalCallEnded__DelegateSignature_Params
+{
 };
 
 }

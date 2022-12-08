@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,25 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function interactiveBaseObject.interactiveBaseObject_C.GetTargetRot
+struct AinteractiveBaseObject_C_GetTargetRot_Params
+{
+};
+
+// Function interactiveBaseObject.interactiveBaseObject_C.GetTargetLoc
+struct AinteractiveBaseObject_C_GetTargetLoc_Params
+{
+	struct FVector                                     InLoc;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Grid;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InRot;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OutLoc;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              OutRot;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing
 struct AinteractiveBaseObject_C_VerifyBaseSizing_Params
 {
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function interactiveBaseObject.interactiveBaseObject_C.GetEquipmentMeta

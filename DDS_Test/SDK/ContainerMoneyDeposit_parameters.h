@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ struct AContainerMoneyDeposit_C_UserConstructionScript_Params
 // Function ContainerMoneyDeposit.ContainerMoneyDeposit_C.NewPickupQuest
 struct AContainerMoneyDeposit_C_NewPickupQuest_Params
 {
-	int                                                TaskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                taskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ContainerMoneyDeposit.ContainerMoneyDeposit_C.closeEventScript

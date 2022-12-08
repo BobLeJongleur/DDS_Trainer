@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,47 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function inventoryScreen.inventoryScreen_C.Get_btnMarkSafe_ToolTipWidget_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UinventoryScreen_C::Get_btnMarkSafe_ToolTipWidget_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.Get_btnMarkSafe_ToolTipWidget_1");
+
+	UinventoryScreen_C_Get_btnMarkSafe_ToolTipWidget_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function inventoryScreen.inventoryScreen_C.ConfigSafeButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGuid                   CurGuid                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UinventoryScreen_C::ConfigSafeButton(const struct FGuid& CurGuid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.ConfigSafeButton");
+
+	UinventoryScreen_C_ConfigSafeButton_Params params;
+	params.CurGuid = CurGuid;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function inventoryScreen.inventoryScreen_C.Get_btnAcceptTrade_bIsEnabled_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -252,15 +293,15 @@ void UinventoryScreen_C::acceptBoughtItems()
 // Function inventoryScreen.inventoryScreen_C.countBoughtItemValue
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UinventoryScreen_C::countBoughtItemValue(class AplayerCharacterBP_C* PlayerRef, int* Value)
+void UinventoryScreen_C::countBoughtItemValue(class AplayerCharacterBP_C* playerRef, int* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.countBoughtItemValue");
 
 	UinventoryScreen_C_countBoughtItemValue_Params params;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 
@@ -446,15 +487,15 @@ void UinventoryScreen_C::renderBuyerNeeded()
 // Function inventoryScreen.inventoryScreen_C.checkItemsFitPockets
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NoFit                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UinventoryScreen_C::checkItemsFitPockets(class AplayerCharacterBP_C* PlayerRef, bool* NoFit)
+void UinventoryScreen_C::checkItemsFitPockets(class AplayerCharacterBP_C* playerRef, bool* NoFit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.checkItemsFitPockets");
 
 	UinventoryScreen_C_checkItemsFitPockets_Params params;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 
@@ -576,16 +617,16 @@ void UinventoryScreen_C::renderContainer(class AcontainerBase_C* container)
 // Parameters:
 // class AcontainerBase_C*        ContainerRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AbaseNPC_C*              sellerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UinventoryScreen_C::prepareInventoryMode(class AcontainerBase_C* ContainerRef, class AbaseNPC_C* sellerRef, class AplayerCharacterBP_C* PlayerRef)
+void UinventoryScreen_C::prepareInventoryMode(class AcontainerBase_C* ContainerRef, class AbaseNPC_C* sellerRef, class AplayerCharacterBP_C* playerRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.prepareInventoryMode");
 
 	UinventoryScreen_C_prepareInventoryMode_Params params;
 	params.ContainerRef = ContainerRef;
 	params.sellerRef = sellerRef;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 
@@ -906,6 +947,23 @@ void UinventoryScreen_C::refreshActiveColor()
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.refreshActiveColor");
 
 	UinventoryScreen_C_refreshActiveColor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function inventoryScreen.inventoryScreen_C.BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UinventoryScreen_C::BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+
+	UinventoryScreen_C_BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

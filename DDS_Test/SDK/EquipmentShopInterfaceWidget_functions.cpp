@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,72 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Get_VillaHolder_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* ok)
+ESlateVisibility UEquipmentShopInterfaceWidget_C::Get_VillaHolder_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Get_VillaHolder_Visibility_1");
+
+	UEquipmentShopInterfaceWidget_C_Get_VillaHolder_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.RenderFilters
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UEquipmentShopInterfaceWidget_C::RenderFilters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.RenderFilters");
+
+	UEquipmentShopInterfaceWidget_C_RenderFilters_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.SetFilter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           FilterEnabled                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EequipmentCategory> FilterCat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UEquipmentShopInterfaceWidget_C::SetFilter(bool FilterEnabled, TEnumAsByte<EequipmentCategory> FilterCat)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.SetFilter");
+
+	UEquipmentShopInterfaceWidget_C_SetFilter_Params params;
+	params.FilterEnabled = FilterEnabled;
+	params.FilterCat = FilterCat;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* OK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments");
 
@@ -30,8 +90,8 @@ void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* ok)
 
 	fn->FunctionFlags = flags;
 
-	if (ok != nullptr)
-		*ok = params.ok;
+	if (OK != nullptr)
+		*OK = params.OK;
 }
 
 
@@ -185,7 +245,7 @@ void UEquipmentShopInterfaceWidget_C::Construct()
 }
 
 
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Setup
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.setup
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FappartmentEquipment> baseEq                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -193,11 +253,11 @@ void UEquipmentShopInterfaceWidget_C::Construct()
 // class AequipmentShop_C*        ParentShopRef                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<bool>                   unlocked                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> unlocked)
+void UEquipmentShopInterfaceWidget_C::setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> unlocked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.setup");
 
-	UEquipmentShopInterfaceWidget_C_Setup_Params params;
+	UEquipmentShopInterfaceWidget_C_setup_Params params;
 	params.baseEq = baseEq;
 	params.basePrices = basePrices;
 	params.ParentShopRef = ParentShopRef;
@@ -287,40 +347,6 @@ void UEquipmentShopInterfaceWidget_C::BndEvt__btnShowAll_K2Node_ComponentBoundEv
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowAll_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
 	UEquipmentShopInterfaceWidget_C_BndEvt__btnShowAll_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UEquipmentShopInterfaceWidget_C::BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
-
-	UEquipmentShopInterfaceWidget_C_BndEvt__btnShowFunctional_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UEquipmentShopInterfaceWidget_C::BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
-
-	UEquipmentShopInterfaceWidget_C_BndEvt__btnShowDeco_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

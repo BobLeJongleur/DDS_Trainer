@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.getMaxQuantity
 struct UfurnitureDropQuantityWidget_C_getMaxQuantity_Params
 {
-	struct FString                                     targetString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     TargetString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	class UUserWidget*                                 Widget;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	int                                                sourceQuan;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FinventoryItemStruct                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -40,10 +40,10 @@ struct UfurnitureDropQuantityWidget_C_BndEvt__btnCancel_K2Node_ComponentBoundEve
 {
 };
 
-// Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.Setup
-struct UfurnitureDropQuantityWidget_C_Setup_Params
+// Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.setup
+struct UfurnitureDropQuantityWidget_C_setup_Params
 {
-	struct FString                                     targetString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     TargetString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                quanMax;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UAppManageList_C*                            ManageList;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };

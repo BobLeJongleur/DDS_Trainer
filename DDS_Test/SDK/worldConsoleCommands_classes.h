@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,6 +80,10 @@ public:
 	void RegisterExpoSale(int AmountGrams);
 	void CountKurwaEverything();
 	void WyjebChuj();
+	void KillAllSectants();
+	void BuildAllVillas();
+	void PsycheDone();
+	void CheatAddExposition();
 	void ExecuteUbergraph_worldConsoleCommands(int EntryPoint);
 };
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function onePackageWidget.onePackageWidget_C.Setup
+// Function onePackageWidget.onePackageWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   DrugNam                        (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -23,11 +23,11 @@ namespace SDK
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UpackageProductWidget_C* Parent                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UonePackageWidget_C::Setup(const struct FText& DrugNam, int Grams, int Quantity, class UTexture2D* Icon, int Index, class UpackageProductWidget_C* Parent)
+void UonePackageWidget_C::setup(const struct FText& DrugNam, int Grams, int Quantity, class UTexture2D* Icon, int Index, class UpackageProductWidget_C* Parent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function onePackageWidget.onePackageWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function onePackageWidget.onePackageWidget_C.setup");
 
-	UonePackageWidget_C_Setup_Params params;
+	UonePackageWidget_C_setup_Params params;
 	params.DrugNam = DrugNam;
 	params.Grams = Grams;
 	params.Quantity = Quantity;

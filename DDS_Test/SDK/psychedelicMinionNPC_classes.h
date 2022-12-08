@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,6 +32,9 @@ public:
 	void ReceiveBeginPlay();
 	void checkCanTalk();
 	void retryInitiate();
+	void RamaLoadedEvent();
+	void SetEndgameDialogue();
+	void OpenedDialogueEndgame();
 	void ExecuteUbergraph_psychedelicMinionNPC(int EntryPoint);
 };
 

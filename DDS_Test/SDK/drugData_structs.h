@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,9 +17,9 @@ namespace SDK
 struct FdrugData
 {
 	struct FText                                       DrugName;              // 0x0000(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       DrugDescription_8_2796A88340BA080A65F5F69051780E3E;       // 0x0018(0x0018) (Edit, BlueprintVisible)
-	class UTexture2D*                                  DrugIcon_5_7EE8BD8A4052D5717A2A618C63FAFFDD;              // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FText>                               colloquialNames_12_E78EF57F4B652CDDBB191CB29ABBE240;      // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FText                                       DrugDescription;       // 0x0018(0x0018) (Edit, BlueprintVisible)
+	class UTexture2D*                                  DrugIcon;              // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FText>                               colloquialNames;      // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              availabilityMultiplier_15_5A44761547697AA7002A4AA4082221A1;// 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EdrugForm>                             drugForm_19_B94E64C64B0B81B32236CCBA49100E18;             // 0x004C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               isWet_21_3DCCFDAF4015574DA4DB7FA14AC0C133;                // 0x004D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

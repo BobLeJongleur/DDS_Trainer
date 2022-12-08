@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.removeMe
-struct UnarratorSubtitlesWidget_C_removeMe_Params
+// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.RemoveMe
+struct UnarratorSubtitlesWidget_C_RemoveMe_Params
 {
 };
 
@@ -26,8 +26,8 @@ struct UnarratorSubtitlesWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.Setup
-struct UnarratorSubtitlesWidget_C_Setup_Params
+// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.setup
+struct UnarratorSubtitlesWidget_C_setup_Params
 {
 	struct FText                                       Monologue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

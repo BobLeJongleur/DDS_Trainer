@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,6 +42,16 @@ struct AnoisyNeighbourBP_C_checkPlayerAtHome_Params
 
 // Function noisyNeighbourBP.noisyNeighbourBP_C.retryPlay
 struct AnoisyNeighbourBP_C_retryPlay_Params
+{
+};
+
+// Function noisyNeighbourBP.noisyNeighbourBP_C.ForcePlayDialogue
+struct AnoisyNeighbourBP_C_ForcePlayDialogue_Params
+{
+};
+
+// Function noisyNeighbourBP.noisyNeighbourBP_C.ForceStopDialogue
+struct AnoisyNeighbourBP_C_ForceStopDialogue_Params
 {
 };
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct AlaunderSpawnLocation_C_UserConstructionScript_Params
 // Function launderSpawnLocation.launderSpawnLocation_C.SpawnCharacter
 struct AlaunderSpawnLocation_C_SpawnCharacter_Params
 {
-	int                                                TaskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                taskID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function launderSpawnLocation.launderSpawnLocation_C.ExecuteUbergraph_launderSpawnLocation

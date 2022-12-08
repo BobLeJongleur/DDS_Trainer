@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,17 +52,17 @@ void UquickHintWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 }
 
 
-// Function quickHintWidget.quickHintWidget_C.Setup
+// Function quickHintWidget.quickHintWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // TEnumAsByte<EquickHintType>    Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UquickHintWidget_C::Setup(const struct FText& Text, TEnumAsByte<EquickHintType> Category)
+void UquickHintWidget_C::setup(const struct FText& Text, TEnumAsByte<EquickHintType> Category)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function quickHintWidget.quickHintWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function quickHintWidget.quickHintWidget_C.setup");
 
-	UquickHintWidget_C_Setup_Params params;
+	UquickHintWidget_C_setup_Params params;
 	params.Text = Text;
 	params.Category = Category;
 

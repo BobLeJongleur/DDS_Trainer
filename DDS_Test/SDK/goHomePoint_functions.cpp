@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -108,6 +108,23 @@ void AgoHomePoint_C::LongRadiusChanged(bool InRadius)
 
 	AgoHomePoint_C_LongRadiusChanged_Params params;
 	params.InRadius = InRadius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function goHomePoint.goHomePoint_C.ResetLocation
+// (BlueprintCallable, BlueprintEvent)
+
+void AgoHomePoint_C::ResetLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function goHomePoint.goHomePoint_C.ResetLocation");
+
+	AgoHomePoint_C_ResetLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
 

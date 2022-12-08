@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function actionOptionWidget.actionOptionWidget_C.Setup
+// Function actionOptionWidget.actionOptionWidget_C.setup
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           InitActive                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ActionName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UactionOptionWidget_C::Setup(bool InitActive, const struct FText& ActionName)
+void UactionOptionWidget_C::setup(bool InitActive, const struct FText& ActionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function actionOptionWidget.actionOptionWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function actionOptionWidget.actionOptionWidget_C.setup");
 
-	UactionOptionWidget_C_Setup_Params params;
+	UactionOptionWidget_C_setup_Params params;
 	params.InitActive = InitActive;
 	params.ActionName = ActionName;
 
@@ -38,14 +38,14 @@ void UactionOptionWidget_C::Setup(bool InitActive, const struct FText& ActionNam
 // Function actionOptionWidget.actionOptionWidget_C.SetActive
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           activated                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Activated                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UactionOptionWidget_C::SetActive(bool activated)
+void UactionOptionWidget_C::SetActive(bool Activated)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function actionOptionWidget.actionOptionWidget_C.SetActive");
 
 	UactionOptionWidget_C_SetActive_Params params;
-	params.activated = activated;
+	params.Activated = Activated;
 
 	auto flags = fn->FunctionFlags;
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -243,6 +243,26 @@ struct AworldConsoleCommands_C_CountKurwaEverything_Params
 
 // Function worldConsoleCommands.worldConsoleCommands_C.WyjebChuj
 struct AworldConsoleCommands_C_WyjebChuj_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.KillAllSectants
+struct AworldConsoleCommands_C_KillAllSectants_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.BuildAllVillas
+struct AworldConsoleCommands_C_BuildAllVillas_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.PsycheDone
+struct AworldConsoleCommands_C_PsycheDone_Params
+{
+};
+
+// Function worldConsoleCommands.worldConsoleCommands_C.CheatAddExposition
+struct AworldConsoleCommands_C_CheatAddExposition_Params
 {
 };
 

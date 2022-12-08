@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,10 +31,11 @@ public:
 	}
 
 
+	void CheckRoomLighting(bool* Enabled);
 	void respawnFurniture();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void InteractionActivate(class AplayerCharacterBP_C* PlayerRef);
+	void InteractionActivate(class AplayerCharacterBP_C* playerRef);
 	void InputToggleOn();
 	void InputToggleOff();
 	void ExecuteUbergraph_decorativeFurniture(int EntryPoint);

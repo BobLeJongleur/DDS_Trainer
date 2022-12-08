@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,8 +24,8 @@ struct UArrestScreenWidget_C_Construct_Params
 {
 };
 
-// Function ArrestScreenWidget.ArrestScreenWidget_C.Setup
-struct UArrestScreenWidget_C_Setup_Params
+// Function ArrestScreenWidget.ArrestScreenWidget_C.setup
+struct UArrestScreenWidget_C_setup_Params
 {
 	class AsalesManager_C*                             salesManager;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UshadyCommInterface_C*                       ParentShady;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)

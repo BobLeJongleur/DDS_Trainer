@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function playerCharacterPC.playerCharacterPC_C.FrontWidgetDestroyed
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*             WidgetRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void AplayerCharacterPC_C::FrontWidgetDestroyed(class UUserWidget* WidgetRef)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterPC.playerCharacterPC_C.FrontWidgetDestroyed");
+
+	AplayerCharacterPC_C_FrontWidgetDestroyed_Params params;
+	params.WidgetRef = WidgetRef;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function playerCharacterPC.playerCharacterPC_C.HasFrontWidgets
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)

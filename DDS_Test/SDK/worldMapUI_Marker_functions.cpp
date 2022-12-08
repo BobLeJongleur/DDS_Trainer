@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -144,7 +144,7 @@ void UworldMapUI_Marker_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 }
 
 
-// Function worldMapUI_Marker.worldMapUI_Marker_C.Setup
+// Function worldMapUI_Marker.worldMapUI_Marker_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   MarkerName                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -153,18 +153,20 @@ void UworldMapUI_Marker_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 // struct FText                   ToolTip                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           dealer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 AreaString                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// bool                           Alert                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UworldMapUI_Marker_C::Setup(const struct FText& MarkerName, TEnumAsByte<EmapMarkerCategories> MarkerType, const struct FVector2D& basePos, const struct FText& ToolTip, bool dealer, const struct FString& AreaString)
+void UworldMapUI_Marker_C::setup(const struct FText& MarkerName, TEnumAsByte<EmapMarkerCategories> MarkerType, const struct FVector2D& basePos, const struct FText& ToolTip, bool dealer, const struct FString& AreaString, bool Alert)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function worldMapUI_Marker.worldMapUI_Marker_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapUI_Marker.worldMapUI_Marker_C.setup");
 
-	UworldMapUI_Marker_C_Setup_Params params;
+	UworldMapUI_Marker_C_setup_Params params;
 	params.MarkerName = MarkerName;
 	params.MarkerType = MarkerType;
 	params.basePos = basePos;
 	params.ToolTip = ToolTip;
 	params.dealer = dealer;
 	params.AreaString = AreaString;
+	params.Alert = Alert;
 
 	auto flags = fn->FunctionFlags;
 

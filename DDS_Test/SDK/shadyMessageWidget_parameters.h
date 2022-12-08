@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function shadyMessageWidget.shadyMessageWidget_C.Setup
-struct UshadyMessageWidget_C_Setup_Params
+// Function shadyMessageWidget.shadyMessageWidget_C.setup
+struct UshadyMessageWidget_C_setup_Params
 {
 	struct FText                                       UserName;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FString                                     msgString;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)

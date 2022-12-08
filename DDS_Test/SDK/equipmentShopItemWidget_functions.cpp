@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ class UWidget* UequipmentShopItemWidget_C::Get_mainHolder_ToolTipWidget_1()
 }
 
 
-// Function equipmentShopItemWidget.equipmentShopItemWidget_C.Setup
+// Function equipmentShopItemWidget.equipmentShopItemWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EqID                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -44,11 +44,11 @@ class UWidget* UequipmentShopItemWidget_C::Get_mainHolder_ToolTipWidget_1()
 // bool                           checkedOut                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            WaitBoost                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UequipmentShopItemWidget_C::Setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool checkedOut, int WaitBoost)
+void UequipmentShopItemWidget_C::setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool checkedOut, int WaitBoost)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function equipmentShopItemWidget.equipmentShopItemWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function equipmentShopItemWidget.equipmentShopItemWidget_C.setup");
 
-	UequipmentShopItemWidget_C_Setup_Params params;
+	UequipmentShopItemWidget_C_setup_Params params;
 	params.EqID = EqID;
 	params.Price = Price;
 	params.Index = Index;

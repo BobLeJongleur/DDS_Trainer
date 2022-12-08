@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,9 +29,9 @@ public:
 	}
 
 
-	void secondsToTime(int Seconds, struct FText* timeText);
+	void SecondsToTime(int Seconds, struct FText* timeText);
 	void Construct();
-	void Setup(int baseSeconds);
+	void setup(int baseSeconds);
 	void updateCountdown(bool Drama, int leftSeconds);
 	void killWidget();
 	void ExecuteUbergraph_deaRaidCounterWidget(int EntryPoint);

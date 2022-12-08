@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,7 +51,7 @@ void UInventoryItemTooltip_C::Construct()
 }
 
 
-// Function InventoryItemTooltip.InventoryItemTooltip_C.Setup
+// Function InventoryItemTooltip.InventoryItemTooltip_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,11 +62,11 @@ void UInventoryItemTooltip_C::Construct()
 // class UInventoryComponent_C*   InvComp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FGuid                   ItemGuid                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UInventoryItemTooltip_C::Setup(const struct FName& ItemID, const struct FinventoryItemStruct& Data, const struct FText& CustomTagName, int Quantity, int Amount, class UInventoryComponent_C* InvComp, const struct FGuid& ItemGuid)
+void UInventoryItemTooltip_C::setup(const struct FName& ItemID, const struct FinventoryItemStruct& Data, const struct FText& CustomTagName, int Quantity, int Amount, class UInventoryComponent_C* InvComp, const struct FGuid& ItemGuid)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryItemTooltip.InventoryItemTooltip_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryItemTooltip.InventoryItemTooltip_C.setup");
 
-	UInventoryItemTooltip_C_Setup_Params params;
+	UInventoryItemTooltip_C_setup_Params params;
 	params.ItemID = ItemID;
 	params.Data = Data;
 	params.CustomTagName = CustomTagName;

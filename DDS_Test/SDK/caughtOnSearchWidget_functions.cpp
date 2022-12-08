@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,16 +33,16 @@ void UcaughtOnSearchWidget_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function caughtOnSearchWidget.caughtOnSearchWidget_C.Setup
+// Function caughtOnSearchWidget.caughtOnSearchWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           foundDrugs                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UcaughtOnSearchWidget_C::Setup(bool foundDrugs)
+void UcaughtOnSearchWidget_C::setup(bool foundDrugs)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function caughtOnSearchWidget.caughtOnSearchWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function caughtOnSearchWidget.caughtOnSearchWidget_C.setup");
 
-	UcaughtOnSearchWidget_C_Setup_Params params;
+	UcaughtOnSearchWidget_C_setup_Params params;
 	params.foundDrugs = foundDrugs;
 
 	auto flags = fn->FunctionFlags;

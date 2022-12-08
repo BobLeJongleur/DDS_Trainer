@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 
 	void getSurfaceData(const struct FName& SurfaceID, TEnumAsByte<EVillaListCategories> Category, struct FVillaSurfaceFinish* SurfaceData);
 	void Construct();
-	void Setup(const struct FappartmentEquipment& eqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool selected);
+	void setup(const struct FappartmentEquipment& eqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool selected);
 	void ExecuteUbergraph_equipmentListWidget(int EntryPoint);
 };
 

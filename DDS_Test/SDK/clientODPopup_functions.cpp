@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,17 +30,17 @@ void UclientODPopup_C::Construct()
 }
 
 
-// Function clientODPopup.clientODPopup_C.Setup
+// Function clientODPopup.clientODPopup_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ClientName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   ClientOverdoseDrug             (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UclientODPopup_C::Setup(const struct FText& ClientName, const struct FText& ClientOverdoseDrug)
+void UclientODPopup_C::setup(const struct FText& ClientName, const struct FText& ClientOverdoseDrug)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function clientODPopup.clientODPopup_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function clientODPopup.clientODPopup_C.setup");
 
-	UclientODPopup_C_Setup_Params params;
+	UclientODPopup_C_setup_Params params;
 	params.ClientName = ClientName;
 	params.ClientOverdoseDrug = ClientOverdoseDrug;
 

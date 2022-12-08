@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass confirmPopupFrame.confirmPopupFrame_C
-// 0x0088 (0x0290 - 0x0208)
+// 0x00B0 (0x02B8 - 0x0208)
 class UconfirmPopupFrame_C : public UUserWidget
 {
 public:
@@ -34,6 +34,7 @@ public:
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0271(0x0007) MISSED OFFSET
 	struct FString                                     ActionID;                                                 // 0x0278(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UObject*                                     Querier;                                                  // 0x0288(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FSlateColor                                 activeElementsColor;                                      // 0x0290(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

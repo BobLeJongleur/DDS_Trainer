@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UinventoryErrorWidget_C::Construct()
 }
 
 
-// Function inventoryErrorWidget.inventoryErrorWidget_C.Setup
+// Function inventoryErrorWidget.inventoryErrorWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ErrorText                      (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UinventoryErrorWidget_C::Setup(const struct FText& ErrorText)
+void UinventoryErrorWidget_C::setup(const struct FText& ErrorText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function inventoryErrorWidget.inventoryErrorWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function inventoryErrorWidget.inventoryErrorWidget_C.setup");
 
-	UinventoryErrorWidget_C_Setup_Params params;
+	UinventoryErrorWidget_C_setup_Params params;
 	params.ErrorText = ErrorText;
 
 	auto flags = fn->FunctionFlags;

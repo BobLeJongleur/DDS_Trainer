@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,6 +68,7 @@ public:
 	}
 
 
+	class UWidget* Get_btnChangeSpray_ToolTipWidget_1();
 	void markerSetAreaVisuals(float BorderOpacity, const struct FSlateColor& BorderColor, int Index);
 	void markerHoverAction(int Index, class UTexture2D* Image);
 	void Construct();

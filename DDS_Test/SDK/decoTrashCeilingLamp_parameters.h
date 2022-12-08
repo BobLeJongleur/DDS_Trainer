@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,6 +22,12 @@ struct AdecoTrashCeilingLamp_C_UserConstructionScript_Params
 // Function decoTrashCeilingLamp.decoTrashCeilingLamp_C.ReceiveBeginPlay
 struct AdecoTrashCeilingLamp_C_ReceiveBeginPlay_Params
 {
+};
+
+// Function decoTrashCeilingLamp.decoTrashCeilingLamp_C.SetLightState
+struct AdecoTrashCeilingLamp_C_SetLightState_Params
+{
+	bool                                               LightOn;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function decoTrashCeilingLamp.decoTrashCeilingLamp_C.ExecuteUbergraph_decoTrashCeilingLamp

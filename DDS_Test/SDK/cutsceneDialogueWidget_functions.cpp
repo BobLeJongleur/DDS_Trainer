@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void UcutsceneDialogueWidget_C::Construct()
 }
 
 
-// Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.Setup
+// Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Speaker                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -39,11 +39,11 @@ void UcutsceneDialogueWidget_C::Construct()
 // struct FString                 functionOptionA                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 FunctionOptionB                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UcutsceneDialogueWidget_C::Setup(class AActor* Speaker, const struct FText& OptionA, const struct FText& OptionB, const struct FString& functionOptionA, const struct FString& FunctionOptionB)
+void UcutsceneDialogueWidget_C::setup(class AActor* Speaker, const struct FText& OptionA, const struct FText& OptionB, const struct FString& functionOptionA, const struct FString& FunctionOptionB)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.setup");
 
-	UcutsceneDialogueWidget_C_Setup_Params params;
+	UcutsceneDialogueWidget_C_setup_Params params;
 	params.Speaker = Speaker;
 	params.OptionA = OptionA;
 	params.OptionB = OptionB;

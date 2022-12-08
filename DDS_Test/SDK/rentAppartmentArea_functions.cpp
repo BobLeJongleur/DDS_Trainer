@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,67 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function rentAppartmentArea.rentAppartmentArea_C.GetAreaMetarage
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          Meterage                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ArentAppartmentArea_C::GetAreaMetarage(float* Meterage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.GetAreaMetarage");
+
+	ArentAppartmentArea_C_GetAreaMetarage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Meterage != nullptr)
+		*Meterage = params.Meterage;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckHideoutEmpty
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Empty                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ArentAppartmentArea_C::CheckHideoutEmpty(bool* Empty)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.CheckHideoutEmpty");
+
+	ArentAppartmentArea_C_CheckHideoutEmpty_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Empty != nullptr)
+		*Empty = params.Empty;
+}
+
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckEndgame
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ArentAppartmentArea_C::CheckEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.CheckEndgame");
+
+	ArentAppartmentArea_C_CheckEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function rentAppartmentArea.rentAppartmentArea_C.CheckTabletops
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -203,16 +264,16 @@ void ArentAppartmentArea_C::observationCountdown(float Delta)
 // Function rentAppartmentArea.rentAppartmentArea_C.vanCanSpawn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AdeaRaidManager_C*       raidManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AdeaRaidManager_C*       RaidManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AdeaRaidCarSpawnPoint_C* suvSpawnPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           CanSpawn                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ArentAppartmentArea_C::vanCanSpawn(class AdeaRaidManager_C* raidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn)
+void ArentAppartmentArea_C::vanCanSpawn(class AdeaRaidManager_C* RaidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.vanCanSpawn");
 
 	ArentAppartmentArea_C_vanCanSpawn_Params params;
-	params.raidManager = raidManager;
+	params.RaidManager = RaidManager;
 
 	auto flags = fn->FunctionFlags;
 
@@ -230,16 +291,16 @@ void ArentAppartmentArea_C::vanCanSpawn(class AdeaRaidManager_C* raidManager, cl
 // Function rentAppartmentArea.rentAppartmentArea_C.suvCanSpawn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AdeaRaidManager_C*       raidManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AdeaRaidManager_C*       RaidManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AdeaRaidCarSpawnPoint_C* suvSpawnPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           CanSpawn                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ArentAppartmentArea_C::suvCanSpawn(class AdeaRaidManager_C* raidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn)
+void ArentAppartmentArea_C::suvCanSpawn(class AdeaRaidManager_C* RaidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function rentAppartmentArea.rentAppartmentArea_C.suvCanSpawn");
 
 	ArentAppartmentArea_C_suvCanSpawn_Params params;
-	params.raidManager = raidManager;
+	params.RaidManager = RaidManager;
 
 	auto flags = fn->FunctionFlags;
 
@@ -335,7 +396,7 @@ void ArentAppartmentArea_C::checkPlayerOverlaping()
 
 
 // Function rentAppartmentArea.rentAppartmentArea_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ArentAppartmentArea_C::UserConstructionScript()
 {

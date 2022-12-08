@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,16 +52,16 @@ void UlevelUpWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 }
 
 
-// Function levelUpWidget.levelUpWidget_C.Setup
+// Function levelUpWidget.levelUpWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            NewLevel                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UlevelUpWidget_C::Setup(int NewLevel)
+void UlevelUpWidget_C::setup(int NewLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function levelUpWidget.levelUpWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function levelUpWidget.levelUpWidget_C.setup");
 
-	UlevelUpWidget_C_Setup_Params params;
+	UlevelUpWidget_C_setup_Params params;
 	params.NewLevel = NewLevel;
 
 	auto flags = fn->FunctionFlags;

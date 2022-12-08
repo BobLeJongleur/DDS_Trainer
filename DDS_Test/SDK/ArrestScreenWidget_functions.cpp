@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,17 +47,17 @@ void UArrestScreenWidget_C::Construct()
 }
 
 
-// Function ArrestScreenWidget.ArrestScreenWidget_C.Setup
+// Function ArrestScreenWidget.ArrestScreenWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AsalesManager_C*         salesManager                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UshadyCommInterface_C*   ParentShady                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UArrestScreenWidget_C::Setup(class AsalesManager_C* salesManager, class UshadyCommInterface_C* ParentShady)
+void UArrestScreenWidget_C::setup(class AsalesManager_C* salesManager, class UshadyCommInterface_C* ParentShady)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ArrestScreenWidget.ArrestScreenWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function ArrestScreenWidget.ArrestScreenWidget_C.setup");
 
-	UArrestScreenWidget_C_Setup_Params params;
+	UArrestScreenWidget_C_setup_Params params;
 	params.salesManager = salesManager;
 	params.ParentShady = ParentShady;
 

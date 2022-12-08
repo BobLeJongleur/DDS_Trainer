@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,32 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function BlueprintHelpers.BlueprintHelpers_C.SecondsToTime
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          TimeSeconds                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   OutTextTime                    (Parm, OutParm)
+
+void UBlueprintHelpers_C::STATIC_SecondsToTime(float TimeSeconds, class UObject* __WorldContext, struct FText* OutTextTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BlueprintHelpers.BlueprintHelpers_C.SecondsToTime");
+
+	UBlueprintHelpers_C_SecondsToTime_Params params;
+	params.TimeSeconds = TimeSeconds;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutTextTime != nullptr)
+		*OutTextTime = params.OutTextTime;
+}
+
 
 // Function BlueprintHelpers.BlueprintHelpers_C.DrugFormToText
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)

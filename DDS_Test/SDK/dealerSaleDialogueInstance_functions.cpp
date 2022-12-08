@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function dealerSaleDialogueInstance.dealerSaleDialogueInstance_C.GetRandomDialogueLine
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   Output                         (Parm, OutParm)
+
+void AdealerSaleDialogueInstance_C::GetRandomDialogueLine(struct FText* Output)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function dealerSaleDialogueInstance.dealerSaleDialogueInstance_C.GetRandomDialogueLine");
+
+	AdealerSaleDialogueInstance_C_GetRandomDialogueLine_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Output != nullptr)
+		*Output = params.Output;
+}
+
 
 // Function dealerSaleDialogueInstance.dealerSaleDialogueInstance_C.chooseKnowSomething
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function useSlotWidget.useSlotWidget_C.GetToolTipWidget_2
+struct UuseSlotWidget_C_GetToolTipWidget_2_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
 
 // Function useSlotWidget.useSlotWidget_C.setUseContent
 struct UuseSlotWidget_C_setUseContent_Params

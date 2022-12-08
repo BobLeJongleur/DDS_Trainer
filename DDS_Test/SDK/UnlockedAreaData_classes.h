@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ public:
 	class UWidget* Get_progUnlock_ToolTipWidget_1();
 	class UWidget* Get_respectBarsPanel_ToolTipWidget_1();
 	void Construct();
-	void Setup(const struct FText& AreaNam, float ExpVal, float ExpClamp, float ExpMax, bool AreaUnlocked, bool AreaAvailable, const struct FString& AreaString, const struct FText& reqArea, float reqRespect, int reqLevel, float ReqAreaExp);
+	void setup(const struct FText& AreaNam, float ExpVal, float ExpClamp, float ExpMax, bool AreaUnlocked, bool AreaAvailable, const struct FString& AreaString, const struct FText& reqArea, float reqRespect, int reqLevel, float ReqAreaExp);
 	void BndEvt__btnUnlock_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void updateExposureBar();
 	void ExecuteUbergraph_UnlockedAreaData(int EntryPoint);

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,6 +16,11 @@ namespace SDK
 
 // Function policeSearchWidget.policeSearchWidget_C.Construct
 struct UpoliceSearchWidget_C_Construct_Params
+{
+};
+
+// Function policeSearchWidget.policeSearchWidget_C.RemoveMe
+struct UpoliceSearchWidget_C_RemoveMe_Params
 {
 };
 

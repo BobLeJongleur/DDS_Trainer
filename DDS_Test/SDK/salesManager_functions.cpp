@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,133 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function salesManager.salesManager_C.ReconstructClientExpectations
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AsalesManager_C::ReconstructClientExpectations()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.ReconstructClientExpectations");
+
+	AsalesManager_C_ReconstructClientExpectations_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.CheckAssignedSafe
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CashDropped                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AsalesManager_C::CheckAssignedSafe(int ClientId, bool* CashDropped)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.CheckAssignedSafe");
+
+	AsalesManager_C_CheckAssignedSafe_Params params;
+	params.ClientId = ClientId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CashDropped != nullptr)
+		*CashDropped = params.CashDropped;
+}
+
+
+// Function salesManager.salesManager_C.ClearSafeBinding
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 AssignedArea                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AsalesManager_C::ClearSafeBinding(const struct FString& AssignedArea)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.ClearSafeBinding");
+
+	AsalesManager_C_ClearSafeBinding_Params params;
+	params.AssignedArea = AssignedArea;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.BindSafeToArea
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGuid                   SafeGuid                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 AreaString                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AsalesManager_C::BindSafeToArea(const struct FGuid& SafeGuid, const struct FString& AreaString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.BindSafeToArea");
+
+	AsalesManager_C_BindSafeToArea_Params params;
+	params.SafeGuid = SafeGuid;
+	params.AreaString = AreaString;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.MurderDealer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AsalesManager_C::MurderDealer(int ClientId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.MurderDealer");
+
+	AsalesManager_C_MurderDealer_Params params;
+	params.ClientId = ClientId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.PromoteClientToLabCrew
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   AssignedLab                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          EndCost                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AsalesManager_C::PromoteClientToLabCrew(int ClientId, const struct FName& AssignedLab, float EndCost)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.PromoteClientToLabCrew");
+
+	AsalesManager_C_PromoteClientToLabCrew_Params params;
+	params.ClientId = ClientId;
+	params.AssignedLab = AssignedLab;
+	params.EndCost = EndCost;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function salesManager.salesManager_C.ReleaseAllClients
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -377,10 +504,12 @@ void AsalesManager_C::adaptDifficulty()
 // bool                           CashMeet                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   DrugNam                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           priceHigh                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           PriceHigh                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CashDrop                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            CashAmount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Message                        (Parm, OutParm)
 
-void AsalesManager_C::generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool priceHigh, struct FText* Message)
+void AsalesManager_C::generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool PriceHigh, bool CashDrop, int CashAmount, struct FText* Message)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.generateClientMessage");
 
@@ -389,7 +518,9 @@ void AsalesManager_C::generateClientMessage(bool dealer, bool CashMeet, int Quan
 	params.CashMeet = CashMeet;
 	params.Quantity = Quantity;
 	params.DrugNam = DrugNam;
-	params.priceHigh = priceHigh;
+	params.PriceHigh = PriceHigh;
+	params.CashDrop = CashDrop;
+	params.CashAmount = CashAmount;
 
 	auto flags = fn->FunctionFlags;
 
@@ -586,10 +717,10 @@ void AsalesManager_C::getOrderedDrugName(int DrugIndex, struct FText* Output)
 // int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            DrugDemandedID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interested                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           priceHigh                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           PriceHigh                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Wish                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AsalesManager_C::checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* priceHigh, bool* Wish)
+void AsalesManager_C::checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* PriceHigh, bool* Wish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.checkClientInterested");
 
@@ -605,8 +736,8 @@ void AsalesManager_C::checkClientInterested(int ClientId, int DrugDemandedID, bo
 
 	if (Interested != nullptr)
 		*Interested = params.Interested;
-	if (priceHigh != nullptr)
-		*priceHigh = params.priceHigh;
+	if (PriceHigh != nullptr)
+		*PriceHigh = params.PriceHigh;
 	if (Wish != nullptr)
 		*Wish = params.Wish;
 }
@@ -920,19 +1051,19 @@ void AsalesManager_C::countClientStatistics()
 // Parameters:
 // int                            inClientID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           nightTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           priceHigh                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           PriceHigh                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            DrugID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OutQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Critical                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AsalesManager_C::calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int DrugID, int* OutQuantity, bool* Critical)
+void AsalesManager_C::calcOrderQuantity(int inClientID, bool nightTime, bool PriceHigh, int DrugID, int* OutQuantity, bool* Critical)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.calcOrderQuantity");
 
 	AsalesManager_C_calcOrderQuantity_Params params;
 	params.inClientID = inClientID;
 	params.nightTime = nightTime;
-	params.priceHigh = priceHigh;
+	params.PriceHigh = PriceHigh;
 	params.DrugID = DrugID;
 
 	auto flags = fn->FunctionFlags;
@@ -1307,6 +1438,40 @@ void AsalesManager_C::KillSalesManager()
 	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.KillSalesManager");
 
 	AsalesManager_C_KillSalesManager_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.AllClientsMakeDealers
+// (BlueprintCallable, BlueprintEvent)
+
+void AsalesManager_C::AllClientsMakeDealers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.AllClientsMakeDealers");
+
+	AsalesManager_C_AllClientsMakeDealers_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function salesManager.salesManager_C.TestKillDealer
+// (BlueprintCallable, BlueprintEvent)
+
+void AsalesManager_C::TestKillDealer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function salesManager.salesManager_C.TestKillDealer");
+
+	AsalesManager_C_TestKillDealer_Params params;
 
 	auto flags = fn->FunctionFlags;
 

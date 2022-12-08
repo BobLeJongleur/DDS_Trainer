@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,17 +122,17 @@ void UspinBoxOverride_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 }
 
 
-// Function spinBoxOverride.spinBoxOverride_C.Setup
+// Function spinBoxOverride.spinBoxOverride_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          MaxVal                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DefaultOverride                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UspinBoxOverride_C::Setup(float MaxVal, float DefaultOverride)
+void UspinBoxOverride_C::setup(float MaxVal, float DefaultOverride)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function spinBoxOverride.spinBoxOverride_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function spinBoxOverride.spinBoxOverride_C.setup");
 
-	UspinBoxOverride_C_Setup_Params params;
+	UspinBoxOverride_C_setup_Params params;
 	params.MaxVal = MaxVal;
 	params.DefaultOverride = DefaultOverride;
 

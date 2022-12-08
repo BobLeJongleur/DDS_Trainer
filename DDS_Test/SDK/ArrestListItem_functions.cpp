@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,18 +51,18 @@ void UArrestListItem_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_0_OnButtonCl
 }
 
 
-// Function ArrestListItem.ArrestListItem_C.Setup
+// Function ArrestListItem.ArrestListItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CliendID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AsalesManager_C*         salesManager                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UArrestScreenWidget_C*   MyParentRef                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UArrestListItem_C::Setup(int CliendID, class AsalesManager_C* salesManager, class UArrestScreenWidget_C* MyParentRef)
+void UArrestListItem_C::setup(int CliendID, class AsalesManager_C* salesManager, class UArrestScreenWidget_C* MyParentRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ArrestListItem.ArrestListItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function ArrestListItem.ArrestListItem_C.setup");
 
-	UArrestListItem_C_Setup_Params params;
+	UArrestListItem_C_setup_Params params;
 	params.CliendID = CliendID;
 	params.salesManager = salesManager;
 	params.MyParentRef = MyParentRef;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass saleAreaManageMarker.saleAreaManageMarker_C
-// 0x0100 (0x0308 - 0x0208)
+// 0x0108 (0x0310 - 0x0208)
 class UsaleAreaManageMarker_C : public UUserWidget
 {
 public:
@@ -41,6 +41,7 @@ public:
 	bool                                               requirementsMet;                                          // 0x02A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
 	struct FSaleAreaData                               AreaMeta;                                                 // 0x02A8(0x0060) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UDataTable*                                  AreaDatabase;                                             // 0x0308(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -49,6 +50,7 @@ public:
 	}
 
 
+	void CheckAllAreas(int CurAreas, class AsaleAreaManager_C* saleAreaManager, bool* AllAreas);
 	void setParentReference();
 	class UWidget* Get_alertIcon_ToolTipWidget_1();
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);

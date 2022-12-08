@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,8 +39,8 @@ struct UcolorSelectWidget_C_BndEvt__sliderBlue_K2Node_ComponentBoundEvent_2_OnFl
 	float                                              Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function colorSelectWidget.colorSelectWidget_C.Setup
-struct UcolorSelectWidget_C_Setup_Params
+// Function colorSelectWidget.colorSelectWidget_C.setup
+struct UcolorSelectWidget_C_setup_Params
 {
 	struct FSlateColor                                 SlateColor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UsettingsWidget_C*                           settingsWidget;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)

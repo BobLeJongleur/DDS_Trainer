@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,16 +52,16 @@ void UplantStatsWidget_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function plantStatsWidget.plantStatsWidget_C.Setup
+// Function plantStatsWidget.plantStatsWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AweedPlantBP_C*          PlantRef                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UplantStatsWidget_C::Setup(class AweedPlantBP_C* PlantRef)
+void UplantStatsWidget_C::setup(class AweedPlantBP_C* PlantRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function plantStatsWidget.plantStatsWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function plantStatsWidget.plantStatsWidget_C.setup");
 
-	UplantStatsWidget_C_Setup_Params params;
+	UplantStatsWidget_C_setup_Params params;
 	params.PlantRef = PlantRef;
 
 	auto flags = fn->FunctionFlags;

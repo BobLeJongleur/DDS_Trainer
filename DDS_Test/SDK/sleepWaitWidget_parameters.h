@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,8 +68,8 @@ struct UsleepWaitWidget_C_BndEvt__btnCancel_K2Node_ComponentBoundEvent_5_OnButto
 {
 };
 
-// Function sleepWaitWidget.sleepWaitWidget_C.Setup
-struct UsleepWaitWidget_C_Setup_Params
+// Function sleepWaitWidget.sleepWaitWidget_C.setup
+struct UsleepWaitWidget_C_setup_Params
 {
 	bool                                               Sleep;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

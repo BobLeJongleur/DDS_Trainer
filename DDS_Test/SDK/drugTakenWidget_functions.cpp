@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UdrugTakenWidget_C::Construct()
 }
 
 
-// Function drugTakenWidget.drugTakenWidget_C.Setup
+// Function drugTakenWidget.drugTakenWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   DrugName                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UdrugTakenWidget_C::Setup(const struct FText& DrugName)
+void UdrugTakenWidget_C::setup(const struct FText& DrugName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function drugTakenWidget.drugTakenWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function drugTakenWidget.drugTakenWidget_C.setup");
 
-	UdrugTakenWidget_C_Setup_Params params;
+	UdrugTakenWidget_C_setup_Params params;
 	params.DrugName = DrugName;
 
 	auto flags = fn->FunctionFlags;

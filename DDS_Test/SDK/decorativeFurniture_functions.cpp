@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function decorativeFurniture.decorativeFurniture_C.CheckRoomLighting
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AdecorativeFurniture_C::CheckRoomLighting(bool* Enabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function decorativeFurniture.decorativeFurniture_C.CheckRoomLighting");
+
+	AdecorativeFurniture_C_CheckRoomLighting_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Enabled != nullptr)
+		*Enabled = params.Enabled;
+}
+
 
 // Function decorativeFurniture.decorativeFurniture_C.respawnFurniture
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -67,14 +89,14 @@ void AdecorativeFurniture_C::ReceiveBeginPlay()
 // Function decorativeFurniture.decorativeFurniture_C.InteractionActivate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AplayerCharacterBP_C*    PlayerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AplayerCharacterBP_C*    playerRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AdecorativeFurniture_C::InteractionActivate(class AplayerCharacterBP_C* PlayerRef)
+void AdecorativeFurniture_C::InteractionActivate(class AplayerCharacterBP_C* playerRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function decorativeFurniture.decorativeFurniture_C.InteractionActivate");
 
 	AdecorativeFurniture_C_InteractionActivate_Params params;
-	params.PlayerRef = PlayerRef;
+	params.playerRef = playerRef;
 
 	auto flags = fn->FunctionFlags;
 

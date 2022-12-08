@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function saleAreaManageMarker.saleAreaManageMarker_C.CheckAllAreas
+struct UsaleAreaManageMarker_C_CheckAllAreas_Params
+{
+	int                                                CurAreas;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AsaleAreaManager_C*                          saleAreaManager;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               AllAreas;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function saleAreaManageMarker.saleAreaManageMarker_C.setParentReference
 struct UsaleAreaManageMarker_C_setParentReference_Params

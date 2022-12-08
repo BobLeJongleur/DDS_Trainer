@@ -1,0 +1,467 @@
+Label_0x0:
+    $4C: FlowStack.Push(0x78C);
+Label_0x5:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Not_PreBool_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Not_PreBool)
+          $1: Instance variable named dropTestPositive
+          $16: EX_EndFunctionParms
+Label_0x22:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_IsValid_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (000002836141EF50:KismetSystemLibrary Engine.Default__KismetSystemLibrary)
+          Skip Bytes:
+            0x13
+          R-Value Property
+            CallFunc_IsValid_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node KismetSystemLibrary::IsValid)
+              $1: Instance variable named selectedDrop
+              $16: EX_EndFunctionParms
+Label_0x55:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_BooleanAND_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::BooleanAND)
+          $0: Local variable named CallFunc_IsValid_ReturnValue
+          $1: Instance variable named awaitingOrder
+          $16: EX_EndFunctionParms
+Label_0x7B:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_BooleanAND_ReturnValue1
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::BooleanAND)
+          $0: Local variable named CallFunc_BooleanAND_ReturnValue
+          $0: Local variable named CallFunc_Not_PreBool_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0xA1:
+    $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
+      $0: Local variable named CallFunc_BooleanAND_ReturnValue1
+Label_0xAB:
+    $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
+      $19: Context
+        ObjectExpression:
+          $1: Instance variable named selectedDrop
+        Skip Bytes:
+          0x9
+        R-Value Property
+          expectingDrop
+        ContextExpression:
+          $1: Instance variable named expectingDrop
+Label_0xCB:
+    $31: set array
+      $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+      $32: EX_EndArray
+Label_0xD6:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622237F0:GameplayStatics Engine.Default__GameplayStatics)
+      Skip Bytes:
+        0x1D
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+          $17: EX_Self
+          $20: EX_ObjectConst (0000028370A7A600:BlueprintGeneratedClass mainComputer.mainComputer_C)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+          $16: EX_EndFunctionParms
+Label_0x109:
+    $19: Context
+      ObjectExpression:
+        $19: Context
+          ObjectExpression:
+            $1: Instance variable named selectedDrop
+          Skip Bytes:
+            0x9
+          R-Value Property
+            InventoryComponent
+          ContextExpression:
+            $1: Instance variable named InventoryComponent
+      Skip Bytes:
+        0x53
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named GetItemList
+          $21: literal name None
+          $27: EX_True
+          $24: literal byte 4
+          $2F: literal struct Guid (serialized size: 16)
+            $1D: literal int32_t 0
+            $1D: literal int32_t 0
+            $1D: literal int32_t 0
+            $1D: literal int32_t 0
+            $30: EX_EndStructConst
+          $28: EX_False
+          $0: Local variable named CallFunc_GetItemList_OutItems
+          $0: Local variable named CallFunc_GetItemList_StackExceeded
+          $16: EX_EndFunctionParms
+Label_0x188:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named Temp_int_Loop_Counter_Variable
+      Expression:
+        $1D: literal int32_t 0
+Label_0x19F:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named Temp_int_Array_Index_Variable
+      Expression:
+        $1D: literal int32_t 0
+Label_0x1B6:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Array_Length_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+          Skip Bytes:
+            0x13
+          R-Value Property
+            CallFunc_Array_Length_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node KismetArrayLibrary::Array_Length)
+              $0: Local variable named CallFunc_GetItemList_OutItems
+              $16: EX_EndFunctionParms
+Label_0x1F1:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Less_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Less_IntInt)
+          $0: Local variable named Temp_int_Loop_Counter_Variable
+          $0: Local variable named CallFunc_Array_Length_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0x217:
+    $7: Jump to offset 0x436 if not expr:
+      $0: Local variable named CallFunc_Less_IntInt_ReturnValue
+Label_0x225:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named Temp_int_Array_Index_Variable
+      Expression:
+        $0: Local variable named Temp_int_Loop_Counter_Variable
+Label_0x240:
+    $4C: FlowStack.Push(0x742);
+Label_0x245:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x21
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+          $1D: literal int32_t 0
+          $0: Local variable named CallFunc_Array_Get_Item1
+          $16: EX_EndFunctionParms
+Label_0x27C:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x25
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetItemList_OutItems
+          $0: Local variable named Temp_int_Array_Index_Variable
+          $0: Local variable named CallFunc_Array_Get_Item2
+          $16: EX_EndFunctionParms
+Label_0x2B7:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_EqualEqual_IntInt_ReturnValue1
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::EqualEqual_IntInt)
+          $42: Struct member context 
+            Expression within struct: 
+              ItemAmount_26_F0481C6644AA39BC24534C94A29D7450, offset 12
+            Expression to struct:
+              $0: Local variable named CallFunc_Array_Get_Item2
+          $1: Instance variable named curOrderPackageSize
+          $16: EX_EndFunctionParms
+Label_0x2E6:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x3B
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $19: Context
+            ObjectExpression:
+              $0: Local variable named CallFunc_Array_Get_Item1
+            Skip Bytes:
+              0x9
+            R-Value Property
+              drugsAvailable
+            ContextExpression:
+              $1: Instance variable named drugsAvailable
+          $1: Instance variable named curOrderDrugID
+          $0: Local variable named CallFunc_Array_Get_Item3
+          $16: EX_EndFunctionParms
+Label_0x337:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_EqualEqual_ByteByte_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::EqualEqual_ByteByte)
+          $42: Struct member context 
+            Expression within struct: 
+              SubstanceForm_10_C925520C4AB9EFE7114FA789E8C6ED6A, offset 32
+            Expression to struct:
+              $42: Struct member context 
+                Expression within struct: 
+                  MixProportions_16_D1FE595547104A1D9071A9807CFE11BE, offset 80
+                Expression to struct:
+                  $0: Local variable named CallFunc_Array_Get_Item2
+          $42: Struct member context 
+            Expression within struct: 
+              drugForm_19_B94E64C64B0B81B32236CCBA49100E18, offset 76
+            Expression to struct:
+              $0: Local variable named CallFunc_Array_Get_Item3
+          $16: EX_EndFunctionParms
+Label_0x378:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_BooleanAND_ReturnValue2
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::BooleanAND)
+          $0: Local variable named CallFunc_EqualEqual_IntInt_ReturnValue1
+          $0: Local variable named CallFunc_EqualEqual_ByteByte_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0x39E:
+    $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
+      $0: Local variable named CallFunc_BooleanAND_ReturnValue2
+Label_0x3A8:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x25
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetItemList_OutItems
+          $0: Local variable named Temp_int_Array_Index_Variable
+          $0: Local variable named CallFunc_Array_Get_Item2
+          $16: EX_EndFunctionParms
+Label_0x3E3:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue1
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
+          $0: Local variable named numValidPackages
+          $42: Struct member context 
+            Expression within struct: 
+              ItemQuantity_5_5FC98A504C1F1F7038442980024ECBD0, offset 8
+            Expression to struct:
+              $0: Local variable named CallFunc_Array_Get_Item2
+          $16: EX_EndFunctionParms
+Label_0x41A:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named numValidPackages
+      Expression:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue1
+Label_0x435:
+    $4D: if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! }
+Label_0x436:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_EqualEqual_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::EqualEqual_IntInt)
+          $0: Local variable named numValidPackages
+          $1: Instance variable named curOrderPackageQuantity
+          $16: EX_EndFunctionParms
+Label_0x45C:
+    $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
+      $0: Local variable named CallFunc_EqualEqual_IntInt_ReturnValue
+Label_0x466:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $1: Instance variable named dropTestPositive
+      Expression:
+        $27: EX_True
+Label_0x471:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Greater_IntInt)
+          $1: Instance variable named curOrderTaskID
+          $1D: literal int32_t 0
+          $16: EX_EndFunctionParms
+Label_0x493:
+    $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
+      $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
+Label_0x49D:
+    $31: set array
+      $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+      $32: EX_EndArray
+Label_0x4A8:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622237F0:GameplayStatics Engine.Default__GameplayStatics)
+      Skip Bytes:
+        0x1D
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
+          $17: EX_Self
+          $20: EX_ObjectConst (0000028365344C00:BlueprintGeneratedClass questManager.questManager_C)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          $16: EX_EndFunctionParms
+Label_0x4DB:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x21
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          $1D: literal int32_t 0
+          $0: Local variable named CallFunc_Array_Get_Item
+          $16: EX_EndFunctionParms
+Label_0x512:
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Array_Get_Item
+      Skip Bytes:
+        0x19
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named markTaskStatus
+          $1: Instance variable named curOrderTaskID
+          $24: literal byte 1
+          $16: EX_EndFunctionParms
+Label_0x541:
+    $F: Let (Variable = Expression)
+      Variable:
+        $1: Instance variable named curOrderTaskID
+      Expression:
+        $1D: literal int32_t 0
+Label_0x558:
+    $1B: Virtual Function named getFinaliseTaskDescription
+      $0: Local variable named CallFunc_getFinaliseTaskDescription_Text
+      $16: EX_EndFunctionParms
+Label_0x56F:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x21
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
+          $1D: literal int32_t 0
+          $0: Local variable named CallFunc_Array_Get_Item
+          $16: EX_EndFunctionParms
+Label_0x5A6:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (00000283622232B0:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
+      Skip Bytes:
+        0x21
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
+          $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
+          $1D: literal int32_t 0
+          $0: Local variable named CallFunc_Array_Get_Item1
+          $16: EX_EndFunctionParms
+Label_0x5DD:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_K2_GetActorLocation_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $0: Local variable named CallFunc_Array_Get_Item1
+          Skip Bytes:
+            0xA
+          R-Value Property
+            CallFunc_K2_GetActorLocation_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node Actor::K2_GetActorLocation)
+              $16: EX_EndFunctionParms
+Label_0x60F:
+    $19: Context
+      ObjectExpression:
+        $0: Local variable named CallFunc_Array_Get_Item
+      Skip Bytes:
+        0x101
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named createNewTask
+          $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "???????????????????????????????????????????" }
+          $0: Local variable named CallFunc_getFinaliseTaskDescription_Text
+          $1E: literal float 1000.000000
+          $1F: literal ansi string ""
+          $27: EX_True
+          $0: Local variable named CallFunc_K2_GetActorLocation_ReturnValue
+          $29: literal text - string table entry { tableid: "??????????????????????????????????????????????????????????????????????????????????????????", key: "??????????????????????????????????????????" }
+          $0: Local variable named CallFunc_getFinaliseTaskDescription_Text
+          $28: EX_False
+          $1D: literal int32_t -1
+          $27: EX_True
+          $0: Local variable named CallFunc_createNewTask_AssignedID
+          $16: EX_EndFunctionParms
+Label_0x726:
+    $F: Let (Variable = Expression)
+      Variable:
+        $1: Instance variable named orderFinaliseTaskID
+      Expression:
+        $0: Local variable named CallFunc_createNewTask_AssignedID
+Label_0x741:
+    $4D: if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! }
+Label_0x742:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
+          $0: Local variable named Temp_int_Loop_Counter_Variable
+          $1D: literal int32_t 1
+          $16: EX_EndFunctionParms
+Label_0x76C:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named Temp_int_Loop_Counter_Variable
+      Expression:
+        $0: Local variable named CallFunc_Add_IntInt_ReturnValue
+Label_0x787:
+    $6: Jump to offset 0x1B6
+Label_0x78C:
+    $4: Return expression
+      $B: EX_Nothing
+Label_0x78E:
+    $53: EX_EndOfScript

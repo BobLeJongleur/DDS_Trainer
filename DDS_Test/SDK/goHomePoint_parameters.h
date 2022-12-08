@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,6 +45,11 @@ struct AgoHomePoint_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOve
 struct AgoHomePoint_C_LongRadiusChanged_Params
 {
 	bool                                               InRadius;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function goHomePoint.goHomePoint_C.ResetLocation
+struct AgoHomePoint_C_ResetLocation_Params
+{
 };
 
 // Function goHomePoint.goHomePoint_C.ExecuteUbergraph_goHomePoint

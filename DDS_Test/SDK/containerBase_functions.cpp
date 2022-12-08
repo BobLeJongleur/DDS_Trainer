@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,9 +76,9 @@ void AcontainerBase_C::CanAccessContainer(bool* CanAccess, struct FText* Decline
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EitemCategories>   Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AcontainerBase_C::AcceptsCategory(TEnumAsByte<EitemCategories> Category, bool* ok)
+void AcontainerBase_C::AcceptsCategory(TEnumAsByte<EitemCategories> Category, bool* OK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function containerBase.containerBase_C.AcceptsCategory");
 
@@ -91,8 +91,8 @@ void AcontainerBase_C::AcceptsCategory(TEnumAsByte<EitemCategories> Category, bo
 
 	fn->FunctionFlags = flags;
 
-	if (ok != nullptr)
-		*ok = params.ok;
+	if (OK != nullptr)
+		*OK = params.OK;
 }
 
 
@@ -252,17 +252,17 @@ void AcontainerBase_C::resetContentSizes()
 }
 
 
-// Function containerBase.containerBase_C.RemoveItem
+// Function containerBase.containerBase_C.removeItem
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AcontainerBase_C::RemoveItem(int ItemIndex, int Quantity)
+void AcontainerBase_C::removeItem(int ItemIndex, int Quantity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function containerBase.containerBase_C.RemoveItem");
+	static auto fn = UObject::FindObject<UFunction>("Function containerBase.containerBase_C.removeItem");
 
-	AcontainerBase_C_RemoveItem_Params params;
+	AcontainerBase_C_removeItem_Params params;
 	params.ItemIndex = ItemIndex;
 	params.Quantity = Quantity;
 

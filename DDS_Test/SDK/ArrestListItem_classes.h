@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 
 	ESlateVisibility Get_BAILAMT_Visibility_1();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void Setup(int CliendID, class AsalesManager_C* salesManager, class UArrestScreenWidget_C* MyParentRef);
+	void setup(int CliendID, class AsalesManager_C* salesManager, class UArrestScreenWidget_C* MyParentRef);
 	void ExecuteUbergraph_ArrestListItem(int EntryPoint);
 	void ButtonChuj__DelegateSignature();
 };

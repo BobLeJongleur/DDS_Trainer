@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,164 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage
+// Function playerCharacterBP.playerCharacterBP_C.CheckRespawnDocuments
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AplayerCharacterBP_C::CheckFallDamage()
+void AplayerCharacterBP_C::CheckRespawnDocuments()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.CheckRespawnDocuments");
+
+	AplayerCharacterBP_C_CheckRespawnDocuments_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.GetMovementForwardVector
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AplayerCharacterBP_C::GetMovementForwardVector()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.GetMovementForwardVector");
+
+	AplayerCharacterBP_C_GetMovementForwardVector_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckCashAchievements
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::CheckCashAchievements()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.CheckCashAchievements");
+
+	AplayerCharacterBP_C_CheckCashAchievements_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.GetSurfaceActionName
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 SurfaceID                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FText                   OutAction                      (Parm, OutParm)
+
+void AplayerCharacterBP_C::GetSurfaceActionName(const struct FString& SurfaceID, struct FText* OutAction)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.GetSurfaceActionName");
+
+	AplayerCharacterBP_C_GetSurfaceActionName_Params params;
+	params.SurfaceID = SurfaceID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutAction != nullptr)
+		*OutAction = params.OutAction;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.StartRenovationMode
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::StartRenovationMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.StartRenovationMode");
+
+	AplayerCharacterBP_C_StartRenovationMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.RenovationInteraction
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::RenovationInteraction()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.RenovationInteraction");
+
+	AplayerCharacterBP_C_RenovationInteraction_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ClearRenovationMode
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ClearRenovationMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ClearRenovationMode");
+
+	AplayerCharacterBP_C_ClearRenovationMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.RenovationModeTrace
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::RenovationModeTrace()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.RenovationModeTrace");
+
+	AplayerCharacterBP_C_RenovationModeTrace_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          OverrideDamage                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AplayerCharacterBP_C::CheckFallDamage(float OverrideDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.CheckFallDamage");
 
 	AplayerCharacterBP_C_CheckFallDamage_Params params;
+	params.OverrideDamage = OverrideDamage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1174,18 +1324,18 @@ void AplayerCharacterBP_C::clearBackpack()
 // Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AbackpackBase_C*         backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AbackpackBase_C*         Backpack                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AitemInventoryHolder_C*  itemHolder                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FinventoryItemStruct    backpackData                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   BackpackItemID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AplayerCharacterBP_C::setCurrentBackpack(class AbackpackBase_C* backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData, const struct FName& BackpackItemID, bool FromVendor)
+void AplayerCharacterBP_C::setCurrentBackpack(class AbackpackBase_C* Backpack, class AitemInventoryHolder_C* itemHolder, const struct FinventoryItemStruct& backpackData, const struct FName& BackpackItemID, bool FromVendor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.setCurrentBackpack");
 
 	AplayerCharacterBP_C_setCurrentBackpack_Params params;
-	params.backpack = backpack;
+	params.Backpack = Backpack;
 	params.itemHolder = itemHolder;
 	params.backpackData = backpackData;
 	params.BackpackItemID = BackpackItemID;
@@ -1970,6 +2120,26 @@ void AplayerCharacterBP_C::headBobbTimeline__footStep__EventFunc()
 }
 
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_33
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_SprintToggle_K2Node_InputActionEvent_33(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_33");
+
+	AplayerCharacterBP_C_InpActEvt_SprintToggle_K2Node_InputActionEvent_33_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_32
 // (BlueprintEvent)
 // Parameters:
@@ -1990,16 +2160,16 @@ void AplayerCharacterBP_C::InpActEvt_SprintToggle_K2Node_InputActionEvent_32(con
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_31
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_31
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_SprintToggle_K2Node_InputActionEvent_31(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_CrouchToggle_K2Node_InputActionEvent_31(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_SprintToggle_K2Node_InputActionEvent_31");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_31");
 
-	AplayerCharacterBP_C_InpActEvt_SprintToggle_K2Node_InputActionEvent_31_Params params;
+	AplayerCharacterBP_C_InpActEvt_CrouchToggle_K2Node_InputActionEvent_31_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2010,16 +2180,16 @@ void AplayerCharacterBP_C::InpActEvt_SprintToggle_K2Node_InputActionEvent_31(con
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_30
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_30
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_CrouchToggle_K2Node_InputActionEvent_30(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_JumpObstacle_K2Node_InputActionEvent_30(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_CrouchToggle_K2Node_InputActionEvent_30");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_30");
 
-	AplayerCharacterBP_C_InpActEvt_CrouchToggle_K2Node_InputActionEvent_30_Params params;
+	AplayerCharacterBP_C_InpActEvt_JumpObstacle_K2Node_InputActionEvent_30_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2030,16 +2200,16 @@ void AplayerCharacterBP_C::InpActEvt_CrouchToggle_K2Node_InputActionEvent_30(con
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_29
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_29
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_JumpObstacle_K2Node_InputActionEvent_29(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_InventoryToggle_K2Node_InputActionEvent_29(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_JumpObstacle_K2Node_InputActionEvent_29");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_29");
 
-	AplayerCharacterBP_C_InpActEvt_JumpObstacle_K2Node_InputActionEvent_29_Params params;
+	AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_29_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2060,26 +2230,6 @@ void AplayerCharacterBP_C::InpActEvt_InventoryToggle_K2Node_InputActionEvent_28(
 	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_28");
 
 	AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_28_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_27
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void AplayerCharacterBP_C::InpActEvt_InventoryToggle_K2Node_InputActionEvent_27(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InventoryToggle_K2Node_InputActionEvent_27");
-
-	AplayerCharacterBP_C_InpActEvt_InventoryToggle_K2Node_InputActionEvent_27_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2130,16 +2280,16 @@ void AplayerCharacterBP_C::InpActEvt_F10_K2Node_InputKeyEvent_6(const struct FKe
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_26
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_27
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_Wait_K2Node_InputActionEvent_26(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_Wait_K2Node_InputActionEvent_27(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_26");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Wait_K2Node_InputActionEvent_27");
 
-	AplayerCharacterBP_C_InpActEvt_Wait_K2Node_InputActionEvent_26_Params params;
+	AplayerCharacterBP_C_InpActEvt_Wait_K2Node_InputActionEvent_27_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2150,16 +2300,16 @@ void AplayerCharacterBP_C::InpActEvt_Wait_K2Node_InputActionEvent_26(const struc
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_25
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_26
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_phoneNext_K2Node_InputActionEvent_25(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_phoneNext_K2Node_InputActionEvent_26(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_25");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneNext_K2Node_InputActionEvent_26");
 
-	AplayerCharacterBP_C_InpActEvt_phoneNext_K2Node_InputActionEvent_25_Params params;
+	AplayerCharacterBP_C_InpActEvt_phoneNext_K2Node_InputActionEvent_26_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2170,16 +2320,16 @@ void AplayerCharacterBP_C::InpActEvt_phoneNext_K2Node_InputActionEvent_25(const 
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_24
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_25
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_phonePrevious_K2Node_InputActionEvent_24(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_phonePrevious_K2Node_InputActionEvent_25(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_24");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phonePrevious_K2Node_InputActionEvent_25");
 
-	AplayerCharacterBP_C_InpActEvt_phonePrevious_K2Node_InputActionEvent_24_Params params;
+	AplayerCharacterBP_C_InpActEvt_phonePrevious_K2Node_InputActionEvent_25_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2190,16 +2340,16 @@ void AplayerCharacterBP_C::InpActEvt_phonePrevious_K2Node_InputActionEvent_24(co
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_23
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_24
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_phoneEnter_K2Node_InputActionEvent_23(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_phoneEnter_K2Node_InputActionEvent_24(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_23");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneEnter_K2Node_InputActionEvent_24");
 
-	AplayerCharacterBP_C_InpActEvt_phoneEnter_K2Node_InputActionEvent_23_Params params;
+	AplayerCharacterBP_C_InpActEvt_phoneEnter_K2Node_InputActionEvent_24_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2210,16 +2360,16 @@ void AplayerCharacterBP_C::InpActEvt_phoneEnter_K2Node_InputActionEvent_23(const
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_22
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_23
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_phoneBack_K2Node_InputActionEvent_22(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_phoneBack_K2Node_InputActionEvent_23(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_22");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_phoneBack_K2Node_InputActionEvent_23");
 
-	AplayerCharacterBP_C_InpActEvt_phoneBack_K2Node_InputActionEvent_22_Params params;
+	AplayerCharacterBP_C_InpActEvt_phoneBack_K2Node_InputActionEvent_23_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2250,16 +2400,16 @@ void AplayerCharacterBP_C::InpActEvt_H_K2Node_InputKeyEvent_5(const struct FKey&
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_21
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_22
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_ScrollUp_K2Node_InputActionEvent_21(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_ScrollUp_K2Node_InputActionEvent_22(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_21");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollUp_K2Node_InputActionEvent_22");
 
-	AplayerCharacterBP_C_InpActEvt_ScrollUp_K2Node_InputActionEvent_21_Params params;
+	AplayerCharacterBP_C_InpActEvt_ScrollUp_K2Node_InputActionEvent_22_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2270,16 +2420,36 @@ void AplayerCharacterBP_C::InpActEvt_ScrollUp_K2Node_InputActionEvent_21(const s
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_20
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_21
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_ScrollDown_K2Node_InputActionEvent_20(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_ScrollDown_K2Node_InputActionEvent_21(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_20");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_ScrollDown_K2Node_InputActionEvent_21");
 
-	AplayerCharacterBP_C_InpActEvt_ScrollDown_K2Node_InputActionEvent_20_Params params;
+	AplayerCharacterBP_C_InpActEvt_ScrollDown_K2Node_InputActionEvent_21_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20");
+
+	AplayerCharacterBP_C_InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_20_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2310,16 +2480,16 @@ void AplayerCharacterBP_C::InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18");
 
-	AplayerCharacterBP_C_InpActEvt_WorkStation_EqMode_K2Node_InputActionEvent_18_Params params;
+	AplayerCharacterBP_C_InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_18_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2350,16 +2520,16 @@ void AplayerCharacterBP_C::InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16");
 
-	AplayerCharacterBP_C_InpActEvt_WorkStation_DPMode_K2Node_InputActionEvent_16_Params params;
+	AplayerCharacterBP_C_InpActEvt_LeftClickPlace_K2Node_InputActionEvent_16_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2390,16 +2560,16 @@ void AplayerCharacterBP_C::InpActEvt_LeftClickPlace_K2Node_InputActionEvent_15(c
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14");
 
-	AplayerCharacterBP_C_InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14_Params params;
+	AplayerCharacterBP_C_InpActEvt_EquipmentOptions_K2Node_InputActionEvent_14_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2410,16 +2580,16 @@ void AplayerCharacterBP_C::InpActEvt_LeftClickPlace_K2Node_InputActionEvent_14(c
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_13
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_AppartmentMode_K2Node_InputActionEvent_13(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_13");
 
-	AplayerCharacterBP_C_InpActEvt_EquipmentOptions_K2Node_InputActionEvent_13_Params params;
+	AplayerCharacterBP_C_InpActEvt_AppartmentMode_K2Node_InputActionEvent_13_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2450,36 +2620,16 @@ void AplayerCharacterBP_C::InpActEvt_AppartmentMode_K2Node_InputActionEvent_12(c
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_11
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_11
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_AppartmentMode_K2Node_InputActionEvent_11(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_InfoToggle_K2Node_InputActionEvent_11(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_AppartmentMode_K2Node_InputActionEvent_11");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_11");
 
-	AplayerCharacterBP_C_InpActEvt_AppartmentMode_K2Node_InputActionEvent_11_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_10
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void AplayerCharacterBP_C::InpActEvt_InfoToggle_K2Node_InputActionEvent_10(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_InfoToggle_K2Node_InputActionEvent_10");
-
-	AplayerCharacterBP_C_InpActEvt_InfoToggle_K2Node_InputActionEvent_10_Params params;
+	AplayerCharacterBP_C_InpActEvt_InfoToggle_K2Node_InputActionEvent_11_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2510,6 +2660,26 @@ void AplayerCharacterBP_C::InpActEvt_Y_K2Node_InputKeyEvent_4(const struct FKey&
 }
 
 
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_10
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_DropBackpack_K2Node_InputActionEvent_10(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_10");
+
+	AplayerCharacterBP_C_InpActEvt_DropBackpack_K2Node_InputActionEvent_10_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_9
 // (BlueprintEvent)
 // Parameters:
@@ -2530,16 +2700,16 @@ void AplayerCharacterBP_C::InpActEvt_DropBackpack_K2Node_InputActionEvent_9(cons
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_8
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_8
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_DropBackpack_K2Node_InputActionEvent_8(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_Action_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_DropBackpack_K2Node_InputActionEvent_8");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_8");
 
-	AplayerCharacterBP_C_InpActEvt_DropBackpack_K2Node_InputActionEvent_8_Params params;
+	AplayerCharacterBP_C_InpActEvt_Action_K2Node_InputActionEvent_8_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2570,16 +2740,16 @@ void AplayerCharacterBP_C::InpActEvt_Action_K2Node_InputActionEvent_7(const stru
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_6
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_6
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_Action_K2Node_InputActionEvent_6(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_QuickUse01_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_Action_K2Node_InputActionEvent_6");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_6");
 
-	AplayerCharacterBP_C_InpActEvt_Action_K2Node_InputActionEvent_6_Params params;
+	AplayerCharacterBP_C_InpActEvt_QuickUse01_K2Node_InputActionEvent_6_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2590,16 +2760,16 @@ void AplayerCharacterBP_C::InpActEvt_Action_K2Node_InputActionEvent_6(const stru
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_5
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_5
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_QuickUse01_K2Node_InputActionEvent_5(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_QuickUse02_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse01_K2Node_InputActionEvent_5");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_5");
 
-	AplayerCharacterBP_C_InpActEvt_QuickUse01_K2Node_InputActionEvent_5_Params params;
+	AplayerCharacterBP_C_InpActEvt_QuickUse02_K2Node_InputActionEvent_5_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2610,16 +2780,16 @@ void AplayerCharacterBP_C::InpActEvt_QuickUse01_K2Node_InputActionEvent_5(const 
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_4
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_QuickUse02_K2Node_InputActionEvent_4(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_QuickUse03_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse02_K2Node_InputActionEvent_4");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_4");
 
-	AplayerCharacterBP_C_InpActEvt_QuickUse02_K2Node_InputActionEvent_4_Params params;
+	AplayerCharacterBP_C_InpActEvt_QuickUse03_K2Node_InputActionEvent_4_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2630,36 +2800,16 @@ void AplayerCharacterBP_C::InpActEvt_QuickUse02_K2Node_InputActionEvent_4(const 
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_3
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_QuickUse03_K2Node_InputActionEvent_3(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_QuickUse04_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse03_K2Node_InputActionEvent_3");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_3");
 
-	AplayerCharacterBP_C_InpActEvt_QuickUse03_K2Node_InputActionEvent_3_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_2
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void AplayerCharacterBP_C::InpActEvt_QuickUse04_K2Node_InputActionEvent_2(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_QuickUse04_K2Node_InputActionEvent_2");
-
-	AplayerCharacterBP_C_InpActEvt_QuickUse04_K2Node_InputActionEvent_2_Params params;
+	AplayerCharacterBP_C_InpActEvt_QuickUse04_K2Node_InputActionEvent_3_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2710,16 +2860,16 @@ void AplayerCharacterBP_C::InpActEvt_L_K2Node_InputKeyEvent_2(const struct FKey&
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_MapToggle_K2Node_InputActionEvent_1(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_MapToggle_K2Node_InputActionEvent_2(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_1");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MapToggle_K2Node_InputActionEvent_2");
 
-	AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_1_Params params;
+	AplayerCharacterBP_C_InpActEvt_MapToggle_K2Node_InputActionEvent_2_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -2730,16 +2880,36 @@ void AplayerCharacterBP_C::InpActEvt_MapToggle_K2Node_InputActionEvent_1(const s
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_RightClickFilters_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AplayerCharacterBP_C::InpActEvt_N_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void AplayerCharacterBP_C::InpActEvt_RightClickFilters_K2Node_InputActionEvent_1(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_N_K2Node_InputKeyEvent_1");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_RightClickFilters_K2Node_InputActionEvent_1");
 
-	AplayerCharacterBP_C_InpActEvt_N_K2Node_InputKeyEvent_1_Params params;
+	AplayerCharacterBP_C_InpActEvt_RightClickFilters_K2Node_InputActionEvent_1_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AplayerCharacterBP_C::InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1");
+
+	AplayerCharacterBP_C_InpActEvt_MiddleMouseButton_K2Node_InputKeyEvent_1_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -3349,14 +3519,14 @@ void AplayerCharacterBP_C::lookAtCheck()
 }
 
 
-// Function playerCharacterBP.playerCharacterBP_C.StartChaseMusic
+// Function playerCharacterBP.playerCharacterBP_C.startChaseMusic
 // (BlueprintCallable, BlueprintEvent)
 
-void AplayerCharacterBP_C::StartChaseMusic()
+void AplayerCharacterBP_C::startChaseMusic()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.StartChaseMusic");
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.startChaseMusic");
 
-	AplayerCharacterBP_C_StartChaseMusic_Params params;
+	AplayerCharacterBP_C_startChaseMusic_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4091,6 +4261,57 @@ void AplayerCharacterBP_C::TestUseWater(int Amount)
 
 	AplayerCharacterBP_C_TestUseWater_Params params;
 	params.Amount = Amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ClearSave
+// (BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ClearSave()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ClearSave");
+
+	AplayerCharacterBP_C_ClearSave_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.AchievementCaught
+// (BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::AchievementCaught()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.AchievementCaught");
+
+	AplayerCharacterBP_C_AchievementCaught_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function playerCharacterBP.playerCharacterBP_C.ToggleGhost
+// (BlueprintCallable, BlueprintEvent)
+
+void AplayerCharacterBP_C::ToggleGhost()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function playerCharacterBP.playerCharacterBP_C.ToggleGhost");
+
+	AplayerCharacterBP_C_ToggleGhost_Params params;
 
 	auto flags = fn->FunctionFlags;
 

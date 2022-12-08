@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UconfirmDumpContent_C::Construct()
 }
 
 
-// Function confirmDumpContent.confirmDumpContent_C.Setup
+// Function confirmDumpContent.confirmDumpContent_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AworkStationEquipmentBase_C* EqName                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UconfirmDumpContent_C::Setup(class AworkStationEquipmentBase_C* EqName)
+void UconfirmDumpContent_C::setup(class AworkStationEquipmentBase_C* EqName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function confirmDumpContent.confirmDumpContent_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function confirmDumpContent.confirmDumpContent_C.setup");
 
-	UconfirmDumpContent_C_Setup_Params params;
+	UconfirmDumpContent_C_setup_Params params;
 	params.EqName = EqName;
 
 	auto flags = fn->FunctionFlags;

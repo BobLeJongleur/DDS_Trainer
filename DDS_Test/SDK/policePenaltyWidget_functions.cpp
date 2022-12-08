@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,17 +30,17 @@ void UpolicePenaltyWidget_C::Construct()
 }
 
 
-// Function policePenaltyWidget.policePenaltyWidget_C.Setup
+// Function policePenaltyWidget.policePenaltyWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Reason                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UpolicePenaltyWidget_C::Setup(const struct FText& Reason, int Amount)
+void UpolicePenaltyWidget_C::setup(const struct FText& Reason, int Amount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function policePenaltyWidget.policePenaltyWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function policePenaltyWidget.policePenaltyWidget_C.setup");
 
-	UpolicePenaltyWidget_C_Setup_Params params;
+	UpolicePenaltyWidget_C_setup_Params params;
 	params.Reason = Reason;
 	params.Amount = Amount;
 

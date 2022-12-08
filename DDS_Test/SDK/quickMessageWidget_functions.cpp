@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UquickMessageWidget_C::Construct()
 }
 
 
-// Function quickMessageWidget.quickMessageWidget_C.Setup
+// Function quickMessageWidget.quickMessageWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   SetText                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UquickMessageWidget_C::Setup(const struct FText& SetText)
+void UquickMessageWidget_C::setup(const struct FText& SetText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function quickMessageWidget.quickMessageWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function quickMessageWidget.quickMessageWidget_C.setup");
 
-	UquickMessageWidget_C_Setup_Params params;
+	UquickMessageWidget_C_setup_Params params;
 	params.SetText = SetText;
 
 	auto flags = fn->FunctionFlags;

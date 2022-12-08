@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,18 +16,18 @@ namespace SDK
 // Function itemDropQuantityWidget.itemDropQuantityWidget_C.getMaxQuantity
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 TargetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UUserWidget*             Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            sourceQuan                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            maxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UitemDropQuantityWidget_C::getMaxQuantity(const struct FString& targetString, class UUserWidget* Widget, int sourceQuan, const struct FinventoryItemStruct& Data, int* maxQuantity)
+void UitemDropQuantityWidget_C::getMaxQuantity(const struct FString& TargetString, class UUserWidget* Widget, int sourceQuan, const struct FinventoryItemStruct& Data, int* maxQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.getMaxQuantity");
 
 	UitemDropQuantityWidget_C_getMaxQuantity_Params params;
-	params.targetString = targetString;
+	params.TargetString = TargetString;
 	params.Widget = Widget;
 	params.sourceQuan = sourceQuan;
 	params.Data = Data;
@@ -40,86 +40,6 @@ void UitemDropQuantityWidget_C::getMaxQuantity(const struct FString& targetStrin
 
 	if (maxQuantity != nullptr)
 		*maxQuantity = params.maxQuantity;
-}
-
-
-// Function itemDropQuantityWidget.itemDropQuantityWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UitemDropQuantityWidget_C::PreConstruct(bool IsDesignTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.PreConstruct");
-
-	UitemDropQuantityWidget_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function itemDropQuantityWidget.itemDropQuantityWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UitemDropQuantityWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.Construct");
-
-	UitemDropQuantityWidget_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function itemDropQuantityWidget.itemDropQuantityWidget_C.BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UitemDropQuantityWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UitemDropQuantityWidget_C_BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function itemDropQuantityWidget.itemDropQuantityWidget_C.Setup
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// int                            quanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UUserWidget*             TargetWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UinventoryItemWidget_C*  Payload                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UitemDropQuantityWidget_C::Setup(const struct FString& targetString, int quanMax, class UUserWidget* TargetWidget, class UinventoryItemWidget_C* Payload)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.Setup");
-
-	UitemDropQuantityWidget_C_Setup_Params params;
-	params.targetString = targetString;
-	params.quanMax = quanMax;
-	params.TargetWidget = TargetWidget;
-	params.Payload = Payload;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -168,6 +88,86 @@ void UitemDropQuantityWidget_C::BreakPriceLoop()
 	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.BreakPriceLoop");
 
 	UitemDropQuantityWidget_C_BreakPriceLoop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function itemDropQuantityWidget.itemDropQuantityWidget_C.setup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 TargetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// int                            quanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UUserWidget*             TargetWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UinventoryItemWidget_C*  Payload                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UitemDropQuantityWidget_C::setup(const struct FString& TargetString, int quanMax, class UUserWidget* TargetWidget, class UinventoryItemWidget_C* Payload)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.setup");
+
+	UitemDropQuantityWidget_C_setup_Params params;
+	params.TargetString = TargetString;
+	params.quanMax = quanMax;
+	params.TargetWidget = TargetWidget;
+	params.Payload = Payload;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function itemDropQuantityWidget.itemDropQuantityWidget_C.BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UitemDropQuantityWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UitemDropQuantityWidget_C_BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function itemDropQuantityWidget.itemDropQuantityWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UitemDropQuantityWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.Construct");
+
+	UitemDropQuantityWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function itemDropQuantityWidget.itemDropQuantityWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UitemDropQuantityWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.PreConstruct");
+
+	UitemDropQuantityWidget_C_PreConstruct_Params params;
+	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
 

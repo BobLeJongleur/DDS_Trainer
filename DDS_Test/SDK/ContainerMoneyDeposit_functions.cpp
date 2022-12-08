@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,14 +58,14 @@ void AContainerMoneyDeposit_C::UserConstructionScript()
 // Function ContainerMoneyDeposit.ContainerMoneyDeposit_C.NewPickupQuest
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AContainerMoneyDeposit_C::NewPickupQuest(int TaskID)
+void AContainerMoneyDeposit_C::NewPickupQuest(int taskID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ContainerMoneyDeposit.ContainerMoneyDeposit_C.NewPickupQuest");
 
 	AContainerMoneyDeposit_C_NewPickupQuest_Params params;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 
 	auto flags = fn->FunctionFlags;
 

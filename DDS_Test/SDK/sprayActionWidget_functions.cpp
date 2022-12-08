@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,16 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function sprayActionWidget.sprayActionWidget_C.Setup
+// Function sprayActionWidget.sprayActionWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   AreaNam                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UsprayActionWidget_C::Setup(const struct FText& AreaNam)
+void UsprayActionWidget_C::setup(const struct FText& AreaNam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function sprayActionWidget.sprayActionWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function sprayActionWidget.sprayActionWidget_C.setup");
 
-	UsprayActionWidget_C_Setup_Params params;
+	UsprayActionWidget_C_setup_Params params;
 	params.AreaNam = AreaNam;
 
 	auto flags = fn->FunctionFlags;

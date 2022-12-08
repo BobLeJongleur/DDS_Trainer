@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(const struct FText& Text, TEnumAsByte<EquickHintType> Category);
+	void setup(const struct FText& Text, TEnumAsByte<EquickHintType> Category);
 	void ExecuteUbergraph_quickHintWidget(int EntryPoint);
 };
 

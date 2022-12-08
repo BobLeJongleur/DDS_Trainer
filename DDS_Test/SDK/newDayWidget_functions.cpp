@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UnewDayWidget_C::Construct()
 }
 
 
-// Function newDayWidget.newDayWidget_C.Setup
+// Function newDayWidget.newDayWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   DayNam                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UnewDayWidget_C::Setup(const struct FText& DayNam)
+void UnewDayWidget_C::setup(const struct FText& DayNam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function newDayWidget.newDayWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function newDayWidget.newDayWidget_C.setup");
 
-	UnewDayWidget_C_Setup_Params params;
+	UnewDayWidget_C_setup_Params params;
 	params.DayNam = DayNam;
 
 	auto flags = fn->FunctionFlags;

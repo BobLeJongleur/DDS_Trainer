@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -95,17 +95,17 @@ void UcolorSelectWidget_C::BndEvt__sliderBlue_K2Node_ComponentBoundEvent_2_OnFlo
 }
 
 
-// Function colorSelectWidget.colorSelectWidget_C.Setup
+// Function colorSelectWidget.colorSelectWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FSlateColor             SlateColor                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UsettingsWidget_C*       settingsWidget                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UcolorSelectWidget_C::Setup(const struct FSlateColor& SlateColor, class UsettingsWidget_C* settingsWidget)
+void UcolorSelectWidget_C::setup(const struct FSlateColor& SlateColor, class UsettingsWidget_C* settingsWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function colorSelectWidget.colorSelectWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function colorSelectWidget.colorSelectWidget_C.setup");
 
-	UcolorSelectWidget_C_Setup_Params params;
+	UcolorSelectWidget_C_setup_Params params;
 	params.SlateColor = SlateColor;
 	params.settingsWidget = settingsWidget;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 
 
 	class UWidget* Get_mainHolder_ToolTipWidget_1();
-	void Setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool checkedOut, int WaitBoost);
+	void setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool checkedOut, int WaitBoost);
 	void BndEvt__btnItemBuy_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_equipmentShopItemWidget(int EntryPoint);
 };

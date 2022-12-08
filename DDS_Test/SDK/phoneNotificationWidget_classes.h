@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void Setup(class UTexture2D* Icon, const struct FText& Text);
+	void setup(class UTexture2D* Icon, const struct FText& Text);
 	void ExecuteUbergraph_phoneNotificationWidget(int EntryPoint);
 };
 

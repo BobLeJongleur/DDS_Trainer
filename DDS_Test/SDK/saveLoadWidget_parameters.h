@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function saveLoadWidget.saveLoadWidget_C.SetInputColor
+struct UsaveLoadWidget_C_SetInputColor_Params
+{
+};
 
 // Function saveLoadWidget.saveLoadWidget_C.beforeLoadCleanup
 struct UsaveLoadWidget_C_beforeLoadCleanup_Params
@@ -36,8 +41,8 @@ struct UsaveLoadWidget_C_SlotClicked_Params
 	int                                                SlotID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function saveLoadWidget.saveLoadWidget_C.Setup
-struct UsaveLoadWidget_C_Setup_Params
+// Function saveLoadWidget.saveLoadWidget_C.setup
+struct UsaveLoadWidget_C_setup_Params
 {
 	bool                                               SaveGame;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               mainMenu;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

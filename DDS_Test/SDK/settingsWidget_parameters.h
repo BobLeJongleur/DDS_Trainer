@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function settingsWidget.settingsWidget_C.UpdateActiveColor
+struct UsettingsWidget_C_UpdateActiveColor_Params
+{
+};
 
 // Function settingsWidget.settingsWidget_C.Get_imgHudActiveColor_ColorAndOpacity_1
 struct UsettingsWidget_C_Get_imgHudActiveColor_ColorAndOpacity_1_Params

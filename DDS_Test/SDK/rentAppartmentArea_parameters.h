@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function rentAppartmentArea.rentAppartmentArea_C.GetAreaMetarage
+struct ArentAppartmentArea_C_GetAreaMetarage_Params
+{
+	float                                              Meterage;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckHideoutEmpty
+struct ArentAppartmentArea_C_CheckHideoutEmpty_Params
+{
+	bool                                               Empty;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function rentAppartmentArea.rentAppartmentArea_C.CheckEndgame
+struct ArentAppartmentArea_C_CheckEndgame_Params
+{
+};
 
 // Function rentAppartmentArea.rentAppartmentArea_C.CheckTabletops
 struct ArentAppartmentArea_C_CheckTabletops_Params
@@ -72,7 +89,7 @@ struct ArentAppartmentArea_C_observationCountdown_Params
 // Function rentAppartmentArea.rentAppartmentArea_C.vanCanSpawn
 struct ArentAppartmentArea_C_vanCanSpawn_Params
 {
-	class AdeaRaidManager_C*                           raidManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AdeaRaidManager_C*                           RaidManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AdeaRaidCarSpawnPoint_C*                     suvSpawnPoint;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               CanSpawn;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -80,7 +97,7 @@ struct ArentAppartmentArea_C_vanCanSpawn_Params
 // Function rentAppartmentArea.rentAppartmentArea_C.suvCanSpawn
 struct ArentAppartmentArea_C_suvCanSpawn_Params
 {
-	class AdeaRaidManager_C*                           raidManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AdeaRaidManager_C*                           RaidManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AdeaRaidCarSpawnPoint_C*                     suvSpawnPoint;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               CanSpawn;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

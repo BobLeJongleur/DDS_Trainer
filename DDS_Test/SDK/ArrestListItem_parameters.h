@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,8 +25,8 @@ struct UArrestListItem_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_0_OnButtonC
 {
 };
 
-// Function ArrestListItem.ArrestListItem_C.Setup
-struct UArrestListItem_C_Setup_Params
+// Function ArrestListItem.ArrestListItem_C.setup
+struct UArrestListItem_C_setup_Params
 {
 	int                                                CliendID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AsalesManager_C*                             salesManager;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

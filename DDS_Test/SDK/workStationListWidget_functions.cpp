@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function workStationListWidget.workStationListWidget_C.Setup
+// Function workStationListWidget.workStationListWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FinventoryItemStruct    InventoryData                  (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -27,11 +27,11 @@ namespace SDK
 // bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions)
+void UworkStationListWidget_C::setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function workStationListWidget.workStationListWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function workStationListWidget.workStationListWidget_C.setup");
 
-	UworkStationListWidget_C_Setup_Params params;
+	UworkStationListWidget_C_setup_Params params;
 	params.InventoryData = InventoryData;
 	params.EqID = EqID;
 	params.DrugID = DrugID;

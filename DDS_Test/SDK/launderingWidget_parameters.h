@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,8 +20,8 @@ struct UlaunderingWidget_C_launderCashFunctions_Params
 	int                                                Amount;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function launderingWidget.launderingWidget_C.Setup
-struct UlaunderingWidget_C_Setup_Params
+// Function launderingWidget.launderingWidget_C.setup
+struct UlaunderingWidget_C_setup_Params
 {
 	int                                                PlayerMoney;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

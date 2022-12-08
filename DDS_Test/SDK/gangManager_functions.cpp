@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,40 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function gangManager.gangManager_C.ResetGangmanOrderPending
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AgangManager_C::ResetGangmanOrderPending()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.ResetGangmanOrderPending");
+
+	AgangManager_C_ResetGangmanOrderPending_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function gangManager.gangManager_C.RamaExtend
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AgangManager_C::RamaExtend()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.RamaExtend");
+
+	AgangManager_C_RamaExtend_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function gangManager.gangManager_C.gangLevelLimitRaise
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -452,6 +486,50 @@ void AgangManager_C::TestGangMultiplier(int Level, float Rep)
 	AgangManager_C_TestGangMultiplier_Params params;
 	params.Level = Level;
 	params.Rep = Rep;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function gangManager.gangManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AgangManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AgangManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function gangManager.gangManager_C.TestGangScript
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Sat                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AgangManager_C::TestGangScript(float Sat, int Level)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.TestGangScript");
+
+	AgangManager_C_TestGangScript_Params params;
+	params.Sat = Sat;
+	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
 

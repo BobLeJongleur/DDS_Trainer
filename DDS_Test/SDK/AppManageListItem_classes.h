@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ public:
 	struct FText GetText_1();
 	void OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Setup(const struct FappartmentEquipment& EqMeta, int SourceIndex, class UAppManageList_C* MyList, int Quan);
+	void setup(const struct FappartmentEquipment& EqMeta, int SourceIndex, class UAppManageList_C* MyList, int Quan);
 	void ExecuteUbergraph_AppManageListItem(int EntryPoint);
 };
 

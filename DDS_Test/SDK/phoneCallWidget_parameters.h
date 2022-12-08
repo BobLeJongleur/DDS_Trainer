@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function phoneCallWidget.phoneCallWidget_C.Setup
-struct UphoneCallWidget_C_Setup_Params
+// Function phoneCallWidget.phoneCallWidget_C.setup
+struct UphoneCallWidget_C_setup_Params
 {
 	struct FText                                       CallerName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                callerID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

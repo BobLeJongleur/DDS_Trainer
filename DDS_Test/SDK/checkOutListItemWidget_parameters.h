@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function checkOutListItemWidget.checkOutListItemWidget_C.Setup
-struct UcheckOutListItemWidget_C_Setup_Params
+// Function checkOutListItemWidget.checkOutListItemWidget_C.setup
+struct UcheckOutListItemWidget_C_setup_Params
 {
 	struct FName                                       NewParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Price;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,6 +78,44 @@ public:
 };
 
 
+// Class GameplayTasks.GameplayTask_TimeLimitedExecution
+// 0x0030 (0x0098 - 0x0068)
+class UGameplayTask_TimeLimitedExecution : public UGameplayTask
+{
+public:
+	struct FScriptMulticastDelegate                    OnFinished;                                               // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnTimeExpired;                                            // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_TimeLimitedExecution");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayTasks.GameplayTask_WaitDelay
+// 0x0018 (0x0080 - 0x0068)
+class UGameplayTask_WaitDelay : public UGameplayTask
+{
+public:
+	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
+		return ptr;
+	}
+
+
+	class UGameplayTask_WaitDelay* STATIC_TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time, unsigned char Priority);
+	void TaskDelayDelegate__DelegateSignature();
+};
+
+
 // Class GameplayTasks.GameplayTaskOwnerInterface
 // 0x0000 (0x0028 - 0x0028)
 class UGameplayTaskOwnerInterface : public UInterface
@@ -138,44 +176,6 @@ public:
 
 	void OnRep_SimulatedTasks();
 	EGameplayTaskRunResult STATIC_K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources);
-};
-
-
-// Class GameplayTasks.GameplayTask_WaitDelay
-// 0x0018 (0x0080 - 0x0068)
-class UGameplayTask_WaitDelay : public UGameplayTask
-{
-public:
-	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
-		return ptr;
-	}
-
-
-	class UGameplayTask_WaitDelay* STATIC_TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time, unsigned char Priority);
-	void TaskDelayDelegate__DelegateSignature();
-};
-
-
-// Class GameplayTasks.GameplayTask_TimeLimitedExecution
-// 0x0030 (0x0098 - 0x0068)
-class UGameplayTask_TimeLimitedExecution : public UGameplayTask
-{
-public:
-	struct FScriptMulticastDelegate                    OnFinished;                                               // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTimeExpired;                                            // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_TimeLimitedExecution");
-		return ptr;
-	}
-
 };
 
 

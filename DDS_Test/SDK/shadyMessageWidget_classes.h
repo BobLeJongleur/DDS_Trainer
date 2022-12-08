@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	}
 
 
-	void Setup(const struct FText& UserName, const struct FString& msgString, class UTexture2D* userAvatar, bool PlayerMessage);
+	void setup(const struct FText& UserName, const struct FString& msgString, class UTexture2D* userAvatar, bool PlayerMessage);
 	void ExecuteUbergraph_shadyMessageWidget(int EntryPoint);
 };
 

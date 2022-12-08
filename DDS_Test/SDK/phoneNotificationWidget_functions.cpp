@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function phoneNotificationWidget.phoneNotificationWidget_C.Setup
+// Function phoneNotificationWidget.phoneNotificationWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UphoneNotificationWidget_C::Setup(class UTexture2D* Icon, const struct FText& Text)
+void UphoneNotificationWidget_C::setup(class UTexture2D* Icon, const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function phoneNotificationWidget.phoneNotificationWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function phoneNotificationWidget.phoneNotificationWidget_C.setup");
 
-	UphoneNotificationWidget_C_Setup_Params params;
+	UphoneNotificationWidget_C_setup_Params params;
 	params.Icon = Icon;
 	params.Text = Text;
 

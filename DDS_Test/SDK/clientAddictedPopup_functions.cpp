@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,17 +30,17 @@ void UclientAddictedPopup_C::Construct()
 }
 
 
-// Function clientAddictedPopup.clientAddictedPopup_C.Setup
+// Function clientAddictedPopup.clientAddictedPopup_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ClientName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   ClientAddictionDrug            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UclientAddictedPopup_C::Setup(const struct FText& ClientName, const struct FText& ClientAddictionDrug)
+void UclientAddictedPopup_C::setup(const struct FText& ClientName, const struct FText& ClientAddictionDrug)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function clientAddictedPopup.clientAddictedPopup_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function clientAddictedPopup.clientAddictedPopup_C.setup");
 
-	UclientAddictedPopup_C_Setup_Params params;
+	UclientAddictedPopup_C_setup_Params params;
 	params.ClientName = ClientName;
 	params.ClientAddictionDrug = ClientAddictionDrug;
 

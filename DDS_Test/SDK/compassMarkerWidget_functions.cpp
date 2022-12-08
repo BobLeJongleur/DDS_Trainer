@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,16 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function compassMarkerWidget.compassMarkerWidget_C.Setup
+// Function compassMarkerWidget.compassMarkerWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EmapMarkerCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UcompassMarkerWidget_C::Setup(TEnumAsByte<EmapMarkerCategories> Category)
+void UcompassMarkerWidget_C::setup(TEnumAsByte<EmapMarkerCategories> Category)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function compassMarkerWidget.compassMarkerWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function compassMarkerWidget.compassMarkerWidget_C.setup");
 
-	UcompassMarkerWidget_C_Setup_Params params;
+	UcompassMarkerWidget_C_setup_Params params;
 	params.Category = Category;
 
 	auto flags = fn->FunctionFlags;

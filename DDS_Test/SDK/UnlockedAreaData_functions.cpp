@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -177,7 +177,7 @@ void UUnlockedAreaData_C::Construct()
 }
 
 
-// Function UnlockedAreaData.UnlockedAreaData_C.Setup
+// Function UnlockedAreaData.UnlockedAreaData_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   AreaNam                        (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -192,11 +192,11 @@ void UUnlockedAreaData_C::Construct()
 // int                            reqLevel                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReqAreaExp                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUnlockedAreaData_C::Setup(const struct FText& AreaNam, float ExpVal, float ExpClamp, float ExpMax, bool AreaUnlocked, bool AreaAvailable, const struct FString& AreaString, const struct FText& reqArea, float reqRespect, int reqLevel, float ReqAreaExp)
+void UUnlockedAreaData_C::setup(const struct FText& AreaNam, float ExpVal, float ExpClamp, float ExpMax, bool AreaUnlocked, bool AreaAvailable, const struct FString& AreaString, const struct FText& reqArea, float reqRespect, int reqLevel, float ReqAreaExp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UnlockedAreaData.UnlockedAreaData_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function UnlockedAreaData.UnlockedAreaData_C.setup");
 
-	UUnlockedAreaData_C_Setup_Params params;
+	UUnlockedAreaData_C_setup_Params params;
 	params.AreaNam = AreaNam;
 	params.ExpVal = ExpVal;
 	params.ExpClamp = ExpClamp;

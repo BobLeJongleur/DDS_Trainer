@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function PM_CheckpointGuard.PM_CheckpointGuard_C.checkBackpackForIllegals
 struct APM_CheckpointGuard_C_checkBackpackForIllegals_Params
 {
-	class AbackpackBase_C*                             backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AbackpackBase_C*                             Backpack;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -85,6 +85,11 @@ struct APM_CheckpointGuard_C_overrideSearch_Params
 
 // Function PM_CheckpointGuard.PM_CheckpointGuard_C.ReceiveDestroyed
 struct APM_CheckpointGuard_C_ReceiveDestroyed_Params
+{
+};
+
+// Function PM_CheckpointGuard.PM_CheckpointGuard_C.PoliceFoundNothing
+struct APM_CheckpointGuard_C_PoliceFoundNothing_Params
 {
 };
 

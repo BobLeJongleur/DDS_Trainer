@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function playerCharacterPC.playerCharacterPC_C.FrontWidgetDestroyed
+struct AplayerCharacterPC_C_FrontWidgetDestroyed_Params
+{
+	class UUserWidget*                                 WidgetRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
 
 // Function playerCharacterPC.playerCharacterPC_C.HasFrontWidgets
 struct AplayerCharacterPC_C_HasFrontWidgets_Params

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,25 +47,25 @@ void AworldMapMarker_C::ReceiveBeginPlay()
 }
 
 
-// Function worldMapMarker.worldMapMarker_C.Setup
+// Function worldMapMarker.worldMapMarker_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EmapMarkerCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   ToolTip                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           dealer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworldMapMarker_C::Setup(TEnumAsByte<EmapMarkerCategories> Category, const struct FText& Name, const struct FText& ToolTip, bool dealer, int TaskID)
+void AworldMapMarker_C::setup(TEnumAsByte<EmapMarkerCategories> Category, const struct FText& Name, const struct FText& ToolTip, bool dealer, int taskID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.setup");
 
-	AworldMapMarker_C_Setup_Params params;
+	AworldMapMarker_C_setup_Params params;
 	params.Category = Category;
 	params.Name = Name;
 	params.ToolTip = ToolTip;
 	params.dealer = dealer;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -117,6 +117,28 @@ void AworldMapMarker_C::recalcWaitTime()
 	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.recalcWaitTime");
 
 	AworldMapMarker_C_recalcWaitTime_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function worldMapMarker.worldMapMarker_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URamaSaveComponent*      RamaSaveComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString                 LevelPackageName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void AworldMapMarker_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature");
+
+	AworldMapMarker_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
+	params.RamaSaveComponent = RamaSaveComponent;
+	params.LevelPackageName = LevelPackageName;
 
 	auto flags = fn->FunctionFlags;
 

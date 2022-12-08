@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass mainComputer.mainComputer_C
-// 0x03A5 (0x07CD - 0x0428)
+// 0x03C8 (0x07F0 - 0x0428)
 class AmainComputer_C : public AinteractiveBaseObject_C
 {
 public:
@@ -108,6 +108,11 @@ public:
 	class UDataTable*                                  LaunderingDataTable;                                      // 0x07C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PlayerEddieDebt;                                          // 0x07C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ViewingApartments;                                        // 0x07CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x07CD(0x0003) MISSED OFFSET
+	struct FText                                       BossNickname;                                             // 0x07D0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               BossNicknameSelected;                                     // 0x07E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x07E9(0x0003) MISSED OFFSET
+	int                                                LabsConstructedTotal;                                     // 0x07EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -116,6 +121,8 @@ public:
 	}
 
 
+	void LabConstructed();
+	void SetBossName(const struct FText& BossName);
 	void GetPlayerDebt(float* OutDebt);
 	void GetPlayerOrderLimit(float* Limit);
 	void SendLaunderPayment(float Amount, bool Force);
@@ -142,6 +149,7 @@ public:
 	void addPsychedelicsOffer();
 	void BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
 	void RetryIllegalReminder();
+	void ChooseBossNickname();
 	void ExecuteUbergraph_mainComputer(int EntryPoint);
 };
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ void UrespectRaiseWidget_C::Tick(const struct FGeometry& MyGeometry, float InDel
 }
 
 
-// Function respectRaiseWidget.respectRaiseWidget_C.Setup
+// Function respectRaiseWidget.respectRaiseWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          respAmount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -61,11 +61,11 @@ void UrespectRaiseWidget_C::Tick(const struct FGeometry& MyGeometry, float InDel
 // float                          respectAfter                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          respectMax                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UrespectRaiseWidget_C::Setup(float respAmount, const struct FText& AreaNam, float respectNow, float respectAfter, float respectMax)
+void UrespectRaiseWidget_C::setup(float respAmount, const struct FText& AreaNam, float respectNow, float respectAfter, float respectMax)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function respectRaiseWidget.respectRaiseWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function respectRaiseWidget.respectRaiseWidget_C.setup");
 
-	UrespectRaiseWidget_C_Setup_Params params;
+	UrespectRaiseWidget_C_setup_Params params;
 	params.respAmount = respAmount;
 	params.AreaNam = AreaNam;
 	params.respectNow = respectNow;

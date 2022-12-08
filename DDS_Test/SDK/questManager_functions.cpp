@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,94 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function questManager.questManager_C.EndgameSecondCallCheck
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::EndgameSecondCallCheck()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.EndgameSecondCallCheck");
+
+	AquestManager_C_EndgameSecondCallCheck_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.ClearEddie
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::ClearEddie()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.ClearEddie");
+
+	AquestManager_C_ClearEddie_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.DisplayOneTimeTutorial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   TutorialID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AquestManager_C::DisplayOneTimeTutorial(const struct FName& TutorialID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.DisplayOneTimeTutorial");
+
+	AquestManager_C_DisplayOneTimeTutorial_Params params;
+	params.TutorialID = TutorialID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.MarkFirstVilla
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::MarkFirstVilla()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.MarkFirstVilla");
+
+	AquestManager_C_MarkFirstVilla_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.ActivateDeathSites
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::ActivateDeathSites()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.ActivateDeathSites");
+
+	AquestManager_C_ActivateDeathSites_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function questManager.questManager_C.ReportLaunderDoor
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -225,9 +313,9 @@ void AquestManager_C::addNewQuest(const struct FText& QuestNam, const struct FTe
 // Function questManager.questManager_C.checkCanAddWidget
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AquestManager_C::checkCanAddWidget(bool* ok)
+void AquestManager_C::checkCanAddWidget(bool* OK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.checkCanAddWidget");
 
@@ -239,8 +327,8 @@ void AquestManager_C::checkCanAddWidget(bool* ok)
 
 	fn->FunctionFlags = flags;
 
-	if (ok != nullptr)
-		*ok = params.ok;
+	if (OK != nullptr)
+		*OK = params.OK;
 }
 
 
@@ -269,14 +357,14 @@ void AquestManager_C::playerAvailable(bool* IsAvailable)
 // Function questManager.questManager_C.checkTaskRelatedMarkers
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AquestManager_C::checkTaskRelatedMarkers(int TaskID)
+void AquestManager_C::checkTaskRelatedMarkers(int taskID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.checkTaskRelatedMarkers");
 
 	AquestManager_C_checkTaskRelatedMarkers_Params params;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -308,15 +396,19 @@ void AquestManager_C::checkDisplayNewTask()
 // Parameters:
 // class USoundWave*              Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   MonologueText                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   NameOverride                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                           Mute                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Length                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AquestManager_C::playNarration(class USoundWave* Sound, const struct FText& MonologueText, float* Length)
+void AquestManager_C::playNarration(class USoundWave* Sound, const struct FText& MonologueText, const struct FText& NameOverride, bool Mute, float* Length)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.playNarration");
 
 	AquestManager_C_playNarration_Params params;
 	params.Sound = Sound;
 	params.MonologueText = MonologueText;
+	params.NameOverride = NameOverride;
+	params.Mute = Mute;
 
 	auto flags = fn->FunctionFlags;
 
@@ -420,6 +512,122 @@ void AquestManager_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.UserConstructionScript");
 
 	AquestManager_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnFailure_214E326344AEE6B434437487B8B049E3
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   WrittenAchievementName         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          WrittenProgress                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            WrittenUserTag                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AquestManager_C::OnFailure_214E326344AEE6B434437487B8B049E3(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnFailure_214E326344AEE6B434437487B8B049E3");
+
+	AquestManager_C_OnFailure_214E326344AEE6B434437487B8B049E3_Params params;
+	params.WrittenAchievementName = WrittenAchievementName;
+	params.WrittenProgress = WrittenProgress;
+	params.WrittenUserTag = WrittenUserTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnSuccess_214E326344AEE6B434437487B8B049E3
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   WrittenAchievementName         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          WrittenProgress                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            WrittenUserTag                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AquestManager_C::OnSuccess_214E326344AEE6B434437487B8B049E3(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnSuccess_214E326344AEE6B434437487B8B049E3");
+
+	AquestManager_C_OnSuccess_214E326344AEE6B434437487B8B049E3_Params params;
+	params.WrittenAchievementName = WrittenAchievementName;
+	params.WrittenProgress = WrittenProgress;
+	params.WrittenUserTag = WrittenUserTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnFailure_241AACF344E2259B70F21A95DD93254A
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::OnFailure_241AACF344E2259B70F21A95DD93254A()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnFailure_241AACF344E2259B70F21A95DD93254A");
+
+	AquestManager_C_OnFailure_241AACF344E2259B70F21A95DD93254A_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnSuccess_241AACF344E2259B70F21A95DD93254A
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::OnSuccess_241AACF344E2259B70F21A95DD93254A()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnSuccess_241AACF344E2259B70F21A95DD93254A");
+
+	AquestManager_C_OnSuccess_241AACF344E2259B70F21A95DD93254A_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03");
+
+	AquestManager_C_OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03");
+
+	AquestManager_C_OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -834,14 +1042,14 @@ void AquestManager_C::workStationTask()
 // Function questManager.questManager_C.firstOwnOrderReceived
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AquestManager_C::firstOwnOrderReceived(int TaskID)
+void AquestManager_C::firstOwnOrderReceived(int taskID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.firstOwnOrderReceived");
 
 	AquestManager_C_firstOwnOrderReceived_Params params;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2556,6 +2764,298 @@ void AquestManager_C::ReopenNewLaunder()
 }
 
 
+// Function questManager.questManager_C.eddieCallEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieCallEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieCallEndgame");
+
+	AquestManager_C_eddieCallEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieRepeatEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieRepeatEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieRepeatEndgame");
+
+	AquestManager_C_eddieRepeatEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.retryEddieEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::retryEddieEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.retryEddieEndgame");
+
+	AquestManager_C_retryEddieEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieEndEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieEndEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieEndEndgame");
+
+	AquestManager_C_eddieEndEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieCallEndgame02
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieCallEndgame02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieCallEndgame02");
+
+	AquestManager_C_eddieCallEndgame02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieRepeatEndgame02
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieRepeatEndgame02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieRepeatEndgame02");
+
+	AquestManager_C_eddieRepeatEndgame02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.retryEddieEndgame02
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::retryEddieEndgame02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.retryEddieEndgame02");
+
+	AquestManager_C_retryEddieEndgame02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.eddieEndEndgame02
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::eddieEndEndgame02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.eddieEndEndgame02");
+
+	AquestManager_C_eddieEndEndgame02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.PlayerFinishedGame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::PlayerFinishedGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.PlayerFinishedGame");
+
+	AquestManager_C_PlayerFinishedGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.BuildFirstVilla
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::BuildFirstVilla()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.BuildFirstVilla");
+
+	AquestManager_C_BuildFirstVilla_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.RunEndgame
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::RunEndgame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.RunEndgame");
+
+	AquestManager_C_RunEndgame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.VerifyEddieEndgame2
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::VerifyEddieEndgame2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.VerifyEddieEndgame2");
+
+	AquestManager_C_VerifyEddieEndgame2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.AchievementUnlocked
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   AchievementName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AquestManager_C::AchievementUnlocked(const struct FName& AchievementName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.AchievementUnlocked");
+
+	AquestManager_C_AchievementUnlocked_Params params;
+	params.AchievementName = AchievementName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.AddSectorCTask
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::AddSectorCTask()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.AddSectorCTask");
+
+	AquestManager_C_AddSectorCTask_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.SectSearchTask
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::SectSearchTask()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.SectSearchTask");
+
+	AquestManager_C_SectSearchTask_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.SectSearchTaskComplete
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::SectSearchTaskComplete()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.SectSearchTaskComplete");
+
+	AquestManager_C_SectSearchTaskComplete_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.SetOneAchievement
+// (BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::SetOneAchievement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.SetOneAchievement");
+
+	AquestManager_C_SetOneAchievement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function questManager.questManager_C.ExecuteUbergraph_questManager
 // (Final, HasDefaults)
 // Parameters:
@@ -2567,6 +3067,40 @@ void AquestManager_C::ExecuteUbergraph_questManager(int EntryPoint)
 
 	AquestManager_C_ExecuteUbergraph_questManager_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.OutroNarrEnd__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::OutroNarrEnd__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.OutroNarrEnd__DelegateSignature");
+
+	AquestManager_C_OutroNarrEnd__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function questManager.questManager_C.EddieFinalCallEnded__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AquestManager_C::EddieFinalCallEnded__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function questManager.questManager_C.EddieFinalCallEnded__DelegateSignature");
+
+	AquestManager_C_EddieFinalCallEnded__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

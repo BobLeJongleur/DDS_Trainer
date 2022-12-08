@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,16 +52,16 @@ void UmixDetailsWidget_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function mixDetailsWidget.mixDetailsWidget_C.Setup
+// Function mixDetailsWidget.mixDetailsWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AworkStationMixerBase_C* Mixer                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UmixDetailsWidget_C::Setup(class AworkStationMixerBase_C* Mixer)
+void UmixDetailsWidget_C::setup(class AworkStationMixerBase_C* Mixer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function mixDetailsWidget.mixDetailsWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function mixDetailsWidget.mixDetailsWidget_C.setup");
 
-	UmixDetailsWidget_C_Setup_Params params;
+	UmixDetailsWidget_C_setup_Params params;
 	params.Mixer = Mixer;
 
 	auto flags = fn->FunctionFlags;

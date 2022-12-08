@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,6 +25,7 @@ public:
 	}
 
 
+	void STATIC_SecondsToTime(float TimeSeconds, class UObject* __WorldContext, struct FText* OutTextTime);
 	void STATIC_DrugFormToText(TEnumAsByte<EdrugForm> drugForm, class UObject* __WorldContext, struct FText* OutText);
 	void STATIC_GetHourTimestamp(class AdayTimeControler_C* dayTimeCon, class UObject* __WorldContext, int* IntTimestamp);
 	void STATIC_DisplayConfirmWidget(class UObject* Querier, const struct FText& Title, const struct FText& Descritpion, bool ShowMouseAfter, const struct FString& ActionID, class UObject* __WorldContext);

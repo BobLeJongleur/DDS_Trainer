@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,7 +55,7 @@ void UappartmentListItem_C::Construct()
 }
 
 
-// Function appartmentListItem.appartmentListItem_C.Setup
+// Function appartmentListItem.appartmentListItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -66,11 +66,11 @@ void UappartmentListItem_C::Construct()
 // class UEquipmentShopInterfaceWidget_C* parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UappartmentListItem_C::Setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool selected)
+void UappartmentListItem_C::setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool selected)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function appartmentListItem.appartmentListItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentListItem.appartmentListItem_C.setup");
 
-	UappartmentListItem_C_Setup_Params params;
+	UappartmentListItem_C_setup_Params params;
 	params.Name = Name;
 	params.Address = Address;
 	params.Meterage = Meterage;

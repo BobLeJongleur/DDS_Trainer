@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,18 +30,18 @@ void UoneTaskWidget_C::Construct()
 }
 
 
-// Function oneTaskWidget.oneTaskWidget_C.Setup
+// Function oneTaskWidget.oneTaskWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UoneTaskWidget_C::Setup(const struct FText& Title, const struct FText& Description, bool Success)
+void UoneTaskWidget_C::setup(const struct FText& Title, const struct FText& Description, bool Success)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function oneTaskWidget.oneTaskWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function oneTaskWidget.oneTaskWidget_C.setup");
 
-	UoneTaskWidget_C_Setup_Params params;
+	UoneTaskWidget_C_setup_Params params;
 	params.Title = Title;
 	params.Description = Description;
 	params.Success = Success;

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function policePatrolArea.policePatrolArea_C.CheckSpecialFlag
+struct ApolicePatrolArea_C_CheckSpecialFlag_Params
+{
+	float                                              AddChance;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function policePatrolArea.policePatrolArea_C.GetPatrolSpawnChances
 struct ApolicePatrolArea_C_GetPatrolSpawnChances_Params
@@ -76,6 +82,11 @@ struct ApolicePatrolArea_C_LongRadiusChanged_Params
 
 // Function policePatrolArea.policePatrolArea_C.ResetSpawnGate
 struct ApolicePatrolArea_C_ResetSpawnGate_Params
+{
+};
+
+// Function policePatrolArea.policePatrolArea_C.ForceSpawnPatrol
+struct ApolicePatrolArea_C_ForceSpawnPatrol_Params
 {
 };
 

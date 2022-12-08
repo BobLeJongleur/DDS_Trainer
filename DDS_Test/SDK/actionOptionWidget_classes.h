@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,8 +33,8 @@ public:
 	}
 
 
-	void Setup(bool InitActive, const struct FText& ActionName);
-	void SetActive(bool activated);
+	void setup(bool InitActive, const struct FText& ActionName);
+	void SetActive(bool Activated);
 	void Construct();
 	void ExecuteUbergraph_actionOptionWidget(int EntryPoint);
 };

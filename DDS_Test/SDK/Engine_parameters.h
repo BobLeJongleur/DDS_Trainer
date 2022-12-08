@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -5300,17 +5300,17 @@ struct UInstancedStaticMeshComponent_AddInstance_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.StaticMeshActor.SetMobility
+struct AStaticMeshActor_SetMobility_Params
+{
+	TEnumAsByte<EComponentMobility>                    InMobility;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.HierarchicalInstancedStaticMeshComponent.RemoveInstances
 struct UHierarchicalInstancedStaticMeshComponent_RemoveInstances_Params
 {
 	TArray<int>                                        InstancesToRemove;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.StaticMeshActor.SetMobility
-struct AStaticMeshActor_SetMobility_Params
-{
-	TEnumAsByte<EComponentMobility>                    InMobility;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.MaterialInterface.SetForceMipLevelsToBeResident
@@ -8715,11 +8715,6 @@ struct AEmitter_Activate_Params
 {
 };
 
-// Function Engine.ExponentialHeightFog.OnRep_bEnabled
-struct AExponentialHeightFog_OnRep_bEnabled_Params
-{
-};
-
 // Function Engine.ExponentialHeightFogComponent.SetVolumetricFogScatteringDistribution
 struct UExponentialHeightFogComponent_SetVolumetricFogScatteringDistribution_Params
 {
@@ -8895,6 +8890,11 @@ struct UForceFeedbackComponent_BP_GetAttenuationSettingsToApply_Params
 struct UForceFeedbackComponent_AdjustAttenuation_Params
 {
 	struct FForceFeedbackAttenuationSettings           InAttenuationSettings;                                    // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function Engine.ExponentialHeightFog.OnRep_bEnabled
+struct AExponentialHeightFog_OnRep_bEnabled_Params
+{
 };
 
 // Function Engine.GameModeBase.StartPlay
@@ -9151,6 +9151,470 @@ struct AGameMode_EndMatch_Params
 // Function Engine.GameMode.AbortMatch
 struct AGameMode_AbortMatch_Params
 {
+};
+
+// Function Engine.GameStateBase.OnRep_SpectatorClass
+struct AGameStateBase_OnRep_SpectatorClass_Params
+{
+};
+
+// Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds
+struct AGameStateBase_OnRep_ReplicatedWorldTimeSeconds_Params
+{
+};
+
+// Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay
+struct AGameStateBase_OnRep_ReplicatedHasBegunPlay_Params
+{
+};
+
+// Function Engine.GameStateBase.OnRep_GameModeClass
+struct AGameStateBase_OnRep_GameModeClass_Params
+{
+};
+
+// Function Engine.GameStateBase.HasMatchStarted
+struct AGameStateBase_HasMatchStarted_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameStateBase.HasBegunPlay
+struct AGameStateBase_HasBegunPlay_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameStateBase.GetServerWorldTimeSeconds
+struct AGameStateBase_GetServerWorldTimeSeconds_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameStateBase.GetPlayerStartTime
+struct AGameStateBase_GetPlayerStartTime_Params
+{
+	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameStateBase.GetPlayerRespawnDelay
+struct AGameStateBase_GetPlayerRespawnDelay_Params
+{
+	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameState.OnRep_MatchState
+struct AGameState_OnRep_MatchState_Params
+{
+};
+
+// Function Engine.GameState.OnRep_ElapsedTime
+struct AGameState_OnRep_ElapsedTime_Params
+{
+};
+
+// Function Engine.GameUserSettings.ValidateSettings
+struct UGameUserSettings_ValidateSettings_Params
+{
+};
+
+// Function Engine.GameUserSettings.SupportsHDRDisplayOutput
+struct UGameUserSettings_SupportsHDRDisplayOutput_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetVSyncEnabled
+struct UGameUserSettings_SetVSyncEnabled_Params
+{
+	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetVisualEffectQuality
+struct UGameUserSettings_SetVisualEffectQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetViewDistanceQuality
+struct UGameUserSettings_SetViewDistanceQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetToDefaults
+struct UGameUserSettings_SetToDefaults_Params
+{
+};
+
+// Function Engine.GameUserSettings.SetTextureQuality
+struct UGameUserSettings_SetTextureQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetShadowQuality
+struct UGameUserSettings_SetShadowQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetScreenResolution
+struct UGameUserSettings_SetScreenResolution_Params
+{
+	struct FIntPoint                                   Resolution;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetResolutionScaleValueEx
+struct UGameUserSettings_SetResolutionScaleValueEx_Params
+{
+	float                                              NewScaleValue;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetResolutionScaleValue
+struct UGameUserSettings_SetResolutionScaleValue_Params
+{
+	int                                                NewScaleValue;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetResolutionScaleNormalized
+struct UGameUserSettings_SetResolutionScaleNormalized_Params
+{
+	float                                              NewScaleNormalized;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetPostProcessingQuality
+struct UGameUserSettings_SetPostProcessingQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetOverallScalabilityLevel
+struct UGameUserSettings_SetOverallScalabilityLevel_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetFullscreenMode
+struct UGameUserSettings_SetFullscreenMode_Params
+{
+	TEnumAsByte<EWindowMode>                           InFullscreenMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetFrameRateLimit
+struct UGameUserSettings_SetFrameRateLimit_Params
+{
+	float                                              NewLimit;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetFoliageQuality
+struct UGameUserSettings_SetFoliageQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetDynamicResolutionEnabled
+struct UGameUserSettings_SetDynamicResolutionEnabled_Params
+{
+	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetBenchmarkFallbackValues
+struct UGameUserSettings_SetBenchmarkFallbackValues_Params
+{
+};
+
+// Function Engine.GameUserSettings.SetAudioQualityLevel
+struct UGameUserSettings_SetAudioQualityLevel_Params
+{
+	int                                                QualityLevel;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SetAntiAliasingQuality
+struct UGameUserSettings_SetAntiAliasingQuality_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.SaveSettings
+struct UGameUserSettings_SaveSettings_Params
+{
+};
+
+// Function Engine.GameUserSettings.RunHardwareBenchmark
+struct UGameUserSettings_RunHardwareBenchmark_Params
+{
+	int                                                WorkScale;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CPUMultiplier;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              GPUMultiplier;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.RevertVideoMode
+struct UGameUserSettings_RevertVideoMode_Params
+{
+};
+
+// Function Engine.GameUserSettings.ResetToCurrentSettings
+struct UGameUserSettings_ResetToCurrentSettings_Params
+{
+};
+
+// Function Engine.GameUserSettings.LoadSettings
+struct UGameUserSettings_LoadSettings_Params
+{
+	bool                                               bForceReload;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsVSyncEnabled
+struct UGameUserSettings_IsVSyncEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsVSyncDirty
+struct UGameUserSettings_IsVSyncDirty_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsScreenResolutionDirty
+struct UGameUserSettings_IsScreenResolutionDirty_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsHDREnabled
+struct UGameUserSettings_IsHDREnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsFullscreenModeDirty
+struct UGameUserSettings_IsFullscreenModeDirty_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsDynamicResolutionEnabled
+struct UGameUserSettings_IsDynamicResolutionEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsDynamicResolutionDirty
+struct UGameUserSettings_IsDynamicResolutionDirty_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.IsDirty
+struct UGameUserSettings_IsDirty_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetVisualEffectQuality
+struct UGameUserSettings_GetVisualEffectQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetViewDistanceQuality
+struct UGameUserSettings_GetViewDistanceQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetTextureQuality
+struct UGameUserSettings_GetTextureQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetShadowQuality
+struct UGameUserSettings_GetShadowQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetScreenResolution
+struct UGameUserSettings_GetScreenResolution_Params
+{
+	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetResolutionScaleInformationEx
+struct UGameUserSettings_GetResolutionScaleInformationEx_Params
+{
+	float                                              CurrentScaleNormalized;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              CurrentScaleValue;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MinScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetResolutionScaleInformation
+struct UGameUserSettings_GetResolutionScaleInformation_Params
+{
+	float                                              CurrentScaleNormalized;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                CurrentScaleValue;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                MinScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                MaxScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetRecommendedResolutionScale
+struct UGameUserSettings_GetRecommendedResolutionScale_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetPreferredFullscreenMode
+struct UGameUserSettings_GetPreferredFullscreenMode_Params
+{
+	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetPostProcessingQuality
+struct UGameUserSettings_GetPostProcessingQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetOverallScalabilityLevel
+struct UGameUserSettings_GetOverallScalabilityLevel_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
+struct UGameUserSettings_GetLastConfirmedScreenResolution_Params
+{
+	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
+struct UGameUserSettings_GetLastConfirmedFullscreenMode_Params
+{
+	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetGameUserSettings
+struct UGameUserSettings_GetGameUserSettings_Params
+{
+	class UGameUserSettings*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetFullscreenMode
+struct UGameUserSettings_GetFullscreenMode_Params
+{
+	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetFrameRateLimit
+struct UGameUserSettings_GetFrameRateLimit_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetFoliageQuality
+struct UGameUserSettings_GetFoliageQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetDesktopResolution
+struct UGameUserSettings_GetDesktopResolution_Params
+{
+	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetDefaultWindowPosition
+struct UGameUserSettings_GetDefaultWindowPosition_Params
+{
+	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetDefaultWindowMode
+struct UGameUserSettings_GetDefaultWindowMode_Params
+{
+	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetDefaultResolutionScale
+struct UGameUserSettings_GetDefaultResolutionScale_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetDefaultResolution
+struct UGameUserSettings_GetDefaultResolution_Params
+{
+	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
+struct UGameUserSettings_GetCurrentHDRDisplayNits_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetAudioQualityLevel
+struct UGameUserSettings_GetAudioQualityLevel_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.GetAntiAliasingQuality
+struct UGameUserSettings_GetAntiAliasingQuality_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.EnableHDRDisplayOutput
+struct UGameUserSettings_EnableHDRDisplayOutput_Params
+{
+	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                DisplayNits;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.ConfirmVideoMode
+struct UGameUserSettings_ConfirmVideoMode_Params
+{
+};
+
+// Function Engine.GameUserSettings.ApplySettings
+struct UGameUserSettings_ApplySettings_Params
+{
+	bool                                               bCheckForCommandLineOverrides;                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.ApplyResolutionSettings
+struct UGameUserSettings_ApplyResolutionSettings_Params
+{
+	bool                                               bCheckForCommandLineOverrides;                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.GameUserSettings.ApplyNonResolutionSettings
+struct UGameUserSettings_ApplyNonResolutionSettings_Params
+{
+};
+
+// Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
+struct UGameUserSettings_ApplyHardwareBenchmarkResults_Params
+{
+};
+
+// Function Engine.SpotLight.SetOuterConeAngle
+struct ASpotLight_SetOuterConeAngle_Params
+{
+	float                                              NewOuterConeAngle;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.SpotLight.SetInnerConeAngle
+struct ASpotLight_SetInnerConeAngle_Params
+{
+	float                                              NewInnerConeAngle;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.GameplayStatics.UnloadStreamLevel
@@ -10208,470 +10672,6 @@ struct UGameplayStatics_ActivateReverbEffect_Params
 	float                                              FadeTime;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Engine.GameStateBase.OnRep_SpectatorClass
-struct AGameStateBase_OnRep_SpectatorClass_Params
-{
-};
-
-// Function Engine.GameStateBase.OnRep_ReplicatedWorldTimeSeconds
-struct AGameStateBase_OnRep_ReplicatedWorldTimeSeconds_Params
-{
-};
-
-// Function Engine.GameStateBase.OnRep_ReplicatedHasBegunPlay
-struct AGameStateBase_OnRep_ReplicatedHasBegunPlay_Params
-{
-};
-
-// Function Engine.GameStateBase.OnRep_GameModeClass
-struct AGameStateBase_OnRep_GameModeClass_Params
-{
-};
-
-// Function Engine.GameStateBase.HasMatchStarted
-struct AGameStateBase_HasMatchStarted_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameStateBase.HasBegunPlay
-struct AGameStateBase_HasBegunPlay_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameStateBase.GetServerWorldTimeSeconds
-struct AGameStateBase_GetServerWorldTimeSeconds_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameStateBase.GetPlayerStartTime
-struct AGameStateBase_GetPlayerStartTime_Params
-{
-	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameStateBase.GetPlayerRespawnDelay
-struct AGameStateBase_GetPlayerRespawnDelay_Params
-{
-	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameState.OnRep_MatchState
-struct AGameState_OnRep_MatchState_Params
-{
-};
-
-// Function Engine.GameState.OnRep_ElapsedTime
-struct AGameState_OnRep_ElapsedTime_Params
-{
-};
-
-// Function Engine.GameUserSettings.ValidateSettings
-struct UGameUserSettings_ValidateSettings_Params
-{
-};
-
-// Function Engine.GameUserSettings.SupportsHDRDisplayOutput
-struct UGameUserSettings_SupportsHDRDisplayOutput_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetVSyncEnabled
-struct UGameUserSettings_SetVSyncEnabled_Params
-{
-	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetVisualEffectQuality
-struct UGameUserSettings_SetVisualEffectQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetViewDistanceQuality
-struct UGameUserSettings_SetViewDistanceQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetToDefaults
-struct UGameUserSettings_SetToDefaults_Params
-{
-};
-
-// Function Engine.GameUserSettings.SetTextureQuality
-struct UGameUserSettings_SetTextureQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetShadowQuality
-struct UGameUserSettings_SetShadowQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetScreenResolution
-struct UGameUserSettings_SetScreenResolution_Params
-{
-	struct FIntPoint                                   Resolution;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetResolutionScaleValueEx
-struct UGameUserSettings_SetResolutionScaleValueEx_Params
-{
-	float                                              NewScaleValue;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetResolutionScaleValue
-struct UGameUserSettings_SetResolutionScaleValue_Params
-{
-	int                                                NewScaleValue;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetResolutionScaleNormalized
-struct UGameUserSettings_SetResolutionScaleNormalized_Params
-{
-	float                                              NewScaleNormalized;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetPostProcessingQuality
-struct UGameUserSettings_SetPostProcessingQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetOverallScalabilityLevel
-struct UGameUserSettings_SetOverallScalabilityLevel_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetFullscreenMode
-struct UGameUserSettings_SetFullscreenMode_Params
-{
-	TEnumAsByte<EWindowMode>                           InFullscreenMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetFrameRateLimit
-struct UGameUserSettings_SetFrameRateLimit_Params
-{
-	float                                              NewLimit;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetFoliageQuality
-struct UGameUserSettings_SetFoliageQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetDynamicResolutionEnabled
-struct UGameUserSettings_SetDynamicResolutionEnabled_Params
-{
-	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetBenchmarkFallbackValues
-struct UGameUserSettings_SetBenchmarkFallbackValues_Params
-{
-};
-
-// Function Engine.GameUserSettings.SetAudioQualityLevel
-struct UGameUserSettings_SetAudioQualityLevel_Params
-{
-	int                                                QualityLevel;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SetAntiAliasingQuality
-struct UGameUserSettings_SetAntiAliasingQuality_Params
-{
-	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.SaveSettings
-struct UGameUserSettings_SaveSettings_Params
-{
-};
-
-// Function Engine.GameUserSettings.RunHardwareBenchmark
-struct UGameUserSettings_RunHardwareBenchmark_Params
-{
-	int                                                WorkScale;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              CPUMultiplier;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              GPUMultiplier;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.RevertVideoMode
-struct UGameUserSettings_RevertVideoMode_Params
-{
-};
-
-// Function Engine.GameUserSettings.ResetToCurrentSettings
-struct UGameUserSettings_ResetToCurrentSettings_Params
-{
-};
-
-// Function Engine.GameUserSettings.LoadSettings
-struct UGameUserSettings_LoadSettings_Params
-{
-	bool                                               bForceReload;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsVSyncEnabled
-struct UGameUserSettings_IsVSyncEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsVSyncDirty
-struct UGameUserSettings_IsVSyncDirty_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsScreenResolutionDirty
-struct UGameUserSettings_IsScreenResolutionDirty_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsHDREnabled
-struct UGameUserSettings_IsHDREnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsFullscreenModeDirty
-struct UGameUserSettings_IsFullscreenModeDirty_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsDynamicResolutionEnabled
-struct UGameUserSettings_IsDynamicResolutionEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsDynamicResolutionDirty
-struct UGameUserSettings_IsDynamicResolutionDirty_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.IsDirty
-struct UGameUserSettings_IsDirty_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetVisualEffectQuality
-struct UGameUserSettings_GetVisualEffectQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetViewDistanceQuality
-struct UGameUserSettings_GetViewDistanceQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetTextureQuality
-struct UGameUserSettings_GetTextureQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetShadowQuality
-struct UGameUserSettings_GetShadowQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetScreenResolution
-struct UGameUserSettings_GetScreenResolution_Params
-{
-	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetResolutionScaleInformationEx
-struct UGameUserSettings_GetResolutionScaleInformationEx_Params
-{
-	float                                              CurrentScaleNormalized;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              CurrentScaleValue;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              MinScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              MaxScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetResolutionScaleInformation
-struct UGameUserSettings_GetResolutionScaleInformation_Params
-{
-	float                                              CurrentScaleNormalized;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                CurrentScaleValue;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                MinScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                MaxScaleValue;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetRecommendedResolutionScale
-struct UGameUserSettings_GetRecommendedResolutionScale_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetPreferredFullscreenMode
-struct UGameUserSettings_GetPreferredFullscreenMode_Params
-{
-	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetPostProcessingQuality
-struct UGameUserSettings_GetPostProcessingQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetOverallScalabilityLevel
-struct UGameUserSettings_GetOverallScalabilityLevel_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
-struct UGameUserSettings_GetLastConfirmedScreenResolution_Params
-{
-	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
-struct UGameUserSettings_GetLastConfirmedFullscreenMode_Params
-{
-	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetGameUserSettings
-struct UGameUserSettings_GetGameUserSettings_Params
-{
-	class UGameUserSettings*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetFullscreenMode
-struct UGameUserSettings_GetFullscreenMode_Params
-{
-	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetFrameRateLimit
-struct UGameUserSettings_GetFrameRateLimit_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetFoliageQuality
-struct UGameUserSettings_GetFoliageQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetDesktopResolution
-struct UGameUserSettings_GetDesktopResolution_Params
-{
-	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetDefaultWindowPosition
-struct UGameUserSettings_GetDefaultWindowPosition_Params
-{
-	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetDefaultWindowMode
-struct UGameUserSettings_GetDefaultWindowMode_Params
-{
-	TEnumAsByte<EWindowMode>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetDefaultResolutionScale
-struct UGameUserSettings_GetDefaultResolutionScale_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetDefaultResolution
-struct UGameUserSettings_GetDefaultResolution_Params
-{
-	struct FIntPoint                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
-struct UGameUserSettings_GetCurrentHDRDisplayNits_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetAudioQualityLevel
-struct UGameUserSettings_GetAudioQualityLevel_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.GetAntiAliasingQuality
-struct UGameUserSettings_GetAntiAliasingQuality_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.EnableHDRDisplayOutput
-struct UGameUserSettings_EnableHDRDisplayOutput_Params
-{
-	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                DisplayNits;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.ConfirmVideoMode
-struct UGameUserSettings_ConfirmVideoMode_Params
-{
-};
-
-// Function Engine.GameUserSettings.ApplySettings
-struct UGameUserSettings_ApplySettings_Params
-{
-	bool                                               bCheckForCommandLineOverrides;                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.ApplyResolutionSettings
-struct UGameUserSettings_ApplyResolutionSettings_Params
-{
-	bool                                               bCheckForCommandLineOverrides;                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.GameUserSettings.ApplyNonResolutionSettings
-struct UGameUserSettings_ApplyNonResolutionSettings_Params
-{
-};
-
-// Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
-struct UGameUserSettings_ApplyHardwareBenchmarkResults_Params
-{
-};
-
-// Function Engine.SpotLight.SetOuterConeAngle
-struct ASpotLight_SetOuterConeAngle_Params
-{
-	float                                              NewOuterConeAngle;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.SpotLight.SetInnerConeAngle
-struct ASpotLight_SetInnerConeAngle_Params
-{
-	float                                              NewInnerConeAngle;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Engine.HealthSnapshotBlueprintLibrary.StopPerformanceSnapshots
 struct UHealthSnapshotBlueprintLibrary_StopPerformanceSnapshots_Params
 {
@@ -11501,51 +11501,6 @@ struct UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Params
 {
 	struct FName                                       AssetGroup;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               SaveToConfig;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.KismetMaterialLibrary.SetVectorParameterValue
-struct UKismetMaterialLibrary_SetVectorParameterValue_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                ParameterValue;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Engine.KismetMaterialLibrary.SetScalarParameterValue
-struct UKismetMaterialLibrary_SetScalarParameterValue_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ParameterValue;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.KismetMaterialLibrary.GetVectorParameterValue
-struct UKismetMaterialLibrary_GetVectorParameterValue_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.KismetMaterialLibrary.GetScalarParameterValue
-struct UKismetMaterialLibrary_GetScalarParameterValue_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance
-struct UKismetMaterialLibrary_CreateDynamicMaterialInstance_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          Parent;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       OptionalName;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.KismetMathLibrary.Xor_IntInt
@@ -15604,6 +15559,51 @@ struct UKismetStringTableLibrary_GetKeysFromStringTable_Params
 	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
+// Function Engine.KismetMaterialLibrary.SetVectorParameterValue
+struct UKismetMaterialLibrary_SetVectorParameterValue_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                ParameterValue;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMaterialLibrary.SetScalarParameterValue
+struct UKismetMaterialLibrary_SetScalarParameterValue_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ParameterValue;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.KismetMaterialLibrary.GetVectorParameterValue
+struct UKismetMaterialLibrary_GetVectorParameterValue_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMaterialLibrary.GetScalarParameterValue
+struct UKismetMaterialLibrary_GetScalarParameterValue_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialParameterCollection*                Collection;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ParameterName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMaterialLibrary.CreateDynamicMaterialInstance
+struct UKismetMaterialLibrary_CreateDynamicMaterialInstance_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          Parent;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       OptionalName;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.KismetSystemLibrary.UnregisterForRemoteNotifications
 struct UKismetSystemLibrary_UnregisterForRemoteNotifications_Params
 {
@@ -18534,14 +18534,6 @@ struct UParticleSystemComponent_BeginTrails_Params
 	float                                              InWidth;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Engine.PawnNoiseEmitterComponent.MakeNoise
-struct UPawnNoiseEmitterComponent_MakeNoise_Params
-{
-	class AActor*                                      NoiseMaker;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Loudness;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     NoiseLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
 // Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
 struct UPhysicalAnimationComponent_SetStrengthMultiplyer_Params
 {
@@ -18583,6 +18575,14 @@ struct UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow_Params
 	struct FName                                       ProfileName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bIncludeSelf;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bClearNotFound;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PawnNoiseEmitterComponent.MakeNoise
+struct UPawnNoiseEmitterComponent_MakeNoise_Params
+{
+	class AActor*                                      NoiseMaker;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Loudness;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NoiseLocation;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
@@ -20417,12 +20417,6 @@ struct UTwitterIntegrationBase_AuthorizeAccounts_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Engine.VectorFieldComponent.SetIntensity
-struct UVectorFieldComponent_SetIntensity_Params
-{
-	float                                              NewIntensity;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Engine.VisualLoggerKismetLibrary.RedirectVislog
 struct UVisualLoggerKismetLibrary_RedirectVislog_Params
 {
@@ -20556,6 +20550,12 @@ struct UWindDirectionalSourceComponent_SetMaximumGustAmount_Params
 // Function Engine.WorldSettings.OnRep_WorldGravityZ
 struct AWorldSettings_OnRep_WorldGravityZ_Params
 {
+};
+
+// Function Engine.VectorFieldComponent.SetIntensity
+struct UVectorFieldComponent_SetIntensity_Params
+{
+	float                                              NewIntensity;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

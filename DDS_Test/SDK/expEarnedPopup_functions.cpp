@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UexpEarnedPopup_C::Construct()
 }
 
 
-// Function expEarnedPopup.expEarnedPopup_C.Setup
+// Function expEarnedPopup.expEarnedPopup_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          expAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UexpEarnedPopup_C::Setup(float expAmount)
+void UexpEarnedPopup_C::setup(float expAmount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function expEarnedPopup.expEarnedPopup_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function expEarnedPopup.expEarnedPopup_C.setup");
 
-	UexpEarnedPopup_C_Setup_Params params;
+	UexpEarnedPopup_C_setup_Params params;
 	params.expAmount = expAmount;
 
 	auto flags = fn->FunctionFlags;

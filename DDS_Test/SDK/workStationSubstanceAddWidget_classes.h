@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,7 +58,7 @@ public:
 	void setPackageIcon(TEnumAsByte<EdrugForm> Form, int Quan, class UTexture2D* Original, TEnumAsByte<EitemCategories> Category, class UTexture2D** OutIcon);
 	void addToEquipment(bool* DontChangeInput);
 	void Construct();
-	void Setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* equipment);
+	void setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* equipment);
 	void BndEvt__btnAdd_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnCancel_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void killWidget(bool DontChangeInput);

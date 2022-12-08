@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,8 +53,8 @@ struct UworldMapUI_Marker_C_OnMouseLeave_Params
 	struct FPointerEvent                               MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
-// Function worldMapUI_Marker.worldMapUI_Marker_C.Setup
-struct UworldMapUI_Marker_C_Setup_Params
+// Function worldMapUI_Marker.worldMapUI_Marker_C.setup
+struct UworldMapUI_Marker_C_setup_Params
 {
 	struct FText                                       MarkerName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	TEnumAsByte<EmapMarkerCategories>                  MarkerType;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,6 +62,7 @@ struct UworldMapUI_Marker_C_Setup_Params
 	struct FText                                       ToolTip;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     AreaString;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	bool                                               Alert;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function worldMapUI_Marker.worldMapUI_Marker_C.ExecuteUbergraph_worldMapUI_Marker

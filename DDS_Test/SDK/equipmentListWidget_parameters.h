@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ struct UequipmentListWidget_C_Construct_Params
 {
 };
 
-// Function equipmentListWidget.equipmentListWidget_C.Setup
-struct UequipmentListWidget_C_Setup_Params
+// Function equipmentListWidget.equipmentListWidget_C.setup
+struct UequipmentListWidget_C_setup_Params
 {
 	struct FappartmentEquipment                        eqData;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FName                                       EqID;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

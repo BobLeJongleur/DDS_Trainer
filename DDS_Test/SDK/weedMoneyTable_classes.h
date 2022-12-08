@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 	class ApsychedelicGangManager_C*                   gangManager;                                              // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	bool                                               tableOccupied;                                            // 0x0440(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0441(0x0007) MISSED OFFSET
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +32,7 @@ public:
 
 
 	void depositeSafeMoney(int Quantity);
-	void parseInventory(TArray<struct FinventoryItemStruct>* backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* pockets, TArray<int>* pocketQuan, int* quantityFound);
+	void parseInventory(TArray<struct FinventoryItemStruct>* Backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* pockets, TArray<int>* pocketQuan, int* quantityFound);
 	void UserConstructionScript();
 	void tableActivated(class AplayerCharacterBP_C* Player);
 	void ExecuteUbergraph_weedMoneyTable(int EntryPoint);

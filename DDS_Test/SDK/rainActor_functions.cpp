@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,6 +109,23 @@ void ArainActor_C::checkWeatherConditions()
 	static auto fn = UObject::FindObject<UFunction>("Function rainActor.rainActor_C.checkWeatherConditions");
 
 	ArainActor_C_checkWeatherConditions_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function rainActor.rainActor_C.EngageMaxRain
+// (BlueprintCallable, BlueprintEvent)
+
+void ArainActor_C::EngageMaxRain()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function rainActor.rainActor_C.EngageMaxRain");
+
+	ArainActor_C_EngageMaxRain_Params params;
 
 	auto flags = fn->FunctionFlags;
 

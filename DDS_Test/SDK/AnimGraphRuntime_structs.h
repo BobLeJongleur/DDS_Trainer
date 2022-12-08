@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1054,25 +1054,6 @@ struct FAnimNode_RotationMultiplier : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0126(0x0002) MISSED OFFSET
 };
 
-// ScriptStruct AnimGraphRuntime.AnimNode_RotationOffsetBlendSpace
-// 0x00B8 (0x01E0 - 0x0128)
-struct FAnimNode_RotationOffsetBlendSpace : public FAnimNode_BlendSpacePlayer
-{
-	struct FPoseLink                                   BasePose;                                                 // 0x0128(0x0010) (Edit, BlueprintVisible)
-	int                                                LODThreshold;                                             // 0x0138(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsLODEnabled;                                            // 0x013C(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	EAnimAlphaInputType                                AlphaInputType;                                           // 0x013D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x013E(0x0002) MISSED OFFSET
-	float                                              Alpha;                                                    // 0x0140(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FInputScaleBias                             AlphaScaleBias;                                           // 0x0144(0x0008) (Edit, BlueprintVisible)
-	float                                              ActualAlpha;                                              // 0x014C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bAlphaBoolEnabled;                                        // 0x0150(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0151(0x0007) MISSED OFFSET
-	struct FInputAlphaBoolBlend                        AlphaBoolBlend;                                           // 0x0158(0x0050) (Edit, BlueprintVisible)
-	struct FName                                       AlphaCurveName;                                           // 0x01A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FInputScaleBiasClamp                        AlphaScaleBiasClamp;                                      // 0x01B0(0x0030) (Edit, BlueprintVisible)
-};
-
 // ScriptStruct AnimGraphRuntime.AnimNode_ScaleChainLength
 // 0x0080 (0x00B0 - 0x0030)
 struct FAnimNode_ScaleChainLength : public FAnimNode_Base
@@ -1105,6 +1086,25 @@ struct FAnimNode_SequenceEvaluator : public FAnimNode_AssetPlayerBase
 	TEnumAsByte<ESequenceEvalReinit>                   ReinitializationBehavior;                                 // 0x006C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bReinitialized;                                           // 0x006D(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x006E(0x0002) MISSED OFFSET
+};
+
+// ScriptStruct AnimGraphRuntime.AnimNode_RotationOffsetBlendSpace
+// 0x00B8 (0x01E0 - 0x0128)
+struct FAnimNode_RotationOffsetBlendSpace : public FAnimNode_BlendSpacePlayer
+{
+	struct FPoseLink                                   BasePose;                                                 // 0x0128(0x0010) (Edit, BlueprintVisible)
+	int                                                LODThreshold;                                             // 0x0138(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bIsLODEnabled;                                            // 0x013C(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	EAnimAlphaInputType                                AlphaInputType;                                           // 0x013D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x013E(0x0002) MISSED OFFSET
+	float                                              Alpha;                                                    // 0x0140(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FInputScaleBias                             AlphaScaleBias;                                           // 0x0144(0x0008) (Edit, BlueprintVisible)
+	float                                              ActualAlpha;                                              // 0x014C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bAlphaBoolEnabled;                                        // 0x0150(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0151(0x0007) MISSED OFFSET
+	struct FInputAlphaBoolBlend                        AlphaBoolBlend;                                           // 0x0158(0x0050) (Edit, BlueprintVisible)
+	struct FName                                       AlphaCurveName;                                           // 0x01A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FInputScaleBiasClamp                        AlphaScaleBiasClamp;                                      // 0x01B0(0x0030) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct AnimGraphRuntime.AnimNode_Slot

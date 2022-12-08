@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C
-// 0x02E0 (0x0608 - 0x0328)
+// 0x02E4 (0x060C - 0x0328)
 class AUltra_Dynamic_Sky_BP_C : public AActor
 {
 public:
@@ -124,7 +124,7 @@ public:
 	class UTexture*                                    Clouds_Base_Texture;                                      // 0x0588(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Cloud_Tiling;                                             // 0x0590(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Cloud_Direction;                                          // 0x0594(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               One_Cloud_Layer;                                          // 0x0598(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               One_cloud_layer;                                          // 0x0598(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x3];                                       // 0x0599(0x0003) MISSED OFFSET
 	float                                              Cloud_Height_1;                                           // 0x059C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Cloud_Height_2;                                           // 0x05A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -149,6 +149,7 @@ public:
 	unsigned char                                      UnknownData16[0x3];                                       // 0x05FD(0x0003) MISSED OFFSET
 	float                                              baseSkyIntensity;                                         // 0x0600(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              skyIntensityBoost;                                        // 0x0604(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              NightSkyIntensityAdd;                                     // 0x0608(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass sleepWaitWidget.sleepWaitWidget_C
-// 0x00C0 (0x02C8 - 0x0208)
+// 0x00C4 (0x02CC - 0x0208)
 class UsleepWaitWidget_C : public UUserWidget
 {
 public:
@@ -45,6 +45,7 @@ public:
 	int                                                bedWaitMultiplier;                                        // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                endWaitMultiplier;                                        // 0x02BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UAudioComponent*                             musicLoop;                                                // 0x02C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	int                                                WaitMultiplierClamp;                                      // 0x02C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -63,7 +64,7 @@ public:
 	void BndEvt__btnAddMin_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnSleep_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnCancel_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
-	void Setup(bool Sleep);
+	void setup(bool Sleep);
 	void Destruct();
 	void ExecuteUbergraph_sleepWaitWidget(int EntryPoint);
 };

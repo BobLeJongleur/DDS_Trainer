@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function gangManager.gangManager_C.ResetGangmanOrderPending
+struct AgangManager_C_ResetGangmanOrderPending_Params
+{
+};
+
+// Function gangManager.gangManager_C.RamaExtend
+struct AgangManager_C_RamaExtend_Params
+{
+};
 
 // Function gangManager.gangManager_C.gangLevelLimitRaise
 struct AgangManager_C_gangLevelLimitRaise_Params
@@ -145,6 +155,20 @@ struct AgangManager_C_TestGangMultiplier_Params
 {
 	int                                                Level;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Rep;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function gangManager.gangManager_C.BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature
+struct AgangManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params
+{
+	class URamaSaveComponent*                          RamaSaveComponent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     LevelPackageName;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function gangManager.gangManager_C.TestGangScript
+struct AgangManager_C_TestGangScript_Params
+{
+	float                                              Sat;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Level;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function gangManager.gangManager_C.ExecuteUbergraph_gangManager

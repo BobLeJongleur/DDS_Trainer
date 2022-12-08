@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -286,6 +286,23 @@ void APM_PatrolLead_C::RetryWipe()
 	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.RetryWipe");
 
 	APM_PatrolLead_C_RetryWipe_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PM_PatrolLead.PM_PatrolLead_C.PoliceFoundNothing
+// (BlueprintCallable, BlueprintEvent)
+
+void APM_PatrolLead_C::PoliceFoundNothing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PM_PatrolLead.PM_PatrolLead_C.PoliceFoundNothing");
+
+	APM_PatrolLead_C_PoliceFoundNothing_Params params;
 
 	auto flags = fn->FunctionFlags;
 

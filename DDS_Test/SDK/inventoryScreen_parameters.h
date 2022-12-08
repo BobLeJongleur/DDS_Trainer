@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function inventoryScreen.inventoryScreen_C.Get_btnMarkSafe_ToolTipWidget_1
+struct UinventoryScreen_C_Get_btnMarkSafe_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function inventoryScreen.inventoryScreen_C.ConfigSafeButton
+struct UinventoryScreen_C_ConfigSafeButton_Params
+{
+	struct FGuid                                       CurGuid;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function inventoryScreen.inventoryScreen_C.Get_btnAcceptTrade_bIsEnabled_1
 struct UinventoryScreen_C_Get_btnAcceptTrade_bIsEnabled_1_Params
@@ -86,7 +98,7 @@ struct UinventoryScreen_C_acceptBoughtItems_Params
 // Function inventoryScreen.inventoryScreen_C.countBoughtItemValue
 struct UinventoryScreen_C_countBoughtItemValue_Params
 {
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Value;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -142,7 +154,7 @@ struct UinventoryScreen_C_renderBuyerNeeded_Params
 // Function inventoryScreen.inventoryScreen_C.checkItemsFitPockets
 struct UinventoryScreen_C_checkItemsFitPockets_Params
 {
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               NoFit;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -181,7 +193,7 @@ struct UinventoryScreen_C_prepareInventoryMode_Params
 {
 	class AcontainerBase_C*                            ContainerRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AbaseNPC_C*                                  sellerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function inventoryScreen.inventoryScreen_C.renderPockets
@@ -276,6 +288,11 @@ struct UinventoryScreen_C_randomWobble_Params
 
 // Function inventoryScreen.inventoryScreen_C.refreshActiveColor
 struct UinventoryScreen_C_refreshActiveColor_Params
+{
+};
+
+// Function inventoryScreen.inventoryScreen_C.BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
+struct UinventoryScreen_C_BndEvt__btnMarkSafe_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

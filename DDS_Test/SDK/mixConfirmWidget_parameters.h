@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct UmixConfirmWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function mixConfirmWidget.mixConfirmWidget_C.Setup
-struct UmixConfirmWidget_C_Setup_Params
+// Function mixConfirmWidget.mixConfirmWidget_C.setup
+struct UmixConfirmWidget_C_setup_Params
 {
 	class AworkStationMixerBase_C*                     Mixer;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

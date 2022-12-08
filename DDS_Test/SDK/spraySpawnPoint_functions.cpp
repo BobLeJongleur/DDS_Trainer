@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -97,6 +97,23 @@ void AspraySpawnPoint_C::spawnSpray()
 	static auto fn = UObject::FindObject<UFunction>("Function spraySpawnPoint.spraySpawnPoint_C.spawnSpray");
 
 	AspraySpawnPoint_C_spawnSpray_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function spraySpawnPoint.spraySpawnPoint_C.ForceSpawnSpray
+// (BlueprintCallable, BlueprintEvent)
+
+void AspraySpawnPoint_C::ForceSpawnSpray()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function spraySpawnPoint.spraySpawnPoint_C.ForceSpawnSpray");
+
+	AspraySpawnPoint_C_ForceSpawnSpray_Params params;
 
 	auto flags = fn->FunctionFlags;
 

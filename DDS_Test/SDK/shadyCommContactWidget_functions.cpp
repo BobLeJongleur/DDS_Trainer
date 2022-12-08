@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,7 +84,7 @@ struct FEventReply UshadyCommContactWidget_C::OnMouseButtonDown(const struct FGe
 }
 
 
-// Function shadyCommContactWidget.shadyCommContactWidget_C.Setup
+// Function shadyCommContactWidget.shadyCommContactWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            userID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -97,11 +97,11 @@ struct FEventReply UshadyCommContactWidget_C::OnMouseButtonDown(const struct FGe
 // int                            ClientId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AsalesManager_C*         salesManager                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommContactWidget_C::Setup(int userID, bool active, class UshadyCommInterface_C* shadyRef, const struct FcontactPersonStruct& userData, int newMessageNumber, bool isDead, bool Addicted, int ClientId, class AsalesManager_C* salesManager)
+void UshadyCommContactWidget_C::setup(int userID, bool active, class UshadyCommInterface_C* shadyRef, const struct FcontactPersonStruct& userData, int newMessageNumber, bool isDead, bool Addicted, int ClientId, class AsalesManager_C* salesManager)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactWidget.shadyCommContactWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function shadyCommContactWidget.shadyCommContactWidget_C.setup");
 
-	UshadyCommContactWidget_C_Setup_Params params;
+	UshadyCommContactWidget_C_setup_Params params;
 	params.userID = userID;
 	params.active = active;
 	params.shadyRef = shadyRef;

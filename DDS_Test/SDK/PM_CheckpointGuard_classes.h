@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 	}
 
 
-	void checkBackpackForIllegals(class AbackpackBase_C* backpack, bool* Found);
+	void checkBackpackForIllegals(class AbackpackBase_C* Backpack, bool* Found);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
@@ -55,6 +55,7 @@ public:
 	void trySuicide();
 	void overrideSearch();
 	void ReceiveDestroyed();
+	void PoliceFoundNothing();
 	void ExecuteUbergraph_PM_CheckpointGuard(int EntryPoint);
 };
 

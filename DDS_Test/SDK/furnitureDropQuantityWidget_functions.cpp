@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,18 +16,18 @@ namespace SDK
 // Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.getMaxQuantity
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 TargetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UUserWidget*             Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            sourceQuan                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FinventoryItemStruct    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            maxQuantity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UfurnitureDropQuantityWidget_C::getMaxQuantity(const struct FString& targetString, class UUserWidget* Widget, int sourceQuan, const struct FinventoryItemStruct& Data, int* maxQuantity)
+void UfurnitureDropQuantityWidget_C::getMaxQuantity(const struct FString& TargetString, class UUserWidget* Widget, int sourceQuan, const struct FinventoryItemStruct& Data, int* maxQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.getMaxQuantity");
 
 	UfurnitureDropQuantityWidget_C_getMaxQuantity_Params params;
-	params.targetString = targetString;
+	params.TargetString = TargetString;
 	params.Widget = Widget;
 	params.sourceQuan = sourceQuan;
 	params.Data = Data;
@@ -97,19 +97,19 @@ void UfurnitureDropQuantityWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEven
 }
 
 
-// Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.Setup
+// Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 TargetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            quanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAppManageList_C*        ManageList                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UfurnitureDropQuantityWidget_C::Setup(const struct FString& targetString, int quanMax, class UAppManageList_C* ManageList)
+void UfurnitureDropQuantityWidget_C::setup(const struct FString& TargetString, int quanMax, class UAppManageList_C* ManageList)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.setup");
 
-	UfurnitureDropQuantityWidget_C_Setup_Params params;
-	params.targetString = targetString;
+	UfurnitureDropQuantityWidget_C_setup_Params params;
+	params.TargetString = TargetString;
 	params.quanMax = quanMax;
 	params.ManageList = ManageList;
 

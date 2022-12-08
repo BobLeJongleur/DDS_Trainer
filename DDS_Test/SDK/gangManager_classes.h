@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,6 +60,8 @@ public:
 	}
 
 
+	void ResetGangmanOrderPending();
+	void RamaExtend();
 	void gangLevelLimitRaise();
 	void reconstructOrderFlow();
 	void reconstructDropRef();
@@ -84,6 +86,8 @@ public:
 	void unlockDeliveryMessage();
 	void TestGangOrder();
 	void TestGangMultiplier(int Level, float Rep);
+	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
+	void TestGangScript(float Sat, int Level);
 	void ExecuteUbergraph_gangManager(int EntryPoint);
 };
 

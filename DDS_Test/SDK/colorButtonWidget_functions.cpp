@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,18 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function colorButtonWidget.colorButtonWidget_C.Setup
+// Function colorButtonWidget.colorButtonWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UlabelEditWidget_C*      Parent                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FColor                  Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ColorIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UcolorButtonWidget_C::Setup(class UlabelEditWidget_C* Parent, const struct FColor& Color, int ColorIndex)
+void UcolorButtonWidget_C::setup(class UlabelEditWidget_C* Parent, const struct FColor& Color, int ColorIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function colorButtonWidget.colorButtonWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function colorButtonWidget.colorButtonWidget_C.setup");
 
-	UcolorButtonWidget_C_Setup_Params params;
+	UcolorButtonWidget_C_setup_Params params;
 	params.Parent = Parent;
 	params.Color = Color;
 	params.ColorIndex = ColorIndex;

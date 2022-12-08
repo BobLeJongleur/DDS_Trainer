@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,6 +109,40 @@ void AnoisyNeighbourBP_C::retryPlay()
 	static auto fn = UObject::FindObject<UFunction>("Function noisyNeighbourBP.noisyNeighbourBP_C.retryPlay");
 
 	AnoisyNeighbourBP_C_retryPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function noisyNeighbourBP.noisyNeighbourBP_C.ForcePlayDialogue
+// (BlueprintCallable, BlueprintEvent)
+
+void AnoisyNeighbourBP_C::ForcePlayDialogue()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function noisyNeighbourBP.noisyNeighbourBP_C.ForcePlayDialogue");
+
+	AnoisyNeighbourBP_C_ForcePlayDialogue_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function noisyNeighbourBP.noisyNeighbourBP_C.ForceStopDialogue
+// (BlueprintCallable, BlueprintEvent)
+
+void AnoisyNeighbourBP_C::ForceStopDialogue()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function noisyNeighbourBP.noisyNeighbourBP_C.ForceStopDialogue");
+
+	AnoisyNeighbourBP_C_ForceStopDialogue_Params params;
 
 	auto flags = fn->FunctionFlags;
 

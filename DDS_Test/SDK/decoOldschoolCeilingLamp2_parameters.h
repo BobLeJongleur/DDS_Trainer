@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,6 +17,12 @@ namespace SDK
 // Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.UserConstructionScript
 struct AdecoOldschoolCeilingLamp2_C_UserConstructionScript_Params
 {
+};
+
+// Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.SetLightState
+struct AdecoOldschoolCeilingLamp2_C_SetLightState_Params
+{
+	bool                                               LightOn;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function decoOldschoolCeilingLamp2.decoOldschoolCeilingLamp2_C.ReceiveBeginPlay

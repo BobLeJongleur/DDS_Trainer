@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function InventoryItemTooltipContentItem.InventoryItemTooltipContentItem_C.Setup
+// Function InventoryItemTooltipContentItem.InventoryItemTooltipContentItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UInventoryItemTooltipContentItem_C::Setup(const struct FText& Name, int Quantity)
+void UInventoryItemTooltipContentItem_C::setup(const struct FText& Name, int Quantity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryItemTooltipContentItem.InventoryItemTooltipContentItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryItemTooltipContentItem.InventoryItemTooltipContentItem_C.setup");
 
-	UInventoryItemTooltipContentItem_C_Setup_Params params;
+	UInventoryItemTooltipContentItem_C_setup_Params params;
 	params.Name = Name;
 	params.Quantity = Quantity;
 

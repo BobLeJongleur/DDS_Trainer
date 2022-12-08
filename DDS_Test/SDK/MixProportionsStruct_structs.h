@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,7 @@ struct FMixProportionsStruct
 	TEnumAsByte<EdrugForm>                             SubstanceForm_10_C925520C4AB9EFE7114FA789E8C6ED6A;        // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	float                                              Humidity_13_89BE6EF14389F8190C5A7FA273040A2B;             // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FText                                       SubstanceName_16_B4DFC395423C963522E86AA3E95B2CFB;        // 0x0028(0x0018) (Edit, BlueprintVisible)
+	struct FText                                       SubstanceName;        // 0x0028(0x0018) (Edit, BlueprintVisible)
 };
 
 }

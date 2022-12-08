@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,8 +20,8 @@ struct UcaughtOnSearchWidget_C_PreConstruct_Params
 	bool                                               IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function caughtOnSearchWidget.caughtOnSearchWidget_C.Setup
-struct UcaughtOnSearchWidget_C_Setup_Params
+// Function caughtOnSearchWidget.caughtOnSearchWidget_C.setup
+struct UcaughtOnSearchWidget_C_setup_Params
 {
 	bool                                               foundDrugs;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

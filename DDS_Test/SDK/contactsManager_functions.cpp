@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,6 +106,23 @@ void AcontactsManager_C::generatePsychedelicGuy()
 	static auto fn = UObject::FindObject<UFunction>("Function contactsManager.contactsManager_C.generatePsychedelicGuy");
 
 	AcontactsManager_C_generatePsychedelicGuy_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function contactsManager.contactsManager_C.GenerateGreene
+// (BlueprintCallable, BlueprintEvent)
+
+void AcontactsManager_C::GenerateGreene()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function contactsManager.contactsManager_C.GenerateGreene");
+
+	AcontactsManager_C_GenerateGreene_Params params;
 
 	auto flags = fn->FunctionFlags;
 

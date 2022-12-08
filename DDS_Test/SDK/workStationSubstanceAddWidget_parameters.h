@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,8 +41,8 @@ struct UworkStationSubstanceAddWidget_C_Construct_Params
 {
 };
 
-// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.Setup
-struct UworkStationSubstanceAddWidget_C_Setup_Params
+// Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.setup
+struct UworkStationSubstanceAddWidget_C_setup_Params
 {
 	class AinteractiveBaseObject_C*                    SelectedSubstance;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class AworkStationEquipmentBase_C*                 equipment;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

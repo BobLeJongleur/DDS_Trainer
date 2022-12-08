@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass rentAppartmentArea.rentAppartmentArea_C
-// 0x0189 (0x04B1 - 0x0328)
+// 0x01DC (0x0504 - 0x0328)
 class ArentAppartmentArea_C : public AActor
 {
 public:
@@ -60,7 +60,7 @@ public:
 	bool                                               raidCleanup;                                              // 0x0430(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               areaRaided;                                               // 0x0431(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x2];                                       // 0x0432(0x0002) MISSED OFFSET
-	float                                              respectBoost;                                             // 0x0434(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RespectBoost;                                             // 0x0434(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class AappartmentWallPicker_C*                     wallPickerRef;                                            // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	float                                              resetCountdown;                                           // 0x0440(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               tryingToReset;                                            // 0x0444(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -80,10 +80,20 @@ public:
 	bool                                               OriginalInstance;                                         // 0x0480(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData08[0x3];                                       // 0x0481(0x0003) MISSED OFFSET
 	struct FVector                                     AreaSizeStatic;                                           // 0x0484(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AdeaRaidManager_C*                           raidManager;                                              // 0x0490(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	class AdeaRaidManager_C*                           RaidManager;                                              // 0x0490(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	class UDataTable*                                  HideoutDatabase;                                          // 0x0498(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FString>                             RamaVariableFix;                                          // 0x04A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                               SectorCFirst;                                             // 0x04B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x7];                                       // 0x04B1(0x0007) MISSED OFFSET
+	class AlabPrefabMaster_C*                          LabPrefabRef;                                             // 0x04B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	TArray<int>                                        LabCrew;                                                  // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       LabTypeID;                                                // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                LabProducedTotal;                                         // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LabProductionTimer;                                       // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ProductionOnHold;                                         // 0x04E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x04E1(0x0007) MISSED OFFSET
+	struct FText                                       CustomHideoutName;                                        // 0x04E8(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	int                                                HideoutSortingIndex;                                      // 0x0500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -92,6 +102,9 @@ public:
 	}
 
 
+	void GetAreaMetarage(float* Meterage);
+	void CheckHideoutEmpty(bool* Empty);
+	void CheckEndgame();
 	void CheckTabletops();
 	void VerifyInventory();
 	void GetHideoutMeta(bool* Success, struct FHideoutData* HideoutMeta);
@@ -102,8 +115,8 @@ public:
 	void updateHideoutSetup();
 	void updateAreaNam();
 	void observationCountdown(float Delta);
-	void vanCanSpawn(class AdeaRaidManager_C* raidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn);
-	void suvCanSpawn(class AdeaRaidManager_C* raidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn);
+	void vanCanSpawn(class AdeaRaidManager_C* RaidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn);
+	void suvCanSpawn(class AdeaRaidManager_C* RaidManager, class AdeaRaidCarSpawnPoint_C** suvSpawnPoint, bool* CanSpawn);
 	void spawnFlashBang();
 	void addInventoryItem(const struct FappartmentEquipment& eqData, const struct FName& EquipmentID, int Quantity);
 	void removeInventoryItem(int Index, int Quantity);

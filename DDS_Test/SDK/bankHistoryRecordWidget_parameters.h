@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.Setup
-struct UbankHistoryRecordWidget_C_Setup_Params
+// Function bankHistoryRecordWidget.bankHistoryRecordWidget_C.setup
+struct UbankHistoryRecordWidget_C_setup_Params
 {
 	struct FText                                       Source;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)

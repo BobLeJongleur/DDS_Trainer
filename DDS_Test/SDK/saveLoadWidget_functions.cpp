@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function saveLoadWidget.saveLoadWidget_C.SetInputColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UsaveLoadWidget_C::SetInputColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.SetInputColor");
+
+	UsaveLoadWidget_C_SetInputColor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function saveLoadWidget.saveLoadWidget_C.beforeLoadCleanup
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -89,18 +106,18 @@ void UsaveLoadWidget_C::SlotClicked(int SlotID)
 }
 
 
-// Function saveLoadWidget.saveLoadWidget_C.Setup
+// Function saveLoadWidget.saveLoadWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           SaveGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           mainMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AsaveStation_C*          saveStationRef                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UsaveLoadWidget_C::Setup(bool SaveGame, bool mainMenu, class AsaveStation_C* saveStationRef)
+void UsaveLoadWidget_C::setup(bool SaveGame, bool mainMenu, class AsaveStation_C* saveStationRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function saveLoadWidget.saveLoadWidget_C.setup");
 
-	UsaveLoadWidget_C_Setup_Params params;
+	UsaveLoadWidget_C_setup_Params params;
 	params.SaveGame = SaveGame;
 	params.mainMenu = mainMenu;
 	params.saveStationRef = saveStationRef;

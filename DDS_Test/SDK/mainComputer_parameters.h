@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function mainComputer.mainComputer_C.LabConstructed
+struct AmainComputer_C_LabConstructed_Params
+{
+};
+
+// Function mainComputer.mainComputer_C.SetBossName
+struct AmainComputer_C_SetBossName_Params
+{
+	struct FText                                       BossName;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
 
 // Function mainComputer.mainComputer_C.GetPlayerDebt
 struct AmainComputer_C_GetPlayerDebt_Params
@@ -171,6 +182,11 @@ struct AmainComputer_C_BndEvt__RamaSave_0_K2Node_ComponentBoundEvent_0_RamaSaveF
 
 // Function mainComputer.mainComputer_C.RetryIllegalReminder
 struct AmainComputer_C_RetryIllegalReminder_Params
+{
+};
+
+// Function mainComputer.mainComputer_C.ChooseBossNickname
+struct AmainComputer_C_ChooseBossNickname_Params
 {
 };
 

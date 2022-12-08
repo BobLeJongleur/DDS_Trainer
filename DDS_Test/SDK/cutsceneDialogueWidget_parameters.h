@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,8 +19,8 @@ struct UcutsceneDialogueWidget_C_Construct_Params
 {
 };
 
-// Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.Setup
-struct UcutsceneDialogueWidget_C_Setup_Params
+// Function cutsceneDialogueWidget.cutsceneDialogueWidget_C.setup
+struct UcutsceneDialogueWidget_C_setup_Params
 {
 	class AActor*                                      Speaker;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       OptionA;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)

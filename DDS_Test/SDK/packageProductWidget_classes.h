@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass packageProductWidget.packageProductWidget_C
-// 0x01F8 (0x0400 - 0x0208)
+// 0x0210 (0x0418 - 0x0208)
 class UpackageProductWidget_C : public UUserWidget
 {
 public:
@@ -49,6 +49,9 @@ public:
 	float                                              listTotalMass;                                            // 0x03D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x03D4(0x0004) MISSED OFFSET
 	struct FSlateColor                                 activeElementColor;                                       // 0x03D8(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                              MassOverride;                                             // 0x0400(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    TookMass;                                                 // 0x0408(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -67,12 +70,13 @@ public:
 	void checkCanFitInventory(bool* canFit);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(class AworkStationEquipmentBase_C* EqRef);
+	void setup(class AworkStationEquipmentBase_C* EqRef, const struct FName& DrugOverride, const struct FMixProportionsStruct& MixOverride, float Mass);
 	void BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void killMe();
 	void BndEvt__btnAddPackage_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnAddInventory_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_packageProductWidget(int EntryPoint);
+	void TookMass__DelegateSignature(float Mass);
 };
 
 

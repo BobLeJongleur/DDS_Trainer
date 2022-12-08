@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,14 +33,14 @@ void AlaunderSpawnLocation_C::UserConstructionScript()
 // Function launderSpawnLocation.launderSpawnLocation_C.SpawnCharacter
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AlaunderSpawnLocation_C::SpawnCharacter(int TaskID)
+void AlaunderSpawnLocation_C::SpawnCharacter(int taskID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function launderSpawnLocation.launderSpawnLocation_C.SpawnCharacter");
 
 	AlaunderSpawnLocation_C_SpawnCharacter_Params params;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 
 	auto flags = fn->FunctionFlags;
 

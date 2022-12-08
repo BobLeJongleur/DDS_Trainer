@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,8 +31,8 @@ struct UappartmentViewerWidget_C_Construct_Params
 {
 };
 
-// Function appartmentViewerWidget.appartmentViewerWidget_C.Setup
-struct UappartmentViewerWidget_C_Setup_Params
+// Function appartmentViewerWidget.appartmentViewerWidget_C.setup
+struct UappartmentViewerWidget_C_setup_Params
 {
 	bool                                               Owned;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Forever;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

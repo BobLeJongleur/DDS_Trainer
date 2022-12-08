@@ -1,0 +1,183 @@
+Label_0x0:
+    $5F: Let Obj (Variable = Expression)
+      Variable:
+        $0: Local variable named DataTable
+      Expression:
+        $20: EX_ObjectConst (0000029D1346D940:DataTable BalanceFlags.BalanceFlags)
+Label_0x13:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_GetDataTableRowFromName_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (0000029D031E11E0:DataTableFunctionLibrary Engine.Default__DataTableFunctionLibrary)
+          Skip Bytes:
+            0x25
+          R-Value Property
+            CallFunc_GetDataTableRowFromName_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node DataTableFunctionLibrary::GetDataTableRowFromName)
+              $0: Local variable named DataTable
+              $0: Local variable named FlagID
+              $0: Local variable named CallFunc_GetDataTableRowFromName_OutRow
+              $16: EX_EndFunctionParms
+Label_0x58:
+    $7: Jump to offset 0x91 if not expr:
+      $0: Local variable named CallFunc_GetDataTableRowFromName_ReturnValue
+Label_0x66:
+    $F: Let (Variable = Expression)
+      Variable:
+        $48: Local out variable named FlagData
+      Expression:
+        $0: Local variable named CallFunc_GetDataTableRowFromName_OutRow
+Label_0x81:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named FlagExists
+      Expression:
+        $27: EX_True
+Label_0x8C:
+    $6: Jump to offset 0x2B0
+Label_0x91:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Conv_NameToText_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (0000029D031E0280:KismetTextLibrary Engine.Default__KismetTextLibrary)
+          Skip Bytes:
+            0x13
+          R-Value Property
+            CallFunc_Conv_NameToText_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node KismetTextLibrary::Conv_NameToText)
+              $0: Local variable named FlagID
+              $16: EX_EndFunctionParms
+Label_0xCC:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentName, offset 0
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $1F: literal ansi string "??????????????????????????????????????????????????????????????????"
+Label_0xEC:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentValueType, offset 16
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $24: literal byte 4
+Label_0x109:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentValue, offset 24
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $0: Local variable named CallFunc_Conv_NameToText_ReturnValue
+Label_0x12D:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentValueInt, offset 48
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $1D: literal int32_t 0
+Label_0x14D:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentValueFloat, offset 52
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $1E: literal float 0.000000
+Label_0x16D:
+    $F: Let (Variable = Expression)
+      Variable:
+        $42: Struct member context 
+          Expression within struct: 
+            ArgumentValueGender, offset 56
+          Expression to struct:
+            $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      Expression:
+        $24: literal byte 0
+Label_0x18A:
+    $31: set array
+      $0: Local variable named K2Node_MakeArray_Array
+      $0: Local variable named K2Node_MakeStruct_FormatArgumentData
+      $32: EX_EndArray
+Label_0x19E:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Format_ReturnValue
+      Expression:
+        $19: Context
+          ObjectExpression:
+            $20: EX_ObjectConst (0000029D031E0280:KismetTextLibrary Engine.Default__KismetTextLibrary)
+          Skip Bytes:
+            0x57
+          R-Value Property
+            CallFunc_Format_ReturnValue
+          ContextExpression:
+            $1C: Final Function (stack node KismetTextLibrary::Format)
+              $29: literal text - localized text { namespace: "", key: "??????????????????????????????????????????????????????????", source: "???????????????????????????????????????????" }
+              $0: Local variable named K2Node_MakeArray_Array
+              $16: EX_EndFunctionParms
+Label_0x21D:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (0000029D031E4A20:KismetSystemLibrary Engine.Default__KismetSystemLibrary)
+      Skip Bytes:
+        0x45
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1C: Final Function (stack node KismetSystemLibrary::PrintText)
+          $0: Local variable named __WorldContext
+          $0: Local variable named CallFunc_Format_ReturnValue
+          $27: EX_True
+          $27: EX_True
+          $2F: literal struct LinearColor (serialized size: 16)
+            $1E: literal float 1.000000
+            $1E: literal float 0.000000
+            $1E: literal float 0.000000
+            $1E: literal float 1.000000
+            $30: EX_EndStructConst
+          $1E: literal float 6.000000
+          $16: EX_EndFunctionParms
+Label_0x278:
+    $F: Let (Variable = Expression)
+      Variable:
+        $48: Local out variable named FlagData
+      Expression:
+        $2F: literal struct FlagStruct (serialized size: 32)
+          $27: EX_True
+          $1E: literal float 1.000000
+          $1D: literal int32_t 0
+          $1F: literal ansi string ""
+          $30: EX_EndStructConst
+Label_0x2A5:
+    $14: LetBool (Variable = Expression)
+      Variable:
+        $48: Local out variable named FlagExists
+      Expression:
+        $28: EX_False
+Label_0x2B0:
+    $4: Return expression
+      $B: EX_Nothing
+Label_0x2B2:
+    $53: EX_EndOfScript

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function shadyMessageWidget.shadyMessageWidget_C.Setup
+// Function shadyMessageWidget.shadyMessageWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   UserName                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -21,11 +21,11 @@ namespace SDK
 // class UTexture2D*              userAvatar                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PlayerMessage                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyMessageWidget_C::Setup(const struct FText& UserName, const struct FString& msgString, class UTexture2D* userAvatar, bool PlayerMessage)
+void UshadyMessageWidget_C::setup(const struct FText& UserName, const struct FString& msgString, class UTexture2D* userAvatar, bool PlayerMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function shadyMessageWidget.shadyMessageWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function shadyMessageWidget.shadyMessageWidget_C.setup");
 
-	UshadyMessageWidget_C_Setup_Params params;
+	UshadyMessageWidget_C_setup_Params params;
 	params.UserName = UserName;
 	params.msgString = msgString;
 	params.userAvatar = userAvatar;

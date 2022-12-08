@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,43 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function mainComputer.mainComputer_C.LabConstructed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AmainComputer_C::LabConstructed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.LabConstructed");
+
+	AmainComputer_C_LabConstructed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function mainComputer.mainComputer_C.SetBossName
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   BossName                       (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AmainComputer_C::SetBossName(const struct FText& BossName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.SetBossName");
+
+	AmainComputer_C_SetBossName_Params params;
+	params.BossName = BossName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function mainComputer.mainComputer_C.GetPlayerDebt
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -531,6 +568,23 @@ void AmainComputer_C::RetryIllegalReminder()
 	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.RetryIllegalReminder");
 
 	AmainComputer_C_RetryIllegalReminder_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function mainComputer.mainComputer_C.ChooseBossNickname
+// (BlueprintCallable, BlueprintEvent)
+
+void AmainComputer_C::ChooseBossNickname()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.ChooseBossNickname");
+
+	AmainComputer_C_ChooseBossNickname_Params params;
 
 	auto flags = fn->FunctionFlags;
 

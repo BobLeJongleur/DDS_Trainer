@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function dialogueResponseWidget.dialogueResponseWidget_C.Setup
-struct UdialogueResponseWidget_C_Setup_Params
+// Function dialogueResponseWidget.dialogueResponseWidget_C.setup
+struct UdialogueResponseWidget_C_setup_Params
 {
 	struct FText                                       DialogueText;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                responseID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

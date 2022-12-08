@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,8 +37,8 @@ struct UdeclarePackageWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function declarePackageWidget.declarePackageWidget_C.Setup
-struct UdeclarePackageWidget_C_Setup_Params
+// Function declarePackageWidget.declarePackageWidget_C.setup
+struct UdeclarePackageWidget_C_setup_Params
 {
 	class UpackageProductWidget_C*                     Parent;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };

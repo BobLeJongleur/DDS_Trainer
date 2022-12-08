@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,8 +19,8 @@ struct UconfirmDumpContent_C_Construct_Params
 {
 };
 
-// Function confirmDumpContent.confirmDumpContent_C.Setup
-struct UconfirmDumpContent_C_Setup_Params
+// Function confirmDumpContent.confirmDumpContent_C.setup
+struct UconfirmDumpContent_C_setup_Params
 {
 	class AworkStationEquipmentBase_C*                 EqName;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 	void BndEvt__sliderREd_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value);
 	void BndEvt__sliderGreen_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float Value);
 	void BndEvt__sliderBlue_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature(float Value);
-	void Setup(const struct FSlateColor& SlateColor, class UsettingsWidget_C* settingsWidget);
+	void setup(const struct FSlateColor& SlateColor, class UsettingsWidget_C* settingsWidget);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_colorSelectWidget(int EntryPoint);
 };

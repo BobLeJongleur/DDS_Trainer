@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 
 	void PreConstruct(bool IsDesignTime);
-	void Setup(bool foundDrugs);
+	void setup(bool foundDrugs);
 	void ExecuteUbergraph_caughtOnSearchWidget(int EntryPoint);
 };
 

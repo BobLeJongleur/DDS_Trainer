@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,8 +29,8 @@ struct ApackageBase_C_takeContents_Params
 {
 };
 
-// Function packageBase.packageBase_C.Setup
-struct ApackageBase_C_Setup_Params
+// Function packageBase.packageBase_C.setup
+struct ApackageBase_C_setup_Params
 {
 	TArray<struct FinventoryItemStruct>                Contents;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        Quantities;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)

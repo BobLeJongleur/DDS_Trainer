@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,45 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function salesManager.salesManager_C.ReconstructClientExpectations
+struct AsalesManager_C_ReconstructClientExpectations_Params
+{
+};
+
+// Function salesManager.salesManager_C.CheckAssignedSafe
+struct AsalesManager_C_CheckAssignedSafe_Params
+{
+	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CashDropped;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function salesManager.salesManager_C.ClearSafeBinding
+struct AsalesManager_C_ClearSafeBinding_Params
+{
+	struct FString                                     AssignedArea;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function salesManager.salesManager_C.BindSafeToArea
+struct AsalesManager_C_BindSafeToArea_Params
+{
+	struct FGuid                                       SafeGuid;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     AreaString;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function salesManager.salesManager_C.MurderDealer
+struct AsalesManager_C_MurderDealer_Params
+{
+	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function salesManager.salesManager_C.PromoteClientToLabCrew
+struct AsalesManager_C_PromoteClientToLabCrew_Params
+{
+	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       AssignedLab;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              EndCost;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function salesManager.salesManager_C.ReleaseAllClients
 struct AsalesManager_C_ReleaseAllClients_Params
@@ -127,7 +166,9 @@ struct AsalesManager_C_generateClientMessage_Params
 	bool                                               CashMeet;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       DrugNam;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               priceHigh;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               PriceHigh;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CashDrop;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CashAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Message;                                                  // (Parm, OutParm)
 };
 
@@ -189,7 +230,7 @@ struct AsalesManager_C_checkClientInterested_Params
 	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                DrugDemandedID;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Interested;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               priceHigh;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               PriceHigh;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Wish;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -289,7 +330,7 @@ struct AsalesManager_C_calcOrderQuantity_Params
 {
 	int                                                inClientID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               nightTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               priceHigh;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               PriceHigh;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                DrugID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                OutQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Critical;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -402,6 +443,16 @@ struct AsalesManager_C_DisableBallenaBlock_Params
 
 // Function salesManager.salesManager_C.KillSalesManager
 struct AsalesManager_C_KillSalesManager_Params
+{
+};
+
+// Function salesManager.salesManager_C.AllClientsMakeDealers
+struct AsalesManager_C_AllClientsMakeDealers_Params
+{
+};
+
+// Function salesManager.salesManager_C.TestKillDealer
+struct AsalesManager_C_TestKillDealer_Params
 {
 };
 

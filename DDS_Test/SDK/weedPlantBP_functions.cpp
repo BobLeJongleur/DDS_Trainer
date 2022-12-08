@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -591,6 +591,23 @@ void AweedPlantBP_C::trySetRainRef()
 	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.trySetRainRef");
 
 	AweedPlantBP_C_trySetRainRef_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function weedPlantBP.weedPlantBP_C.SetWeedGizmo
+// (BlueprintCallable, BlueprintEvent)
+
+void AweedPlantBP_C::SetWeedGizmo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function weedPlantBP.weedPlantBP_C.SetWeedGizmo");
+
+	AweedPlantBP_C_SetWeedGizmo_Params params;
 
 	auto flags = fn->FunctionFlags;
 

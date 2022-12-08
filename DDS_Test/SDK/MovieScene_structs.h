@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,16 +21,6 @@ enum class EMovieSceneKeyInterpolation : uint8_t
 	EMovieSceneKeyInterpolation__Linear = 3,
 	EMovieSceneKeyInterpolation__Constant = 4,
 	EMovieSceneKeyInterpolation__EMovieSceneKeyInterpolation_MAX = 5
-};
-
-
-// Enum MovieScene.EMovieSceneBlendType
-enum class EMovieSceneBlendType : uint8_t
-{
-	EMovieSceneBlendType__Absolute = 0,
-	EMovieSceneBlendType__Additive = 1,
-	EMovieSceneBlendType__Relative = 2,
-	EMovieSceneBlendType__EMovieSceneBlendType_MAX = 3
 };
 
 
@@ -91,17 +81,13 @@ enum class EMovieSceneEvaluationType : uint8_t
 };
 
 
-// Enum MovieScene.EMovieScenePlayerStatus
-enum class EMovieScenePlayerStatus : uint8_t
+// Enum MovieScene.EMovieSceneBlendType
+enum class EMovieSceneBlendType : uint8_t
 {
-	EMovieScenePlayerStatus__Stopped = 0,
-	EMovieScenePlayerStatus__Playing = 1,
-	EMovieScenePlayerStatus__Recording = 2,
-	EMovieScenePlayerStatus__Scrubbing = 3,
-	EMovieScenePlayerStatus__Jumping = 4,
-	EMovieScenePlayerStatus__Stepping = 5,
-	EMovieScenePlayerStatus__Paused = 6,
-	EMovieScenePlayerStatus__MAX   = 7
+	EMovieSceneBlendType__Absolute = 0,
+	EMovieSceneBlendType__Additive = 1,
+	EMovieSceneBlendType__Relative = 2,
+	EMovieSceneBlendType__EMovieSceneBlendType_MAX = 3
 };
 
 
@@ -141,6 +127,20 @@ enum class ESpawnOwnership : uint8_t
 	ESpawnOwnership__MasterSequence = 1,
 	ESpawnOwnership__External      = 2,
 	ESpawnOwnership__ESpawnOwnership_MAX = 3
+};
+
+
+// Enum MovieScene.EMovieScenePlayerStatus
+enum class EMovieScenePlayerStatus : uint8_t
+{
+	EMovieScenePlayerStatus__Stopped = 0,
+	EMovieScenePlayerStatus__Playing = 1,
+	EMovieScenePlayerStatus__Recording = 2,
+	EMovieScenePlayerStatus__Scrubbing = 3,
+	EMovieScenePlayerStatus__Jumping = 4,
+	EMovieScenePlayerStatus__Stepping = 5,
+	EMovieScenePlayerStatus__Paused = 6,
+	EMovieScenePlayerStatus__MAX   = 7
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,7 +122,7 @@ public:
 	void SetMasterPoseComponentForParts();
 	bool IsDefaultMeshInheritungItsAnimationAsset();
 	void processReceivedDrugs();
-	void setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int TaskID, bool isMale, bool isDealer, float ExpectationLevel);
+	void setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int taskID, bool isMale, bool isDealer, float ExpectationLevel);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);

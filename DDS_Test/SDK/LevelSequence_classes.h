@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -144,24 +144,6 @@ public:
 };
 
 
-// Class LevelSequence.LevelSequenceDirector
-// 0x0008 (0x0030 - 0x0028)
-class ULevelSequenceDirector : public UObject
-{
-public:
-	class ULevelSequencePlayer*                        Player;                                                   // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceDirector");
-		return ptr;
-	}
-
-
-	void OnCreated();
-};
-
-
 // Class LevelSequence.LegacyLevelSequenceDirectorBlueprint
 // 0x0000 (0x00E0 - 0x00E0)
 class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
@@ -195,6 +177,24 @@ public:
 
 
 	class ULevelSequencePlayer* STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
+};
+
+
+// Class LevelSequence.LevelSequenceDirector
+// 0x0008 (0x0030 - 0x0028)
+class ULevelSequenceDirector : public UObject
+{
+public:
+	class ULevelSequencePlayer*                        Player;                                                   // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceDirector");
+		return ptr;
+	}
+
+
+	void OnCreated();
 };
 
 

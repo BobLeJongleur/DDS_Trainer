@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function mainMenuWidget.mainMenuWidget_C.OnFailure_25E8D4CB47DF55B981A9E19A5039C9B7
+struct UmainMenuWidget_C_OnFailure_25E8D4CB47DF55B981A9E19A5039C9B7_Params
+{
+};
+
+// Function mainMenuWidget.mainMenuWidget_C.OnSuccess_25E8D4CB47DF55B981A9E19A5039C9B7
+struct UmainMenuWidget_C_OnSuccess_25E8D4CB47DF55B981A9E19A5039C9B7_Params
+{
+};
 
 // Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnGame_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
 struct UmainMenuWidget_C_BndEvt__btnGame_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature_Params
@@ -249,6 +259,26 @@ struct UmainMenuWidget_C_BndEvt__btnOpenCredits_K2Node_ComponentBoundEvent_38_On
 
 // Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnOpenCredits_K2Node_ComponentBoundEvent_39_OnButtonHoverEvent__DelegateSignature
 struct UmainMenuWidget_C_BndEvt__btnOpenCredits_K2Node_ComponentBoundEvent_39_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnLaunchDDS2_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature
+struct UmainMenuWidget_C_BndEvt__btnLaunchDDS2_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnCloseBanner_K2Node_ComponentBoundEvent_41_OnButtonClickedEvent__DelegateSignature
+struct UmainMenuWidget_C_BndEvt__btnCloseBanner_K2Node_ComponentBoundEvent_41_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function mainMenuWidget.mainMenuWidget_C.OpenBanners
+struct UmainMenuWidget_C_OpenBanners_Params
+{
+};
+
+// Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnLaunchDiscord_K2Node_ComponentBoundEvent_42_OnButtonClickedEvent__DelegateSignature
+struct UmainMenuWidget_C_BndEvt__btnLaunchDiscord_K2Node_ComponentBoundEvent_42_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

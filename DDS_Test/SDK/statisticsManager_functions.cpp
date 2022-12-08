@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -504,6 +504,26 @@ void AstatisticsManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSav
 	AstatisticsManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
 	params.RamaSaveComponent = RamaSaveComponent;
 	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function statisticsManager.statisticsManager_C.SetAllSales
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          SalesAmount                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AstatisticsManager_C::SetAllSales(float SalesAmount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.SetAllSales");
+
+	AstatisticsManager_C_SetAllSales_Params params;
+	params.SalesAmount = SalesAmount;
 
 	auto flags = fn->FunctionFlags;
 

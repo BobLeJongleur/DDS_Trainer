@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function saleAreaManagementWidget.saleAreaManagementWidget_C.Get_btnChangeSpray_ToolTipWidget_1
+struct UsaleAreaManagementWidget_C_Get_btnChangeSpray_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
 
 // Function saleAreaManagementWidget.saleAreaManagementWidget_C.markerSetAreaVisuals
 struct UsaleAreaManagementWidget_C_markerSetAreaVisuals_Params

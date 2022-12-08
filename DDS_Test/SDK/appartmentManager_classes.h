@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass appartmentManager.appartmentManager_C
-// 0x0108 (0x0430 - 0x0328)
+// 0x010D (0x0435 - 0x0328)
 class AappartmentManager_C : public AActor
 {
 public:
@@ -46,13 +46,15 @@ public:
 	struct FText                                       appartmentRentPaymentTitle;                               // 0x03F0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                              warningCountdown;                                         // 0x0408(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              warningInterval;                                          // 0x040C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AmainComputer_C*                             computerRef;                                              // 0x0410(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AmainComputer_C*                             ComputerRef;                                              // 0x0410(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	float                                              debtTotal;                                                // 0x0418(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                lastApartmentCount;                                       // 0x041C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                rentDayInterval;                                          // 0x0420(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               firstOneRented;                                           // 0x0424(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0425(0x0003) MISSED OFFSET
 	class ArentAppartmentArea_C*                       firstRentedApartment;                                     // 0x0428(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	int                                                CurCalcAllHideouts;                                       // 0x0430(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CheckAchievement;                                         // 0x0434(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -61,27 +63,31 @@ public:
 	}
 
 
+	bool CheckAllAppartments();
+	void SortHideouts(TArray<class ArentAppartmentArea_C*>* UnsortedArray, TArray<class ArentAppartmentArea_C*>* SortedArray);
 	void getWallPicker(int apartmentID, bool* Success, class AappartmentViewerPawn_C** viewerPawn, class AappartmentWallPicker_C** wallPicker);
 	void rentBoostRespect();
 	void countAvailableApartments();
 	void processRentTransaction(bool* Success);
 	void UserConstructionScript();
+	void prevViewAppartment();
 	void rentAction();
 	void ConfirmRentAction();
 	void cancelRenting();
 	void refreshEndRenting();
 	void checkAppartmentPayments();
-	void prevViewAppartment();
 	void nextViewAppartment();
 	void refreshAppartments();
-	void terminateRenting();
 	void ChangeViewAppartment(int AppartmentID);
 	void startAppartmentViewer();
+	void terminateRenting();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void sendDebtInfo();
 	void firstRentAction();
 	void BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature(class URamaSaveComponent* RamaSaveComponent, const struct FString& LevelPackageName);
+	void NewAppartmentsPopup();
+	void OpenPopup();
 	void ExecuteUbergraph_appartmentManager(int EntryPoint);
 };
 

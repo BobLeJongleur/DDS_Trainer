@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,7 +43,7 @@ public:
 	}
 
 
-	void Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions);
+	void setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions);
 	void ExecuteUbergraph_workStationListWidget(int EntryPoint);
 };
 

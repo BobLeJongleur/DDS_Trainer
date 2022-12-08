@@ -1,0 +1,144 @@
+Label_0x0:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named randomInterval
+      Expression:
+        $1E: literal float 0.000000
+Label_0x17:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (0000028301C34EA0:BlueprintHelpers_C BlueprintHelpers.Default__BlueprintHelpers_C)
+      Skip Bytes:
+        0x2E
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named GetBalanceFlag
+          $21: literal name GANG-MAX-LEVEL
+          $17: EX_Self
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagData1
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagExists1
+          $16: EX_EndFunctionParms
+Label_0x5B:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (0000028301C34EA0:BlueprintHelpers_C BlueprintHelpers.Default__BlueprintHelpers_C)
+      Skip Bytes:
+        0x2E
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named GetBalanceFlag
+          $21: literal name GANG-INTERVAL-MAX-DROP
+          $17: EX_Self
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagData
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagExists
+          $16: EX_EndFunctionParms
+Label_0x9F:
+    $19: Context
+      ObjectExpression:
+        $20: EX_ObjectConst (0000028301C34EA0:BlueprintHelpers_C BlueprintHelpers.Default__BlueprintHelpers_C)
+      Skip Bytes:
+        0x2E
+      R-Value Property
+        (null)
+      ContextExpression:
+        $1B: Virtual Function named GetBalanceFlag
+          $21: literal name GANG-ORDER-INTERVAL
+          $17: EX_Self
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagData2
+          $0: Local variable named CallFunc_GetBalanceFlag_FlagExists2
+          $16: EX_EndFunctionParms
+Label_0xE3:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Multiply_IntFloat)
+          $1: Instance variable named gangLevel
+          $1: Instance variable named gangSatisfactionMax
+          $16: EX_EndFunctionParms
+Label_0x111:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
+          $1: Instance variable named gangSatisfaction
+          $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0x13F:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue1
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Multiply_IntFloat)
+          $42: Struct member context 
+            Expression within struct: 
+              IntValue_11_FA91B6C3429E0A1C69544190AECC9E7B, offset 8
+            Expression to struct:
+              $0: Local variable named CallFunc_GetBalanceFlag_FlagData1
+          $1: Instance variable named gangSatisfactionMax
+          $16: EX_EndFunctionParms
+Label_0x176:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
+          $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
+          $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue1
+          $16: EX_EndFunctionParms
+Label_0x1A4:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_MapRangeClamped_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::MapRangeClamped)
+          $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue
+          $1E: literal float 0.000000
+          $1E: literal float 1.000000
+          $1E: literal float 0.000000
+          $42: Struct member context 
+            Expression within struct: 
+              FloatValue_4_84C339BE4BFFA59BE99714B615C3B3F7, offset 4
+            Expression to struct:
+              $0: Local variable named CallFunc_GetBalanceFlag_FlagData
+          $16: EX_EndFunctionParms
+Label_0x1EA:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
+          $42: Struct member context 
+            Expression within struct: 
+              FloatValue_4_84C339BE4BFFA59BE99714B615C3B3F7, offset 4
+            Expression to struct:
+              $0: Local variable named CallFunc_GetBalanceFlag_FlagData2
+          $0: Local variable named CallFunc_MapRangeClamped_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0x221:
+    $F: Let (Variable = Expression)
+      Variable:
+        $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
+      Expression:
+        $68: Call Math (stack node KismetMathLibrary::Subtract_FloatFloat)
+          $42: Struct member context 
+            Expression within struct: 
+              FloatValue_4_84C339BE4BFFA59BE99714B615C3B3F7, offset 4
+            Expression to struct:
+              $0: Local variable named CallFunc_GetBalanceFlag_FlagData2
+          $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
+          $16: EX_EndFunctionParms
+Label_0x258:
+    $F: Let (Variable = Expression)
+      Variable:
+        $1: Instance variable named nextOrderCountdown
+      Expression:
+        $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
+Label_0x273:
+    $4: Return expression
+      $B: EX_Nothing
+Label_0x275:
+    $53: EX_EndOfScript

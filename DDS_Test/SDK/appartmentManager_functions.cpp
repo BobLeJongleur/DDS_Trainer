@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,52 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function appartmentManager.appartmentManager_C.CheckAllAppartments
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AappartmentManager_C::CheckAllAppartments()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.CheckAllAppartments");
+
+	AappartmentManager_C_CheckAllAppartments_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function appartmentManager.appartmentManager_C.SortHideouts
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class ArentAppartmentArea_C*> UnsortedArray                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class ArentAppartmentArea_C*> SortedArray                    (Parm, OutParm, ZeroConstructor)
+
+void AappartmentManager_C::SortHideouts(TArray<class ArentAppartmentArea_C*>* UnsortedArray, TArray<class ArentAppartmentArea_C*>* SortedArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.SortHideouts");
+
+	AappartmentManager_C_SortHideouts_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (UnsortedArray != nullptr)
+		*UnsortedArray = params.UnsortedArray;
+	if (SortedArray != nullptr)
+		*SortedArray = params.SortedArray;
+}
+
 
 // Function appartmentManager.appartmentManager_C.getWallPicker
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
@@ -116,6 +162,23 @@ void AappartmentManager_C::UserConstructionScript()
 }
 
 
+// Function appartmentManager.appartmentManager_C.prevViewAppartment
+// (BlueprintCallable, BlueprintEvent)
+
+void AappartmentManager_C::prevViewAppartment()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.prevViewAppartment");
+
+	AappartmentManager_C_prevViewAppartment_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function appartmentManager.appartmentManager_C.rentAction
 // (BlueprintCallable, BlueprintEvent)
 
@@ -201,23 +264,6 @@ void AappartmentManager_C::checkAppartmentPayments()
 }
 
 
-// Function appartmentManager.appartmentManager_C.prevViewAppartment
-// (BlueprintCallable, BlueprintEvent)
-
-void AappartmentManager_C::prevViewAppartment()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.prevViewAppartment");
-
-	AappartmentManager_C_prevViewAppartment_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function appartmentManager.appartmentManager_C.nextViewAppartment
 // (BlueprintCallable, BlueprintEvent)
 
@@ -243,23 +289,6 @@ void AappartmentManager_C::refreshAppartments()
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.refreshAppartments");
 
 	AappartmentManager_C_refreshAppartments_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function appartmentManager.appartmentManager_C.terminateRenting
-// (BlueprintCallable, BlueprintEvent)
-
-void AappartmentManager_C::terminateRenting()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.terminateRenting");
-
-	AappartmentManager_C_terminateRenting_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -297,6 +326,23 @@ void AappartmentManager_C::startAppartmentViewer()
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.startAppartmentViewer");
 
 	AappartmentManager_C_startAppartmentViewer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function appartmentManager.appartmentManager_C.terminateRenting
+// (BlueprintCallable, BlueprintEvent)
+
+void AappartmentManager_C::terminateRenting()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.terminateRenting");
+
+	AappartmentManager_C_terminateRenting_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -390,6 +436,40 @@ void AappartmentManager_C::BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSav
 	AappartmentManager_C_BndEvt__RamaSave_K2Node_ComponentBoundEvent_0_RamaSaveFullyLoadedSignature__DelegateSignature_Params params;
 	params.RamaSaveComponent = RamaSaveComponent;
 	params.LevelPackageName = LevelPackageName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function appartmentManager.appartmentManager_C.NewAppartmentsPopup
+// (BlueprintCallable, BlueprintEvent)
+
+void AappartmentManager_C::NewAppartmentsPopup()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.NewAppartmentsPopup");
+
+	AappartmentManager_C_NewAppartmentsPopup_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function appartmentManager.appartmentManager_C.OpenPopup
+// (BlueprintCallable, BlueprintEvent)
+
+void AappartmentManager_C::OpenPopup()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentManager.appartmentManager_C.OpenPopup");
+
+	AappartmentManager_C_OpenPopup_Params params;
 
 	auto flags = fn->FunctionFlags;
 

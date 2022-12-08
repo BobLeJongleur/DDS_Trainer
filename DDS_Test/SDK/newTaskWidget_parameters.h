@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct UnewTaskWidget_C_Construct_Params
 {
 };
 
-// Function newTaskWidget.newTaskWidget_C.Setup
-struct UnewTaskWidget_C_Setup_Params
+// Function newTaskWidget.newTaskWidget_C.setup
+struct UnewTaskWidget_C_setup_Params
 {
 	struct FText                                       heading;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Desc;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)

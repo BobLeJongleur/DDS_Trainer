@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -292,20 +292,20 @@ struct FEventReply UinventoryItemWidget_C::OnMouseButtonDoubleClick(const struct
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            setPrice                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           showPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ShowPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FromVendor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           workStation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShowAsGrid                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   CustomName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UinventoryItemWidget_C::widgetSetup(int setPrice, bool showPrice, bool FromVendor, bool workStation, bool ShowAsGrid, int SetAmount, const struct FText& CustomName)
+void UinventoryItemWidget_C::widgetSetup(int setPrice, bool ShowPrice, bool FromVendor, bool workStation, bool ShowAsGrid, int SetAmount, const struct FText& CustomName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryItemWidget.inventoryItemWidget_C.widgetSetup");
 
 	UinventoryItemWidget_C_widgetSetup_Params params;
 	params.setPrice = setPrice;
-	params.showPrice = showPrice;
+	params.ShowPrice = ShowPrice;
 	params.FromVendor = FromVendor;
 	params.workStation = workStation;
 	params.ShowAsGrid = ShowAsGrid;

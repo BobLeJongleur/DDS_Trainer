@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -194,16 +194,16 @@ void UsleepWaitWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEvent_5_OnButton
 }
 
 
-// Function sleepWaitWidget.sleepWaitWidget_C.Setup
+// Function sleepWaitWidget.sleepWaitWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Sleep                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UsleepWaitWidget_C::Setup(bool Sleep)
+void UsleepWaitWidget_C::setup(bool Sleep)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function sleepWaitWidget.sleepWaitWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function sleepWaitWidget.sleepWaitWidget_C.setup");
 
-	UsleepWaitWidget_C_Setup_Params params;
+	UsleepWaitWidget_C_setup_Params params;
 	params.Sleep = Sleep;
 
 	auto flags = fn->FunctionFlags;

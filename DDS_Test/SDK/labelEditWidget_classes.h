@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 	struct FSlateColor GetColorAndOpacity_1();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(class AadditiveContainerBase_C* ParentContainer, const struct FText& DefaultName, bool DisableCancel);
+	void setup(class AadditiveContainerBase_C* ParentContainer, const struct FText& DefaultName, bool DisableCancel);
 	void BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnSave_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void killMe();

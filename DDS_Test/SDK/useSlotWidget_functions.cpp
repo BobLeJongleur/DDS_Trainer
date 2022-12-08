@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,27 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function useSlotWidget.useSlotWidget_C.GetToolTipWidget_2
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UuseSlotWidget_C::GetToolTipWidget_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function useSlotWidget.useSlotWidget_C.GetToolTipWidget_2");
+
+	UuseSlotWidget_C_GetToolTipWidget_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function useSlotWidget.useSlotWidget_C.setUseContent
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

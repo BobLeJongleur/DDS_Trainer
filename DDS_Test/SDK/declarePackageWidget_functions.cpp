@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,16 +89,16 @@ void UdeclarePackageWidget_C::Tick(const struct FGeometry& MyGeometry, float InD
 }
 
 
-// Function declarePackageWidget.declarePackageWidget_C.Setup
+// Function declarePackageWidget.declarePackageWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UpackageProductWidget_C* Parent                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UdeclarePackageWidget_C::Setup(class UpackageProductWidget_C* Parent)
+void UdeclarePackageWidget_C::setup(class UpackageProductWidget_C* Parent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function declarePackageWidget.declarePackageWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function declarePackageWidget.declarePackageWidget_C.setup");
 
-	UdeclarePackageWidget_C_Setup_Params params;
+	UdeclarePackageWidget_C_setup_Params params;
 	params.Parent = Parent;
 
 	auto flags = fn->FunctionFlags;

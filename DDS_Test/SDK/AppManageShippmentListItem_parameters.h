@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,12 @@ struct UAppManageShippmentListItem_C_UserClickedCancel_Params
 	struct FString                                     ActionID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
-// Function AppManageShippmentListItem.AppManageShippmentListItem_C.Setup
-struct UAppManageShippmentListItem_C_Setup_Params
+// Function AppManageShippmentListItem.AppManageShippmentListItem_C.setup
+struct UAppManageShippmentListItem_C_setup_Params
 {
 	class ArentAppartmentArea_C*                       AppartmentRef;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UappartmentModeWidget_C*                     appModeWidget;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AVillaPropertyInstance_C*                    VillaRef;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AppManageShippmentListItem.AppManageShippmentListItem_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature

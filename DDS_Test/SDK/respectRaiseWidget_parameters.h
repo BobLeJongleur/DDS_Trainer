@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct UrespectRaiseWidget_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function respectRaiseWidget.respectRaiseWidget_C.Setup
-struct UrespectRaiseWidget_C_Setup_Params
+// Function respectRaiseWidget.respectRaiseWidget_C.setup
+struct UrespectRaiseWidget_C_setup_Params
 {
 	float                                              respAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       AreaNam;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)

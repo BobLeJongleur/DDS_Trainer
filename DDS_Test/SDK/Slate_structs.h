@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -104,6 +104,16 @@ enum class EListItemAlignment : uint8_t
 };
 
 
+// Enum Slate.ETextFlowDirection
+enum class ETextFlowDirection : uint8_t
+{
+	ETextFlowDirection__Auto       = 0,
+	ETextFlowDirection__LeftToRight = 1,
+	ETextFlowDirection__RightToLeft = 2,
+	ETextFlowDirection__ETextFlowDirection_MAX = 3
+};
+
+
 // Enum Slate.ETextWrappingPolicy
 enum class ETextWrappingPolicy : uint8_t
 {
@@ -130,16 +140,6 @@ enum class EMultipleKeyBindingIndex : uint8_t
 	EMultipleKeyBindingIndex__Secondary = 1,
 	EMultipleKeyBindingIndex__NumChords = 2,
 	EMultipleKeyBindingIndex__EMultipleKeyBindingIndex_MAX = 3
-};
-
-
-// Enum Slate.ETextFlowDirection
-enum class ETextFlowDirection : uint8_t
-{
-	ETextFlowDirection__Auto       = 0,
-	ETextFlowDirection__LeftToRight = 1,
-	ETextFlowDirection__RightToLeft = 2,
-	ETextFlowDirection__ETextFlowDirection_MAX = 3
 };
 
 

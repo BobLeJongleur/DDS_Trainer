@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void Setup(class UlabelEditWidget_C* Parent, const struct FColor& Color, int ColorIndex);
+	void setup(class UlabelEditWidget_C* Parent, const struct FColor& Color, int ColorIndex);
 	void BndEvt__btnColor_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_colorButtonWidget(int EntryPoint);
 };

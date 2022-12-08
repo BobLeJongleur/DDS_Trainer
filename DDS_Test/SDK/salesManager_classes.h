@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass salesManager.salesManager_C
-// 0x0568 (0x0890 - 0x0328)
+// 0x05D8 (0x0900 - 0x0328)
 class AsalesManager_C : public AActor
 {
 public:
@@ -21,7 +21,7 @@ public:
 	class URamaSaveComponent*                          RamaSave;                                                 // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBillboardComponent*                         Billboard;                                                // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AcontactsManager_C*                          contactsManager;                                          // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AstatisticsManager_C*                        statisticsManager;                                        // 0x0358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class AmainComputer_C*                             mainComputerRef;                                          // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
@@ -139,6 +139,9 @@ public:
 	TArray<bool>                                       ArrestedDisplayReleased;                                  // 0x0878(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	float                                              DealerOrderMultiplier;                                    // 0x0888(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DealerCashMultiplier;                                     // 0x088C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<bool>                                       ClientsLabCrew;                                           // 0x0890(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               ClientsAssignedLab;                                       // 0x08A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TMap<struct FString, struct FGuid>                 DropSafeMap;                                              // 0x08B0(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -147,6 +150,12 @@ public:
 	}
 
 
+	void ReconstructClientExpectations();
+	void CheckAssignedSafe(int ClientId, bool* CashDropped);
+	void ClearSafeBinding(const struct FString& AssignedArea);
+	void BindSafeToArea(const struct FGuid& SafeGuid, const struct FString& AreaString);
+	void MurderDealer(int ClientId);
+	void PromoteClientToLabCrew(int ClientId, const struct FName& AssignedLab, float EndCost);
 	void ReleaseAllClients();
 	void CalcArrestBail(int ArrestedIndex, int* OutBailAmount);
 	void CheckArrestReleases();
@@ -164,7 +173,7 @@ public:
 	void countAddictedClients(int* ClientCount);
 	void countMaxDealers(int ClientId, bool* CanHaveMore);
 	void adaptDifficulty();
-	void generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool priceHigh, struct FText* Message);
+	void generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool PriceHigh, bool CashDrop, int CashAmount, struct FText* Message);
 	void recalcClientCount();
 	void tryDisplayClientState();
 	void displayClientAddictedPopup(int ClientId);
@@ -174,7 +183,7 @@ public:
 	void updateAreaTimeMultiplier();
 	void loopCheckPrices(bool* someAffordable);
 	void getOrderedDrugName(int DrugIndex, struct FText* Output);
-	void checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* priceHigh, bool* Wish);
+	void checkClientInterested(int ClientId, int DrugDemandedID, bool* Interested, bool* PriceHigh, bool* Wish);
 	void badSaleResponse(bool ClientLost, int ClientId);
 	void sendDealerOffer(int ClientId);
 	bool dealerOfferChance(int ClientId);
@@ -189,7 +198,7 @@ public:
 	void getOrderedDrugIndex(int RandomIndex, int* OutIndex);
 	void refreshAvailableDrugs(int ClientId, bool* DrugsAreAvailable);
 	void countClientStatistics();
-	void calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int DrugID, int* OutQuantity, bool* Critical);
+	void calcOrderQuantity(int inClientID, bool nightTime, bool PriceHigh, int DrugID, int* OutQuantity, bool* Critical);
 	void clientSendNewOrder(int ClientId, bool nightTime);
 	void clientOrderCountdown(float Delta);
 	void generateNewClient(bool Force);
@@ -210,6 +219,8 @@ public:
 	void ForceReleaseAllClients();
 	void DisableBallenaBlock();
 	void KillSalesManager();
+	void AllClientsMakeDealers();
+	void TestKillDealer();
 	void ExecuteUbergraph_salesManager(int EntryPoint);
 };
 

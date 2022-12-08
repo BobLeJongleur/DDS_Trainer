@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -141,18 +141,18 @@ void UdialogueWidget_C::Construct()
 }
 
 
-// Function dialogueWidget.dialogueWidget_C.Setup
+// Function dialogueWidget.dialogueWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AdialogueInstance_C*     dialogueInstanceRef            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RiskFactor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Speaker_Name                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UdialogueWidget_C::Setup(class AdialogueInstance_C* dialogueInstanceRef, float RiskFactor, const struct FText& Speaker_Name)
+void UdialogueWidget_C::setup(class AdialogueInstance_C* dialogueInstanceRef, float RiskFactor, const struct FText& Speaker_Name)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function dialogueWidget.dialogueWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function dialogueWidget.dialogueWidget_C.setup");
 
-	UdialogueWidget_C_Setup_Params params;
+	UdialogueWidget_C_setup_Params params;
 	params.dialogueInstanceRef = dialogueInstanceRef;
 	params.RiskFactor = RiskFactor;
 	params.Speaker_Name = Speaker_Name;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass questManager.questManager_C
-// 0x0D90 (0x10B8 - 0x0328)
+// 0x0DF8 (0x1120 - 0x0328)
 class AquestManager_C : public AActor
 {
 public:
@@ -22,7 +22,7 @@ public:
 	class URamaSaveComponent*                          RamaSave;                                                 // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBillboardComponent*                         Billboard;                                                // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FText>                               taskNames;                                                // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               tempDrugNames;                                            // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               taskDecriptions;                                          // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -172,6 +172,24 @@ public:
 	bool                                               NewLaunderPresented;                                      // 0x10B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData25[0x3];                                       // 0x10B1(0x0003) MISSED OFFSET
 	int                                                NewLaunderTaskID;                                         // 0x10B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               BlockLevelUnlocks;                                        // 0x10B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               VillasUnlocked;                                           // 0x10B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               EddieRanAway;                                             // 0x10BA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData26[0x1];                                       // 0x10BB(0x0001) MISSED OFFSET
+	int                                                FirstVillaTaskID;                                         // 0x10BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                GreeneContactIndex;                                       // 0x10C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData27[0x4];                                       // 0x10C4(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    EddieFinalCallEnded;                                      // 0x10C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	TArray<struct FName>                               OneTimeTutorialsDisplayed;                                // 0x10D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                LabsBuilt;                                                // 0x10E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData28[0x4];                                       // 0x10EC(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OutroNarrEnd;                                             // 0x10F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               EndgameTriggered;                                         // 0x1100(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData29[0x3];                                       // 0x1101(0x0003) MISSED OFFSET
+	int                                                SectorUnlockTaskID;                                       // 0x1104(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                SectSearchTaskID;                                         // 0x1108(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData30[0x4];                                       // 0x110C(0x0004) MISSED OFFSET
+	TArray<struct FName>                               AchievementStack;                                         // 0x1110(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -180,6 +198,11 @@ public:
 	}
 
 
+	void EndgameSecondCallCheck();
+	void ClearEddie();
+	void DisplayOneTimeTutorial(const struct FName& TutorialID);
+	void MarkFirstVilla();
+	void ActivateDeathSites();
 	void ReportLaunderDoor(class AlaunderDoor_C* Door);
 	void RamaExpand();
 	void fixTaskDuplicates();
@@ -190,15 +213,21 @@ public:
 	void questEnded(bool Success, int QuestID);
 	void activateQuest(int QuestID);
 	void addNewQuest(const struct FText& QuestNam, const struct FText& QuestShort, const struct FText& QuestDescription, float QuestExp, int QuestCash, const struct FString& QuestScriptNam);
-	void checkCanAddWidget(bool* ok);
+	void checkCanAddWidget(bool* OK);
 	void playerAvailable(bool* IsAvailable);
-	void checkTaskRelatedMarkers(int TaskID);
+	void checkTaskRelatedMarkers(int taskID);
 	void checkDisplayNewTask();
-	void playNarration(class USoundWave* Sound, const struct FText& MonologueText, float* Length);
+	void playNarration(class USoundWave* Sound, const struct FText& MonologueText, const struct FText& NameOverride, bool Mute, float* Length);
 	void markTaskStatus(int ID, TEnumAsByte<EtaskStatuses> Status);
 	void createNewTask(const struct FText& taskName, const struct FText& taskDecription, float taskExpReward, const struct FString& FunctionOnComplete, bool creteTaskMarker, const struct FVector& taskMarkerLocation, const struct FText& MarkerTitle, const struct FText& MarkerDesc, bool isSale, int QuestID, bool SpecialTask, int* AssignedID);
 	void setupDefaultReferences();
 	void UserConstructionScript();
+	void OnFailure_214E326344AEE6B434437487B8B049E3(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag);
+	void OnSuccess_214E326344AEE6B434437487B8B049E3(const struct FName& WrittenAchievementName, float WrittenProgress, int WrittenUserTag);
+	void OnFailure_241AACF344E2259B70F21A95DD93254A();
+	void OnSuccess_241AACF344E2259B70F21A95DD93254A();
+	void OnFailure_B6FA77B8496A0DBFA30B239D36F5AF03();
+	void OnSuccess_B6FA77B8496A0DBFA30B239D36F5AF03();
 	void ReceiveBeginPlay();
 	void initialiseQuestManager();
 	void handOverMoney();
@@ -222,7 +251,7 @@ public:
 	void firstWorkStation();
 	void madeFirstOrder();
 	void workStationTask();
-	void firstOwnOrderReceived(int TaskID);
+	void firstOwnOrderReceived(int taskID);
 	void tutWorkPlayerPutDrug();
 	void tutWorkPlayerPutContainer();
 	void tutWorkPlayerAddedSubstance();
@@ -322,7 +351,26 @@ public:
 	void TrySectorC_Quests();
 	void NewLaunderHidout();
 	void ReopenNewLaunder();
+	void eddieCallEndgame();
+	void eddieRepeatEndgame();
+	void retryEddieEndgame();
+	void eddieEndEndgame();
+	void eddieCallEndgame02();
+	void eddieRepeatEndgame02();
+	void retryEddieEndgame02();
+	void eddieEndEndgame02();
+	void PlayerFinishedGame();
+	void BuildFirstVilla();
+	void RunEndgame();
+	void VerifyEddieEndgame2();
+	void AchievementUnlocked(const struct FName& AchievementName);
+	void AddSectorCTask();
+	void SectSearchTask();
+	void SectSearchTaskComplete();
+	void SetOneAchievement();
 	void ExecuteUbergraph_questManager(int EntryPoint);
+	void OutroNarrEnd__DelegateSignature();
+	void EddieFinalCallEnded__DelegateSignature();
 };
 
 

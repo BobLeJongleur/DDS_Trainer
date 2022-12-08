@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ void UappartmentViewerWidget_C::Construct()
 }
 
 
-// Function appartmentViewerWidget.appartmentViewerWidget_C.Setup
+// Function appartmentViewerWidget.appartmentViewerWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Owned                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -87,11 +87,11 @@ void UappartmentViewerWidget_C::Construct()
 // float                          Boost                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ArentAppartmentArea_C*   ApartmentRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UappartmentViewerWidget_C::Setup(bool Owned, bool Forever, bool terminated, bool savePoint, bool Raided, const struct FText& AppartmentName, const struct FText& AppartmentDesc, const struct FText& Address, float Meterage, float Price, int Floors, int daysTillPayment, float Boost, class ArentAppartmentArea_C* ApartmentRef)
+void UappartmentViewerWidget_C::setup(bool Owned, bool Forever, bool terminated, bool savePoint, bool Raided, const struct FText& AppartmentName, const struct FText& AppartmentDesc, const struct FText& Address, float Meterage, float Price, int Floors, int daysTillPayment, float Boost, class ArentAppartmentArea_C* ApartmentRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function appartmentViewerWidget.appartmentViewerWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function appartmentViewerWidget.appartmentViewerWidget_C.setup");
 
-	UappartmentViewerWidget_C_Setup_Params params;
+	UappartmentViewerWidget_C_setup_Params params;
 	params.Owned = Owned;
 	params.Forever = Forever;
 	params.terminated = terminated;

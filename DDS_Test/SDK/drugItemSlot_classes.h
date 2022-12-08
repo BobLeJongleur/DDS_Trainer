@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 
 	void OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Setup(const struct FdrugData& drugData, const struct FName& DrugID, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload);
+	void setup(const struct FdrugData& drugData, const struct FName& DrugID, float GramPrice, int Quantity, class UorderDropOverlay_C* dropOverlayParent, const struct FString& Tag, bool DragPayload);
 	void BndEvt__btnRemoveElement_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_drugItemSlot(int EntryPoint);

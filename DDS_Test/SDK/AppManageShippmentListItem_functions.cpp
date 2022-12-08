@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,19 +54,21 @@ void UAppManageShippmentListItem_C::UserClickedCancel(const struct FString& Acti
 }
 
 
-// Function AppManageShippmentListItem.AppManageShippmentListItem_C.Setup
+// Function AppManageShippmentListItem.AppManageShippmentListItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ArentAppartmentArea_C*   AppartmentRef                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UappartmentModeWidget_C* appModeWidget                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AVillaPropertyInstance_C* VillaRef                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAppManageShippmentListItem_C::Setup(class ArentAppartmentArea_C* AppartmentRef, class UappartmentModeWidget_C* appModeWidget)
+void UAppManageShippmentListItem_C::setup(class ArentAppartmentArea_C* AppartmentRef, class UappartmentModeWidget_C* appModeWidget, class AVillaPropertyInstance_C* VillaRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AppManageShippmentListItem.AppManageShippmentListItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function AppManageShippmentListItem.AppManageShippmentListItem_C.setup");
 
-	UAppManageShippmentListItem_C_Setup_Params params;
+	UAppManageShippmentListItem_C_setup_Params params;
 	params.AppartmentRef = AppartmentRef;
 	params.appModeWidget = appModeWidget;
+	params.VillaRef = VillaRef;
 
 	auto flags = fn->FunctionFlags;
 

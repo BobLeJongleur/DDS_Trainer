@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,8 +19,8 @@ struct UintroCreditsWidget_C_Construct_Params
 {
 };
 
-// Function introCreditsWidget.introCreditsWidget_C.Setup
-struct UintroCreditsWidget_C_Setup_Params
+// Function introCreditsWidget.introCreditsWidget_C.setup
+struct UintroCreditsWidget_C_setup_Params
 {
 	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Person;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)

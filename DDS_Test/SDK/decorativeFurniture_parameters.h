@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function decorativeFurniture.decorativeFurniture_C.CheckRoomLighting
+struct AdecorativeFurniture_C_CheckRoomLighting_Params
+{
+	bool                                               Enabled;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function decorativeFurniture.decorativeFurniture_C.respawnFurniture
 struct AdecorativeFurniture_C_respawnFurniture_Params
@@ -32,7 +38,7 @@ struct AdecorativeFurniture_C_ReceiveBeginPlay_Params
 // Function decorativeFurniture.decorativeFurniture_C.InteractionActivate
 struct AdecorativeFurniture_C_InteractionActivate_Params
 {
-	class AplayerCharacterBP_C*                        PlayerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AplayerCharacterBP_C*                        playerRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function decorativeFurniture.decorativeFurniture_C.InputToggleOn

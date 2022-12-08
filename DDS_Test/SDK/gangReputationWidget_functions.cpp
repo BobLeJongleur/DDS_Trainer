@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ void UgangReputationWidget_C::Tick(const struct FGeometry& MyGeometry, float InD
 }
 
 
-// Function gangReputationWidget.gangReputationWidget_C.Setup
+// Function gangReputationWidget.gangReputationWidget_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          respAmount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,11 +62,11 @@ void UgangReputationWidget_C::Tick(const struct FGeometry& MyGeometry, float InD
 // int                            gangLevel                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           levelUp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UgangReputationWidget_C::Setup(float respAmount, float respectNow, float respectAfter, float respectMax, int gangLevel, bool levelUp)
+void UgangReputationWidget_C::setup(float respAmount, float respectNow, float respectAfter, float respectMax, int gangLevel, bool levelUp)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function gangReputationWidget.gangReputationWidget_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function gangReputationWidget.gangReputationWidget_C.setup");
 
-	UgangReputationWidget_C_Setup_Params params;
+	UgangReputationWidget_C_setup_Params params;
 	params.respAmount = respAmount;
 	params.respectNow = respectNow;
 	params.respectAfter = respectAfter;

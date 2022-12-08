@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,24 +13,24 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function miniTaskListItem.miniTaskListItem_C.Setup
+// Function miniTaskListItem.miniTaskListItem_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   taskName                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           taskDone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskFailed                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskSpecial                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskAwaitingDelivery           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UminiTaskListItem_C::Setup(const struct FText& taskName, bool taskDone, int TaskID, bool taskFailed, bool taskSpecial, bool taskAwaitingDelivery)
+void UminiTaskListItem_C::setup(const struct FText& taskName, bool taskDone, int taskID, bool taskFailed, bool taskSpecial, bool taskAwaitingDelivery)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function miniTaskListItem.miniTaskListItem_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function miniTaskListItem.miniTaskListItem_C.setup");
 
-	UminiTaskListItem_C_Setup_Params params;
+	UminiTaskListItem_C_setup_Params params;
 	params.taskName = taskName;
 	params.taskDone = taskDone;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 	params.taskFailed = taskFailed;
 	params.taskSpecial = taskSpecial;
 	params.taskAwaitingDelivery = taskAwaitingDelivery;

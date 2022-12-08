@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,17 +101,6 @@ enum class ELandscapeLayerBlendType : uint8_t
 };
 
 
-// Enum Landscape.ETerrainCoordMappingType
-enum class ETerrainCoordMappingType : uint8_t
-{
-	TCMT_Auto                      = 0,
-	TCMT_XY                        = 1,
-	TCMT_XZ                        = 2,
-	TCMT_YZ                        = 3,
-	TCMT_MAX                       = 4
-};
-
-
 // Enum Landscape.ELandscapeCustomizedCoordType
 enum class ELandscapeCustomizedCoordType : uint8_t
 {
@@ -121,6 +110,17 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_CustomUV2                 = 3,
 	LCCT_WeightMapUV               = 4,
 	LCCT_MAX                       = 5
+};
+
+
+// Enum Landscape.ETerrainCoordMappingType
+enum class ETerrainCoordMappingType : uint8_t
+{
+	TCMT_Auto                      = 0,
+	TCMT_XY                        = 1,
+	TCMT_XZ                        = 2,
+	TCMT_YZ                        = 3,
+	TCMT_MAX                       = 4
 };
 
 

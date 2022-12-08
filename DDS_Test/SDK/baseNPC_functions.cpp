@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -389,12 +389,12 @@ void AbaseNPC_C::processReceivedDrugs()
 // struct FText                   characterName                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          expectedPrice                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            orderID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            taskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isMale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isDealer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ExpectationLevel               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int TaskID, bool isMale, bool isDealer, float ExpectationLevel)
+void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int taskID, bool isMale, bool isDealer, float ExpectationLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.setupNewDrugSale");
 
@@ -404,7 +404,7 @@ void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuan
 	params.characterName = characterName;
 	params.expectedPrice = expectedPrice;
 	params.orderID = orderID;
-	params.TaskID = TaskID;
+	params.taskID = taskID;
 	params.isMale = isMale;
 	params.isDealer = isDealer;
 	params.ExpectationLevel = ExpectationLevel;

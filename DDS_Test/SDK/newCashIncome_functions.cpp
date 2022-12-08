@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.2.23
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,16 @@ void UnewCashIncome_C::Construct()
 }
 
 
-// Function newCashIncome.newCashIncome_C.Setup
+// Function newCashIncome.newCashIncome_C.setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CashAmount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UnewCashIncome_C::Setup(int CashAmount)
+void UnewCashIncome_C::setup(int CashAmount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function newCashIncome.newCashIncome_C.Setup");
+	static auto fn = UObject::FindObject<UFunction>("Function newCashIncome.newCashIncome_C.setup");
 
-	UnewCashIncome_C_Setup_Params params;
+	UnewCashIncome_C_setup_Params params;
 	params.CashAmount = CashAmount;
 
 	auto flags = fn->FunctionFlags;
