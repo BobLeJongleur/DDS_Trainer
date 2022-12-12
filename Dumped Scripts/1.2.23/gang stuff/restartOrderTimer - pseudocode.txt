@@ -2,9 +2,9 @@
     // randomInterval is not used anywhere
     randomInterval = 0.0
 
-    GANG_MAX_LEVEL = BlueprintHelpers.GetBalanceFlag("GANG-MAX-LEVEL")
-    GANG_INTERVAL_MAX_DROP = BlueprintHelpers.GetBalanceFlag("GANG-INTERVAL-MAX-DROP")
-    GANG_ORDER_INTERVAL = BlueprintHelpers.GetBalanceFlag("GANG-ORDER-INTERVAL")
+    GANG_MAX_LEVEL = BlueprintHelpers.GetBalanceFlag("GANG-MAX-LEVEL") // 10
+    GANG_INTERVAL_MAX_DROP = BlueprintHelpers.GetBalanceFlag("GANG-INTERVAL-MAX-DROP") // 0.3
+    GANG_ORDER_INTERVAL = BlueprintHelpers.GetBalanceFlag("GANG-ORDER-INTERVAL") // 36000.0
 
     currentGangSatisfaction = this.gangLevel * this.gangSatisfactionMax + this.gangSatisfaction
     maxGangSatisfaction = GANG_MAX_LEVEL * this.gangSatisfactionMax

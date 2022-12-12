@@ -5385,7 +5385,7 @@ class UDataTable : public UObject
 {
 public:
 	class UScriptStruct*                               RowStruct;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0030(0x0050) MISSED OFFSET
+	unsigned char                                      RowMap[0x50];											 // 0x0030(0x0050) MISSED OFFSET
 	unsigned char                                      bStripFromClientBuilds : 1;                               // 0x0080(0x0001) (Edit)
 	unsigned char                                      UnknownData01[0x1F];                                      // 0x0081(0x001F) MISSED OFFSET
 

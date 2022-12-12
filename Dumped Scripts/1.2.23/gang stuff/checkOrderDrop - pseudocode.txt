@@ -5,12 +5,127 @@
         jump(0x86A)
     
     // CallFunc_GetAllActorsOfClass_OutActors1
-    computer = GameplayStatics.GetAllActorsOfClass(mainComputer.mainComputer_C)
+    computers = GameplayStatics.GetAllActorsOfClass(mainComputer.mainComputer_C)
 
     // CallFunc_GetItemList_OutItems
     dropItems = None
     // CallFunc_GetItemList_StackExceeded
     stackExceeded = None
 
-    this.selectedDrop.InventoryComponent.GetItemList(None, True, 4, 0000-0000-0000-0000, False, &dropItems, &stackExceeded)
-    
+    // void GetItemList(const struct FName& ItemsOfName, bool FilterByCategory, TEnumAsByte<EitemCategories> Category, const struct FGuid& HeldInGuid, bool IncludePockets, TArray<struct FInventoryListStructure>* OutItems, bool* StackExceeded);
+    this.selectedDrop.InventoryComponent.GetItemList(None, True, 4 /*Drugs*/, 0000-0000-0000-0000, False, &dropItems, &stackExceeded)
+
+    numValidPackages = 0
+    numValidToxic = 0
+    numValidQuality = 0
+
+0x1B6:
+    for (i = 0; i < dropItems.Array_Length; i++):
+        push(0xE70)
+        
+        // CallFunc_MixToDrugData_OutData
+        givenDrugData = None;
+        // void STATIC_MixToDrugData(const struct FMixProportionsStruct& MixProportions, class UObject* __WorldContext, struct FdrugData* OutData);
+        blueprintHelpers.MixToDrugData(dropItems[i].MixProportions, this, &givenDrugData)
+
+        computer = computers[0]
+        orderedDrugData = computer.drugsAvailable[curOrderDrugID]
+
+        correctSize = dropItems[i] == this.curOrderPackageSize
+        correctForm = givenDrugData.drugForm == orderedDrugData.drugForm
+
+        if !(correctSize && correctForm):
+            continue
+
+        numValidPackages += dropItems[i].ItemQuantity
+        relativeToxicity = givenDrugData.toxicity / orderedDrugData.toxicity
+
+        if relativeToxicity >= 1.8:
+            continue
+
+        numValidToxic += dropItems[i].ItemQuantity
+        orderedDrugIndex = KismetArrayLibrary.Array_Find(givenDrugData, orderedDrugData.StringID)
+        relativeStrength = givenDrugData.strength / orderedDrugData.strength
+        purity = givenDrugData.MixProportions[orderedDrugIndex]
+
+        relativeStrength = KismetMathLibrary.FClamp(relativeStrength, 1.0, 1.22)
+        purity *= relativeStrength
+
+        if purity < this.curOrderPackageQuality:
+            continue
+
+        numValidQuality += dropItems[i].ItemQuantity
+    jump(0x87A)
+
+0x86A:
+    OrderOK = False
+    jump(0xF70)
+
+0x87A:
+    if numValidPackages != this.curOrderPackageQuantity:
+        jump(0xC10)
+
+    if numValidToxic != this.curOrderPackageQuantity:
+        jump(0xB84)
+
+    if numValidQuality != this.curOrderPackageQuantity:
+        jump(0xEBA)
+
+0x916:
+    this.gangMessageResponse(/*garbled data*/)
+    questManager = GameplayStatics.GetAllActorsOfClass(questManager.questManager_C)[0]
+    questManager.markTaskStatus(this.orderFinaliseTaskID, 1)
+
+    GANG_REP_PER_DELIVERY = BlueprintHelpers.GetBalanceFlag("GANG-REP-PER-DELIVERY")
+
+    if this.daytimeCon.curDayNum != this.curOrderDeliveryDay:
+        jump (0xF4B)
+
+    satisfactionGain = GANG_REP_PER_DELIVERY * 0.85
+    this.modifyGangSatisfaction(satisfactionGain)
+
+0xAFC:
+    this.orderFinaliseTaskID = 0
+    this.spawnGangMember()
+    this.selectedDrop.clearDeadDrop()
+    this.selectedDrop = None
+    this.restartOrderTimer()
+    this.awaitingOrder = False
+    this.dropTestPositive = False
+    this.OrderOK = True
+    jump 0xF70
+
+0xB84:
+    this.gangMessageResponse(/*garbled data*/)
+    this.modifyGangSatisfaction(-15.0)
+
+0xC00
+    this.OrderOK = False
+    jump(0xF70)
+
+0xC10:
+    // TODO: Some K2Node fuckery, may come back to this later
+    //      Actually seems to be some kind of string format, but text is garbled. Maybe fix eventually in disassembler?
+    // ==
+    response = KismetTextLibrary.Format(/*stuff*/)
+    // ===
+
+0xE41:
+    this.gangMessageResponse(response)
+    this.modifyGangSatisfaction(-5.0)
+    jump 0xC00
+
+0xE70:
+    // LOOP HANDLING STUFF
+
+0xEBA:
+    this.gangMessageResponse(/*garbled data*/)
+    this.OrderOK = False
+    jump(0xF70)
+
+0xF4B:
+    this.modifyGangSatisfaction(GANG_REP_PER_DELIVERY)
+    jump(0xAFC)
+
+0xF70:
+    return

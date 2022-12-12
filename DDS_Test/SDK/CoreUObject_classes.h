@@ -186,7 +186,8 @@ public:
 	}
 
 	inline void ProcessEvent(class UFunction* function, void* parms) {
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 64)(this, function, parms);
+		auto vFunction = GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 64);
+		return vFunction(this, function, parms);
 	}
 
 

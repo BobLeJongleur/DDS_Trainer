@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "pch.h"
 #include "ScriptDisassembler.h"
-//#include "utils/mem.h"
+#include "utils/mem.h"
 //#include "SDK.h"
 
 static FILE* consoleFile;
@@ -13,6 +13,20 @@ static BOOLEAN kill;
 static SDK::AbaseNPC_C* chosenNPC = nullptr;
 static bool lightsEnabled = false;
 static int loopCount = 0;
+
+size_t payload1_offset = 0x50E737;
+static BYTE payload1[] = {	0xE9, 0xC9, 0xEF, 0xB0, 0xFF, 0x90, 0x90, 0x90, 
+							0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 
+							0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 
+							0x90, 0x90, 0x90, 0x90 };
+
+size_t payload2_offset = 0x1D705;
+static BYTE payload2[] = {	0x74, 0x1A, 0x0F, 0x10, 0x4C, 0x24, 0x20, 0x0F, 
+							0x10, 0x06, 0x0F, 0x11, 0x4C, 0x24, 0x30, 0x0F, 
+							0x11, 0x44, 0x24, 0x20, 0x48, 0x8B, 0x4C, 0x24, 
+							0x28, 0x0F, 0x11, 0x0E, 0x81, 0xF9, 0xCC, 0xCC, 
+							0xCC, 0xCC, 0x75, 0x03, 0x48, 0x29, 0xC9, 0x48, 
+							0x85, 0xC9, 0xE9, 0x22, 0x10, 0x4F, 0x00 };
 
 void refreshMenu(int32_t objCount, void* player, void* statsManager)
 {
@@ -31,7 +45,6 @@ void refreshMenu(int32_t objCount, void* player, void* statsManager)
 		F6: Backpack content\n\
 		F7: Open computer interface\n\
 		F9: Add $1\n\
-		F10: Burst Mothafuckers\n\
 		Pause: Unhook from process\n\n");
 }
 
@@ -48,6 +61,22 @@ void printFlagData(const char* flagName, SDK::UObject* context, SDK::UBlueprintH
 		wprintf_s(L"%hs doesn't exist in flag table\n", flagName);
 }
 
+void printDrugData(const char* drugName, SDK::UObject* context, SDK::UBlueprintHelpers_C* bpHelper)
+{
+	SDK::FNewDrugData newDrugData;
+	bool drugExists;
+	auto drugFName = SDK::FName(drugName);
+	bpHelper->STATIC_GetDrugMeta(drugFName, context, &drugExists, &newDrugData);
+
+	if (drugExists)
+	{
+		auto drug = newDrugData.DrugProperties_22_E6A8BE7C4BD0A5DE60F298A73A8A53E0;
+		wprintf_s(L"\ntox: %.2f;\tstr: %.2f;\tmixStr: %.2f;\taddict: %.2f | %hs", drug.toxicity, drug.strength, drug.mixStr, drug.addictiveness, drugName);
+	}
+	else
+		wprintf_s(L"%hs doesn't exist in drug table\n", drugName);
+}
+
 DWORD WINAPI InjectedThread(HANDLE hModule)
 {
 	kill = FALSE;
@@ -57,9 +86,9 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 	wprintf_s(L"Hooked\n");
 
 	//1.2.23
-	uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE89A0 - 0x10, 0x2DA5710));
+	uintptr_t baseAddr = SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE89A0 - 0x10, 0x2DA5710);
 	//uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
-	
+
 	//1.1.0
 	// Same as 1.0.8 it seems.
 	//uintptr_t* baseAddr = reinterpret_cast<uintptr_t*>(SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2EE77A0 - 0x10, 0x2EE3460));
@@ -75,7 +104,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 	//uintptr_t baseAddr = SDK::InitSdk("DrugDealerSimulator-Win64-Shipping.exe", 0x2E75B10, 0x2E717E0);
 
 	//std::cout << "BaseAddr: " << std::hex << baseAddr << "; GObjects: " << SDK::UObject::GObjects << "; GNames: " << SDK::FName::GNames << std::dec << std::endl;
-	wprintf_s(L"BaseAddr: 0x%p; GObjects: 0x%p; GNames: 0x%p\n", baseAddr, reinterpret_cast<uintptr_t*>(SDK::UObject::GObjects->ObjObjects.Objects), *reinterpret_cast<uintptr_t**>(SDK::FName::GNames));
+	wprintf_s(L"BaseAddr: 0x%p; GObjects: 0x%p; GNames: 0x%p\n", reinterpret_cast<uintptr_t*>(baseAddr), reinterpret_cast<uintptr_t*>(SDK::UObject::GObjects->ObjObjects.Objects), *reinterpret_cast<uintptr_t**>(SDK::FName::GNames));
 
 	SDK::AplayerCharacterBP_C* player = SDK::UObject::FindObjectReversed<SDK::AplayerCharacterBP_C>();
 	SDK::AmainComputer_C* computer = SDK::UObject::FindObjectReversed<SDK::AmainComputer_C>();
@@ -84,24 +113,16 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 	SDK::AstatisticsManager_C* statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
 	auto gangManager = SDK::UObject::FindObjectReversed<SDK::AgangManager_C>();
 	auto bpHelper = SDK::UObject::FindObjectReversed<SDK::UBlueprintHelpers_C>();
+	auto dataTableLibrary = SDK::UObject::FindObject<SDK::UDataTableFunctionLibrary>();
+	auto worldContext = SDK::UObject::FindObject<SDK::UWorld>();
+
+	// this patches an issue with GetDrugMeta
+	mem::Patch(reinterpret_cast<BYTE*>(baseAddr + payload1_offset), payload1, 28);
+	mem::Patch(reinterpret_cast<BYTE*>(baseAddr + payload2_offset), payload2, 47);
 
 	int32_t objCount = SDK::UObject::GetGlobalObjects().Num();
 	refreshMenu(objCount, player, statsManager);
-	//wprintf_s(L"Global obj count: %d; Player addr: 0x%p; statsManager addr: 0x%p\n\n", objCount, player, statsManager);
-	//wprintf_s(L"Commands: \n\
-	//	Home: Enables debug widets\n\
-	//	Ins: Add psychedelic offers\n\
-	//	End: Check client state\n\
-	//	Page Up: Dump a bunch of scripts\n\
-	//	F1: Dump some function ptr\n\
-	//	F2: Sales Manager data\n\
-	//	F3: Show all available drugs\n\
-	//	F4: Give 0xFF exp\n\
-	//	F5: Get NPCs that have an active order\n\
-	//	F6: Backpack content\n\
-	//	F7: Open computer interface\n\
-	//	F9: Add $1\n\
-	//	Pause: Unhook from process\n\n");
+
 	while (!kill)
 	{
 		bool updateStatus = false;
@@ -110,26 +131,6 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			break;
 			kill = TRUE;
 		}
-
-		//loopCount++;
-		//if (loopCount > 100)
-		//{
-		//	loopCount = 0;
-		//	//statsManager->checkStatuses();
-		//	//statsManager->levelUpFunctions();
-		//}
-
-		//if (false && (GetAsyncKeyState(VK_F3) & 1))
-		//{
-		//	if (chosenNPC == nullptr)
-		//		wprintf_s(L"\nNo NPC has been saved. Press F5 to save an NPC.\n");
-		//	else
-		//	{
-		//		wprintf_s(L"\nTriggering processReceivedDrugs() on NPC 0x%p...\n", chosenNPC);
-		//		chosenNPC->processReceivedDrugs();
-		//		wprintf_s(L"Done!");
-		//	}
-		//}
 
 		if (GetAsyncKeyState(VK_INSERT) & 1)
 			computer->addPsychedelicsOffer();
@@ -162,6 +163,10 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 			FKismetBytecodeDisassembler disasm = FKismetBytecodeDisassembler();
 			std::vector<std::string> funcNames = std::vector<std::string>();
+			funcNames.push_back("Function Engine.DataTableFunctionLibrary.GetDataTableRowFromName");
+			funcNames.push_back("Function BlueprintHelpers.BlueprintHelpers_C.GetDrugMeta");
+			funcNames.push_back("Function BlueprintHelpers.BlueprintHelpers_C.MixToDrugData");
+			funcNames.push_back("Function salesManager.salesManager_C.countMaxDealers");
 			funcNames.push_back("Function gangManager.gangManager_C.restartOrderTimer");
 			funcNames.push_back("Function gangManager.gangManager_C.testDropForQuantity");
 			funcNames.push_back("Function gangManager.gangManager_C.checkOrderDrop");
@@ -177,7 +182,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			funcNames.push_back("Function saleAreaManager.saleAreaManager_C.addAreaExposure");
 			funcNames.push_back("Function baseNPC.baseNPC_C.saleReputationUpdate");
 			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.applyMix");
-			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.processMix"); //=> !CRASHES!
+			funcNames.push_back("Function workStationMixerBase.workStationMixerBase_C.processMix");
 			funcNames.push_back("Function statisticsManager.statisticsManager_C.modifyReputation");
 			funcNames.push_back("Function mainComputer.mainComputer_C.prepareOrderResponse");
 			funcNames.push_back("Function salesManager.salesManager_C.tryDisplayClientState");
@@ -192,8 +197,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			funcNames.push_back("Function saleAreaManager.saleAreaManager_C.addAreaExposure");
 			funcNames.push_back("Function baseNPC.baseNPC_C.drugSaleSuccesfull");
 			funcNames.push_back("Function sampleClientBP.sampleClientBP_C.ReceiveBeginPlay");
-			funcNames.push_back("Function mainComputer.mainComputer_C.ExecuteUbergraph_mainComputer"); //=> !CRASHES! maybe look into it? read on ubergraph functions first
-
+			funcNames.push_back("Function mainComputer.mainComputer_C.ExecuteUbergraph_mainComputer");
 			funcNames.push_back("Function BlueprintHelpers.BlueprintHelpers_C.GetBalanceFlag");
 
 			printf_s("Processing %zu scripts\n", funcNames.size());
@@ -214,7 +218,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			}
 		}
 
-		if (GetAsyncKeyState(VK_F1) & 1) 
+		if (GetAsyncKeyState(VK_F1) & 1)
 		{
 			std::vector<std::string> funcNames = std::vector<std::string>();
 			funcNames.push_back("Function playerCharacterBP.playerCharacterBP_C.addMoney");
@@ -229,7 +233,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			wprintf_s(L"\n");
 			for (int i = 0; i < funcNames.size(); i++)
 			{
-				/*	
+				/*
 				int32_t                                            FunctionFlags;                                            // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	BAD OFFSET? int16_t                                            RepOffset;                                                // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 				int8_t                                             NumParms;                                                 // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
@@ -243,7 +247,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 				void*                                              Func;                                                     // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 				*/
 				auto funcName = funcNames[i];
-				SDK::UFunction *fnptr = SDK::UObject::FindObject<SDK::UFunction>(funcName);
+				SDK::UFunction* fnptr = SDK::UObject::FindObject<SDK::UFunction>(funcName);
 				//wprintf_s(L"[0x%p] %s\n\t=> 0x%p; 0x%x; 0x%x\n", fnptr, std::wstring(funcName.begin(), funcName.end()).c_str(), fnptr->Func, fnptr->RepOffset, fnptr->RPCId);
 				wprintf_s(L"[0x%p] %s\n", fnptr, std::wstring(funcName.begin(), funcName.end()).c_str());
 				wprintf_s(L"\t=> 0x%x; 0x%x; 0x%x; 0x%x; 0x%x; 0x%x; 0x%p; 0x%p; 0x%x\n", fnptr->FunctionFlags, /*fnptr->RepOffset, */fnptr->NumParms, fnptr->ParmsSize, fnptr->ReturnValueOffset, fnptr->RPCId, fnptr->RPCResponseId, fnptr->FirstPropertyToInit, fnptr->EventGraphFunction, fnptr->EventGraphCallOffset);
@@ -284,92 +288,21 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 		if (GetAsyncKeyState(VK_F3) & 1)
 		{
-			auto availDrugs = computer->drugsAvailable;
+			auto dataTable = computer->DrugDatabase;
+			SDK::TArray<SDK::FName> rowNames;
+			dataTableLibrary->STATIC_GetDataTableRowNames(dataTable, &rowNames);
 
-			wprintf_s(L"\n== DRUGS ==\n");
-			for (int i = 0; i < availDrugs.Num(); i++)
+			for (int i = 0; i < rowNames.Num(); i++)
 			{
-				auto drug = &(availDrugs[i]);
-				const wchar_t* drugName = drug->MixStringIDs[0].c_str();
-
-				if (drugName == nullptr)
-					drugName = drug->DrugName.Get();
-
-				wprintf_s(L"tox: %.2f; str: %.2f; mixStr: %.2f; addict: %.2f; ", drug->toxicity, drug->strength, drug->mixStr, drug->addictiveness);
-				wprintf_s(L"name: %ls\n", drugName == nullptr ? L"[NULL]" : drugName);
-				//wprintf_s(L"\t=> %p\n", drug);
+				auto rowName = rowNames[i];
+				printDrugData(rowName.GetName(), worldContext, bpHelper);
 			}
 
-			auto additives = std::unordered_set<SDK::FinventoryItemStruct, SDK::FinventoryItemStruct>();
-
-			auto shopPharmacyInstances = SDK::UObject::FindObjects<SDK::AshopPharmacy_C>();
-			for (auto shop : shopPharmacyInstances)
-			{
-				auto inventory = shop->currentInventory;
-				for (int i = 0; i < inventory.Num(); i++)
-				{
-					auto item = &inventory[i];
-					if (item->Category == SDK::EitemCategories::Drug  || item->Category == SDK::EitemCategories::Additives)
-						additives.insert(*item);
-				}
-			}
-
-			auto shopGasStationInstances = SDK::UObject::FindObjects<SDK::AshopAmyGasStaion_C>();
-			for (auto shop : shopGasStationInstances)
-			{
-				auto inventory = shop->currentInventory;
-				for (int i = 0; i < inventory.Num(); i++)
-				{
-					auto item = &inventory[i];
-					//if (item->Category == SDK::EitemCategories::Drug || item->Category == SDK::EitemCategories::Additives)
-					additives.insert(*item);
-				}
-			}
-
-			wprintf_s(L"\n== ADDITIVES ==\n");
-			for (auto additive : additives)
-			{
-				auto drug = &additive.drugData;
-				const wchar_t* drugName = drug->MixStringIDs[0].c_str();
-
-				if (drugName == nullptr)
-					drugName = drug->DrugName.Get();
-
-				if (drugName == nullptr)
-					drugName = additive.Name.Get();
-
-				wprintf_s(L"tox: %.2f; str: %.2f; mixStr: %.2f; addict: %.2f; ", drug->toxicity, drug->strength, drug->mixStr, drug->addictiveness);
-				wprintf_s(L"name: %ls; cat: %d\n", drugName == nullptr ? L"[NULL]" : drugName, additive.Category);
-				//wprintf_s(L"\t=> %p\n", drug);
-			}
+			wprintf_s(L"");
 		}
 
-		//if (GetAsyncKeyState(VK_F4) & 1)
-		//{
-		//	if (chosenNPC == nullptr)
-		//		wprintf_s(L"\nNo NPC has been saved. Press F5 to save an NPC.\n");
-		//	else
-		//	{
-		//		auto receivedDrug = &(chosenNPC->drugReceived);
-		//		auto receivedDrugQty = chosenNPC->drugReceivedQuantity;
-		//		wchar_t* drugName = receivedDrug->DrugName.Get();
-		//		if (drugName == nullptr)
-		//			drugName = const_cast<wchar_t*>(receivedDrug->StringID.c_str());
-
-		//		wprintf_s(L"\nNPC 0x%p: \n", chosenNPC);
-		//		wprintf_s(L"\n\t%dg of %ls [tox: %.2f; str: %.2f; add: %.2f] => %p\n", receivedDrugQty, drugName == nullptr ? L"[NULLPTR]" : drugName, receivedDrug->toxicity, receivedDrug->strength, receivedDrug->addictiveness, receivedDrug);
-		//	}
-		//}
-		//if (GetAsyncKeyState(VK_F4) & 1)
-		//{
-		//	/*auto drugStoreUnlocker = SDK::UObject::FindObjectReversed<SDK::AdrugStoreUnlocker_C>();
-		//	drugStoreUnlocker->UnlockStore();*/
-		//	//auto statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
-		//	statsManager->addExp(0xFF);
-		//}
-
 		if (GetAsyncKeyState(VK_F4) & 1)
-		{			
+		{
 			wprintf_s(L"\nCurrent Order:\n\tSize: %d; Quantity: %d; Quality: %.2f\n\tNext order: %.2f\nInterval range: [%.2f, %.2f]\n\tPrice per gram: %d$\n\tSatisfaction: %.2f; Satisfaction Max: %.2f; Level: %d\n\n",
 				gangManager->curOrderPackageSize, gangManager->curOrderPackageQuantity, gangManager->curOrderPackageQuality,
 				gangManager->nextOrderCountdown,
@@ -377,10 +310,10 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 				gangManager->ballenaPricePerGram,
 				gangManager->gangSatisfaction, gangManager->gangSatisfactionMax, gangManager->gangLevel);
 
-			auto context = SDK::UObject::FindObject<SDK::UWorld>();
-			printFlagData("GANG-INTERVAL-MAX-DROP", context, bpHelper);
-			printFlagData("GANG-MAX-LEVEL", context, bpHelper);
-			printFlagData("GANG-ORDER-INTERVAL", context, bpHelper);
+
+			printFlagData("GANG-INTERVAL-MAX-DROP", worldContext, bpHelper);
+			printFlagData("GANG-MAX-LEVEL", worldContext, bpHelper);
+			printFlagData("GANG-ORDER-INTERVAL", worldContext, bpHelper);
 			wprintf_s(L"\n");
 		}
 
@@ -453,143 +386,37 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 		if (GetAsyncKeyState(VK_F6) & 1)
 		{
-			//updateStatus = true;
 			auto itemNames = player->InventoryComponent->ItemNames;
 			auto inv = player->InventoryComponent;
-			wprintf_s(L"\nInventory stuff [%d]:", itemNames.Num());
+
+			SDK::FGuid guid;
+			SDK::TArray<struct SDK::FInventoryListStructure> items;
+			bool stackExceeded;
+			auto categories = SDK::TEnumAsByte<SDK::EitemCategories>(0);
+
+			inv->GetItemList(SDK::FName(), false, categories, guid, true, &items, &stackExceeded);
+			wprintf_s(L"\nInventory stuff [%d]:", items.Num());
 
 			for (int i = 0; i < itemNames.Num(); i++)
 			{
-				wprintf_s(L"\n\t%d: %hs (%d; %d)", i, itemNames[i].GetName(), inv->itemQuantities[i], inv->ItemCurAmount[i]);
-			}
 
-			wprintf_s(L"\n");
+				wprintf_s(L"\n\t%d: %hs", i, itemNames[i].GetName());
+				auto mix = inv->ItemMixProportions[i];
+				if (mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16.IsValidIndex(0))
+				{
+					for (int j = 0; j < mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16.Num(); j++)
+					{
+						wprintf_s(L"\n%hs", mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16[j].GetName());
+					}
+
+					SDK::FdrugData drug;
+					bpHelper->STATIC_MixToDrugData(mix, worldContext, &drug);
+			}
 		}
 
 		if (GetAsyncKeyState(VK_F7) & 1)
 		{
 			computer->openComputer();
-			//auto dayTimeController = SDK::UObject::FindObjectReversed<SDK::AdayTimeControler_C>();
-
-			//if (lightsEnabled)
-			//{
-			//	dayTimeController->disableStreetLight();
-			//	lightsEnabled = false;
-			//}
-			//else
-			//{
-			//	dayTimeController->enableStreetLight();
-			//	lightsEnabled = true;
-			//}
-		}
-
-		//if (GetAsyncKeyState(VK_F8) & 1)
-		//	wardrobe->ChangeClothes();
-
-		if (GetAsyncKeyState(VK_F8) & 1 && false)
-		{
-			//auto cheatWidget = SDK::UObject::FindObjectReversed<SDK::UcheatManagerWidget_C>();
-			auto cheatWidgets = SDK::UObject::FindObjects<SDK::UcheatManagerWidget_C>();
-			//auto compassWidgets = SDK::UObject::FindObjects<SDK::UcompassMarkerWidget_C>();
-
-			//for (int i = 0; i < compassWidgets.size(); i++)
-			//{
-			//	auto compassWidget = compassWidgets[i];
-			//	compassWidget->SetPositionInViewport(SDK::FVector2D(32, 64 * i + 16), false);
-			//}
-
-			//auto containerWidget = SDK::UObject::FindObjectReversed<SDK::UcontainerListWidget_C>();
-			//containerWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-			auto containerWidgets = SDK::UObject::FindObjects<SDK::UdruPriceListingItem_C>();
-			for (int i = 0; i < containerWidgets.size(); i++)
-			{
-				auto containerWidget = containerWidgets[i];
-				wprintf_s(L"#%d => visible %d; enabled %d; in viewport %d; visibility enum %d; parent 0x%p\n", i, containerWidget->GetIsVisible(), containerWidget->GetIsEnabled(), containerWidget->IsInViewport(), containerWidget->GetVisibility(), containerWidget->GetParent());
-			}
-
-			if (cheatWidgets.empty())
-			{
-				wprintf_s(L"No UcheatManagerWidget_C instance found\n");
-			}
-			else
-			{
-				wprintf_s(L"Trying to launch %d cheat widget...\n", cheatWidgets.size());
-				//for (int i = 0; i < cheatWidgets.size(); i++)
-				//{
-				//	auto cheatWidget = cheatWidgets[i];
-				//	cheatWidget->AddToViewport(512);
-				//	cheatWidget->SetPositionInViewport(SDK::FVector2D(10, 64 * i + 16), false);
-				//	cheatWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-				//	cheatWidget->SetIsEnabled(true);
-				//	auto rootWidget = cheatWidget->WidgetTree->RootWidget;
-				//	wprintf_s(L"#%d => visible: %d; enabled: %d; on viewport: %d; visibility enum: %d; parent addr: 0x%p; widget tree: 0x%p\n", i, cheatWidget->GetIsVisible(), cheatWidget->GetIsEnabled(), cheatWidget->IsInViewport(), cheatWidget->GetVisibility(), cheatWidget->GetParent(), cheatWidget->WidgetTree);
-				//	//wprintf_s(L"\troot => enabled: %d; visibility enum: %d; parent addr: 0x%p\n", rootWidget->GetIsEnabled(), rootWidget->GetVisibility(), rootWidget->GetParent());
-				//	wprintf_s(L"\troot => ");
-				//	wprintf_s(L"enabled: %d;", rootWidget->GetIsEnabled());
-				//	wprintf_s(L"visibility enum: %d;", rootWidget->GetVisibility());
-				//	wprintf_s(L"parent addr: 0x%p\n", rootWidget->GetParent());
-				//}
-				//wprintf_s(L"\n");
-				 
-				auto cheatWidget = cheatWidgets[0];
-				auto rootWidget = cheatWidget->WidgetTree->RootWidget;
-				//auto allWidgets = cheatWidget->WidgetTree->AllWidgets;
-				//wprintf_s(L"widget count: %d; root widget: 0x%p\n", allWidgets.Num(), rootWidget);
-				//rootWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-				//cheatWidget->AddToViewport(512);
-				//cheatWidget->SetPositionInViewport(SDK::FVector2D(10, 16), false);
-				//cheatWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-				//cheatWidget->SetIsEnabled(true);
-				//cheatWidget->Construct();
-				wprintf_s(L"visible: %d; enabled: %d; on viewport: %d; visibility enum: %d; parent addr: 0x%p; widget tree: 0x%p\n", cheatWidget->GetIsVisible(), cheatWidget->GetIsEnabled(), cheatWidget->IsInViewport(), cheatWidget->GetVisibility(), cheatWidget->GetParent(), cheatWidget->WidgetTree);
-				wprintf_s(L"\troot => root addr: 0x%p; enabled: %d; visibility enum: %d; parent addr: 0x%p\n", &cheatWidget->WidgetTree->RootWidget, rootWidget->GetIsEnabled(), rootWidget->GetVisibility(), rootWidget->GetParent());
-				
-				//cheatWidget->AddToPlayerScreen(MAXINT);
-				//cheatWidget->BndEvt__btnProfileStart_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature();
-				//Sleep(2000);
-				//cheatWidget->BndEvt__btnProfileEnd_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature();
-				//cheatWidget->BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-				//cheatWidget->AddToViewport(0);
-				
-				//wprintf_s(L"Cheat Widget: enabled %d; visible %d\n", cheatWidget->GetIsEnabled(), cheatWidget->IsVisible());
-
-				// widget might be on a special menu, need to try and find out hierarchy
-				// also need to find out which cheat widget instance to grab, there are multiple ones
-				//if (cheatWidget->IsVisible())
-				//{
-				//	wprintf_s(L"Visibility was 1, changed to ");
-				//	cheatWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Hidden);
-				//	wprintf_s(L"%d\n", cheatWidget->IsVisible());
-				//}
-				//else
-				//{
-				//	wprintf_s(L"Visibility was 0, changed to ");
-				//	cheatWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-				//	wprintf_s(L"%d\n", cheatWidget->IsVisible());
-				//}
-
-				//SDK::UWidget* currentWidget = cheatWidget;
-				//std::vector<SDK::UWidget*> widgets = std::vector<SDK::UWidget*>();
-				//wprintf_s(L"Is in viewport? %d\n", cheatWidget->IsInViewport());
-
-				//while (currentWidget) 
-				//{
-				//	widgets.push_back(currentWidget);
-				//	currentWidget = currentWidget->GetParent();
-				//}
-
-				//wprintf_s(L"Widget count: %d\nWidget hierarchy visibility: ", widgets.size());
-				//for (auto widget : widgets)
-				//{
-				//	wprintf_s(L"%d; ", widget->IsVisible());
-				//}
-				//wprintf_s(L"\n");
-				/*cheatWidget->AddToViewport(512);
-				cheatWidget->SetVisibility(SDK::ESlateVisibility::ESlateVisibility__Visible);
-				cheatWidget->SetIsEnabled(true);*/
-				//cheatWidget->
-				//wprintf_s(L"visible: %d; enabled: %d; on viewport: %d; visibility enum: %d\n", cheatWidget->GetIsVisible(), cheatWidget->GetIsEnabled(), cheatWidget->IsInViewport(), cheatWidget->GetVisibility());
-			}
 		}
 
 		if (GetAsyncKeyState(VK_F9) & 1)
@@ -598,7 +425,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			player->addMoney(1, false, &success);
 		}
 
-		if (GetAsyncKeyState(VK_F10) & 1)
+		if (GetAsyncKeyState(VK_F8) & 1)
 		{
 			auto popManager = SDK::UObject::FindObjectReversed<SDK::ApopulationManager_C>();
 			popManager->burstMothafuckers();
@@ -622,7 +449,7 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 				wprintf_s(L"\n");
 				for (int i = 0; i < backpackStuff.Num(); i++)
 				{
-					SDK::FinventoryItemStruct *item = &(backpackStuff[i]);
+					SDK::FinventoryItemStruct* item = &(backpackStuff[i]);
 					wchar_t* itemName = nullptr;
 					SDK::EitemCategories itemCategory = item->Category.GetValue();
 					int quantity = backpackItemQty[i];

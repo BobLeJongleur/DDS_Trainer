@@ -1,0 +1,6 @@
+0x0:
+    push(0x504)
+
+0x5
+    for (i = 0; i < KismetArrayLibrary.Array_Length(this.clientIsDealer)); i++):
+        
