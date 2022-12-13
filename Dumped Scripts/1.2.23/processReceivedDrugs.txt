@@ -1,112 +1,61 @@
-
 Label_0x0:
-  
     $4C: FlowStack.Push(0x157C);
-  
-
 Label_0x5:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named minODToxicity
       Expression:
         $1E: literal float 3.900000
-      
-    
-  
-
 Label_0x1C:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named maxGeneralSatisfaction
       Expression:
         $1E: literal float 3.000000
-      
-    
-  
-
 Label_0x33:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named lowToxOdPercent
       Expression:
         $1E: literal float 0.100000
-      
-    
-  
-
 Label_0x4A:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named highToxOdPercent
       Expression:
         $1E: literal float 0.250000
-      
-    
-  
-
 Label_0x61:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named highToxLevel
       Expression:
         $1E: literal float 12.000000
-      
-    
-  
-
 Label_0x78:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named minAddictValue
       Expression:
         $1E: literal float 1.000000
-      
-    
-  
-
 Label_0x8F:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named maxAddictValue
       Expression:
         $1E: literal float 13.000000
-      
-    
-  
-
 Label_0xA6:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named clientSaleSatisfactionRange
       Expression:
         $1E: literal float 0.300000
-      
-    
-  
-
 Label_0xBD:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named K2Node_DynamicCast_AsSample_Client_BP
       Expression:
         $2E: DynamicCast to sampleClientBP_C of expr:
           $17: EX_Self
-        
-      
-    
-  
-
 Label_0xD9:
-  
     $F: Let (Variable = Expression)
       Variable:
         $0: Local variable named K2Node_DynamicCast_bSuccess
@@ -114,40 +63,20 @@ Label_0xD9:
         $38: PrimitiveCast of type 71
           Argument:
             $0: Local variable named K2Node_DynamicCast_AsSample_Client_BP
-          
-        
-      
-    
-  
 Label_0xF6:
-    
       $7: Jump to offset 0x335 if not expr:
         $0: Local variable named K2Node_DynamicCast_bSuccess
-      
-    
-  
 Label_0x104:
-    
       $5F: Let Obj (Variable = Expression)
         Variable:
           $0: Local variable named samplePerson
         Expression:
           $0: Local variable named K2Node_DynamicCast_AsSample_Client_BP
-        
-      
-    
-  
 Label_0x117:
-    
       $31: set array
         $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors3
-      
         $32: EX_EndArray
-      
-    
-  
 Label_0x122:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
@@ -158,41 +87,22 @@ Label_0x122:
         ContextExpression:
           $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
             $17: EX_Self
-          
             $20: EX_ObjectConst (0000024232293400:BlueprintGeneratedClass mainComputer.mainComputer_C)
-          
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors3
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x155:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Loop_Counter_Variable
         Expression:
           $1D: literal int32_t 0
-        
-      
-    
-  
 Label_0x16C:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Array_Index_Variable1
         Expression:
           $1D: literal int32_t 0
-        
-      
-    
-  
 Label_0x183:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -203,19 +113,10 @@ Label_0x183:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors3
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item4
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1BA:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Length_ReturnValue
@@ -238,59 +139,28 @@ Label_0x1BA:
                     drugsAvailable
                   ContextExpression:
                     $1: Instance variable named drugsAvailable
-                  
-                
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0x20B:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Less_IntInt_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Less_IntInt)
             $0: Local variable named Temp_int_Loop_Counter_Variable
-          
             $0: Local variable named CallFunc_Array_Length_ReturnValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x231:
-    
       $7: Jump to offset 0x1065 if not expr:
         $0: Local variable named CallFunc_Less_IntInt_ReturnValue
-      
-    
-  
 Label_0x23F:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Array_Index_Variable1
         Expression:
           $0: Local variable named Temp_int_Loop_Counter_Variable
-        
-      
-    
-  
 Label_0x25A:
-    
       $4C: FlowStack.Push(0x1400);
-    
-  
 Label_0x25F:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -301,19 +171,10 @@ Label_0x25F:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors3
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item4
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x296:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -332,21 +193,10 @@ Label_0x296:
                 drugsAvailable
               ContextExpression:
                 $1: Instance variable named drugsAvailable
-              
-            
-          
             $0: Local variable named Temp_int_Array_Index_Variable1
-          
             $0: Local variable named CallFunc_Array_Get_Item6
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x2E7:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Add_ReturnValue
@@ -361,39 +211,19 @@ Label_0x2E7:
             ContextExpression:
               $1C: Final Function (stack node KismetArrayLibrary::Array_Add)
                 $0: Local variable named drugStringIds
-              
                 $42: Struct member context 
                   Expression within struct: 
                     StringID_36_3FD7427C416F05A3FAE41494889710CB, offset 104
                   Expression to struct:
                     $0: Local variable named CallFunc_Array_Get_Item6
-                  
-                
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0x334:
-    
       $4D: if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! }
-    
-  
 Label_0x335:
-    
       $31: set array
         $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors4
-      
         $32: EX_EndArray
-      
-    
-  
 Label_0x340:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
@@ -404,19 +234,10 @@ Label_0x340:
         ContextExpression:
           $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
             $17: EX_Self
-          
             $20: EX_ObjectConst (000002422FE64000:BlueprintGeneratedClass salesManager.salesManager_C)
-          
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors4
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x373:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -427,30 +248,16 @@ Label_0x373:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors4
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item12
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x3AA:
-    
       $5F: Let Obj (Variable = Expression)
         Variable:
           $0: Local variable named memSalesMenager
         Expression:
           $0: Local variable named CallFunc_Array_Get_Item12
-        
-      
-    
-  
 Label_0x3BD:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -461,19 +268,10 @@ Label_0x3BD:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors4
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item12
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x3F4:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -492,32 +290,16 @@ Label_0x3F4:
                 orderListClientID
               ContextExpression:
                 $1: Instance variable named orderListClientID
-              
-            
-          
             $1: Instance variable named orderID
-          
             $0: Local variable named CallFunc_Array_Get_Item13
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x445:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named ClientId
         Expression:
           $0: Local variable named CallFunc_Array_Get_Item13
-        
-      
-    
-  
 Label_0x460:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -536,29 +318,15 @@ Label_0x460:
                 clientsLastOrderDrugName
               ContextExpression:
                 $1: Instance variable named clientsLastOrderDrugName
-              
-            
-          
             $0: Local variable named ClientId
-          
             $42: Struct member context 
               Expression within struct: 
                 DrugName_2_D42CFE1B49201DD5F14A7B92ED1D9E5F, offset 0
               Expression to struct:
                 $1: Instance variable named drugExpected
-              
-            
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x4BB:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -577,29 +345,15 @@ Label_0x4BB:
                 clientsLastOrderRecievedDrugName
               ContextExpression:
                 $1: Instance variable named clientsLastOrderRecievedDrugName
-              
-            
-          
             $0: Local variable named ClientId
-          
             $42: Struct member context 
               Expression within struct: 
                 DrugName_2_D42CFE1B49201DD5F14A7B92ED1D9E5F, offset 0
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x516:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -614,21 +368,10 @@ Label_0x516:
                 MixStringIDs_41_539D03C54BF6480E05C4DCA079BEC14A, offset 120
               Expression to struct:
                 $1: Instance variable named drugExpected
-              
-            
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item10
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x556:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Find_ReturnValue2
@@ -647,21 +390,9 @@ Label_0x556:
                     MixStringIDs_41_539D03C54BF6480E05C4DCA079BEC14A, offset 120
                   Expression to struct:
                     $1: Instance variable named drugReceived
-                  
-                
-              
                 $0: Local variable named CallFunc_Array_Get_Item10
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0x5A3:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -676,41 +407,20 @@ Label_0x5A3:
                 MixStringProportions_43_ABF7A43645EBC16787BC0E8F2906C6C4, offset 136
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named CallFunc_Array_Find_ReturnValue2
-          
             $0: Local variable named CallFunc_Array_Get_Item11
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x5E7:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named productContentExpectationRatio
         Expression:
           $0: Local variable named CallFunc_Array_Get_Item11
-        
-      
-    
-  
 Label_0x602:
-    
       $1B: Virtual Function named saleReputationUpdate
         $0: Local variable named productContentExpectationRatio
-      
         $16: EX_EndFunctionParms
-      
-    
-  
 Label_0x619:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue6
@@ -721,117 +431,62 @@ Label_0x619:
                 strength_26_B4E709F44A3C02554E1D3FA63641BBFD, offset 84
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $42: Struct member context 
               Expression within struct: 
                 strength_26_B4E709F44A3C02554E1D3FA63641BBFD, offset 84
               Expression to struct:
                 $1: Instance variable named drugExpected
-              
-            
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x659:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named productStrengthRatio
         Expression:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue6
-        
-      
-    
-  
 Label_0x674:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
             $0: Local variable named productContentExpectationRatio
-          
             $1E: literal float 0.200000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x69E:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named productStrengthRatio
-          
             $1E: literal float 0.000000
-          
             $1E: literal float 1.500000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x6CD:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
             $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x6FB:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
             $0: Local variable named productContentExpectationRatio
-          
             $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x729:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named endProductQualityRatio
         Expression:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue
-        
-      
-    
-  
 Label_0x744:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -850,127 +505,66 @@ Label_0x744:
                 clientsExpectedQuality
               ContextExpression:
                 $1: Instance variable named clientsExpectedQuality
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_Array_Get_Item9
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x795:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
             $0: Local variable named CallFunc_Array_Get_Item9
-          
             $1E: literal float 0.200000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x7BF:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue4
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue2
-          
             $1E: literal float 0.400000
-          
             $1E: literal float 0.900000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x7EE:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue5
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named endProductQualityRatio
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue4
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x81C:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Subtract_FloatFloat)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue5
-          
             $1E: literal float 0.950000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x846:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
             $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue2
-          
             $0: Local variable named clientSaleSatisfactionRange
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x874:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue5
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue2
-          
             $1E: literal float -0.500000
-          
             $1E: literal float 0.250000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x8A3:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -989,23 +583,11 @@ Label_0x8A3:
                 clientsSatisfactionLastOrder
               ContextExpression:
                 $1: Instance variable named clientsSatisfactionLastOrder
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue5
-          
             $28: EX_False
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x8F5:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1024,21 +606,10 @@ Label_0x8F5:
                 clientsSatisfactionGeneral
               ContextExpression:
                 $1: Instance variable named clientsSatisfactionGeneral
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_Array_Get_Item8
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x946:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1057,163 +628,85 @@ Label_0x946:
                 clientsExpectedQuality
               ContextExpression:
                 $1: Instance variable named clientsExpectedQuality
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_Array_Get_Item9
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x997:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
             $0: Local variable named CallFunc_Array_Get_Item9
-          
             $1E: literal float 0.200000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x9C1:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue4
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue2
-          
             $1E: literal float 0.400000
-          
             $1E: literal float 0.900000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x9F0:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue5
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named endProductQualityRatio
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue4
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xA1E:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Subtract_FloatFloat)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue5
-          
             $1E: literal float 0.950000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xA48:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_FloatFloat)
             $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue2
-          
             $0: Local variable named clientSaleSatisfactionRange
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xA76:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue5
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Multiply_FloatFloat_ReturnValue2
-          
             $1E: literal float -0.500000
-          
             $1E: literal float 0.250000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xAA5:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue3
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
             $0: Local variable named CallFunc_Array_Get_Item8
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue5
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xAD3:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue6
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue3
-          
             $1E: literal float -1.000000
-          
             $0: Local variable named maxGeneralSatisfaction
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xB06:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1232,23 +725,11 @@ Label_0xB06:
                 clientsSatisfactionGeneral
               ContextExpression:
                 $1: Instance variable named clientsSatisfactionGeneral
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue6
-          
             $28: EX_False
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xB58:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1267,23 +748,11 @@ Label_0xB58:
                 clientAwaitingResponse
               ContextExpression:
                 $1: Instance variable named clientAwaitingResponse
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named Temp_bool_Variable
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xBAA:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue2
@@ -1294,26 +763,12 @@ Label_0xBAA:
                 toxicity_24_54E19A5F4B81FE2CF3836FA4F83382FC, offset 80
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named minODToxicity
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xBD9:
-    
       $7: Jump to offset 0xC93 if not expr:
         $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue2
-      
-    
-  
 Label_0xBE7:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue1
@@ -1324,41 +779,20 @@ Label_0xBE7:
                 toxicity_24_54E19A5F4B81FE2CF3836FA4F83382FC, offset 80
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named highToxLevel
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xC16:
-    
       $7: Jump to offset 0x144A if not expr:
         $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue1
-      
-    
-  
 Label_0xC24:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::RandomBoolWithWeight)
             $0: Local variable named highToxOdPercent
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xC41:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1377,32 +811,15 @@ Label_0xC41:
                 clientsOD
               ContextExpression:
                 $1: Instance variable named clientsOD
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xC93:
-    
       $31: set array
         $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
-      
         $32: EX_EndArray
-      
-    
-  
 Label_0xC9E:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
@@ -1413,19 +830,10 @@ Label_0xC9E:
         ContextExpression:
           $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
             $17: EX_Self
-          
             $20: EX_ObjectConst (00000242304FFD00:BlueprintGeneratedClass questManager.questManager_C)
-          
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xCD1:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1436,19 +844,10 @@ Label_0xCD1:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xD08:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
@@ -1463,19 +862,9 @@ Label_0xD08:
                 longNewDrugsTaskID
               ContextExpression:
                 $1: Instance variable named longNewDrugsTaskID
-              
-            
-          
             $1D: literal int32_t 0
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xD40:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue
@@ -1486,60 +875,30 @@ Label_0xD40:
                 addictiveness_30_BF9166F740FC345C0EBDE3BA45E428B2, offset 92
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named minAddictValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xD6F:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_BooleanAND_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::BooleanAND)
             $0: Local variable named CallFunc_Greater_FloatFloat_ReturnValue
-          
             $0: Local variable named CallFunc_Greater_IntInt_ReturnValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xD95:
-    
       $7: Jump to offset 0x1060 if not expr:
         $0: Local variable named CallFunc_BooleanAND_ReturnValue
-      
-    
-  
 Label_0xDA3:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named minAddictValue
-          
             $1E: literal float 2.000000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xDCD:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
@@ -1550,103 +909,52 @@ Label_0xDCD:
                 addictiveness_30_BF9166F740FC345C0EBDE3BA45E428B2, offset 92
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xE04:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue
-          
             $0: Local variable named maxAddictValue
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xE32:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue1
-          
             $1E: literal float 3.000000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xE5C:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue2
-          
             $1E: literal float 0.010000
-          
             $1E: literal float 0.120000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xE8B:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::RandomBoolWithWeight)
             $0: Local variable named CallFunc_FClamp_ReturnValue2
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xEA8:
-    
       $7: Jump to offset 0x1060 if not expr:
         $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue1
-      
-    
-  
 Label_0xEB6:
-    
       $31: set array
         $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
-      
         $32: EX_EndArray
-      
-    
-  
 Label_0xEC1:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
@@ -1657,19 +965,10 @@ Label_0xEC1:
         ContextExpression:
           $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
             $17: EX_Self
-          
             $20: EX_ObjectConst (0000024232293400:BlueprintGeneratedClass mainComputer.mainComputer_C)
-          
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xEF4:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1680,19 +979,10 @@ Label_0xEF4:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $1: Instance variable named drugsDemandedID
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xF2B:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1703,19 +993,10 @@ Label_0xF2B:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors1
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item2
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0xF62:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Find_ReturnValue
@@ -1738,21 +1019,9 @@ Label_0xF62:
                     drugsAvailableIDs
                   ContextExpression:
                     $1: Instance variable named drugsAvailableIDs
-                  
-                
-              
                 $0: Local variable named CallFunc_Array_Get_Item
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0xFBC:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1771,23 +1040,11 @@ Label_0xFBC:
                 clientsDrugAddictedTo
               ContextExpression:
                 $1: Instance variable named clientsDrugAddictedTo
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_Array_Find_ReturnValue
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x100E:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1806,50 +1063,25 @@ Label_0x100E:
                 clientsDrugAddictedData
               ContextExpression:
                 $1: Instance variable named clientsDrugAddictedData
-              
-            
-          
             $0: Local variable named ClientId
-          
             $1: Instance variable named drugReceived
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1060:
-    
       $6: Jump to offset 0x157C
-    
-  
 Label_0x1065:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Loop_Counter_Variable1
         Expression:
           $1D: literal int32_t 0
-        
-      
-    
-  
 Label_0x107C:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Array_Index_Variable
         Expression:
           $1D: literal int32_t 0
-        
-      
-    
-  
 Label_0x1093:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Length_ReturnValue1
@@ -1868,59 +1100,28 @@ Label_0x1093:
                     MixStringIDs_41_539D03C54BF6480E05C4DCA079BEC14A, offset 120
                   Expression to struct:
                     $1: Instance variable named drugReceived
-                  
-                
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0x10D7:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Less_IntInt_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Less_IntInt)
             $0: Local variable named Temp_int_Loop_Counter_Variable1
-          
             $0: Local variable named CallFunc_Array_Length_ReturnValue1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x10FD:
-    
       $7: Jump to offset 0x12B7 if not expr:
         $0: Local variable named CallFunc_Less_IntInt_ReturnValue1
-      
-    
-  
 Label_0x110B:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Array_Index_Variable
         Expression:
           $0: Local variable named Temp_int_Loop_Counter_Variable1
-        
-      
-    
-  
 Label_0x1126:
-    
       $4C: FlowStack.Push(0x126D);
-    
-  
 Label_0x112B:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -1935,21 +1136,10 @@ Label_0x112B:
                 MixStringIDs_41_539D03C54BF6480E05C4DCA079BEC14A, offset 120
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named Temp_int_Array_Index_Variable
-          
             $0: Local variable named CallFunc_Array_Get_Item7
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x116F:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Array_Find_ReturnValue1
@@ -1964,43 +1154,21 @@ Label_0x116F:
             ContextExpression:
               $1C: Final Function (stack node KismetArrayLibrary::Array_Find)
                 $0: Local variable named drugStringIds
-              
                 $0: Local variable named CallFunc_Array_Get_Item7
-              
                 $16: EX_EndFunctionParms
-              
-            
-          
-        
-      
-    
-  
 Label_0x11B3:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Greater_IntInt_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Greater_IntInt)
             $0: Local variable named CallFunc_Array_Find_ReturnValue1
-          
             $1D: literal int32_t -1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x11D5:
-    
       $4F: if (!condition) { if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! } }
         $0: Local variable named CallFunc_Greater_IntInt_ReturnValue1
-      
-    
-  
 Label_0x11DF:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -2015,96 +1183,48 @@ Label_0x11DF:
                 MixStringProportions_43_ABF7A43645EBC16787BC0E8F2906C6C4, offset 136
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named Temp_int_Array_Index_Variable
-          
             $0: Local variable named CallFunc_Array_Get_Item5
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1223:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_FloatFloat)
             $0: Local variable named totalPercDrug
-          
             $0: Local variable named CallFunc_Array_Get_Item5
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1251:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named totalPercDrug
         Expression:
           $0: Local variable named CallFunc_Add_FloatFloat_ReturnValue1
-        
-      
-    
-  
 Label_0x126C:
-    
       $4D: if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! }
-    
-  
 Label_0x126D:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_IntInt_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
             $0: Local variable named Temp_int_Loop_Counter_Variable1
-          
             $1D: literal int32_t 1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1297:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Loop_Counter_Variable1
         Expression:
           $0: Local variable named CallFunc_Add_IntInt_ReturnValue1
-        
-      
-    
-  
 Label_0x12B2:
-    
       $6: Jump to offset 0x1093
-    
-  
 Label_0x12B7:
-    
       $31: set array
         $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors2
-      
         $32: EX_EndArray
-      
-    
-  
 Label_0x12C2:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A37C0:GameplayStatics Engine.Default__GameplayStatics)
@@ -2115,72 +1235,38 @@ Label_0x12C2:
         ContextExpression:
           $1C: Final Function (stack node GameplayStatics::GetAllActorsOfClass)
             $17: EX_Self
-          
             $20: EX_ObjectConst (000002422FE6FA00:BlueprintGeneratedClass saleAreaManager.saleAreaManager_C)
-          
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors2
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x12F5:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_IntInt_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_IntInt)
             $1: Instance variable named drugReceivedQuantity
-          
             $1D: literal int32_t 40
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x131F:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Multiply_IntFloat)
             $0: Local variable named CallFunc_Multiply_IntInt_ReturnValue
-          
             $0: Local variable named totalPercDrug
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x134D:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue1
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Multiply_IntFloat_ReturnValue
-          
             $1E: literal float 50.000000
-          
             $1E: literal float 250.000000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x137C:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -2191,19 +1277,10 @@ Label_0x137C:
         ContextExpression:
           $1C: Final Function (stack node KismetArrayLibrary::Array_Get)
             $0: Local variable named CallFunc_GetAllActorsOfClass_OutActors2
-          
             $1D: literal int32_t 0
-          
             $0: Local variable named CallFunc_Array_Get_Item3
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x13B3:
-    
       $19: Context
         ObjectExpression:
           $0: Local variable named CallFunc_Array_Get_Item3
@@ -2222,57 +1299,28 @@ Label_0x13B3:
                 sampleAreaAffected
               ContextExpression:
                 $1: Instance variable named sampleAreaAffected
-              
-            
-          
             $0: Local variable named CallFunc_FClamp_ReturnValue1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x13FF:
-    
       $4D: if (FlowStack.Num()) { jump to statement at FlowStack.Pop(); } else { ERROR!!! }
-    
-  
 Label_0x1400:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Add_IntInt_ReturnValue
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Add_IntInt)
             $0: Local variable named Temp_int_Loop_Counter_Variable
-          
             $1D: literal int32_t 1
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x142A:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named Temp_int_Loop_Counter_Variable
         Expression:
           $0: Local variable named CallFunc_Add_IntInt_ReturnValue
-        
-      
-    
-  
 Label_0x1445:
-    
       $6: Jump to offset 0x183
-    
-  
 Label_0x144A:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue1
@@ -2283,87 +1331,45 @@ Label_0x144A:
                 toxicity_24_54E19A5F4B81FE2CF3836FA4F83382FC, offset 80
               Expression to struct:
                 $1: Instance variable named drugReceived
-              
-            
-          
             $0: Local variable named minODToxicity
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1481:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue3
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named CallFunc_Subtract_FloatFloat_ReturnValue1
-          
             $0: Local variable named minODToxicity
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x14AF:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue4
         Expression:
           $68: Call Math (stack node KismetMathLibrary::Divide_FloatFloat)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue3
-          
             $1E: literal float 20.000000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x14D9:
-    
       $F: Let (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_FClamp_ReturnValue3
         Expression:
           $68: Call Math (stack node KismetMathLibrary::FClamp)
             $0: Local variable named CallFunc_Divide_FloatFloat_ReturnValue4
-          
             $1E: literal float 0.001000
-          
             $1E: literal float 0.080000
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1508:
-    
       $14: LetBool (Variable = Expression)
         Variable:
           $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue2
         Expression:
           $68: Call Math (stack node KismetMathLibrary::RandomBoolWithWeight)
             $0: Local variable named CallFunc_FClamp_ReturnValue3
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1525:
-    
       $19: Context
         ObjectExpression:
           $20: EX_ObjectConst (00000242218A3C40:KismetArrayLibrary Engine.Default__KismetArrayLibrary)
@@ -2382,35 +1388,15 @@ Label_0x1525:
                 clientsOD
               ContextExpression:
                 $1: Instance variable named clientsOD
-              
-            
-          
             $0: Local variable named ClientId
-          
             $0: Local variable named CallFunc_RandomBoolWithWeight_ReturnValue2
-          
             $27: EX_True
-          
             $16: EX_EndFunctionParms
-          
-        
-      
-    
-  
 Label_0x1577:
-    
       $6: Jump to offset 0xC93
-    
-  
 Label_0x157C:
-    
       $4: Return expression
         $B: EX_Nothing
-      
-    
-  
 Label_0x157E:
-    
       $53: EX_EndOfScript
-    
   

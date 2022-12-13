@@ -106,19 +106,24 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 	//std::cout << "BaseAddr: " << std::hex << baseAddr << "; GObjects: " << SDK::UObject::GObjects << "; GNames: " << SDK::FName::GNames << std::dec << std::endl;
 	wprintf_s(L"BaseAddr: 0x%p; GObjects: 0x%p; GNames: 0x%p\n", reinterpret_cast<uintptr_t*>(baseAddr), reinterpret_cast<uintptr_t*>(SDK::UObject::GObjects->ObjObjects.Objects), *reinterpret_cast<uintptr_t**>(SDK::FName::GNames));
 
-	SDK::AplayerCharacterBP_C* player = SDK::UObject::FindObjectReversed<SDK::AplayerCharacterBP_C>();
-	SDK::AmainComputer_C* computer = SDK::UObject::FindObjectReversed<SDK::AmainComputer_C>();
-	SDK::AclothesWardrobeBP_C* wardrobe = SDK::UObject::FindObjectReversed<SDK::AclothesWardrobeBP_C>();
-	SDK::AsalesManager_C* salesManager = SDK::UObject::FindObjectReversed<SDK::AsalesManager_C>();
-	SDK::AstatisticsManager_C* statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
+	wprintf_s(L"Finding UObjects...");
+	auto player = SDK::UObject::FindObjectReversed<SDK::AplayerCharacterBP_C>();
+	auto computer = SDK::UObject::FindObjectReversed<SDK::AmainComputer_C>();
+	auto wardrobe = SDK::UObject::FindObjectReversed<SDK::AclothesWardrobeBP_C>();
+	auto salesManager = SDK::UObject::FindObjectReversed<SDK::AsalesManager_C>();
+	auto salesAreaManager = SDK::UObject::FindObjectReversed<SDK::AsaleAreaManager_C>();
+	auto statsManager = SDK::UObject::FindObjectReversed<SDK::AstatisticsManager_C>();
 	auto gangManager = SDK::UObject::FindObjectReversed<SDK::AgangManager_C>();
 	auto bpHelper = SDK::UObject::FindObjectReversed<SDK::UBlueprintHelpers_C>();
 	auto dataTableLibrary = SDK::UObject::FindObject<SDK::UDataTableFunctionLibrary>();
 	auto worldContext = SDK::UObject::FindObject<SDK::UWorld>();
+	wprintf_s(L" Done\n");
 
+	wprintf_s(L"Patching some code...");
 	// this patches an issue with GetDrugMeta
 	mem::Patch(reinterpret_cast<BYTE*>(baseAddr + payload1_offset), payload1, 28);
 	mem::Patch(reinterpret_cast<BYTE*>(baseAddr + payload2_offset), payload2, 47);
+	wprintf_s(L" Done\n");
 
 	int32_t objCount = SDK::UObject::GetGlobalObjects().Num();
 	refreshMenu(objCount, player, statsManager);
@@ -284,6 +289,12 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 			//	wprintf_s(L"%d; ", salesManager->orderListClientID[i]);
 			wprintf_s(L"\n\nMax Clients Per Area and level: %d, %d\n", salesManager->maxClientsPerArea, salesManager->maxClientsPerLevel);
 
+			for (int i = 0; i < salesAreaManager->saleAreaStrings.Num(); i++)
+			{
+				auto areaString = salesAreaManager->saleAreaStrings[i];
+				wprintf_s(L"\navg client: %.2f; max clients: %d; max dealers: %d; max client boost: %d | %s", salesAreaManager->saleAreaClientAverage[i], salesAreaManager->saleAreaClientsMax[i], salesAreaManager->SaleAreaDealersMax[i], salesAreaManager->saleAreaClientMaxBoost[i], areaString.c_str());
+			}
+			wprintf_s(L"\n");
 		}
 
 		if (GetAsyncKeyState(VK_F3) & 1)
@@ -404,14 +415,19 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 				auto mix = inv->ItemMixProportions[i];
 				if (mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16.IsValidIndex(0))
 				{
-					for (int j = 0; j < mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16.Num(); j++)
-					{
-						wprintf_s(L"\n%hs", mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16[j].GetName());
-					}
+					//for (int j = 0; j < mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16.Num(); j++)
+					//{
+					//	wprintf_s(L"\n%hs", mix.MixContents_4_087C32B1445FBB5223EDA2A1A88D5B16[j].GetName());
+					//}
 
 					SDK::FdrugData drug;
 					bpHelper->STATIC_MixToDrugData(mix, worldContext, &drug);
+
+					wprintf_s(L" | tox: %.2f; str: %.2f; mixStr: %.2f; add: %.2f", drug.toxicity, drug.strength, drug.mixStr, drug.addictiveness);
+				}
 			}
+
+			wprintf_s(L"\n");
 		}
 
 		if (GetAsyncKeyState(VK_F7) & 1)
